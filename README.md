@@ -17,10 +17,10 @@
 无需安装、无需构建、无需服务器：
 
 ```
-直接用浏览器打开 planner/index.html
+直接用浏览器打开根目录的 index.html
 ```
 
-数据全部内联，双击即用，也支持任意静态托管部署。
+数据全部内联，双击即用。仓库根目录就是完整站点，GitHub Pages 选择根目录部署即可，也支持任意静态托管。
 
 ## 📊 数据规模
 
@@ -56,12 +56,12 @@ node followup_test.js  # 完成事件后自动加入后续线路
 ## 📁 目录结构
 
 ```
+├── index.html             # 单页入口（仓库根目录，方便 GitHub Pages 部署）
 ├── data/                  # 源数据（JSON，人工整理的游戏攻略数据）
 │   ├── chapters/          #   43 个篇章文件
 │   ├── achievements.json  #   成就
 │   └── cards_*.json       #   卡牌图鉴（4 个分片）
 └── planner/               # Web 应用本体
-    ├── index.html         #   单页入口
     ├── data.js            #   生成的数据文件（由 data/ 下的 JSON 生成）
     ├── app.js             #   主逻辑
     ├── cardpage.js        #   销卡查询页

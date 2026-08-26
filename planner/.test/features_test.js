@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { JSDOM } = require('jsdom');
 const dir = path.join(__dirname, '..');
-const dom = new JSDOM(fs.readFileSync(path.join(dir,'index.html'),'utf-8'), { runScripts: 'outside-only', url: 'http://localhost/' });
+const dom = new JSDOM(fs.readFileSync(path.join(dir,'..','index.html'),'utf-8'), { runScripts: 'outside-only', url: 'http://localhost/' });
 const { window } = dom;
 window.eval(fs.readFileSync(path.join(dir,'data.js'),'utf-8'));
 window.eval(fs.readFileSync(path.join(dir,'app.js'),'utf-8'));

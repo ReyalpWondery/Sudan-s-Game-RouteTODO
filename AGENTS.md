@@ -17,19 +17,19 @@
 
 - **无构建系统、无框架、无打包器**：原生 HTML + CSS + 浏览器端 JavaScript（ES5 风格，`var` + IIFE，无模块系统）。
 - 唯一的依赖是 `jsdom`，且**只用于测试**（见下文），运行时不需要 Node。
-- **运行**：直接用浏览器打开 `planner/index.html` 即可，无需本地服务器（无 fetch，全部数据内联在 `data.js`）。
+- **运行**：直接用浏览器打开**仓库根目录**的 `index.html` 即可，无需本地服务器（无 fetch，全部数据内联在 `planner/data.js`）。
 - **持久化**：`localStorage`，键为 `sultan_planner_v1`。无网络请求、无遥测。
 
 ## 目录结构
 
 ```
-├── README.md                  # 一句话简介
+├── README.md                  # 项目简介
+├── index.html                 # 单页入口（根目录，方便 GitHub Pages 部署），按顺序加载 planner/ 下的 data.js → app.js → cardpage.js
 ├── data/                      # 源数据（JSON，人工整理的游戏攻略数据）
 │   ├── achievements.json      #   成就：{groups:[{id,name,items:[{id,name,condition,chapterRefs,eventRefs}]}]}
 │   ├── cards_a.json … cards_d.json  # 卡牌图鉴（4 个分片）：{cards:[{name,category,tags,obtain,uses}]}
 │   └── chapters/*.json        #   43 个篇章文件，每篇 {id,title,category,characters,routes:[...]}
 └── planner/                   # Web 应用本体
-    ├── index.html             #   单页入口，按顺序加载 data.js → app.js → cardpage.js
     ├── style.css
     ├── data.js                #   生成的数据文件（~1.3MB）：window.GAME_DATA = {chapters, achievements, cards}
     ├── app.js                 #   主逻辑：状态管理、前置解析、渲染、苏丹卡冲突警告；暴露 window.PLANNER
@@ -94,5 +94,5 @@ node alimu_repro.js      # 阿里木篇排序复现脚本（诊断用，无 PASS
 
 ## 安全与部署
 
-- 纯静态页面，无后端、无密钥、无外部请求；部署就是把 `planner/` 目录放到任意静态托管（或直接双击打开）。
+- 纯静态页面，无后端、无密钥、无外部请求；仓库根目录即完整站点（`index.html` + `planner/`），GitHub Pages 选根目录部署即可，也支持任意静态托管（或直接双击打开）。
 - 不要往页面注入 `data.js` 之外的远程脚本；数据来自仓库内 JSON，渲染全部走 `textContent`。

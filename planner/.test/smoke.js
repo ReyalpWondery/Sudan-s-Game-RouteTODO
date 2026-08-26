@@ -3,7 +3,7 @@ const path = require('path');
 const { JSDOM } = require('jsdom');
 
 const dir = path.join(__dirname, '..');
-const html = fs.readFileSync(path.join(dir, 'index.html'), 'utf-8');
+const html = fs.readFileSync(path.join(dir, '..', 'index.html'), 'utf-8');
 const dataJs = fs.readFileSync(path.join(dir, 'data.js'), 'utf-8');
 const appJs = fs.readFileSync(path.join(dir, 'app.js'), 'utf-8');
 
