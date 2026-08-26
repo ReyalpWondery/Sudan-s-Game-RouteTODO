@@ -1,0 +1,39 @@
+{
+  "id": "asaer",
+  "title": "阿萨尔篇",
+  "category": "character",
+  "characters": ["阿萨尔", "奈费勒"],
+  "routes": [
+    {
+      "id": "asaer_steal",
+      "name": "偷书线",
+      "summary": "完成奈费勒篇《密会》后开启，阿萨尔偷藏禁书，处理不当会导致他入狱或死亡",
+      "steps": [
+        {"id":"asaer_steal_1","name":"另一位爱书的权臣","trigger":"完成奈费勒篇《密会》且未使用苏丹卡；权势≥10、阿萨尔空闲、奈费勒存活","desc":"阿萨尔空闲即不能在《书店营业》和《淘书》里（需先买20本书让书店关门）。结算：获读物「藏木于林」、触发《敲门砖》","prereqs":[],"slots":[]},
+        {"id":"asaer_steal_2","name":"敲门砖","trigger":"完成《另一位爱书的权臣》","desc":"存续5天（逾期权势-1、侠名-1）。卡槽：阿萨尔+藏木于林(失去)+主角+任意情报；另放白银及以上读物(失去)可跳过检定直接成功。检定社交+智慧：成功≥5触发《书窖》；<5偷书线关闭","prereqs":["另一位爱书的权臣"],"slots":[{"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"藏木于林","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）"},{"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}]},
+        {"id":"asaer_steal_3","name":"书窖","trigger":"《敲门砖》检定成功","desc":"存续1天（逾期2天后可能触发《阿萨尔还书》）。检定隐匿+生存：成功≥3主角智慧+1、触发《要阻止他吗》；<3主角智慧+1、2天后可能触发《阿萨尔还书》","prereqs":["敲门砖"],"slots":[{"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}]},
+        {"id":"asaer_steal_4","name":"要阻止他吗","trigger":"《书窖》检定成功","desc":"抉择：选“阻止他”触发《抄书人》；选“就当没看见”3天后可能触发《阿萨尔还书》","prereqs":["书窖"],"slots":[]},
+        {"id":"asaer_steal_5","name":"抄书人","trigger":"在《要阻止他吗》选“阻止他”","desc":"自启动、耗时5天。卡槽：阿萨尔。结算：获读物「不合时宜的思想」(社交1隐匿2)，3天后剧情弹窗「免于恐惧的自由」+1","prereqs":["要阻止他吗"],"slots":[{"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}],"terminal":true},
+        {"id":"asaer_steal_6","name":"阿萨尔还书","trigger":"阿萨尔空闲；《书窖》逾期或检定失败2天后，或在《要阻止他吗》选“就当没看见”2天后","desc":"结算：获读物「不合时宜的思想」(社交1隐匿2)、触发《归木于林》","prereqs":["书窖","要阻止他吗"],"slots":[]},
+        {"id":"asaer_steal_7","name":"归木于林","trigger":"完成《阿萨尔还书》","desc":"存续3天（逾期偷书线关闭）。检定主角智慧+社交：成功≥3为无奖惩纯剧情；<3阿萨尔进入《囚牢》，花10金币赎出后3天剧情弹窗「免于恐惧的自由」+1","prereqs":["阿萨尔还书"],"slots":[{"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}],"terminal":true},
+        {"id":"asaer_steal_8","name":"因笔墨获罪者","trigger":"在《权力的游戏》上贡「不合时宜的思想」（需先经《阿萨尔还书》或《抄书人》获得该读物）","desc":"耗时1天。卡槽：阿萨尔+你所有谋反思潮类卡牌（弑君的计划/谋反的意图/免于恐惧的自由/革命的计划/革命的构思）。结算：阿萨尔死亡、清空你所有的谋反思潮","prereqs":["阿萨尔还书","抄书人"],"slots":[{"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"结算：阿萨尔死亡"},{"card":"弑君的计划","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"你所有的此卡，结算时清空"},{"card":"谋反的意图","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"你所有的此卡，结算时清空"},{"card":"免于恐惧的自由","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"你所有的此卡，结算时清空"},{"card":"革命的计划","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"你所有的此卡，结算时清空"},{"card":"革命的构思","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"你所有的此卡，结算时清空"}],"terminal":true}
+      ]
+    },
+    {
+      "id": "asaer_book",
+      "name": "百科全书线",
+      "summary": "灵视≥5且书店关门后开启，研究「难解之意」通向午夜欢宴，最终让阿萨尔入队并编纂百科全书（跨周目收集）",
+      "steps": [
+        {"id":"asaer_book_1","name":"书店老板上门","trigger":"灵视≥5、买20本书让《书店营业》关闭后触发（桌面不能有《淘书》，否则阿萨尔被占用）","desc":"存续5天（逾期百科全书线关闭）。卡槽：阿萨尔+难解之意+5金币。结算：获读物「难解之意」","prereqs":[],"slots":[{"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"难解之意","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}]},
+        {"id":"asaer_book_2","name":"阅读难解之意","trigger":"寻思「难解之意」（逾期可再次寻思触发）","desc":"卡槽：难解之意(失去)+主角。结算：魅力+2、魔力+2，触发《奇怪的流言》，2天后可能触发《午夜欢宴·1》（可重复）","prereqs":["书店老板上门"],"slots":[{"card":"难解之意","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；卡槽（失去）"},{"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}]},
+        {"id":"asaer_book_3","name":"奇怪的流言","trigger":"完成《阅读难解之意》","desc":"存续3天。卡槽任意追随者，放3金币直接成功。检定智慧+社交+侠名：成功≥5智慧+1、青铜「预兆」+1；<5青铜「预兆」+1","prereqs":["阅读难解之意"],"slots":[]},
+        {"id":"asaer_book_4","name":"午夜欢宴·1","trigger":"完成《阅读难解之意》2天后、阿萨尔空闲","desc":"自启动。卡槽：阅读了「难解之意」的主角。结算：灵视+1、白银「预兆」+1，触发《更加奇怪的流言》《凡人的研究》","prereqs":["阅读难解之意"],"slots":[{"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"须已阅读「难解之意」"}]},
+        {"id":"asaer_book_5","name":"更加奇怪的流言","trigger":"完成《午夜欢宴·1》","desc":"存续3天（逾期恶名+1）。卡槽任意追随者，放3金币直接成功。检定魅力+社交+侠名：成功≥5隐匿+1、黄金「预兆」+1；<5恶名+1","prereqs":["午夜欢宴·1"],"slots":[]},
+        {"id":"asaer_book_6","name":"凡人的研究","trigger":"完成《午夜欢宴·1》","desc":"存续2天、耗时3天（逾期也会触发《午夜欢宴·2》）。卡槽：阿萨尔+智慧+魔力≥10的角色。结算：智慧+1、获「凡人的清单」、触发《午夜欢宴·2》","prereqs":["午夜欢宴·1"],"slots":[{"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}]},
+        {"id":"asaer_book_7","name":"午夜欢宴·2","trigger":"完成《凡人的研究》","desc":"卡槽：阿萨尔+阅读了「难解之意」的主角+任意角色+白银及以下征服+任意情报；放「凡人的清单」使检定成功点要求-5。检定我方魅力+魔力：成功≥8主角体魄+1、阿萨尔&4号槽魔力+1、金骰子+1、灵视+1，1天后可能触发《来龙去脉》；<8死亡结局「夺舍」","prereqs":["凡人的研究"],"slots":[{"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"凡人的清单","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"使检定成功点要求-5"},{"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"须已阅读「难解之意」"},{"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下"}]},
+        {"id":"asaer_book_8","name":"来龙去脉","trigger":"完成《午夜欢宴·2》1天后、阿萨尔空闲","desc":"存续3天（逾期金币+8、获读物「绳索的锤炼」(魔力2)）。卡槽：阿萨尔+青铜及以下杀戮。杀戮：阿萨尔死亡、金币+8、获「绳索的锤炼」；不杀戮（需主动点√）：阿萨尔入队、获「绳索的锤炼」，3-5天后可能触发《百科全书》","prereqs":["午夜欢宴·2"],"slots":[{"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"若放杀戮则阿萨尔死亡"},{"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"青铜及以下"}]},
+        {"id":"asaer_book_9","name":"百科全书","trigger":"完成《来龙去脉》3-5天后、阿萨尔空闲","desc":"长期存续、每次结算后重置。卡槽：阿萨尔+各类「值得收录的东西」（白银吊坠/龙眼宝石/苏丹卡/万逝戒/4级神的面容/镜灵/生命权杖/精美的蓝纱/贝姬夫人/医典/族长的祝福/白犀牛），分别换得各章节；完成全部章节后获「百科全书目录」（用于大结局·龙眼篇/革命篇的特殊结局及成就）。收录进度通关后继承到下一周目；阿萨尔死亡时本事件关闭，多章内容需多周目完成（可重复）","prereqs":["来龙去脉"],"slots":[{"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"白银吊坠","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"获「致谢」；须先获得其他至少一章后方能放置"},{"card":"龙眼宝石","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"获「龙眼之章」"},{"card":"苏丹卡","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"任意品级苏丹卡；获「游戏之章」，不折卡"},{"card":"万逝戒","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"获「逝去之章」"},{"card":"神的面容","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"须4级，获「神明之章」"},{"card":"镜灵","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"获「古镜之章」；须仍为人类形态"},{"card":"生命权杖","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"获「技术之章」"},{"card":"精美的蓝纱","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"获「庸人之章」；至少须二周目完成"},{"card":"贝姬夫人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"获「猫猫之章」"},{"card":"医典","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"获「医学之章」"},{"card":"族长的祝福","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"获「部落之章」"},{"card":"白犀牛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"未达成附加条件时纯剧情"}]}
+      ]
+    }
+  ]
+}

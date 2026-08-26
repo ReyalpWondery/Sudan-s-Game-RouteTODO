@@ -1,0 +1,155 @@
+{
+  "id": "balate_ansuya",
+  "title": "巴拉特&安苏亚篇",
+  "category": "character",
+  "characters": ["巴拉特", "安苏亚"],
+  "routes": [
+    {
+      "id": "balate_ansuya_rent",
+      "name": "巴拉特篇·出租与假币线",
+      "summary": "从《治理家业》放置「空屋」结识巴拉特开始，经营《异国商人》，围绕假「“金币”」走向审问或吐露真相，最终让巴拉特入队或开启造币",
+      "steps": [
+        {"id":"balate_ansuya_rent_1","name":"房屋出租","trigger":"在《治理家业》放置任意「空屋」","desc":"仪式，存续7天（逾期可在《治理家业》重新放置「空屋」重启）。卡槽：巴拉特+「空屋」（失去，空置的旧居/宅邸/房间均可）。触发《异国商人》，并按空屋品级收取第一期租金：石1/铜2/银3/金4金币","prereqs":[],"slots":[
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"空屋","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）；空置的旧居/空置的宅邸/空置的房间均可"}
+        ]},
+        {"id":"balate_ansuya_rent_2","name":"异国商人","trigger":"完成《房屋出租》","desc":"仪式，存续1天、每5天触发一次。放巴拉特收租购物：租金与「租赁协议」品级匹配（石/铜/银/金=1/2/3/4金币），商品青铜5/白银10/黄金20金币，购物收租必须派遣角色；放「“金币”」触发《审问》；放「哑铃铛」（安苏亚篇《安苏亚妃来访》获取）则巴拉特入队；娜依拉前往额外金币+3并获{异域之欢}（限一次）。务必一次性完成收租和购物，否则事件关闭且不补缴租金（可重复）","prereqs":["房屋出租"],"slots":[
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放入「哑铃铛」后替补为「异国商人的伙计」"},
+          {"card":"“金币”","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"触发《审问》"},
+          {"card":"哑铃铛","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"安苏亚篇《安苏亚妃来访》获取；放入则巴拉特入队"},
+          {"card":"租赁协议","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"需与出租「空屋」同品级；租金石/铜/银/金=1/2/3/4金币"},
+          {"card":"娜依拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"派遣槽候选：额外金币+3、获{异域之欢}（限一次）"}
+        ]},
+        {"id":"balate_ansuya_rent_3","name":"可疑的钱币","trigger":"权势≥6、侠名≥4时触发弹窗","desc":"「“金币”」+1，此后每7天弹窗「“金币”」+1（可重复）","prereqs":[],"slots":[]},
+        {"id":"balate_ansuya_rent_4","name":"可疑的房租","trigger":"已触发《可疑的钱币》、巴拉特尚未入队，在《异国商人》第4次收租时一定概率触发","desc":"弹窗，「“金币”」+1。注意：触发《可疑的钱币》前已完成第4次收租则无法触发；本弹窗首次触发后回退到上一天会导致无法再次触发","prereqs":["可疑的钱币","异国商人"],"slots":[]},
+        {"id":"balate_ansuya_rent_5","name":"假币回流","trigger":"在《异国商人》收租3次、在任意事件花费「“金币”」超过3枚后1-3天一定概率触发","desc":"弹窗，「“金币”」+1","prereqs":["异国商人"],"slots":[]},
+        {"id":"balate_ansuya_rent_6","name":"上贡假币","trigger":"在《权力的游戏》上贡「“金币”」","desc":"仪式，耗时1天。未结识巴拉特（未触发《房屋出租》）：权势+1，5天后巴拉特死亡、金币+5、「“金币”」+5、获「亡国的珍宝」（唯一）；已结识且未触发《吐露真相》：权势+1、1-2天后触发《不安的访客》；已触发《吐露真相》：侠名-1、权势-1","prereqs":[],"slots":[
+          {"card":"“金币”","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"在《权力的游戏》上贡"}
+        ]},
+        {"id":"balate_ansuya_rent_7","name":"不安的访客","trigger":"完成《上贡假币》时已结识巴拉特且尚未触发《吐露真相》，1-2天后","desc":"抉择弹窗：选“如果罪犯知道收手就好了”侠名+3、巴拉特篇关闭；选“不说实话我没法帮你”触发《吐露真相》","prereqs":["上贡假币"],"slots":[]},
+        {"id":"balate_ansuya_rent_8","name":"审问","trigger":"在《异国商人》放置「“金币”」","desc":"仪式，存续1天（逾期「“金币”」+1、巴拉特退场、《异国商人》永久关闭）。卡槽：巴拉特+2名任意角色+任意情报。检定社交≥5或体魄≥5成功：触发《吐露真相》；双检定均失败：「“金币”」+1、巴拉特退场、《异国商人》永久关闭","prereqs":["异国商人"],"slots":[
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"balate_ansuya_rent_9","name":"可疑的金币","trigger":"寻思「“金币”」（可重复寻思）","desc":"仪式，存续1天。放「“金币”」+巴拉特：触发《吐露真相》；放其他角色无法推进（玛希尔/拜铃耶/鲁梅拉有差分文本）","prereqs":[],"slots":[
+          {"card":"“金币”","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；仪式1号槽"},
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"触发《吐露真相》"}
+        ]},
+        {"id":"balate_ansuya_rent_10","name":"吐露真相","trigger":"在《可疑的金币》放置巴拉特，或《审问》检定成功，或《不安的访客》选“不说实话我没法帮你”","desc":"仪式，长期存续、耗时1天。卡槽巴拉特+主角（单选分支必须以主角执行）：选“杀了他”巴拉特死亡、触发《搜刮》；选“带上我”1-2天后可能触发《造币》、其时巴拉特入队；选“快滚！”不再触发《异国商人》、4天后可能触发《阔别已久》","prereqs":["可疑的金币"],"slots":[
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"单选分支（杀了他/带上我/快滚！）必须以主角执行"}
+        ]},
+        {"id":"balate_ansuya_rent_11","name":"阔别已久","trigger":"安苏亚存活、善名≥20，在《吐露真相》选“快滚！”4天后","desc":"弹窗。巴拉特入队、改名为「无名的游商」、生存+2、社交+2","prereqs":["吐露真相"],"slots":[],"terminal":true},
+        {"id":"balate_ansuya_rent_12","name":"造币","trigger":"权势≥15、侠名≥10；在《吐露真相》选“带上我”1-2天后，或巴拉特入队后触发安苏亚篇《安苏亚的请求·3》1天后","desc":"仪式，长期存续、耗时3天。卡槽：工匠+助手+10金币+善后者+任意情报。检定1（工匠&助手体魄+智慧）≥8「“金币”」+20、≥5 +15、≥3 +10、<3 +1；检定2（善后者社交+隐匿）<2则「罪证」+1；工匠&助手同时放玛希尔&巴拉特（别放反）：关闭检定、「“金币”」+20且无「罪证」。固定结算再次触发本事件（可重复）","prereqs":["吐露真相"],"slots":[]}
+      ]
+    },
+    {
+      "id": "balate_ansuya_kill",
+      "name": "巴拉特篇·搜刮与质询线",
+      "summary": "在《吐露真相》中选择“杀了他”，搜刮巴拉特的遗产并应付苏丹的质询，可获唯一饰品「亡国的珍宝」",
+      "steps": [
+        {"id":"balate_ansuya_kill_1","name":"搜刮","trigger":"在《吐露真相》选“杀了他”","desc":"仪式，长期存续。卡槽：2名任意角色+任意情报+青铜及以下「奢靡」（放奢靡可免除「谗言」）。检定生存≥5：金币+10、「“金币”」+10、随机获得3个《异国商人》的商品；<5：金币+10、「“金币”」+10。检定隐匿≥5：获「发丝誓约戒指」「亡国的珍宝」（唯一）。1天后触发《苏丹的质询·假币》，未放「奢靡」则「谗言」+1","prereqs":["吐露真相"],"slots":[
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"青铜及以下；免除本事件产生的「谗言」"}
+        ]},
+        {"id":"balate_ansuya_kill_2","name":"苏丹的质询·假币","trigger":"完成《搜刮》1天后","desc":"仪式，存续3天，逾期死亡结局「伴君如伴虎」。卡槽：主角；10金币换黄金「机遇」+1；10「“金币”」换黄金「内幕」+1；放「发丝誓约戒指」（失去）换黄金「洞察」+1但1天后安苏亚死亡。任意可选槽空置：1天后触发《满足苏丹》","prereqs":["搜刮"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"“金币”","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"需10枚：黄金「内幕」+1"},
+          {"card":"发丝誓约戒指","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）；黄金「洞察」+1，但1天后安苏亚死亡"}
+        ]},
+        {"id":"balate_ansuya_kill_3","name":"满足苏丹","trigger":"在《苏丹的质询·假币》空置任意卡槽","desc":"仪式，存续3天，逾期死亡结局「伴君如伴虎」。卡槽同《苏丹的质询·假币》（放「发丝誓约戒指」同样会导致安苏亚死亡）。所有卡槽空置：检定主角社交+魅力≥3获黄金「预兆」+1，<3死亡结局「无名人之死」","prereqs":["苏丹的质询·假币"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"“金币”","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"需10枚：黄金「内幕」+1"},
+          {"card":"发丝誓约戒指","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）；黄金「洞察」+1，但1天后安苏亚死亡"}
+        ],"terminal":true}
+      ]
+    },
+    {
+      "id": "balate_ansuya_relic",
+      "name": "巴拉特篇·异国商品仪式线",
+      "summary": "《异国商人》商店售出的四件奇珍（魂印杵/传承挂毯/驯服马衔等）各自对应的寻思仪式支线",
+      "steps": [
+        {"id":"balate_ansuya_relic_1","name":"堕神的呼唤","trigger":"寻思「魂印杵」（《异国商人》青铜商品，可再次寻思触发）","desc":"仪式，存续3天、耗时1天。放魂印杵+最多3名非动物追随者。警告：恶名+1、全体参与者死亡；「魂印杵」提升为黄金品级{消耗品}、获得全体参与者的所有属性值，此后在任意仪式使用后复原并失去增值属性（可重复）","prereqs":["异国商人"],"slots":[
+          {"card":"魂印杵","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；结算升为黄金{消耗品}并获得参与者全部属性，使用后复原"}
+        ]},
+        {"id":"balate_ansuya_relic_2","name":"扩建挂毯长廊","trigger":"寻思「传承挂毯」（《异国商人》白银商品，可再次寻思触发）","desc":"仪式，存续7天、耗时1天。放传承挂毯+7金币+白银及以下「奢靡」。触发《挂毯长廊》、计入一千零一夜「奇珍之家」","prereqs":["异国商人"],"slots":[
+          {"card":"传承挂毯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下"}
+        ]},
+        {"id":"balate_ansuya_relic_3","name":"挂毯长廊","trigger":"完成《扩建挂毯长廊》后每7天触发一次","desc":"仪式，自启动、耗时7天。放传承挂毯：随机黄金「情报」+1（可重复）","prereqs":["扩建挂毯长廊"],"slots":[
+          {"card":"传承挂毯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"balate_ansuya_relic_4","name":"驯服仪式","trigger":"寻思「驯服马衔」（《异国商人》黄金商品，可再次寻思触发）","desc":"仪式，存续1天、耗时1天。放驯服马衔（失去）+任意角色：一般角色被动穿戴马衔、驯兽槽+1；贝姬夫人生存&魔力&体魄+1；法拉杰/朱娜/贾丽拉/夏玛/奈布哈尼/玛希尔/伊曼/已堕落的铁头/命运商店升级后的快脚则成为{装备}{坐骑}{驯兽}，7天后触发《诅咒解除》","prereqs":["异国商人"],"slots":[
+          {"card":"驯服马衔","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；（失去）"},
+          {"card":"贝姬夫人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽特殊：生存&魔力&体魄+1"},
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽特殊：成为{装备}{坐骑}{驯兽}，7天后触发《诅咒解除》"},
+          {"card":"朱娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽特殊：成为{装备}{坐骑}{驯兽}，7天后触发《诅咒解除》"},
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽特殊：成为{装备}{坐骑}{驯兽}，7天后触发《诅咒解除》"},
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽特殊：成为{装备}{坐骑}{驯兽}，7天后触发《诅咒解除》"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽特殊：成为{装备}{坐骑}{驯兽}，7天后触发《诅咒解除》"},
+          {"card":"玛希尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽特殊：成为{装备}{坐骑}{驯兽}，7天后触发《诅咒解除》"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽特殊：成为{装备}{坐骑}{驯兽}，7天后触发《诅咒解除》"},
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"需已堕落；成为{装备}{坐骑}{驯兽}，7天后触发《诅咒解除》"},
+          {"card":"快脚","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"需命运商店升级后；成为{装备}{坐骑}{驯兽}，7天后触发《诅咒解除》"}
+        ]},
+        {"id":"balate_ansuya_relic_5","name":"诅咒解除","trigger":"在《驯服仪式》放入法拉杰等特殊角色7天后自启动","desc":"仪式，耗时1天。被驯服的角色失去{装备}{坐骑}{驯兽}、体魄+2","prereqs":["驯服仪式"],"slots":[],"terminal":true}
+      ]
+    },
+    {
+      "id": "balate_ansuya_ansuya",
+      "name": "安苏亚篇·改朝换代线",
+      "summary": "从《权力的游戏》对安苏亚使用青铜纵欲开始，献上「亡国的珍宝」赢得她的支持，经三次请求开启结局事件《改朝换代》，最终盗取苏丹的「万逝戒」",
+      "steps": [
+        {"id":"balate_ansuya_ansuya_1","name":"搜寻提尔亚遗物","trigger":"已触发《异国商人》，在《权力的游戏》安苏亚在场时放置“主角+青铜纵欲”","desc":"仪式，长期存续。卡槽：巴拉特+任意角色+10金币；放任意谋反思潮跳过检定直接获「亡国的珍宝」并退回金币。检定魅力+社交≥5获「亡国的珍宝」；<5退回金币、事件关闭","prereqs":["异国商人"],"slots":[
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":"触发条件：《权力的游戏》安苏亚在场时与主角一同放置"}
+        ]},
+        {"id":"balate_ansuya_ansuya_2","name":"失落的珍宝","trigger":"持有「亡国的珍宝」后，在《权力的游戏》安苏亚在场时放置“主角+青铜纵欲”","desc":"仪式，存续14天，逾期死亡结局「伴君如伴虎」（并达成一千零一夜「蔷薇花下死」）。放「亡国的珍宝」（失去）：次日触发《安苏亚妃来访》","prereqs":["搜寻提尔亚遗物"],"slots":[
+          {"card":"亡国的珍宝","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）"},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":"触发条件：《权力的游戏》安苏亚在场时与主角一同放置"}
+        ]},
+        {"id":"balate_ansuya_ansuya_3","name":"安苏亚妃来访","trigger":"完成《失落的珍宝》次日","desc":"仪式，存续1天（逾期自启动）。卡槽：安苏亚+任意谋反思潮+主角/梅姬单选。欢愉：主角+无思潮→安苏亚死亡、「妻子的不满」+1；主角+谋反思潮→安苏亚支持+3、反对清零、获「哑铃铛」、开启结局事件《改朝换代》、2-5天后触发《安苏亚的请求·1》；梅姬→死亡结局「温柔乡」。长谈：无思潮→支持+1、反对清零；有谋反思潮→支持+3、获「哑铃铛」、开启《改朝换代》并触发《安苏亚的请求·1》。都不选：支持+1、反对清零。将「哑铃铛」放入《异国商人》可使巴拉特入队","prereqs":["失落的珍宝"],"slots":[
+          {"card":"安苏亚","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3/4号槽单选之一：欢愉+谋反思潮可获「哑铃铛」并开启《改朝换代》"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3/4号槽单选之一；选“欢愉”+梅姬：死亡结局「温柔乡」"}
+        ]},
+        {"id":"balate_ansuya_ansuya_4","name":"安苏亚的请求·1","trigger":"《安苏亚妃来访》选“欢愉”放“主角+谋反思潮”或选“长谈”放“主角/梅姬+谋反思潮”2-5天后","desc":"仪式，存续5天（逾期重置，《安苏亚的请求·1/2/3》合计最多重置2次）。卡槽：安苏亚+哑铃铛+执行者+10金币+任意情报；热娜/萨米尔跳过检定直接成功；主角成功额外支持+1、失败{受伤}不入囚牢；巴拉特成功额外获【幽密的爱意】；10金币+主角跳过检定。检定隐匿+体魄≥1成功：2-5天后触发《安苏亚的请求·2》；失败：3号槽被关入《囚牢》并重置","prereqs":["安苏亚妃来访"],"slots":[
+          {"card":"安苏亚","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"哑铃铛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽执行者候选：跳过检定直接按成功结算"},
+          {"card":"萨米尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽执行者候选：跳过检定直接按成功结算"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽：成功额外安苏亚支持+1、失败{受伤}但不入《囚牢》；配10金币可跳过检定"},
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽：成功额外获【幽密的爱意】（改变后日谈文本）"}
+        ]},
+        {"id":"balate_ansuya_ansuya_5","name":"安苏亚的请求·2","trigger":"《安苏亚的请求·1》检定成功2-5天后","desc":"仪式，存续5天（逾期重置，合计最多重置2次）。卡槽同《安苏亚的请求·1》，但4号槽需青铜及以上品级同名「情报」×3。检定隐匿+体魄≥1成功：2-5天后触发《安苏亚的请求·3》；失败：3号槽被关入《囚牢》并重置","prereqs":["安苏亚的请求·1"],"slots":[
+          {"card":"安苏亚","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"哑铃铛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽执行者候选：跳过检定直接按成功结算"},
+          {"card":"萨米尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽执行者候选：跳过检定直接按成功结算"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽：成功额外安苏亚支持+1、失败{受伤}但不入《囚牢》；配10金币可跳过检定"},
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽：成功额外获【幽密的爱意】（改变后日谈文本）"}
+        ]},
+        {"id":"balate_ansuya_ansuya_6","name":"安苏亚的请求·3","trigger":"《安苏亚的请求·2》检定成功2-5天后","desc":"仪式，存续5天，需权势≥20方可启动（逾期重置，合计最多重置2次）。卡槽同前（10金币+主角可跳过检定）。检定隐匿+体魄≥1成功：触发《静待时机》；失败：3号槽被关入《囚牢》并重置。本仪式触发1天后若巴拉特已入队，可能触发巴拉特篇《造币》","prereqs":["安苏亚的请求·2"],"slots":[
+          {"card":"安苏亚","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"哑铃铛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽执行者候选：跳过检定直接按成功结算"},
+          {"card":"萨米尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽执行者候选：跳过检定直接按成功结算"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽：成功额外安苏亚支持+1、失败{受伤}但不入《囚牢》；配10金币可跳过检定"},
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽：成功额外获【幽密的爱意】（改变后日谈文本）"}
+        ]},
+        {"id":"balate_ansuya_ansuya_7","name":"静待时机","trigger":"《安苏亚的请求·3》检定成功","desc":"仪式，长期存续。卡槽：安苏亚的侍女+哑铃铛+任意角色+弑君的计划/革命的计划/誓言之证；10金币跳过检定。检定隐匿+体魄：成功且尚无「万逝戒」→1天后可能触发《复仇的伊始》（需等《权力的游戏》关闭、苏丹空闲）；已获「万逝戒」→随机黄金「情报」+1。失败：主角执行则主角{受伤}、其他角色执行则被关入《囚牢》，均重置本事件。警告：不建议过早运行，后续《复仇的伊始》将被动盗取「万逝戒」，此后折断任意苏丹卡都会导致安苏亚死亡，建议临近结局前再运行","prereqs":["安苏亚的请求·3"],"slots":[
+          {"card":"安苏亚的侍女","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"哑铃铛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"弑君的计划","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽三选一"},
+          {"card":"革命的计划","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽三选一"},
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽三选一"}
+        ]},
+        {"id":"balate_ansuya_ansuya_8","name":"复仇的伊始","trigger":"《静待时机》检定成功时尚未获得「万逝戒」1天后，且苏丹空闲","desc":"仪式，自启动、耗时3天。卡槽：安苏亚+苏丹。获「万逝戒」（魔力10）、达成一千零一夜「苏丹的戒指」；「万逝戒」可放入正教篇《神秘的援助》升级（阿图娜尔篇亦可偷取「万逝戒」）","prereqs":["静待时机"],"slots":[
+          {"card":"安苏亚","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"balate_ansuya_ansuya_9","name":"玉碎珠沉","trigger":"《复仇的伊始》后折断任意苏丹卡","desc":"仪式，自启动、耗时1天。卡槽：安苏亚。安苏亚死亡","prereqs":["复仇的伊始"],"slots":[
+          {"card":"安苏亚","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ],"terminal":true}
+      ]
+    }
+  ]
+}

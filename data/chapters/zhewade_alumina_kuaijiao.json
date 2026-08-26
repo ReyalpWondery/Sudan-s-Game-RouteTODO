@@ -1,0 +1,1164 @@
+{
+  "id": "zhewade_alumina_kuaijiao",
+  "title": "哲瓦德&阿鲁米娜&快脚篇",
+  "category": "character",
+  "characters": [
+    "哲瓦德",
+    "阿鲁米娜",
+    "快脚"
+  ],
+  "routes": [
+    {
+      "id": "zhewade_alumina_kuaijiao_join",
+      "name": "入队与提亲线",
+      "summary": "从囚牢解救哲瓦德到其入队，随后触发阿鲁米娜提亲并走向欢宴",
+      "steps": [
+        {
+          "id": "zhewade_alumina_kuaijiao_join_1",
+          "name": "黑街线人",
+          "trigger": "在《囚牢》以任意角色交互哲瓦德",
+          "desc": "仪式，长期存续、耗时3天。5金币：获「廉洁的伪证」，将其放置《囚牢》交互哲瓦德2天后哲瓦德获释、再3天后触发《无名的暗杀》",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "金币",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "5金币"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_join_2",
+          "name": "无名的暗杀",
+          "trigger": "哲瓦德被释放2天后",
+          "desc": "存续1天、耗时1天，逾期自启动。卡槽：刺客+主角+任意情报。检定战斗&生存：成功≥1触发《哲瓦德来访》；成功=0死亡结局「无名人之死」",
+          "prereqs": [
+            "黑街线人"
+          ],
+          "slots": [
+            {
+              "card": "刺客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_join_3",
+          "name": "哲瓦德来访",
+          "trigger": "《无名的暗杀》检定成功",
+          "desc": "卡槽：哲瓦德+任意角色+空置→哲瓦德入队、金币+10；放青铜及以下杀戮→哲瓦德死亡、触发《藏宝地》（一千零一夜「恩将仇报」）。可能触发盖斯篇《盖斯献剑》",
+          "prereqs": [
+            "无名的暗杀"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "空置则哲瓦德入队"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "放入：哲瓦德死亡、触发《藏宝地》"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_join_4",
+          "name": "藏宝地",
+          "trigger": "在《哲瓦德来访》放置杀戮",
+          "desc": "两次检定：隐匿成功≥2后智慧成功≥3金币+10，<3金币+2；隐匿<2事件关闭",
+          "prereqs": [
+            "哲瓦德来访"
+          ],
+          "slots": [],
+          "terminal": true
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_join_5",
+          "name": "配不上阿鲁米娜",
+          "trigger": "权势≥13、寻思头顶惊叹号的「哲瓦德」",
+          "desc": "抉择弹窗：两个选项均2天后触发《我的婚姻自己做主》（第二项另金币+3）",
+          "prereqs": [
+            "哲瓦德来访"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_join_6",
+          "name": "我的婚姻自己做主",
+          "trigger": "哲瓦德存活、完成《配不上阿鲁米娜》2天后",
+          "desc": "抉择：调戏她→获饰品「昂贵的金面纱」、立即触发《气急败坏》；答应她→金币+6、2天后触发《恋爱咨询》；拒绝她→金币+4、2天后触发《恋爱咨询》",
+          "prereqs": [
+            "配不上阿鲁米娜"
+          ],
+          "slots": []
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_join_7",
+          "name": "恋爱咨询",
+          "trigger": "在《我的婚姻自己做主》选“答应她”或“拒绝她”2天后",
+          "desc": "抉择弹窗：所有选项仅文本差分，都触发《欢宴》",
+          "prereqs": [
+            "我的婚姻自己做主"
+          ],
+          "slots": []
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_join_8",
+          "name": "欢宴",
+          "trigger": "完成《恋爱咨询》",
+          "desc": "仪式，存续3天，逾期快脚篇关闭。卡槽：阿鲁米娜+主角+任意女性或贵族男性（梅姬纵欲激情+1等差分）+任意非贵族追随者：放已在《命运商店》增益的快脚→1天后触发《每天都想见她》开启快脚篇；放未增益的快脚→权势-1。可放白银及以下纵欲折卡",
+          "prereqs": [
+            "恋爱咨询"
+          ],
+          "slots": [
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "任意女性或贵族男性槽；梅姬+纵欲则激情+1"
+            },
+            {
+              "card": "快脚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "任意非贵族追随者槽；需已在《命运商店》增益，放入1天后触发《每天都想见她》"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "小圆魅力+1"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "除梅姬以外的同伴需有{激情}方可折卡"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "zhewade_alumina_kuaijiao_duel",
+      "name": "决斗线",
+      "summary": "提亲时选“调戏她”引发哲瓦德上门决斗，处理不当可致主角死亡或哲瓦德夫妇双亡",
+      "steps": [
+        {
+          "id": "zhewade_alumina_kuaijiao_duel_1",
+          "name": "气急败坏",
+          "trigger": "在《我的婚姻自己做主》选“调戏她”",
+          "desc": "存续3天，逾期触发《决斗·哲瓦德》。卡槽：哲瓦德+昂贵的金面纱（关闭其他结算、恶名+1、哲瓦德死亡）+任意情报；放狠话→触发《决斗·哲瓦德》；去劝说检定智慧+魅力≥3恶名+1，<3触发《决斗·哲瓦德》",
+          "prereqs": [
+            "我的婚姻自己做主"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "昂贵的金面纱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "放入：关闭其他结算、恶名+1、哲瓦德死亡"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_duel_2",
+          "name": "决斗·哲瓦德",
+          "trigger": "在《气急败坏》选“放狠话”，或选“去劝说”但检定失败（含逾期）",
+          "desc": "存续3天，逾期权势-3、哲瓦德离队、阿鲁米娜&哲瓦德反对+1。卡槽：哲瓦德+阿鲁米娜+角斗士+任意角色+白银及以下杀戮+任意情报；千夫所指/毒蛇毒液关闭检定、角斗士死亡、哲瓦德归队。检定战斗+体魄≥3：放杀戮→角斗士死亡、恶名+1、触发《末路》；无杀戮→权势+1、侠名+1、哲瓦德归队、触发《还来？》；<3：主角参与→死亡结局「不自量力」，其他追随者→追随者死亡、权势-5、触发《还来？》",
+          "prereqs": [
+            "气急败坏"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "角斗士",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "检定成功或放千夫所指/毒蛇毒液时角斗士死亡"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "放入且检定成功：恶名+1、触发《末路》"
+            },
+            {
+              "card": "千夫所指",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "任意情报槽；关闭检定、角斗士死亡、权势+1、哲瓦德归队"
+            },
+            {
+              "card": "毒蛇毒液",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "任意情报槽；关闭检定、角斗士死亡、权势+1、哲瓦德归队"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_duel_3",
+          "name": "末路",
+          "trigger": "在《决斗·哲瓦德》放杀戮并检定成功",
+          "desc": "自启动。哲瓦德死亡、阿鲁米娜死亡、金币+20",
+          "prereqs": [
+            "决斗·哲瓦德"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "哲瓦德死亡"
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "阿鲁米娜死亡"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_duel_4",
+          "name": "还来?",
+          "trigger": "在《决斗·哲瓦德》不放杀戮并检定成功，或以追随者执行但检定失败",
+          "desc": "存续5天，逾期哲瓦德篇关闭。卡槽阿鲁米娜，三选一：让妻子去（须梅姬，金币+5）/打发她离开（哲瓦德执行金币+5，其他追随者事件关闭）/教她男人的危险（须主角，触发《别人的女儿》）",
+          "prereqs": [
+            "决斗·哲瓦德"
+          ],
+          "slots": [
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "单选槽“让妻子去”须以梅姬执行：金币+5"
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "单选槽“打发她离开”以哲瓦德执行：金币+5"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "单选槽“教她男人的危险”须以主角执行：触发《别人的女儿》"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_duel_5",
+          "name": "别人的女儿",
+          "trigger": "在《还来?》选“教她男人的危险”",
+          "desc": "存续3天，逾期阿鲁米娜反对+3。卡槽：阿鲁米娜+主角；放青铜及以下纵欲→「妻子的不满」+1、触发《哲瓦德成为大敌》；空置→「妻子的不满」+1",
+          "prereqs": [
+            "还来?"
+          ],
+          "slots": [
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "纵欲阿鲁米娜：「妻子的不满」+1、触发《哲瓦德成为大敌》"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "zhewade_alumina_kuaijiao_enemy",
+      "name": "大敌线",
+      "summary": "纵欲阿鲁米娜使哲瓦德成为大敌，进入《哲瓦德大敌战》循环随机事件，以突袭贪官宅邸或暗杀终结",
+      "steps": [
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_1",
+          "name": "哲瓦德成为大敌",
+          "trigger": "在任意事件纵欲阿鲁米娜（主要通过《别人的女儿》触发）",
+          "desc": "抉择弹窗：哲瓦德成为{大敌}、支持清零、反对+5、体魄/魅力/智慧/生存+2；阿鲁米娜支持清零、反对+5、四维+1；触发《哲瓦德大敌战·积累优势》",
+          "prereqs": [
+            "别人的女儿"
+          ],
+          "slots": []
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_2",
+          "name": "积累优势",
+          "trigger": "完成《哲瓦德成为大敌》时立即触发；大敌战运行期间13%概率再触发",
+          "desc": "检定魅力&社交（敌方含「哲瓦德的优势」加成）：成功≥5触发《突袭贪官宅邸》；≥3敌方优势-1、侠名+1；=0敌方优势+1；之后3-6天随机触发一个《哲瓦德大敌战》（可重复）",
+          "prereqs": [
+            "哲瓦德成为大敌"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "贪污官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的打手",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方加成，每张魅力+1智慧+1"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_3",
+          "name": "进谗言",
+          "trigger": "《哲瓦德大敌战》运行期间25%概率触发",
+          "desc": "存续1天、逾期自启动。检定魅力&社交：≥5触发《突袭贪官宅邸》；≥3敌方优势-1、权势+1；=0「谗言」+1；之后3-6天随机触发大敌战（可重复）",
+          "prereqs": [
+            "积累优势"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "贪污官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的打手",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方加成，每张魅力+1智慧+1"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_4",
+          "name": "干扰生意",
+          "trigger": "《哲瓦德大敌战》运行期间25%概率触发",
+          "desc": "存续1天、逾期自启动。检定魅力&社交：≥5触发《突袭贪官宅邸》；≥3敌方优势-1、权势+1；=0《治理家业》暂停3天；之后3-6天随机触发大敌战（可重复）",
+          "prereqs": [
+            "积累优势"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "贪污官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的打手",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方加成，每张魅力+1智慧+1"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_5",
+          "name": "隐身幕后",
+          "trigger": "《哲瓦德大敌战》运行期间13%概率触发",
+          "desc": "存续1天、逾期自启动。检定魅力&社交：≥5触发《突袭贪官宅邸》；≥3敌方优势-1、权势+1；=0敌方优势+1且5天后无提示再+3；之后3-6天随机触发大敌战（可重复）",
+          "prereqs": [
+            "积累优势"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "贪污官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的打手",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方加成，每张魅力+1智慧+1"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_6",
+          "name": "策划袭击",
+          "trigger": "《哲瓦德大敌战》运行期间8%概率触发",
+          "desc": "存续1天、逾期自启动。检定隐匿&战斗：≥5触发《突袭贪官宅邸》；≥3敌方优势-1、权势+1、「贪污官吏&哲瓦德的打手」战斗-1；=0触发《突袭》；之后3-6天随机触发大敌战（可重复）",
+          "prereqs": [
+            "积累优势"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "贪污官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的打手",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方加成，每张魅力+1智慧+1"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_7",
+          "name": "突袭",
+          "trigger": "《策划袭击》检定失败",
+          "desc": "自启动、耗时1天。卡槽任意追随者：战斗≥3则{受伤}、权势+1；战斗<3则追随者死亡、权势-1；手牌无追随者则权势-1",
+          "prereqs": [
+            "策划袭击"
+          ],
+          "slots": []
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_8",
+          "name": "策划诉讼",
+          "trigger": "《哲瓦德大敌战》运行期间8%概率触发",
+          "desc": "存续1天、逾期自启动。检定魅力&社交：≥5触发《突袭贪官宅邸》；≥3敌方优势-1、权势+1；=0触发《牢狱之灾》；之后3-6天随机触发大敌战（可重复）",
+          "prereqs": [
+            "积累优势"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "贪污官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的打手",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方加成，每张魅力+1智慧+1"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_9",
+          "name": "牢狱之灾",
+          "trigger": "在《策划诉讼》检定失败或逾期",
+          "desc": "自启动、耗时5天。卡槽任意追随者：{受伤}；手牌无追随者则权势-1。BUG：运行期间触发的大敌战会被遮挡无法操作",
+          "prereqs": [
+            "策划诉讼"
+          ],
+          "slots": []
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_10",
+          "name": "破坏名声",
+          "trigger": "《哲瓦德大敌战》运行期间4%概率触发",
+          "desc": "存续1天、逾期自启动。检定魅力&社交：≥5触发《突袭贪官宅邸》；≥3敌方优势-1、权势+1；=0「妻子的不满」+1；之后3-6天随机触发大敌战（可重复）",
+          "prereqs": [
+            "积累优势"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "贪污官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的打手",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方加成，每张魅力+1智慧+1"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_11",
+          "name": "策划暗杀",
+          "trigger": "《哲瓦德大敌战》运行期间4%概率触发",
+          "desc": "存续1天、逾期自启动。检定隐匿&社交：≥5触发《突袭贪官宅邸》；≥3「哲瓦德的打手」战斗-1、敌方优势-1、权势+1；=0触发《一次暗杀》；之后3-6天随机触发大敌战（可重复）",
+          "prereqs": [
+            "积累优势"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "贪污官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的打手",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡"
+            },
+            {
+              "card": "哲瓦德的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方加成，每张魅力+1智慧+1"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_12",
+          "name": "一次暗杀",
+          "trigger": "《策划暗杀》检定失败或逾期",
+          "desc": "存续1天、耗时5天，逾期自启动。卡槽：哲瓦德+阿鲁米娜+哲瓦德的打手+被害者（主角或任意追随者）+青铜及以下杀戮（权势+1）+任意情报。检定隐匿&战斗≥1：哲瓦德、阿鲁米娜、打手死亡、金币+20、获饰品「宠溺项链」（魅力5社交1）；=0死亡结局「无名人之死」",
+          "prereqs": [
+            "策划暗杀"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "检定成功≥1时哲瓦德死亡"
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "检定成功≥1时阿鲁米娜死亡"
+            },
+            {
+              "card": "哲瓦德的打手",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "检定成功≥1时死亡"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "被害者槽：主角或任意追随者"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "权势+1"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_enemy_13",
+          "name": "突袭贪官宅邸",
+          "trigger": "在任意一个《哲瓦德大敌战》检定≥5",
+          "desc": "存续3天，逾期3-6天后随机触发大敌战。卡槽含哲瓦德+阿鲁米娜+贪污官吏+打手+主角+部队+青铜及以下杀戮/征服。检定战斗&体魄≥3：哲瓦德、贪官、打手死亡、金币+20；无杀戮→侠名+3、权势+3；征服→权势+3；成功≥1仅清零敌方优势；=0死亡结局「无名人之死」。阿鲁米娜参战且检定≥1时她死亡、额外获「宠溺项链」",
+          "prereqs": [
+            "积累优势",
+            "进谗言",
+            "干扰生意",
+            "隐身幕后",
+            "策划袭击",
+            "策划诉讼",
+            "破坏名声",
+            "策划暗杀"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "检定成功≥3时哲瓦德死亡"
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方卡；若参战且检定≥1则阿鲁米娜死亡、额外获「宠溺项链」"
+            },
+            {
+              "card": "贪污官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "敌方卡；检定成功≥3时死亡"
+            },
+            {
+              "card": "哲瓦德的打手",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "敌方卡；检定成功≥3时死亡"
+            },
+            {
+              "card": "哲瓦德的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "敌方加成，每张魅力+1智慧+1"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "与征服共用槽；不放杀戮则侠名+3、权势+3"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "与杀戮共用槽；放入且成功≥3则权势+3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zhewade_alumina_kuaijiao_kuaijiao",
+      "name": "快脚线",
+      "summary": "欢宴上放出增益后的快脚开启，处理快脚与阿鲁米娜的关系，可让阿鲁米娜入队或送快脚入赘",
+      "steps": [
+        {
+          "id": "zhewade_alumina_kuaijiao_kuaijiao_1",
+          "name": "每天都想见她",
+          "trigger": "《欢宴》放置“增益后的快脚”1天后",
+          "desc": "剧情弹窗：下次折断任意苏丹卡后触发《快脚的约会》；若哲瓦德死亡≥3天（任意杀戮手段均可）触发《焦虑的快脚》",
+          "prereqs": [
+            "欢宴"
+          ],
+          "slots": []
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_kuaijiao_2",
+          "name": "快脚的约会",
+          "trigger": "完成《每天都想见她》后折任意苏丹卡",
+          "desc": "纯剧情。此后每次折断苏丹卡都会触发本事件，直至触发《赘婿的金币》或《焦虑的快脚》（可重复）",
+          "prereqs": [
+            "每天都想见她"
+          ],
+          "slots": [
+            {
+              "card": "快脚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_kuaijiao_3",
+          "name": "焦虑的快脚",
+          "trigger": "哲瓦德死亡≥3天、快脚在队（完成《每天都想见她》后）",
+          "desc": "抉择：你不再是奴隶了→触发《快脚的安家费·1》；你们一起做奴隶吧→阿鲁米娜入队、更名「快脚的老婆」成为{奴隶}、恶名+1、触发《快脚的安家费·2》；她不能留下来→恶名+2、触发《失踪的快脚》",
+          "prereqs": [
+            "每天都想见她"
+          ],
+          "slots": []
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_kuaijiao_4",
+          "name": "快脚的安家费·1",
+          "trigger": "在《焦虑的快脚》选“你不再是奴隶了”",
+          "desc": "存续7天、耗时7天，逾期无奖惩。快脚+5金币：快脚升青铜、体魄/魅力/生存+1、不再是{奴隶}",
+          "prereqs": [
+            "焦虑的快脚"
+          ],
+          "slots": [
+            {
+              "card": "快脚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "金币",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "5金币"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_kuaijiao_5",
+          "name": "快脚的安家费·2",
+          "trigger": "在《焦虑的快脚》选“你们一起做奴隶吧”",
+          "desc": "存续7天、耗时3天，逾期无奖惩。快脚+3金币：随机白银「情报」+1",
+          "prereqs": [
+            "焦虑的快脚"
+          ],
+          "slots": [
+            {
+              "card": "快脚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "金币",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "3金币"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_kuaijiao_6",
+          "name": "失踪的快脚",
+          "trigger": "在《焦虑的快脚》选“她不能留下来”",
+          "desc": "自启动、耗时3天。快脚归队、阿鲁米娜退场",
+          "prereqs": [
+            "焦虑的快脚"
+          ],
+          "slots": [
+            {
+              "card": "快脚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_kuaijiao_7",
+          "name": "赘婿的金币",
+          "trigger": "善名≥14、哲瓦德&阿鲁米娜空闲、完成《每天都想见她》",
+          "desc": "存续5天，逾期7天后重置本事件。卡槽：哲瓦德+阿鲁米娜+20金币（哲瓦德给你的）；空置→阿鲁米娜反对+3、金币+10；放快脚→金币+20、善名+1、快脚永久离队、4天后触发《欢快的访客》",
+          "prereqs": [
+            "每天都想见她"
+          ],
+          "slots": [
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿鲁米娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "金币",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "20金币（哲瓦德给你的）"
+            },
+            {
+              "card": "快脚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "放入：金币+20、善名+1、快脚永久离队、4天后触发《欢快的访客》"
+            }
+          ]
+        },
+        {
+          "id": "zhewade_alumina_kuaijiao_kuaijiao_8",
+          "name": "欢快的访客",
+          "trigger": "在《赘婿的金币》放置快脚4天后",
+          "desc": "长期存续。快脚成为{贵族}、改名「阿木刺图斯」、升青铜、支持+1（不会归队）；权势+1、随机黄金「情报」+1",
+          "prereqs": [
+            "赘婿的金币"
+          ],
+          "slots": [
+            {
+              "card": "阿木刺图斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "快脚更名后的贵族身份"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

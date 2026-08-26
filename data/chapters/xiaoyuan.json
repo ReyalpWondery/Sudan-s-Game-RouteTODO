@@ -1,0 +1,44 @@
+{
+  "id": "xiaoyuan",
+  "title": "小圆篇",
+  "category": "character",
+  "characters": ["小圆", "铁头", "梅姬"],
+  "routes": [
+    {
+      "id": "xiaoyuan_free",
+      "name": "自由线（赎身结局）",
+      "summary": "从《小圆的梦》到为小圆赎身,经调查/护送两条分支汇聚于《苏丹索要小圆》,最终达成完美结局《小小的避难所》",
+      "steps": [
+        {"id":"xiaoyuan_free_1","name":"小圆的梦","trigger":"灵视≥3、梅姬/小圆在队","desc":"抉择弹窗。选“你渴望自由,即使这伴随着风险”获青铜「洞察」+1,是后续触发完美结局《小圆赎身》的必要条件;另一选项获青铜「预兆」+1。1天后剧情弹窗青铜「秘氛」+1","prereqs":[],"slots":[]},
+        {"id":"xiaoyuan_free_2","name":"梦中之狼","trigger":"侠名≥7、梅姬/铁头在队;或完成《小圆的梦》2天后寻思头顶惊叹号的「小圆」","desc":"抉择弹窗。选“她也是一个不错的美人”触发《无法拒绝的安慰》,进入侧室线(无法抵达本篇完结结局);其余三项(铁头似乎有话想说/请梅姬来安抚/转移她的注意力)均最终触发《小圆遇痴汉》,其中“转移她的注意力”另获善名+1、青铜「秘密」+1","prereqs":["小圆的梦"],"slots":[{"card": "小圆", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "寻思触发（触发途径之一：完成《小圆的梦》2天后寻思「小圆」）"}]},
+        {"id":"xiaoyuan_free_3","name":"小圆遇痴汉","trigger":"在《梦中之狼》选“铁头似乎有话想说/请梅姬来安抚”1天后,或选“转移她的注意力”2天后,或《无法拒绝的安慰》逾期1天后","desc":"抉择弹窗。选“派人时刻保护小圆”触发《寸步不离》(完美结局方向);选“找人调查那个男人”触发《私下调查》","prereqs":["梦中之狼"],"slots":[]},
+        {"id":"xiaoyuan_free_4","name":"私下调查","trigger":"在《小圆遇痴汉》选“找人调查那个男人”","desc":"仪式,存续3天、耗时1天;逾期1天后小圆退场。放任意贵族追随者:社交+1,触发《下次还敢吗》","prereqs":["小圆遇痴汉"],"slots":[]},
+        {"id":"xiaoyuan_free_5","name":"下次还敢吗","trigger":"完成《私下调查》","desc":"仪式,存续3天;逾期1天后触发《苏丹索要小圆》。放自命不凡的贵族+主角+任意情报/部队,可用白银及以下杀戮/纵欲/征服:杀戮检定战斗+体魄≥3则贵族死亡、「幸福感」+1,失败死亡结局「无名人之死」;征服(须放部队)贵族死亡、金币+5;纵欲则贵族退场。固定结算:侠名+1、小圆想赎身计数+1","prereqs":["私下调查"],"slots":[{"card": "自命不凡的贵族", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "杀戮/征服分支中死亡，纵欲分支退场"}, {"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "杀戮", "sultan": true, "maxGrade": "白银", "required": true, "consumed": true, "note": "白银及以下，与纵欲/征服三选一"}, {"card": "纵欲", "sultan": true, "maxGrade": "白银", "required": true, "consumed": true, "note": "白银及以下，与杀戮/征服三选一"}, {"card": "征服", "sultan": true, "maxGrade": "白银", "required": true, "consumed": true, "note": "白银及以下，与杀戮/纵欲三选一；须放置部队"}]},
+        {"id":"xiaoyuan_free_6","name":"寸步不离","trigger":"在《小圆遇痴汉》选“派人时刻保护小圆”","desc":"仪式,存续3天;逾期1天后小圆退场。放小圆+非贵族追随者——派「铁头」是本篇完美结局的必要条件。善名+1,1天后触发《痴汉找上门》","prereqs":["小圆遇痴汉"],"slots":[{"card": "小圆", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "铁头", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "占用非贵族追随者槽；派铁头是完美结局必要条件"}]},
+        {"id":"xiaoyuan_free_7","name":"痴汉找上门","trigger":"完成《寸步不离》1天后","desc":"抉择弹窗。“拿上这点钱,滚出我的视线”触发《息事宁人》;“您说得对,小圆是您的了”触发《处置奴隶》(小圆多被送走);“你挨的还不够呢”:「幸福感」+1、权势-1,1天后触发《苏丹索要小圆》","prereqs":["寸步不离"],"slots":[]},
+        {"id":"xiaoyuan_free_8","name":"息事宁人","trigger":"在《痴汉找上门》选“拿上这点钱,滚出我的视线”","desc":"仪式,存续3天;逾期1天后触发《苏丹索要小圆》。放自命不凡的贵族+10金币:「幸福感」+1、侠名+1,1天后触发《苏丹索要小圆》","prereqs":["痴汉找上门"],"slots":[{"card": "自命不凡的贵族", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "金币", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "需10金币"}]},
+        {"id":"xiaoyuan_free_9","name":"处置奴隶","trigger":"在《痴汉找上门》选“您说得对,小圆是您的了”","desc":"仪式,存续3天;逾期1天后触发《苏丹索要小圆》。放自命不凡的贵族+小圆:若小圆为{密教徒}且魅力≥2,贵族死亡、权势+1、恶名+1、「罪证」+1且小圆不离队;否则小圆退场、金币+15、贵族的支持+1、权势+1、「妻子的不满」+1——若铁头在队,3天后贵族死亡、铁头退场;若铁头已是{大敌},3天后贵族死亡、「铁头的优势」+1","prereqs":["痴汉找上门"],"slots":[{"card": "自命不凡的贵族", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "小圆为密教徒且魅力≥2的分支、或铁头在队/已是大敌的分支中死亡"}, {"card": "小圆", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "非密教徒分支中小圆退场"}]},
+        {"id":"xiaoyuan_free_10","name":"苏丹索要小圆","trigger":"《痴汉找上门》选“你挨的还不够呢”,或《息事宁人》完成/逾期,或《处置奴隶》《下次还敢吗》逾期(任一分支皆可)","desc":"抉择弹窗。“我把她献给您”触发《强取1》(小圆退场);“我用其他东西代替她”触发《进贡》;“我建议严查告诉您这件事的人”触发《当堂对峙》","prereqs":["下次还敢吗","痴汉找上门"],"slots":[]},
+        {"id":"xiaoyuan_free_11","name":"强取1","trigger":"在《苏丹索要小圆》选“我把她献给您”","desc":"仪式,长期存续、耗时1天(需手动开启)。放小圆:小圆退场、金币+5,1天后触发《郁郁寡欢》","prereqs":["苏丹索要小圆"],"slots":[{"card": "小圆", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "结算后小圆退场"}]},
+        {"id":"xiaoyuan_free_12","name":"进贡","trigger":"在《苏丹索要小圆》选“我用其他东西代替她”","desc":"仪式,存续3天;逾期死亡结局「伴君如伴虎」。放主角+任意情报,再三选一:献20金币(检定社交+智慧≥3:权势-1、「幸福感」+1、赎身计数+1;失败触发《强取·2》且钱不退)/献黄金品级装备(「谗言」+1、赎身计数+1)/献女性追随者(该追随者退场、恶名+1、侠名-1、赎身计数+1,进献梅姬有独立文本)","prereqs":["苏丹索要小圆"],"slots":[{"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "金币", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "献20金币；与黄金品级装备/女性追随者三选一"}]},
+        {"id":"xiaoyuan_free_13","name":"当堂对峙","trigger":"在《苏丹索要小圆》选“我建议严查告诉您这件事的人”","desc":"仪式,存续3天;逾期死亡结局「伴君如伴虎」。放自命不凡的贵族+主角+任意情报:检定我方社交&智慧-敌方社交&智慧(6),成功≥2则贵族死亡、权势+1、「幸福感」+1、赎身计数+1;失败权势-1、触发《强取·2》","prereqs":["苏丹索要小圆"],"slots":[{"card": "自命不凡的贵族", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "检定成功≥2则贵族死亡"}, {"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}]},
+        {"id":"xiaoyuan_free_14","name":"强取·2","trigger":"《进贡》或《当堂对峙》检定失败","desc":"仪式,存续3天;逾期死亡结局「伴君如伴虎」。放小圆:小圆退场、权势-1,1天后触发《郁郁寡欢》","prereqs":["进贡","当堂对峙"],"slots":[{"card": "小圆", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "结算后小圆退场"}]},
+        {"id":"xiaoyuan_free_15","name":"郁郁寡欢","trigger":"铁头在队、完成《强取1》或《强取·2》1天后","desc":"仪式,存续3天,逾期无奖惩。放铁头+任意谋反思潮:铁头魅力+2、战斗+1、智慧+1,白银「秘密」+1、「免于恐惧的自由」+1;侠名≥20可能触发铁头篇《骆驼骨笛》(铁头获得命运的羁绊)","prereqs":["强取1","强取·2"],"terminal":true,"slots":[{"card": "铁头", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}]},
+        {"id":"xiaoyuan_free_16","name":"小圆赎身","trigger":"善名≥20,且在《小圆的梦》选“你渴望自由,即使这伴随着风险”,且小圆想赎身计数≥1(完成《下次还敢吗》/《当堂对峙》检定成功/《进贡》成功),寻思头顶惊叹号的「小圆」","desc":"抉择弹窗。“这些钱足够了”:金币+2,1-2天后触发《自由之人》;“不必给钱,你自由了”:善名+1、小圆获{命运的羁绊}(完美结局方向),1-2天后触发《自由之人》;“我不喜欢这主意”:1天后弹窗金币+8、小圆退场(坏结局;若梅姬已离队则无事发生)","prereqs":["小圆的梦"],"slots":[{"card": "小圆", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "寻思触发"}]},
+        {"id":"xiaoyuan_free_17","name":"自由之人","trigger":"在《小圆赎身》选“这些钱足够了”或“不必给钱,你自由了”1-2天后","desc":"仪式,存续1天,逾期自启动。放小圆,可放任意饰品(小圆智慧+1、提升为青铜品级)。结算:小圆去除{奴隶}标签、魅力+1、生存+1","prereqs":["小圆赎身"],"slots":[{"card": "小圆", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}]},
+        {"id":"xiaoyuan_free_18","name":"小小的避难所","trigger":"梅姬/小圆/铁头在队、曾在《寸步不离》放置铁头、完成《自由之人》1天后","desc":"剧情弹窗,本篇完美结局。「幸福感」+1;大结局通关后《后日谈》中铁头与小圆结为夫妻","prereqs":["自由之人","寸步不离"],"terminal":true,"slots":[]}
+      ]
+    },
+    {
+      "id": "xiaoyuan_ce",
+      "name": "侧室线",
+      "summary": "在《梦中之狼》选“她也是一个不错的美人”进入,纳小圆为侧室,最终导向《彻夜狂奔》的悲剧;无法抵达本篇完结结局",
+      "steps": [
+        {"id":"xiaoyuan_ce_1","name":"无法拒绝的安慰","trigger":"在《梦中之狼》选“她也是一个不错的美人”","desc":"仪式,存续1天、耗时1天;逾期1天后触发《小圆遇痴汉》(脱离侧室线)。放小圆,可放不高于小圆品级的「纵欲」;若放主角:恶名+1、强迫小圆计数+1(会导致铁头篇大量事件关闭)。结算:获「妻子的不满」+1,梅姬存活时1天后触发《娶小圆》","prereqs":["梦中之狼"],"slots":[{"card": "小圆", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "纵欲", "sultan": true, "maxGrade": null, "required": false, "consumed": true, "note": "不高于小圆品级"}, {"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "恶名+1、强迫小圆计数+1，会导致铁头篇大量事件关闭"}]},
+        {"id":"xiaoyuan_ce_2","name":"娶小圆","trigger":"梅姬存活、完成《无法拒绝的安慰》1天后","desc":"抉择弹窗。选“那就娶吧”触发《成婚》;选“我不会娶一个奴隶”则小圆篇·侧室线关闭","prereqs":["无法拒绝的安慰"],"slots":[]},
+        {"id":"xiaoyuan_ce_3","name":"成婚","trigger":"在《娶小圆》选“那就娶吧”;需金币≥5、主角和小圆空闲","desc":"仪式,存续1天,逾期自启动。放主角+小圆+5金币,可用青铜及以下「奢靡」折卡。结算:小圆品级提升为青铜(依旧是奴隶)、成为{侧室},魅力+1、智慧+1、激情+1","prereqs":["娶小圆"],"slots":[{"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "小圆", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "金币", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "需5金币"}, {"card": "奢靡", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下"}]},
+        {"id":"xiaoyuan_ce_4","name":"彻夜狂奔","trigger":"恶名≥5、完成《成婚》、铁头&小圆空闲","desc":"仪式,存续3天;逾期小圆退场、铁头退场、侠名+1。放小圆+铁头+追捕者+协助者+任意情报:三连检定(生存≥3→隐匿≥2→我方战斗-铁头战斗≥1),全部通过则小圆死亡、铁头死亡,「妻子的不满」+1、权势+1、侠名+1;中途失败则双双退场,最终检定成功=0另致我方全体{受伤}、侠名-1","prereqs":["成婚"],"terminal":true,"slots":[{"card": "小圆", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "铁头", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}]}
+      ]
+    }
+  ]
+}

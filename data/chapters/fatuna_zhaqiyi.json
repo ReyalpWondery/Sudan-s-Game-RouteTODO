@@ -1,0 +1,1438 @@
+{
+  "id": "fatuna_zhaqiyi",
+  "title": "法图娜&扎齐伊篇",
+  "category": "character",
+  "characters": [
+    "法图娜",
+    "扎齐伊",
+    "拉巴哈",
+    "梅姬"
+  ],
+  "routes": [
+    {
+      "id": "fatuna_zhaqiyi_rescue",
+      "name": "营救线（弑兄/邀约分支）",
+      "summary": "第7-14天被动开启，从城外骚乱救下法图娜母子，处置拉巴哈与酒庄阴谋，分支决定扎齐伊是否入队、拉巴哈生死",
+      "steps": [
+        {
+          "id": "fatuna_zhaqiyi_rescue_1",
+          "name": "城外的骚乱",
+          "trigger": "第7-14天被动触发（侠名≥5）",
+          "desc": "仪式，存续3天，逾期本篇关闭。卡槽：法图娜+主角+任意角色+情报，可用青铜及以下征服折卡。检定战斗+体魄：成功≥3金币+5并触发《袭击者的巢穴》；失败法图娜退场、次日扎齐伊退场",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_rescue_2",
+          "name": "袭击者的巢穴",
+          "trigger": "在《城外的骚乱》检定成功",
+          "desc": "存续7天，逾期本篇关闭。可放白银及以下征服（成功权势+2）。成功≥3：金币+5、主角魅力+1、法图娜支持+1、获白银「空置的宅邸」，1天后触发《少年的请求》、3天后触发《酒庄的归属》；失败法图娜死亡、次日扎齐伊退场",
+          "prereqs": [
+            "城外的骚乱"
+          ],
+          "slots": [
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "放置且检定成功时权势+2；空置则侠名+1、权势-1"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_rescue_3",
+          "name": "酒庄的归属",
+          "trigger": "《袭击者的巢穴》检定成功3天后",
+          "desc": "存续3天，逾期3天后重置。放拉巴哈；接待者放扎齐伊则3天后重置本事件，放其他角色获「迷药」并触发抉择《邀请寡妇》",
+          "prereqs": [
+            "袭击者的巢穴"
+          ],
+          "slots": [
+            {
+              "card": "拉巴哈",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "接待者槽：放扎齐伊则3天后重置本事件，放其他角色获「迷药」并触发《邀请寡妇》"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_rescue_4",
+          "name": "邀请寡妇",
+          "trigger": "完成《酒庄的归属》",
+          "desc": "抉择：揭露阴谋→2天后触发《弑兄》；为虎作伥→1天后触发《致命的邀约》",
+          "prereqs": [
+            "酒庄的归属"
+          ],
+          "slots": []
+        },
+        {
+          "id": "fatuna_zhaqiyi_rescue_5",
+          "name": "弑兄",
+          "trigger": "在《邀请寡妇》选“揭露阴谋”2天后",
+          "desc": "存续3天。卡槽：拉巴哈+法图娜+任意角色+情报/迷药+青铜及以下杀戮。迷药+杀戮直接成功但法图娜无激情；检定成功>2为最优解（拉巴哈死亡、侠名+1、权势+1、法图娜激情+1支持+1）；成功<2拉巴哈退场、2天后触发《刺杀1》",
+          "prereqs": [
+            "邀请寡妇"
+          ],
+          "slots": [
+            {
+              "card": "拉巴哈",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "多数结算分支中拉巴哈死亡"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "迷药",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "与任意情报同槽；放迷药关闭检定但法图娜不产生激情"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "检定≥2折卡；与迷药同放则关闭检定，法图娜无激情"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_rescue_6",
+          "name": "刺杀1",
+          "trigger": "《弑兄》检定失败2天后",
+          "desc": "存续1天，逾期自启动。检定主角体魄+生存：成功<2死亡结局「无名人之死」，=2受伤，>2躲过一劫",
+          "prereqs": [
+            "弑兄"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "fatuna_zhaqiyi_rescue_7",
+          "name": "致命的邀约",
+          "trigger": "在《邀请寡妇》选“为虎作伥”1天后",
+          "desc": "存续1天。逾期弹窗：法图娜、扎齐伊退场并触发《刺杀2》；完成（放法图娜+主角+迷药）则法图娜退场、次日扎齐伊退场、2天后触发《刺杀3》",
+          "prereqs": [
+            "邀请寡妇"
+          ],
+          "slots": [
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "迷药",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_rescue_8",
+          "name": "刺杀2",
+          "trigger": "《致命的邀约》逾期2天后",
+          "desc": "自启动。检定主角体魄+生存：成功<2死亡结局「无名人之死」，=2受伤，>2躲过一劫",
+          "prereqs": [
+            "致命的邀约"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "fatuna_zhaqiyi_rescue_9",
+          "name": "刺杀3",
+          "trigger": "完成《致命的邀约》2天后",
+          "desc": "自启动。检定体魄+生存：成功≥2于2天后触发《酒庄主人再次造访》；成功<2死亡结局「无名人之死」",
+          "prereqs": [
+            "致命的邀约"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_rescue_10",
+          "name": "酒庄主人再次造访",
+          "trigger": "《刺杀3》检定≥2的2天后",
+          "desc": "长期存续。放拉巴哈+任意角色；放青铜及以下杀戮：拉巴哈死亡、金币+6；杀戮槽空置：拉巴哈入队、支持+1、反对清零、金币+3",
+          "prereqs": [
+            "刺杀3"
+          ],
+          "slots": [
+            {
+              "card": "拉巴哈",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "放杀戮则死亡；杀戮槽空置则入队"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "放置：拉巴哈死亡、金币+6；空置：拉巴哈入队、支持+1、金币+3"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "fatuna_zhaqiyi_train",
+      "name": "扎齐伊教导线",
+      "summary": "扎齐伊入队后进行三轮训练抉择，塑造属性与学坏计数（学坏≥3法图娜无法入队），最终通向法图娜入队",
+      "steps": [
+        {
+          "id": "fatuna_zhaqiyi_train_1",
+          "name": "少年的请求",
+          "trigger": "《袭击者的巢穴》检定成功1天后",
+          "desc": "存续3天耗时0天，前3次逾期重置、第4次扎齐伊线关闭。扎齐伊入队、支持+1、反对清零，触发抉择《如何训练·1》",
+          "prereqs": [
+            "袭击者的巢穴"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_2",
+          "name": "如何训练·1",
+          "trigger": "完成《少年的请求》",
+          "desc": "抉择：武术指导→《武术指导》；唆使犯罪→《唆使犯罪》（学坏+2）；狩猎实战→《狩猎实战》（学坏+1）。学坏计数达3法图娜将无法入队",
+          "prereqs": [
+            "少年的请求"
+          ],
+          "slots": []
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_3",
+          "name": "武术指导",
+          "trigger": "在《如何训练·1》选“武术指导”",
+          "desc": "长期存续。检定两人体魄：≥5体魄+3、≥3体魄+2、<3体魄+1；1天后触发《扎齐伊的请求·1》",
+          "prereqs": [
+            "如何训练·1"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_4",
+          "name": "唆使犯罪",
+          "trigger": "在《如何训练·1》选“唆使犯罪”",
+          "desc": "长期存续。检定两人隐匿：≥5隐匿+3、≥3隐匿+2、<3隐匿+1且扎齐伊受伤。固定：学坏+2、1天后触发《扎齐伊的请求·1》",
+          "prereqs": [
+            "如何训练·1"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_5",
+          "name": "狩猎实战",
+          "trigger": "在《如何训练·1》选“狩猎实战”",
+          "desc": "长期存续。检定两人体魄+生存：≥5体魄+3生存+2、≥3体魄+2生存+1、<3体魄+1且扎齐伊受伤。固定：学坏+1、1天后触发《扎齐伊的请求·1》",
+          "prereqs": [
+            "如何训练·1"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_6",
+          "name": "扎齐伊的请求·1",
+          "trigger": "完成《武术指导》《唆使犯罪》《狩猎实战》其一1天后",
+          "desc": "存续3天耗时0天，前3次逾期重置、第4次扎齐伊线关闭。触发抉择《如何训练·2》",
+          "prereqs": [
+            "武术指导",
+            "唆使犯罪",
+            "狩猎实战"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_7",
+          "name": "如何训练·2",
+          "trigger": "完成《扎齐伊的请求·1》",
+          "desc": "抉择：宫廷社交→《社交教习·宫廷》；浴场闲谈→《社交教习·浴场》（学坏+1）；欢愉之馆→《社交教习·妓馆》（学坏+3）",
+          "prereqs": [
+            "扎齐伊的请求·1"
+          ],
+          "slots": []
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_8",
+          "name": "社交教习·宫廷",
+          "trigger": "在《如何训练·2》选“宫廷社交”",
+          "desc": "长期存续。检定两人社交：≥5社交+3、≥3社交+2、<3社交+1；1天后触发《扎齐伊的请求·2》",
+          "prereqs": [
+            "如何训练·2"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_9",
+          "name": "社交教习·浴场",
+          "trigger": "在《如何训练·2》选“浴场闲谈”",
+          "desc": "长期存续。检定两人魅力：≥5魅力+3（主角指导时扎齐伊激情+1）、≥3魅力+2、<3魅力+1。固定：随机岩石情报、学坏+1、1天后触发《扎齐伊的请求·2》",
+          "prereqs": [
+            "如何训练·2"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_10",
+          "name": "社交教习·妓馆",
+          "trigger": "在《如何训练·2》选“欢愉之馆”",
+          "desc": "长期存续。检定两人社交+魅力：≥5魅力+3社交+2、≥3魅力+2社交+2、<3各+1。固定：学坏+3、1天后触发《扎齐伊的请求·2》",
+          "prereqs": [
+            "如何训练·2"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_11",
+          "name": "扎齐伊的请求·2",
+          "trigger": "完成任一《社交教习》分支1天后",
+          "desc": "存续3天耗时0天，前3次逾期重置、第4次扎齐伊线关闭。触发抉择《如何训练·3》",
+          "prereqs": [
+            "社交教习·宫廷",
+            "社交教习·浴场",
+            "社交教习·妓馆"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_12",
+          "name": "如何训练·3",
+          "trigger": "完成《扎齐伊的请求·2》",
+          "desc": "抉择：去书店→《最后的解惑·书店》；去监狱→《最后的解惑·监狱》；去黑街→《最后的解惑·黑街》",
+          "prereqs": [
+            "扎齐伊的请求·2"
+          ],
+          "slots": []
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_13",
+          "name": "最后的解惑·书店",
+          "trigger": "在《如何训练·3》选“去书店”",
+          "desc": "长期存续。扎齐伊智慧+2、魅力+2；触发《年轻望族的仰慕》，3-5天后触发《未亡人的造访》",
+          "prereqs": [
+            "如何训练·3"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_14",
+          "name": "最后的解惑·监狱",
+          "trigger": "在《如何训练·3》选“去监狱”",
+          "desc": "长期存续。扎齐伊智慧+3、学坏+1；触发《年轻望族的仰慕》，3-5天后触发《未亡人的造访》",
+          "prereqs": [
+            "如何训练·3"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_15",
+          "name": "最后的解惑·黑街",
+          "trigger": "在《如何训练·3》选“去黑街”",
+          "desc": "长期存续。扎齐伊智慧+2、体魄+2、学坏+3；触发《年轻望族的仰慕》，3-5天后触发《未亡人的造访》",
+          "prereqs": [
+            "如何训练·3"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_16",
+          "name": "年轻望族的仰慕",
+          "trigger": "完成《最后的解惑》任一分支",
+          "desc": "存续3天，逾期无奖惩。思潮槽：弑君的计划给扎齐伊体魄/智慧/魅力+1；窥视黑暗/古老的信仰或新世界可使扎齐伊成为{密教徒}（新世界另加三维+1）",
+          "prereqs": [
+            "最后的解惑·书店",
+            "最后的解惑·监狱",
+            "最后的解惑·黑街"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "对苏丹的恐惧",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：「对苏丹的恐惧」+1"
+            },
+            {
+              "card": "免于恐惧的自由",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：「对苏丹的恐惧」+1"
+            },
+            {
+              "card": "谋反的意图",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：「对苏丹的恐惧」+1"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：扎齐伊体魄+1、智慧+1、魅力+1"
+            },
+            {
+              "card": "窥视黑暗",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：「不洁的思绪」+1、扎齐伊成为{密教徒}"
+            },
+            {
+              "card": "古老的信仰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：「不洁的思绪」+1、扎齐伊成为{密教徒}"
+            },
+            {
+              "card": "新世界",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：「不洁的思绪」+1、扎齐伊体魄/智慧/魅力+1、成为{密教徒}"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_17",
+          "name": "未亡人的造访",
+          "trigger": "完成《最后的解惑》3-5天后",
+          "desc": "长期存续。学坏≥6：恶名+1、法图娜支持清零反对+3、激情-1；学坏≥3：金币+5、支持清零反对+1、激情-1（扎齐伊未受伤不扣激情？按原文分支）；学坏<3：金币+5并触发《寡妇的友谊》",
+          "prereqs": [
+            "最后的解惑·书店",
+            "最后的解惑·监狱",
+            "最后的解惑·黑街"
+          ],
+          "slots": [
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_train_18",
+          "name": "寡妇的友谊",
+          "trigger": "完成《未亡人的造访》时学坏计数<3",
+          "desc": "存续3天，逾期法图娜后续关闭、扎齐伊无法完美结局。思潮槽：弑君的计划→法图娜激情+1；窥视黑暗/古老的信仰→法图娜成{密教徒}；新世界→激情+1且成{密教徒}。固定：法图娜入队、支持+1、反对清零",
+          "prereqs": [
+            "未亡人的造访"
+          ],
+          "slots": [
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "对苏丹的恐惧",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：「对苏丹的恐惧」+1"
+            },
+            {
+              "card": "免于恐惧的自由",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：「对苏丹的恐惧」+1"
+            },
+            {
+              "card": "谋反的意图",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：「对苏丹的恐惧」+1"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：法图娜激情+1"
+            },
+            {
+              "card": "不洁的思绪",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：无额外结算"
+            },
+            {
+              "card": "窥视黑暗",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：法图娜成为{密教徒}、「不洁的思绪」+1"
+            },
+            {
+              "card": "古老的信仰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：法图娜成为{密教徒}、「不洁的思绪」+1"
+            },
+            {
+              "card": "新世界",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "思潮槽：法图娜激情+1、成为{密教徒}、「不洁的思绪」+1"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "fatuna_zhaqiyi_passion",
+      "name": "激情与完美结局线",
+      "summary": "善名/侠名/权势达标后寻思触发的弹窗链，培养法图娜与扎齐伊的激情，通向一千零一夜「三人成行」完美结局",
+      "steps": [
+        {
+          "id": "fatuna_zhaqiyi_passion_1",
+          "name": "法图娜的感谢",
+          "trigger": "善名≥4、扎齐伊存活，寻思头顶惊叹号的「法图娜」",
+          "desc": "剧情弹窗。金币+3",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_passion_2",
+          "name": "你吸引了法图娜",
+          "trigger": "侠名≥3、灵视≥3、梅姬存活、未纵欲过法图娜、未触发《我们也许不该这样》，寻思「法图娜」",
+          "desc": "抉择：私下接待她→法图娜激情+1（若先让她成为侧室则无法触发）；与妻子一起接待→青铜「内幕」+1",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_passion_3",
+          "name": "更深入的沟通",
+          "trigger": "权势≥5、侠名≥8，寻思头顶惊叹号的「扎齐伊」",
+          "desc": "抉择：邀请他去→触发《浴池里的波澜》；这不合适→善名+1",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_passion_4",
+          "name": "浴池里的波澜",
+          "trigger": "在《更深入的沟通》选“邀请他去”",
+          "desc": "存续7天，逾期无法达成扎齐伊完美结局。固定：扎齐伊激情+1。放青铜及以下纵欲：「妻子的不满」+1、2-3天后触发《丑闻缠身》；不纵欲：可能触发《我们也许不该这样》",
+          "prereqs": [
+            "更深入的沟通"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "纵欲：「妻子的不满」+1、2-3天后触发《丑闻缠身》；不纵欲可能触发《我们也许不该这样》"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_passion_5",
+          "name": "丑闻缠身",
+          "trigger": "在《浴池里的波澜》使用纵欲2-3天后",
+          "desc": "自启动。法图娜退场、扎齐伊退场、恶名+1、「妻子的不满」+1；若两人都有{激情}则获饰品「咒文发梳」",
+          "prereqs": [
+            "浴池里的波澜"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "fatuna_zhaqiyi_passion_6",
+          "name": "我们也许不该这样",
+          "trigger": "权势≥10、恶名≥3、侠名≥10，法图娜&扎齐伊均获{命运的羁绊}且都有{激情}、法图娜非{侧室}、完成《浴池里的波澜》但未纵欲，寻思「扎齐伊」",
+          "desc": "存续3天。放主角+扎齐伊+法图娜，可用黄金及以下纵欲。若两人均为{密教徒}：死亡结局「欲望之池」；否则达成一千零一夜「三人成行」完美结局",
+          "prereqs": [
+            "浴池里的波澜"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发；卡槽★"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "fatuna_zhaqiyi_fall",
+      "name": "堕落线",
+      "summary": "恶名路线：扎齐伊学坏后的暗娼事件，分支可毁尸、花钱平事或任其家破人亡",
+      "steps": [
+        {
+          "id": "fatuna_zhaqiyi_fall_1",
+          "name": "轻易获得快乐",
+          "trigger": "恶名≥3、侠名≥6、梅姬&法图娜在队，寻思「扎齐伊」",
+          "desc": "存续3天，逾期关闭本线后续（攻略建议不做，易破坏完美结局）。放主角：青铜「秘密」+1、可能触发《掐死了暗娼》；放梅姬：青铜「洞察」+1",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发；卡槽●"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽主角/梅姬二选一；放主角获青铜「秘密」、可能触发《掐死了暗娼》"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽主角/梅姬二选一；放梅姬获青铜「洞察」"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_fall_2",
+          "name": "掐死了暗娼",
+          "trigger": "在《轻易获得快乐》放置主角；恶名≥5、侠名≥5、法图娜存活、未触发《楷模》时寻思「扎齐伊」",
+          "desc": "抉择：放把火→《毁尸灭迹》；给够钱的话→《谈判》；放弃他→1天后《家破人亡》。触发后《楷模》《沉默的恳谈》不再出现",
+          "prereqs": [
+            "轻易获得快乐"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_fall_3",
+          "name": "毁尸灭迹",
+          "trigger": "在《掐死了暗娼》选“放把火”",
+          "desc": "自启动。检定两人体魄+生存：≥3扎齐伊生存+1、恶名+1；<3另魅力-1",
+          "prereqs": [
+            "掐死了暗娼"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "fatuna_zhaqiyi_fall_4",
+          "name": "谈判",
+          "trigger": "在《掐死了暗娼》选“给够钱的话”",
+          "desc": "存续3天，逾期无奖惩。放5金币→扎齐伊智慧+1；青铜及以下杀戮：恶名+1、回收金币；奢靡（须10金币）：仅折卡",
+          "prereqs": [
+            "掐死了暗娼"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "恶名+1、回收金币"
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "须10金币，仅折卡无额外收益"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "fatuna_zhaqiyi_fall_5",
+          "name": "家破人亡",
+          "trigger": "在《掐死了暗娼》选“放弃他”1天后",
+          "desc": "自启动。法图娜死亡、扎齐伊退场、「妻子的不满」+1、金币+10、恶名+1",
+          "prereqs": [
+            "掐死了暗娼"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "结算：法图娜死亡"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "fatuna_zhaqiyi_justice",
+      "name": "楷模与正义线",
+      "summary": "高善名触发的正道支线，给扎齐伊/法图娜「命运的羁绊」，但人员组合错误会导致母子双亡",
+      "steps": [
+        {
+          "id": "fatuna_zhaqiyi_justice_1",
+          "name": "楷模",
+          "trigger": "善名≥8、法图娜存活、未触发《掐死了暗娼》，寻思「扎齐伊」",
+          "desc": "抉择：未必会有回报→白银「秘密」+1、扎齐伊获{命运的羁绊}；一定会有回报的→获饰品「智慧宝珠」。触发后《掐死了暗娼》不再出现",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "fatuna_zhaqiyi_justice_2",
+          "name": "沉默的恳谈",
+          "trigger": "善名≥14、法图娜存活、扎齐伊非{密教徒}、未触发《掐死了暗娼》",
+          "desc": "存续3天，逾期1-2天后触发《何为正义》。人员组合分歧：主角+梅姬（可含法图娜）→《何为正义》；仅主角/仅法图娜/主角+非侧室法图娜→2-3天后《正义必须…》（母子死亡警告）；梅姬+法图娜→法图娜获{命运的羁绊}；仅梅姬→扎齐伊体魄+2但失去{命运的羁绊}",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_justice_3",
+          "name": "正义必须…",
+          "trigger": "《沉默的恳谈》放置“仅主角/仅法图娜/主角+非侧室法图娜”组合2-3天后（法图娜入队后）",
+          "desc": "自启动。若法图娜为{密教徒}：扎齐伊死亡；否则扎齐伊与法图娜双双死亡",
+          "prereqs": [
+            "沉默的恳谈"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "结算：扎齐伊死亡"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "法图娜非{密教徒}时法图娜死亡"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "fatuna_zhaqiyi_justice_4",
+          "name": "何为正义",
+          "trigger": "法图娜在队，《沉默的恳谈》逾期或放置“主角+梅姬(可含法图娜)”组合1-2天后",
+          "desc": "存续3天，逾期：法图娜为{密教徒}则扎齐伊死亡，否则扎齐伊体魄+2但失去{命运的羁绊}。3号槽放主角→母子双亡（2-4天后金币+20）；放梅姬→法图娜获{命运的羁绊}、金币+5；放青铜及以下杀戮→扎齐伊退场、法图娜死亡、恶名+1、金币+15",
+          "prereqs": [
+            "沉默的恳谈"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "放主角或杀戮的分支中死亡"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽选项之一；放主角母子双亡、2-4天后金币+20"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽选项之一；法图娜获{命运的羁绊}、金币+5"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "3号槽选项之一；扎齐伊退场、法图娜死亡、恶名+1、金币+15"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "fatuna_zhaqiyi_concubine",
+      "name": "侧室线",
+      "summary": "纵欲法图娜开启的纳侧室支线，可让法图娜成为侧室，多条分支通向「无名人之死」死亡结局",
+      "steps": [
+        {
+          "id": "fatuna_zhaqiyi_concubine_1",
+          "name": "诱人的提议",
+          "trigger": "在《在家行淫》纵欲「法图娜」时触发",
+          "desc": "抉择：不，我现在就要她→触发《强夺凋零之花》；询问一下妻子→1天后触发《这或许不是最好的主意》",
+          "prereqs": [],
+          "slots": []
+        },
+        {
+          "id": "fatuna_zhaqiyi_concubine_2",
+          "name": "强夺凋零之花",
+          "trigger": "在《诱人的提议》选“不，我现在就要她”",
+          "desc": "存续1天，逾期自启动。放法图娜+主角+青铜及以下纵欲。纵欲：法图娜激情清零、「妻子的不满」+1、可能触发《那剧毒的果实》；不纵欲：激情清零、白银「预兆」+1、可能触发《我们应该分享一切》",
+          "prereqs": [
+            "诱人的提议"
+          ],
+          "slots": [
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "纵欲：激情清零、「妻子的不满」+1、可能触发《那剧毒的果实》；不纵欲：白银「预兆」+1、可能触发《我们应该分享一切》"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_concubine_3",
+          "name": "那剧毒的果实",
+          "trigger": "在《强夺凋零之花》放置纵欲（其他条件不明，也许需完成《双姝》后）",
+          "desc": "自启动。卡槽需扎齐伊+主角+梅姬+法图娜。死亡结局「无名人之死」",
+          "prereqs": [
+            "强夺凋零之花"
+          ],
+          "slots": [
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "fatuna_zhaqiyi_concubine_4",
+          "name": "我们应该分享一切",
+          "trigger": "在《强夺凋零之花》未纵欲，或完成《双姝》后；且持有「妻子的不满」=2、梅姬篇《不谐之音》逾期或检定失败时有概率触发（非100%）",
+          "desc": "自启动。卡槽需主角+梅姬+法图娜。死亡结局「无名人之死」",
+          "prereqs": [
+            "强夺凋零之花",
+            "双姝"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "fatuna_zhaqiyi_concubine_5",
+          "name": "这或许不是最好的主意",
+          "trigger": "梅姬空闲，在《诱人的提议》选“询问一下妻子”1天后",
+          "desc": "存续2天，逾期关闭后续。检定主角魅力+社交：成功≥2触发抉择《尊重你的选择》；若触发过《我们也许不该这样》或持有「妻子的不满」则强制检定失败，仅获青铜「机遇」",
+          "prereqs": [
+            "诱人的提议"
+          ],
+          "slots": [
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "妻子的不满",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "持有则强制检定失败"
+            }
+          ]
+        },
+        {
+          "id": "fatuna_zhaqiyi_concubine_6",
+          "name": "尊重你的选择",
+          "trigger": "《这或许不是最好的主意》检定成功",
+          "desc": "抉择：让法图娜加入我们的家庭吧→触发《双姝》；不，我只爱我的梅姬→可能触发《花园里唯一的花》",
+          "prereqs": [
+            "这或许不是最好的主意"
+          ],
+          "slots": []
+        },
+        {
+          "id": "fatuna_zhaqiyi_concubine_7",
+          "name": "花园里唯一的花",
+          "trigger": "在《尊重你的选择》选“不，我只爱我的梅姬”且持有「妻子的不满」",
+          "desc": "自启动。「妻子的不满」-1",
+          "prereqs": [
+            "尊重你的选择"
+          ],
+          "slots": [
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "妻子的不满",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "结算：「妻子的不满」-1"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "fatuna_zhaqiyi_concubine_8",
+          "name": "双姝",
+          "trigger": "在《尊重你的选择》选“让法图娜加入我们的家庭吧”",
+          "desc": "存续3天，逾期1天后重置。需至少10金币（放20权势额外+1）。固定：法图娜成为{侧室}、权势+1、获「咒文发梳」、金币+15，梅姬与法图娜密谋计数+1（妻子不满高时两人可能合谋杀你）。可放白银及以下奢靡/纵欲/杀戮/征服：杀戮（需恶名≥10灵视≥5）法图娜与扎齐伊死亡；征服（需恶名≥3灵视≥1）权势+3",
+          "prereqs": [
+            "尊重你的选择"
+          ],
+          "slots": [
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "参与则按选项获得加成；杀戮分支中未参与则次日退场"
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "需20金币，无额外收益"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "扎齐伊生存+1（若参与）、法图娜获{纵欲的痕迹}"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "需恶名≥10、灵视≥5：法图娜死亡、扎齐伊死亡（未参与则次日退场）、恶名+3、灵视+2"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "需恶名≥3、灵视≥1：扎齐伊智慧+1（若参与）、恶名+1、权势+3"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

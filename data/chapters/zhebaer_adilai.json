@@ -1,0 +1,108 @@
+{
+  "id": "zhebaer_adilai",
+  "title": "哲巴尔&阿迪莱篇",
+  "category": "character",
+  "characters": ["哲巴尔", "阿迪莱"],
+  "routes": [
+    {
+      "id": "zhebaer_adilai_zhebaer",
+      "name": "哲巴尔入队线",
+      "summary": "折断征服卡后把机会让给哲巴尔，经夜猎、黑街拳斗要挟，最终在公开拳斗中收服哲巴尔入队",
+      "steps": [
+        {"id":"zhebaer_adilai_zhebaer_1","name":"把征服让给我","trigger":"折断黄金及以下「征服」；或持有青铜及以下「征服」且哲巴尔空闲","desc":"抉择弹窗：选“不答应”哲巴尔篇关闭（大结局屠龙篇也随之关闭）；选“好啊”触发《将军夜猎》","prereqs":[],"slots":[]},
+        {"id":"zhebaer_adilai_zhebaer_2","name":"将军夜猎","trigger":"在《把征服让给我》选“好啊”","desc":"仪式，存续3天（逾期权势-1、哲巴尔反对+1）。放凶兽巨狼+哲巴尔+主角+青铜及以下「征服」。不参与仅折征服；参与检定成功≥4：体魄+1、获「巨狼头颅」，若侠名≥6则《权力的游戏》转为《群龙无首》；可能触发《黑街的拳斗士？》。此后读物冒险事件哲巴尔会强行参与","prereqs":["把征服让给我"],"slots":[
+          {"card":"凶兽巨狼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":""}
+        ]},
+        {"id":"zhebaer_adilai_zhebaer_3","name":"处置凶兽头颅","trigger":"寻思「巨狼头颅」","desc":"抉择：做成首饰→在热娜篇《珠宝设计》获饰品「狼头围巾」；送给盟友→《一件残酷的礼物1》；送给哲巴尔→《一件残酷的礼物2》；卖给商人（需巴拉特已出场）→《一件凶煞的商品》","prereqs":["将军夜猎"],"slots":[
+          {"card":"巨狼头颅","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"zhebaer_adilai_zhebaer_4","name":"一件残酷的礼物1","trigger":"在《处置凶兽头颅》选“送给盟友”","desc":"仪式，存续1天。放巨狼头颅（失去）+赠送对象：按对象获不同收益（哲巴尔支持+1战斗+1、阿迪莱侠名+1、法拉杰权势+1、哈桑灵感+6等）；放小圆触发《狰狞美味》","prereqs":["处置凶兽头颅"],"slots":[
+          {"card":"巨狼头颅","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"赠送对象不同收益不同；送小圆触发《狰狞美味》"}
+        ]},
+        {"id":"zhebaer_adilai_zhebaer_5","name":"狰狞美味","trigger":"在《一件残酷的礼物1》放置小圆","desc":"仪式，存续2天。体魄+1","prereqs":["一件残酷的礼物1"],"slots":[]},
+        {"id":"zhebaer_adilai_zhebaer_6","name":"一件残酷的礼物2","trigger":"在《处置凶兽头颅》选“送给哲巴尔”","desc":"仪式，存续1天。放巨狼头颅（失去）+哲巴尔：哲巴尔支持+1、战斗+1","prereqs":["处置凶兽头颅"],"slots":[
+          {"card":"巨狼头颅","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":""},
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"zhebaer_adilai_zhebaer_7","name":"一件凶煞的商品","trigger":"在《处置凶兽头颅》选“卖给感兴趣的商人”（巴拉特已出场）","desc":"仪式，存续1天。放巨狼头颅（失去）：金币+7，2天后触发《意料之中的买家》","prereqs":["处置凶兽头颅"],"slots":[
+          {"card":"巨狼头颅","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":""}
+        ]},
+        {"id":"zhebaer_adilai_zhebaer_8","name":"意料之中的买家","trigger":"完成《一件凶煞的商品》2天后","desc":"仪式，自启动。放哲巴尔：哲巴尔战斗+1","prereqs":["一件凶煞的商品"],"slots":[
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"zhebaer_adilai_zhebaer_9","name":"黑街的拳斗士？","trigger":"侠名≥6、哲巴尔空闲、完成《将军夜猎》","desc":"仪式，存续1天（逾期或检定失败3-5天后重置）。放主角+任意情报+幕后牌「熟悉的战斗方式」。检定社交+智慧≥3后再检定隐匿≥2：获「拳斗士的证明」、青铜「洞察」+1","prereqs":["将军夜猎"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"熟悉的战斗方式","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"幕后牌"}
+        ]},
+        {"id":"zhebaer_adilai_zhebaer_10","name":"极好的把柄","trigger":"寻思「拳斗士的证明」","desc":"抉择：要挟哲巴尔（需其空闲）→《您也不想别人知道吧》；呈给苏丹→1天后《刀剑问答·哲巴尔》；拿去黑街扬名→《黑街扬名》","prereqs":["黑街的拳斗士？"],"slots":[
+          {"card":"拳斗士的证明","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"zhebaer_adilai_zhebaer_11","name":"刀剑问答·哲巴尔","trigger":"在《权力的游戏》上贡「拳斗士的证明」1天后","desc":"仪式，存续2天（逾期死亡结局「伴君如伴虎」）。放杀戮或千夫所指/毒蛇毒液可跳过检定令哲巴尔死亡；检定我方战斗&体魄-哲巴尔(14)≥1：哲巴尔死亡、战斗+1、权势+1、获「勇者之心」；成功=0：死亡结局「不自量力」。此线哲巴尔死亡、无法入队","prereqs":["极好的把柄"],"slots":[
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"额外侠名+1"},
+          {"card":"千夫所指","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"与任意情报同槽，放置可跳过检定"},
+          {"card":"毒蛇毒液","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"与任意情报同槽，放置可跳过检定"}
+        ],"terminal":true},
+        {"id":"zhebaer_adilai_zhebaer_12","name":"黑街扬名","trigger":"在《极好的把柄》选“拿去黑街扬名”","desc":"仪式，存续1天。放拳斗士的证明（失去）：侠名+3","prereqs":["极好的把柄"],"slots":[
+          {"card":"拳斗士的证明","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":""}
+        ],"terminal":true},
+        {"id":"zhebaer_adilai_zhebaer_13","name":"您也不想别人知道吧","trigger":"在《极好的把柄》选“要挟哲巴尔”且哲巴尔空闲","desc":"仪式，存续1天。放哲巴尔，单选：要钱→获武器「将军的宝剑」、哲巴尔篇关闭；要支持→权势+3、支持+1、反对清零、哲巴尔篇关闭；要他成为同伴→2-3天后触发《公开的拳斗》","prereqs":["极好的把柄"],"slots":[
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"拳斗士的证明","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"单选槽位"}
+        ]},
+        {"id":"zhebaer_adilai_zhebaer_14","name":"公开的拳斗","trigger":"在《您也不想别人知道吧》要哲巴尔成为同伴2-3天后","desc":"仪式，存续4天（逾期哲巴尔篇关闭）。放哲巴尔+主角+任意情报。检定我方体魄&战斗-哲巴尔(14)：成功≥3哲巴尔入队、支持+1、反对清零、去除{苏丹的近卫}标签（近卫完美结局标志）、金币+4；成功<3哲巴尔仍入队但主角{受伤}","prereqs":["您也不想别人知道吧"],"slots":[
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ],"terminal":true}
+      ]
+    },
+    {
+      "id": "zhebaer_adilai_adilai",
+      "name": "阿迪莱入队线",
+      "summary": "第14-21天遭遇受伤的白犀牛，取得犀牛皮后经战书、王狮猎场考验，用犀牛皮换阿迪莱入队并培养至白银",
+      "steps": [
+        {"id":"zhebaer_adilai_adilai_1","name":"受伤的白犀牛","trigger":"第14-21天被动触发","desc":"仪式，长期存续。可放白银及以下「纵欲/征服」（纵欲须主角参与）。多段检定：取得「白犀牛皮」或「诅咒犀牛皮」则1天后触发《阿迪莱的战书》（入队线继续）；未获皮则触发《女战士的挑战》（阿迪莱无法入队、屠龙篇关闭）；纵欲分支检定4成功≥2则阿迪莱篇直接关闭","prereqs":[],"slots":[
+          {"card":"受伤的白犀牛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"与征服单选；纵欲必须主角参与"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"与纵欲单选"}
+        ]},
+        {"id":"zhebaer_adilai_adilai_2","name":"女战士的挑战","trigger":"在《受伤的白犀牛》未获「白犀牛皮」或「诅咒犀牛皮」","desc":"仪式，耗时0天。放阿迪莱+任意角色。检定我方战斗&体魄-阿迪莱(8)：成功≥2战斗+1、触发《处置阿迪莱1》；失败{受伤}、阿迪莱篇关闭","prereqs":["受伤的白犀牛"],"slots":[
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"zhebaer_adilai_adilai_3","name":"处置阿迪莱1","trigger":"《女战士的挑战》检定成功","desc":"仪式，长期存续。放阿迪莱+青铜及以下「杀戮/纵欲」：杀戮→阿迪莱死亡；纵欲→1-2天后触发《一件礼物，一个诅咒》；空置→支持+1、反对清零、获武器「阿迪莱的宝剑」","prereqs":["女战士的挑战"],"slots":[
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"与纵欲单选；杀戮则阿迪莱死亡"},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"与杀戮单选；纵欲触发《一件礼物，一个诅咒》"}
+        ]},
+        {"id":"zhebaer_adilai_adilai_4","name":"一件礼物，一个诅咒","trigger":"在任意仪式「纵欲」阿迪莱1-2天后","desc":"仪式，长期存续。放主角：阿迪莱死亡、获「阿迪莱的宝剑」","prereqs":["处置阿迪莱1","处置阿迪莱2"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ],"terminal":true},
+        {"id":"zhebaer_adilai_adilai_5","name":"阿迪莱的战书","trigger":"在《受伤的白犀牛》获「白犀牛皮/诅咒犀牛皮」1天后","desc":"仪式，耗时0天。放阿迪莱+任意角色：次日触发《王狮猎场》","prereqs":["受伤的白犀牛"],"slots":[
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"zhebaer_adilai_adilai_6","name":"王狮猎场","trigger":"完成《阿迪莱的战书》次日","desc":"仪式，存续3天（逾期阿迪莱支持清零、反对+2）。放阿迪莱+任意角色+白犀牛皮/诅咒犀牛皮/10金币。三项检定（生存/战斗/体魄对狮子）成功次数≥2：退回道具、1天后触发《处置阿迪莱2》；<2：失去道具、阿迪莱支持+1、阿迪莱篇关闭","prereqs":["阿迪莱的战书"],"slots":[
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"白犀牛皮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与诅咒犀牛皮/10金币单选；检定成功退回，失败失去"},
+          {"card":"诅咒犀牛皮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与白犀牛皮/10金币单选；检定成功退回，失败失去"}
+        ]},
+        {"id":"zhebaer_adilai_adilai_7","name":"处置阿迪莱2","trigger":"在《王狮猎场》检定成功次数≥2的1天后","desc":"仪式，长期存续。放阿迪莱：空置→支持+1、获「阿迪莱的宝剑」、篇关闭；杀戮→阿迪莱死亡；纵欲→《一件礼物，一个诅咒》；放白犀牛皮→阿迪莱入队、自带「传奇宝剑」；放诅咒犀牛皮→入队、自带「黑暗宝剑」；入队均10天后触发《少女审视自己1》。注意：阿迪莱需累积“战斗的痕迹”（10天内≥2、20天内≥5），不足会退场","prereqs":["王狮猎场"],"slots":[
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"杀戮则阿迪莱死亡"},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"纵欲触发《一件礼物，一个诅咒》"},
+          {"card":"白犀牛皮","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"放置则阿迪莱入队"},
+          {"card":"诅咒犀牛皮","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"放置则阿迪莱入队"}
+        ]},
+        {"id":"zhebaer_adilai_adilai_8","name":"少女审视自己1","trigger":"阿迪莱入队第10天、阿迪莱空闲","desc":"仪式，自启动。战斗的痕迹≥2：阿迪莱战斗+1、体魄+1、10天后触发《少女审视自己2》；<2：阿迪莱退场","prereqs":["处置阿迪莱2"],"slots":[
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"zhebaer_adilai_adilai_9","name":"少女审视自己2","trigger":"完成《少女审视自己1》10天后、阿迪莱空闲","desc":"仪式，自启动。战斗的痕迹≥5：阿迪莱战斗+1、体魄+1、提升为白银品级；<5：阿迪莱退场。本篇后接《大结局·屠龙篇》","prereqs":["少女审视自己1"],"slots":[
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ],"terminal":true}
+      ]
+    }
+  ]
+}

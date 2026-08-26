@@ -1,0 +1,127 @@
+{
+  "id": "siji_beiji",
+  "title": "朱娜&贾丽拉&夏玛&贝姬夫人篇",
+  "category": "character",
+  "characters": ["朱娜", "贾丽拉", "夏玛", "贝姬夫人"],
+  "routes": [
+    {
+      "id": "siji_beiji_jialila",
+      "name": "贾丽拉线",
+      "summary": "贾丽拉有激情且空闲时开启，经赎身/决斗走向收妾或保留事业两条分支。注意《欢愉之馆》优先级最高，妓女不空闲则个人事件永不触发",
+      "steps": [
+        {"id":"siji_beiji_jialila_1","name":"甜蜜皮鞭","trigger":"贾丽拉有{激情}（在《欢愉之馆》与她欢愉并检定成功获得）且空闲","desc":"仪式，存续1天（逾期4天后重置）。卡槽：贾丽拉+主角+4金币+任意情报，可用青铜及以下纵欲（成功时「妻子的不满」+1）。检定社交+体魄：成功≥2激情+1、达成一千零一夜「甜蜜皮鞭」，可能触发朱娜篇《边缘行者》、3-5天后可能触发《处理尸体》（需侠名≥5）；失败主角{受伤}、贾丽拉篇关闭","prereqs":[],"slots":[
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"失败时主角{受伤}、贾丽拉篇关闭"},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"检定成功时「妻子的不满」+1"}
+        ]},
+        {"id":"siji_beiji_jialila_2","name":"处理尸体","trigger":"侠名≥5、《甜蜜皮鞭》检定成功3-5天后","desc":"仪式，存续5天，逾期贾丽拉死亡。卡槽：贾丽拉+贵族的尸体+2名任意角色+任意情报，可用白银及以下杀戮。放杀戮：3号槽魅力+1、触发《决斗·贾丽拉》；不杀戮：权势≥5直接成功，否则检定隐匿+智慧≥5，成功3天后触发抉择《贾丽拉回来了》，失败贾丽拉死亡、恶名+1","prereqs":["甜蜜皮鞭"],"slots":[
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"逾期或不杀戮检定失败则贾丽拉死亡"},
+          {"card":"贵族的尸体","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"放杀戮触发《决斗·贾丽拉》"}
+        ]},
+        {"id":"siji_beiji_jialila_3","name":"决斗·贾丽拉","trigger":"在《处理尸体》放置「杀戮」","desc":"仪式，存续5天，逾期死亡结局「伴君如伴虎」。卡槽：家族武士+任意角色+任意情报；用千夫所指/毒蛇毒液可关闭检定但家族武士死亡、恶名+1。三轮检定（战斗/体魄），最终成功：家族武士死亡、权势+1、战斗+1、3天后触发《贾丽拉回来了》；失败我方死亡、贾丽拉篇关闭","prereqs":["处理尸体"],"slots":[
+          {"card":"家族武士","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"检定成功或关闭检定时家族武士死亡；检定失败我方死亡"},
+          {"card":"千夫所指","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"与毒蛇毒液任选：关闭检定，家族武士死亡、恶名+1"},
+          {"card":"毒蛇毒液","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"与千夫所指任选：关闭检定，家族武士死亡、恶名+1"}
+        ]},
+        {"id":"siji_beiji_jialila_4","name":"贾丽拉回来了","trigger":"《处理尸体》不杀戮并检定成功3天后，或《决斗·贾丽拉》检定成功3天后","desc":"抉择弹窗：选“收她做妾”触发《女王做妾》；选“保留她的事业”此后每5-8天触发一次《女王的朋友》","prereqs":["处理尸体"],"slots":[]},
+        {"id":"siji_beiji_jialila_5","name":"女王做妾","terminal":true,"trigger":"在《贾丽拉回来了》选“收她做妾”","desc":"仪式，长期存续。卡槽：贾丽拉+主角+20金币，可用青铜及以下奢靡/杀戮。杀戮：贾丽拉死亡；奢靡：贾丽拉入队、不再是{妓女}、主角魅力+1；空置同奢靡，额外「妻子的不满」+1","prereqs":["贾丽拉回来了"],"slots":[
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放杀戮卡则贾丽拉死亡"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"贾丽拉入队、不再是{妓女}、主角魅力+1；空置同奢靡但「妻子的不满」+1"},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"贾丽拉死亡"}
+        ]},
+        {"id":"siji_beiji_jialila_6","name":"女王的朋友","trigger":"在《贾丽拉回来了》选“保留她的事业”后每5-8天触发一次","desc":"仪式，自启动。卡槽：贾丽拉+随机男性贵族；可放密教思潮（限一次：「不洁的思绪」+1、贾丽拉成{密教徒}）和不高于该贵族品级的杀戮（限一次）。杀戮苏丹/主角：死亡结局「无名人之死」（杀苏丹达成「最最尊贵的肥羊」）；杀其他贵族：其死亡、恶名+1（奈费勒/奈布哈尼不加恶名）；对夏玛退回杀戮卡。不杀戮按对象给白银情报/金币+10等收益（仅《群龙无首》时可出苏丹）（可重复）","prereqs":["贾丽拉回来了"],"slots":[
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽为随机男性贵族（伊曼、失去万逝戒的苏丹除外）"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于2号槽贵族品级，限用一次；杀苏丹/主角为死亡结局「无名人之死」；对夏玛退回杀戮卡"}
+        ]}
+      ]
+    },
+    {
+      "id": "siji_beiji_zhuna",
+      "name": "朱娜线",
+      "summary": "需先在贾丽拉篇《甜蜜皮鞭》检定成功，朱娜有激情且空闲时开启，赎身后入队",
+      "steps": [
+        {"id":"siji_beiji_zhuna_1","name":"边缘行者","trigger":"朱娜空闲且有{激情}，且贾丽拉篇《甜蜜皮鞭》检定成功","desc":"仪式，存续1天（朱娜空闲时逾期重置）。卡槽：朱娜+主角+任意情报，可用白银及以下纵欲（成功时「妻子的不满」+1）。检定生存+体魄：成功≥2朱娜激情+1、3-5天后触发《为朱娜赎身》；失败死亡结局「欢愉的极致」、达成一千零一夜「珍珠泪」","prereqs":["甜蜜皮鞭"],"slots":[
+          {"card":"朱娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"检定失败为死亡结局「欢愉的极致」"},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"检定成功时「妻子的不满」+1"}
+        ]},
+        {"id":"siji_beiji_zhuna_2","name":"为朱娜赎身","terminal":true,"trigger":"侠名≥3、朱娜激情≥3且空闲，《边缘行者》检定成功3-5天后","desc":"仪式，存续10天，逾期5-10天后触发《畸情的呼唤》。卡槽：朱娜+主角+10金币+岩石奢靡/杀戮。杀戮：朱娜死亡；奢靡：朱娜入队、不再是{妓女}、主角魅力+1、达成一千零一夜「爱的寄托」；空置同奢靡，额外「妻子的不满」+1","prereqs":["边缘行者"],"slots":[
+          {"card":"朱娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放杀戮卡则朱娜死亡"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"朱娜入队、不再是{妓女}、主角魅力+1、达成「爱的寄托」；空置同奢靡但「妻子的不满」+1"},
+          {"card":"杀戮","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"朱娜死亡"}
+        ]},
+        {"id":"siji_beiji_zhuna_3","name":"畸情的呼唤","trigger":"《为朱娜赎身》逾期5-10天后、朱娜空闲","desc":"仪式，自启动。卡槽：朱娜+主角+任意情报。检定生存+体魄：成功≥2朱娜激情+1、「妻子的不满」+1、5-10天后重置本事件；失败死亡结局「欢愉的极致」、达成一千零一夜「珍珠泪」（可重复）","prereqs":["为朱娜赎身"],"slots":[
+          {"card":"朱娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"检定失败为死亡结局「欢愉的极致」"}
+        ]}
+      ]
+    },
+    {
+      "id": "siji_beiji_xiama",
+      "name": "夏玛线",
+      "summary": "侠名≥10、夏玛有激情且空闲时开启，三个抉择分支分别通向结婚入队、弑父夺位或死亡",
+      "steps": [
+        {"id":"siji_beiji_xiama_1","name":"郁郁寡欢的夏玛","trigger":"侠名≥10、夏玛有{激情}且空闲","desc":"抉择弹窗：选“我可以帮你杀了你父亲”触发《师出有名》；选“我可以纳你为妾室”触发《紧急结婚》；选“我们还是聊点别的吧”1天后触发《孤注一掷·夏玛》","prereqs":[],"slots":[]},
+        {"id":"siji_beiji_xiama_2","name":"紧急结婚","terminal":true,"trigger":"在《郁郁寡欢的夏玛》选“我可以纳你为妾室”","desc":"仪式，存续7天，逾期触发《孤注一掷·夏玛》。卡槽：夏玛+权势≥5的主角+30金币+白银及以下奢靡。结算：权势+1、夏玛入队、不再是{妓女}、「妻子的不满」+1","prereqs":["郁郁寡欢的夏玛"],"slots":[
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"需权势≥5"},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":""}
+        ]},
+        {"id":"siji_beiji_xiama_3","name":"孤注一掷·夏玛","trigger":"在《郁郁寡欢的夏玛》选“我们还是聊点别的吧”，或《紧急结婚》逾期","desc":"仪式，自启动。夏玛成为苏丹的宠妃、支持清零、反对+1，升为黄金品级成为{贵族}；3-5天后夏玛死亡、触发《夏玛的葬礼》","prereqs":["郁郁寡欢的夏玛"],"slots":[
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后3-5天夏玛死亡"}
+        ]},
+        {"id":"siji_beiji_xiama_4","name":"夏玛的葬礼","terminal":true,"trigger":"完成《孤注一掷·夏玛》3-5天后","desc":"仪式，存续7天，逾期贝姬夫人篇无法完美。卡槽：黄金品级装备/黄金品级读物/一大捧花束（失去）。结算：获奇珍「金猫战士雕像」（寻思可触发贝姬夫人篇《扩建黄金猫爬架》）","prereqs":["孤注一掷·夏玛"],"slots":[
+          {"card":"一大捧花束","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"或黄金品级装备/黄金品级读物，均失去"}
+        ]},
+        {"id":"siji_beiji_xiama_5","name":"师出有名","trigger":"在《郁郁寡欢的夏玛》选“我可以帮你杀了你父亲”","desc":"仪式，存续20天、耗时3天，逾期死亡结局「伴君如伴虎」。卡槽：夏玛的父亲+大领主的军队+任意部队+2名任意角色+任意情报+黄金及以下征服。检定我方战斗&体魄-敌方(20)：成功≥3杀父灭军、权势+3、金币+5、「谋反的意图」+1、获「大领主的骏马/佩剑/戒指」、1天后触发弹窗《推荐继承人》；失败我方全员死亡、1天后触发《怒火蔓延》","prereqs":["郁郁寡欢的夏玛"],"slots":[
+          {"card":"夏玛的父亲","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"检定成功后死亡"},
+          {"card":"大领主的军队","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"检定成功后死亡"},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":""}
+        ]},
+        {"id":"siji_beiji_xiama_6","name":"怒火蔓延","terminal":true,"trigger":"《师出有名》检定失败1天后、夏玛空闲","desc":"仪式，自启动。卡槽：夏玛+最多20金币（有多少吸多少）。结算：夏玛死亡、权势-1","prereqs":["师出有名"],"slots":[
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"夏玛死亡"}
+        ]},
+        {"id":"siji_beiji_xiama_7","name":"推荐继承人","trigger":"《师出有名》检定成功、夏玛空闲","desc":"抉择弹窗：选“当然是我继承”触发《我的主人》；选“让夏玛继承”触发《升华》","prereqs":["师出有名"],"slots":[]},
+        {"id":"siji_beiji_xiama_8","name":"我的主人","terminal":true,"trigger":"在《推荐继承人》选“当然是我继承”","desc":"仪式，长期存续。卡槽：夏玛+主角。主角提升为黄金品级、权势+3、获奇珍「金猫战士雕像」（可寻思触发贝姬夫人篇）；夏玛入队、品级降为青铜、成为{奴隶}、不再是{妓女}","prereqs":["推荐继承人"],"slots":[
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"入队、品级降为青铜、成为{奴隶}"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"siji_beiji_xiama_9","name":"升华","terminal":true,"trigger":"在《推荐继承人》选“让夏玛继承”","desc":"仪式，存续1天。权势+3、获奇珍「金猫战士雕像」、达成一千零一夜「升华」；夏玛提升至黄金品级、成为{贵族}、不再是{妓女}、支持+3、反对清零","prereqs":["推荐继承人"],"slots":[
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"提升至黄金品级、成为{贵族}"}
+        ]}
+      ]
+    },
+    {
+      "id": "siji_beiji_beiji",
+      "name": "贝姬夫人线",
+      "summary": "围绕金猫战士雕像与黄金鸟两件奇珍的养成线，让贝姬夫人参与两座建筑可使其升华为秘宝",
+      "steps": [
+        {"id":"siji_beiji_beiji_1","name":"扩建黄金猫爬架","trigger":"寻思「金猫战士雕像」（可在夏玛篇《夏玛的葬礼》/《我的主人》/《升华》获得），逾期可再次寻思","desc":"仪式，存续1天。卡槽：金猫战士雕像+9金币+黄金及以下奢靡。结算：消耗品「金猫战士」+1、触发《黄金猫爬架》、计入一千零一夜「奇珍之家」","prereqs":[],"slots":[
+          {"card":"金猫战士雕像","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"奢靡","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":""}
+        ]},
+        {"id":"siji_beiji_beiji_2","name":"黄金猫爬架","trigger":"完成《扩建黄金猫爬架》后每7天自动触发一次","desc":"仪式，耗时7天。放金猫战士雕像+3金币：灵视+1、「金猫战士」+1、重置本事件；放贝姬夫人：失去雕像、灵视+1、贝姬夫人被动穿戴「金猫之灵」（战斗4不可卸下），可能触发《贝姬夫人不见了》（可重复）","prereqs":["扩建黄金猫爬架"],"slots":[
+          {"card":"金猫战士雕像","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽放贝姬夫人时失去雕像"},
+          {"card":"贝姬夫人","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"与3金币二选一；参与后被动穿戴「金猫之灵」（战斗4不可卸下），可能触发《贝姬夫人不见了》"}
+        ]},
+        {"id":"siji_beiji_beiji_3","name":"黄金鸟","trigger":"在日常弹窗篇《怪异发明家》选“值得上等重的黄金”（跨篇章前置）","desc":"仪式，存续7天，逾期「谗言」+3。卡槽：黄金鸟+任意角色+30金币+黄金及以下奢靡。结算：获奇珍「黄金鸟」（驯兽、魅力8）；若上贡《权力的游戏》权势+5","prereqs":[],"slots":[
+          {"card":"黄金鸟","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":""}
+        ]},
+        {"id":"siji_beiji_beiji_4","name":"黄金鸟屋·扩建","trigger":"寻思「黄金鸟」，逾期可再次寻思","desc":"仪式，存续1天。卡槽：黄金鸟+5金币。结算：金骰子+1、触发《黄金鸟屋》、计入一千零一夜「奇珍之家」","prereqs":["黄金鸟"],"slots":[
+          {"card":"黄金鸟","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"siji_beiji_beiji_5","name":"黄金鸟屋","trigger":"完成《黄金鸟屋·扩建》后每7天自动触发一次","desc":"仪式，耗时7天。无人参与：第1/2次金骰子+1并重置，第3次黄金鸟退场、本仪式永久关闭；贝姬夫人参与：魔力+2、重投+1、金币+10、鸟退场永久关闭，可能触发《贝姬夫人不见了》；其他角色参与：金骰子+1、重置（可重复）","prereqs":["黄金鸟屋·扩建"],"slots":[
+          {"card":"黄金鸟","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"贝姬夫人参与或无人参与第3次时黄金鸟退场、仪式永久关闭"},
+          {"card":"贝姬夫人","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"参与：魔力+2、重投+1、金币+10，可能触发《贝姬夫人不见了》"}
+        ]},
+        {"id":"siji_beiji_beiji_6","name":"贝姬夫人不见了","terminal":true,"trigger":"使用贝姬夫人参与过《黄金猫爬架》且参与过《黄金鸟屋》","desc":"仪式，自启动、耗时3天。结算：贝姬夫人提升为黄金品级、体魄&战斗&生存+1、成为{秘宝}、更换立绘（超级形态）","prereqs":["黄金猫爬架","黄金鸟屋"],"slots":[
+          {"card":"贝姬夫人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"提升为黄金品级、成为{秘宝}"}
+        ]}
+      ]
+    }
+  ]
+}

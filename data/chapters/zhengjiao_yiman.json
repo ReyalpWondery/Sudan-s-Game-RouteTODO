@@ -1,0 +1,163 @@
+{
+  "id": "zhengjiao_yiman",
+  "title": "正教&伊曼篇",
+  "category": "character",
+  "characters": ["伊曼"],
+  "routes": [
+    {
+      "id": "zhengjiao_yiman_church",
+      "name": "正教仪式线",
+      "summary": "善名≥3开启的教会互助体系：救济日积累虔信、求助祭师解锁领受神恩与忏悔，获得祝福、折卡与各式增益",
+      "steps": [
+        {"id":"zhengjiao_yiman_church_1","name":"救济日","trigger":"善名≥3，每15天触发一次（需保持善名≥3）","desc":"仪式。放5金币+岩石杀戮/纵欲+任意正教思潮。不放苏丹卡：善名+1、思潮虔信+1（虔信累积3点可寻思触发《虔信的审视》升品级）；杀戮/纵欲：善名清零、恶名+3且本事件不再触发，并将导致铁头&小圆篇几乎所有事件关闭（可重复）","prereqs":[],"slots":[
+          {"card":"杀戮","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"与纵欲二选一；放置则善名清零、恶名+3，本事件不再触发"},
+          {"card":"纵欲","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"与杀戮二选一；放置则善名清零、恶名+3、「妻子的不满」+1，本事件不再触发"}
+        ]},
+        {"id":"zhengjiao_yiman_church_2","name":"神秘的援助","trigger":"善名≥3，每10-20天重置","desc":"仪式。所放卡牌不消耗：装备/情报获复制品，正教思潮虔信+1灵视+1，可消「妻子的不满」「罪证」，角色按身份获属性点。放「万逝戒」触发《以凡人的方式》（万逝戒来自安苏亚篇《静待时机》或阿图娜尔篇入宫线）（可重复）","prereqs":[],"slots":[
+          {"card":"万逝戒","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放置后触发《以凡人的方式》；本事件所放卡牌均不被消耗"},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放置则「妻子的不满」-1"},
+          {"card":"罪证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放置则「罪证」-1"}
+        ]},
+        {"id":"zhengjiao_yiman_church_3","name":"以凡人的方式","trigger":"在《神秘的援助》放置「万逝戒」","desc":"仪式。放玛希尔+乙太(失去)+7金币+主角+万逝戒(失去)；再放「革命的计划」获「亘誓戒·变革」、放「星神的信仰」获「亘誓戒·星神」（魔力5，可在大结局·革命篇《果实》作新政权象征物）","prereqs":["神秘的援助"],"slots":[
+          {"card":"玛希尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"乙太","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"失去"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"万逝戒","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"失去"},
+          {"card":"革命的计划","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与星神的信仰二选一；获「亘誓戒·变革」(魅力2战斗2魔力5改革3)"},
+          {"card":"星神的信仰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与革命的计划二选一；获「亘誓戒·星神」(体魄2社交2魔力5传统3)"}
+        ]},
+        {"id":"zhengjiao_yiman_church_4","name":"求助祭师","trigger":"折断第2张苏丹卡后：梅姬存活则2天后触发，已死则立即触发","desc":"剧情弹窗。1-2天后触发《向教会求助》","prereqs":[],"slots":[]},
+        {"id":"zhengjiao_yiman_church_5","name":"向教会求助","trigger":"完成《求助祭师》1-2天后，未触发《与正教决裂》","desc":"仪式。放伊曼+主角/梅姬。「纯净的思想」+1、灵视+1；2天后触发《领受神恩》、7天内触发《忏悔》，可能触发《复原的神迹》《净化之火》《纯净者的启示》","prereqs":["求助祭师"],"slots":[
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与梅姬二选一"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与主角二选一"}
+        ]},
+        {"id":"zhengjiao_yiman_church_6","name":"虔信的审视","trigger":"寻思任意「正教思潮」（可再次寻思触发）","desc":"仪式。角色&思潮虔信合计≥3：消耗所有虔信、灵视+1，该思潮品级提升一级（纯净的思想→触碰洁净→赎罪祈愿→完美世界）（可重复）","prereqs":[],"slots":[
+          {"card":"正教思潮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；任意品级，不同品级有差分文本"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"zhengjiao_yiman_church_7","name":"忏悔","trigger":"完成《向教会求助》后每7天触发一次，未触发《与正教决裂》","desc":"仪式。3金币+正教思潮+祭品：圣主像/欲蛇之纱虔信+2，多数追随者虔信+1，放密教徒则该角色死亡；穿「欲蛇之纱」的角色会失去它（派阿里木来可拿回）。1天后触发《协助正教》系列事件（可重复）","prereqs":["向教会求助"],"slots":[
+          {"card":"正教思潮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽；祭品生效则该思潮虔信提升"},
+          {"card":"圣主像","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽祭品选项；思潮虔信+2"},
+          {"card":"欲蛇之纱","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽祭品选项；思潮虔信+2；角色穿戴时也会失去，此后再派阿里木可拿回"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽祭品选项（非双胞胎）；灵视+1、思潮虔信+1"},
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"魔力+1、灵视+1、思潮虔信+1"},
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"非奴隶；夏玛虔信+1、思潮虔信+1"},
+          {"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"盖斯{受伤}、盖斯虔信+1、思潮虔信+1"},
+          {"card":"鲁梅拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"灵视+1、思潮虔信+1"},
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"阿迪莱魔力+1、思潮虔信+1"},
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"热娜灵感+1、思潮虔信+1"},
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"金币+1、思潮虔信+1；可拿回「欲蛇之纱」"},
+          {"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"金币+1、思潮虔信+1"},
+          {"card":"法图娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"法图娜{受伤}、思潮虔信+1"},
+          {"card":"哈桑","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"无奖惩"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"无奖惩"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"马尔基娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"蒙面战士","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"朱娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"哲瓦德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"扎齐伊","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"娜依拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"玛希尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"杰莫尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"哈马尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"},
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"思潮虔信+1"}
+        ]},
+        {"id":"zhengjiao_yiman_church_8","name":"领受神恩","trigger":"完成《向教会求助》2天后每2天触发一次；后续需在《命运商店》开启「神的侧身像」","desc":"仪式。伊曼(入队/死亡则为纯净者祭司)+5或10金币+角色，可放白银及以下杀戮/奢靡/纵欲。无苏丹卡放10金币：获{祝福}、治愈诅咒、触发《协助正教》系列；放密教徒则其死亡；流浪剑客触发其篇《敦请圣像》。放苏丹卡：杀戮→伊曼死亡并触发《与正教决裂》；纵欲或奢靡+主角已受祝福→1天后触发伊曼线《神啊，为什么》（纵欲是伊曼入队唯一途径）（可重复）","prereqs":["向教会求助"],"slots":[
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"若正参与其他事件则本事件暂停；已入队或死亡则代以纯净者祭司"},
+          {"card":"纯净者祭司","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"伊曼已入队或死亡时代替伊曼"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"须白银及以下；放置则伊曼死亡、获「罪孽:无辜者之血」、触发《与正教决裂》"},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"须白银及以下且另放10金币；主角已受祝福则1天后触发《神啊，为什么》"},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"须白银及以下；主角已受祝福则不折卡、1天后触发《神啊，为什么》（伊曼入队唯一途径）；未受祝福则{受伤}"}
+        ]},
+        {"id":"zhengjiao_yiman_church_9","name":"复原的神迹","trigger":"善名≥10、已触发《向教会求助》","desc":"仪式。放任意苏丹卡将其倒计时重置为7天，随后重置本仪式；累计运行3次后关闭","prereqs":["向教会求助"],"slots":[
+          {"card":"苏丹卡","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"任意苏丹卡；倒计时重置为7天，累计运行3次后本仪式关闭"}
+        ]},
+        {"id":"zhengjiao_yiman_church_10","name":"净化之火","trigger":"善名≥20、已触发《向教会求助》","desc":"仪式。折黄金苏丹卡获奖励：纵欲→饰品「恋人之心」(魅力8)、杀戮→武器「自戕者之匕」(社交8)、征服→饰品「王者之冕」(隐匿8)、奢靡→30金币；白银及以下四卡仅折卡","prereqs":["向教会求助"],"slots":[
+          {"card":"纵欲","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"黄金折卡获饰品「恋人之心」(魅力8)；白银及以下仅折卡"},
+          {"card":"杀戮","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"黄金折卡获武器「自戕者之匕」(社交8)；白银及以下仅折卡"},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"黄金折卡获饰品「王者之冕」(隐匿8)；白银及以下仅折卡"},
+          {"card":"奢靡","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"黄金折卡获30金币；白银及以下仅折卡"}
+        ]},
+        {"id":"zhengjiao_yiman_church_11","name":"协助正教系列","trigger":"完成《忏悔》或以10金币+无苏丹卡完成《领受神恩》1天后，从系列事件随机触发一个（同系列桌面限存一个）","desc":"一组仪式，存续3天耗时3天，逾期无奖惩。分别需社交/体魄/智慧/魅力≥5的非怪物非动物角色，结算1号槽虔信+1（可重复）","prereqs":["忏悔","领受神恩"],"slots":[]},
+        {"id":"zhengjiao_yiman_church_12","name":"监守自盗","trigger":"玛希尔篇《偷窃圣血》全部检定成功、幕后牌「神的乙太」≥2、侠名≥9、恶名<10、持有3级及以上正教思潮后，加入《协助正教》随机池","desc":"仪式。放魅力&战斗≥5角色+正教思潮：「乙太」+1、「神的乙太」-1；玛希尔参与则各±2；{污染者}拜玲耶参与则其死亡且「神的乙太」清零。幕后「神的乙太」共20张，偷到剩1张后不再触发（可重复）","prereqs":["忏悔","领受神恩"],"slots":[]}
+      ]
+    },
+    {
+      "id": "zhengjiao_yiman_ayman",
+      "name": "伊曼入队线",
+      "summary": "受祝福后在《领受神恩》放纵欲开启，经幽会或炎日天平审判让伊曼入队；放邪神面容可直接拉他堕入密教",
+      "steps": [
+        {"id":"zhengjiao_yiman_ayman_1","name":"神啊，为什么","trigger":"主角受{祝福}后，在《领受神恩》放「奢靡/纵欲」1天后","desc":"仪式，存续7天（逾期伊曼线关闭）。放伊曼+主角+任意神的面容+正教/密教思潮。奢靡触发时放密教思潮+神的面容→《与正教决裂》；纵欲触发时主角魅力≥8+“正教思潮+1-2级邪神的面容”或“密教思潮+1-4级正神的面容”→触发《密室中的祈祷》且不再触发《领受神恩》；其余组合多为纯剧情或决裂","prereqs":["领受神恩"],"slots":[
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"zhengjiao_yiman_ayman_2","name":"密室中的祈祷","trigger":"在《领受神恩》放「纵欲」，且主角魅力≥8在《神啊，为什么》放“正教思潮+1-2级邪神的面容”或“密教思潮+1-4级正神的面容”","desc":"仪式，存续3天（逾期伊曼线关闭）。放伊曼+主角+白银及以下纵欲。3天后触发《秘密幽会》；纵欲结算：伊曼激情+1、善名/权势-1、恶名+1、获「罪孽:欲望」(唯一)","prereqs":["领受神恩","神啊，为什么"],"slots":[
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；纵欲结算：伊曼激情+1、善名/权势-1、恶名+1、获「罪孽:欲望」(唯一)"}
+        ]},
+        {"id":"zhengjiao_yiman_ayman_3","name":"秘密幽会","trigger":"完成《密室中的祈祷》","desc":"仪式。检定两人智慧&隐匿&侠名-权势：第一次成功≥3得白银「秘密」、第二次≥5得黄金「秘氛」、第三次≥7伊曼入队；任意失败触发《幽会被抓》。放3-4级邪神的面容：关闭检定、伊曼直接入队并成为{密教徒}获{黑暗知识}魔力+3，但触发《与正教决裂》","prereqs":["密室中的祈祷"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"邪神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"须3-4级；放置则关闭检定，伊曼直接入队并成为{密教徒}、获{黑暗知识}、魔力+3、魅力+3，触发《与正教决裂》"}
+        ]},
+        {"id":"zhengjiao_yiman_ayman_4","name":"幽会被抓","trigger":"在《秘密幽会》检定失败","desc":"抉择弹窗：阻止→主角被抓走受刑；放任→伊曼被抓走受刑；均触发《炎日天平》","prereqs":["秘密幽会"],"slots":[]},
+        {"id":"zhengjiao_yiman_ayman_5","name":"炎日天平","trigger":"完成《幽会被抓》","desc":"仪式，连续3天审判检定。受刑者体魄检定成功=0：主角→死亡结局「无名人之死」，伊曼→伊曼死亡且不再触发《领受神恩》。放邪神的面容获「密神的庇护」（折磨清零）：伊曼受刑通过→伊曼入队成{密教徒}并触发《与正教决裂》；主角受刑通过→触发《与正教决裂》《奇怪的信》。放正神的面容：主角受刑→通过并触发《在茉莉花香中⋯》；伊曼受刑→伊曼死亡获武器「纯净之刃」；已有密神庇护再放正神面容→死亡结局「无名人之死」。通过审判达成一千零一夜「炎日天平」","prereqs":["幽会被抓"],"slots":[
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与主角二选一受刑，由《幽会被抓》的抉择决定"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与伊曼二选一受刑，由《幽会被抓》的抉择决定"},
+          {"card":"三日审判","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"×3；三日审判的计数牌"},
+          {"card":"折磨","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"与密神的庇护同槽；检定失败累积，每张使受刑者体魄-3"},
+          {"card":"密神的庇护","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"与折磨同槽；由放邪神的面容检定获得（临时体魄+5、折磨清零），持有则通过审判的结果改变"}
+        ]},
+        {"id":"zhengjiao_yiman_ayman_6","name":"在茉莉花香中⋯","trigger":"完成《炎日天平》且未生成「密神的庇护」1天后；或主角受刑时放入「正神的面容」1天后","desc":"仪式，存续3天（逾期伊曼线失败）。放伊曼+主角：伊曼入队；若主角在《炎日天平》受刑，伊曼获{命运的羁绊}","prereqs":["炎日天平"],"terminal":true,"slots":[
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"zhengjiao_yiman_ayman_7","name":"奇怪的信","trigger":"主角在《炎日天平》受刑、有「密神的庇护」并通过审判","desc":"剧情弹窗：金骰子+3，正教篇·伊曼线失败","prereqs":["炎日天平"],"terminal":true,"slots":[]}
+      ]
+    },
+    {
+      "id": "zhengjiao_yiman_split",
+      "name": "与正教决裂线",
+      "summary": "杀害伊曼或勾结邪神后与正教决裂，教会转为持续骚扰主角的“正教的干扰”系列",
+      "steps": [
+        {"id":"zhengjiao_yiman_split_1","name":"与正教决裂","trigger":"满足任一：在《残忍的牺牲》杀非密教徒伊曼、在《领受神恩》杀戮伊曼、在《神啊，为什么》/《秘密幽会》放置邪神的面容组合、伊曼在《炎日天平》受刑放邪神面容通过审判，或密教篇《破除洁净》《命运之死》《香喷喷的祭品》中的对应行为","desc":"剧情弹窗：正教&伊曼篇几乎所有事件关闭，触发《不再被认可的信仰》","prereqs":[],"slots":[]},
+        {"id":"zhengjiao_yiman_split_2","name":"不再被认可的信仰","trigger":"完成剧情弹窗《与正教决裂》","desc":"仪式，自启动。失去手牌中的正教思潮；开启《正教的干扰》系列：每4-8天随机触发《温和拘禁》《念念不忘》《全民公敌》之一","prereqs":["与正教决裂"],"slots":[
+          {"card":"正教思潮","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"手牌中的正教思潮全部失去"}
+        ]},
+        {"id":"zhengjiao_yiman_split_3","name":"温和拘禁","trigger":"完成《不再被认可的信仰》后每4-8天60%概率触发","desc":"仪式，自启动。放1-2名非怪物/非动物追随者纯软禁；4-8天后随机再触发一个《正教的干扰》（可重复）","prereqs":["不再被认可的信仰"],"slots":[]},
+        {"id":"zhengjiao_yiman_split_4","name":"念念不忘","trigger":"完成《不再被认可的信仰》后每4-8天20%概率触发","desc":"仪式，自启动。放主角：「疯狂」+1；4-8天后随机再触发一个《正教的干扰》（可重复）","prereqs":["不再被认可的信仰"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"「疯狂」+1"}
+        ]},
+        {"id":"zhengjiao_yiman_split_5","name":"全民公敌","trigger":"完成《不再被认可的信仰》后每4-8天20%概率触发","desc":"仪式。检定社交+魅力：成功<5则善名-2、侠名-2、权势-2；之后4-8天随机再触发一个《正教的干扰》（可重复）","prereqs":["不再被认可的信仰"],"slots":[]}
+      ]
+    },
+    {
+      "id": "zhengjiao_yiman_light",
+      "name": "神光线",
+      "summary": "灵视≥8窥见纯净者光辉后顺藤摸瓜，参加神光检定会评审候选人，获知正教真相并偷取神的乙太",
+      "steps": [
+        {"id":"zhengjiao_yiman_light_1","name":"纯净者的光辉","trigger":"灵视≥8、持有「触碰洁净/赎罪祈愿/完美世界」，未触发《与正教决裂》《炎日天平》《神圣的烙印》，主角未成为{教领}","desc":"抉择弹窗：“我应当追根究底”→灵视+1、触发《灵光之试》；“肯定是我看错了”→灵视-1、神光线关闭","prereqs":[],"slots":[]},
+        {"id":"zhengjiao_yiman_light_2","name":"灵光之试","trigger":"在《纯净者的光辉》选“我应当追根究底”","desc":"仪式，存续3天（逾期神光线关闭）。放主角+正教思潮：善名+1、灵视+1、思潮虔信+1；可能触发《神光检定会邀请》","prereqs":["纯净者的光辉"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"正教思潮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"善名+1、灵视+1、该思潮虔信+1"}
+        ]},
+        {"id":"zhengjiao_yiman_light_3","name":"神光检定会邀请","trigger":"持有「赎罪祈愿/完美世界」、权势≥15、完成《灵光之试》，未触发《与正教决裂》《炎日天平》","desc":"抉择弹窗：接受→任务品「晋升的认可」+2、触发《选光者》；拒绝→神光线关闭","prereqs":["灵光之试"],"slots":[]},
+        {"id":"zhengjiao_yiman_light_4","name":"选光者","trigger":"在《神光检定会邀请》选“接受”","desc":"仪式，存续3天（逾期神光线关闭）。放正教思潮，用「晋升的认可」对四名候选人四选二：无知少年认可→5天后其死亡、获知正教真相；贵族子弟认可→「谗言」+1权势-1并获知真相（不认可则金币+10权势+1）；富家子弟认可→金币+4、5-10天后触发《神之硕鼠》。选无知少年或贵族子弟时思潮虔信+1","prereqs":["神光检定会邀请"],"slots":[
+          {"card":"正教思潮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"选无知少年或贵族子弟时虔信+1（最多+1）"},
+          {"card":"晋升的认可","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"四选二放入表示认可对应候选人"}
+        ]},
+        {"id":"zhengjiao_yiman_light_5","name":"神之硕鼠","trigger":"在《选光者》认可富家子弟5-10天后","desc":"仪式。放神的乙太+金币（侠名<13须20金币、≥13只须10金币、主角是{教领}则免金币）：「神的乙太」-1、「乙太」+1。幕后「神的乙太」共20张，偷到剩1张后不再触发（可重复）","prereqs":["选光者"],"slots":[
+          {"card":"神的乙太","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"结算「神的乙太」-1、「乙太」+1；幕后共20张，剩1张后不再触发"}
+        ]}
+      ]
+    }
+  ]
+}

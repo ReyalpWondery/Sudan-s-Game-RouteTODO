@@ -1,0 +1,152 @@
+{
+  "id": "tietou",
+  "title": "铁头篇",
+  "category": "character",
+  "characters": ["铁头", "小圆"],
+  "routes": [
+    {
+      "id": "tietou_canhe",
+      "name": "餐盒线",
+      "summary": "从《救济日》后的施粥与石餐盒生意展开，含赏赐、莓果抉择及巴拉特收购的赚钱支线",
+      "steps": [
+        {"id":"tietou_canhe_1","name":"让小圆来做粥","trigger":"善名≥5、铁头未堕落、完成过正教篇《救济日》且未在其中纵欲/杀戮、未强迫小圆；寻思头顶惊叹号的「铁头」","desc":"抉择弹窗：选“那就换小圆来做”谗言+1、触发《美味的救济日》；选“你是在说什么笑话么”权势+1","prereqs":[],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"tietou_canhe_2","name":"美味的救济日","trigger":"在《让小圆来做粥》选“那就换小圆来做”、桌面上不存在《救济日》","desc":"仪式，存续3天。卡槽：5金币+小圆+铁头。检定智慧+战斗：成功≥2小圆智慧+1、铁头战斗+1、善名+1；成功<2小圆社交+1、铁头战斗+1、侠名+1。检定前小圆魅力+1、虔信+1","prereqs":["让小圆来做粥"],"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"5枚"},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"tietou_canhe_3","name":"铁头的餐盒","trigger":"善名≥9、未在《救济日》纵欲/杀戮、未强迫小圆；寻思头顶惊叹号的「铁头」","desc":"抉择弹窗：选“我想要你这个”获「石餐盒」+1、触发《赏赐》、3天后可能触发《巴拉特收货》；选“能多做一些么?”触发《大量石餐盒》、3天后触发《餐盒收购》；选“你竟敢偷窃我的石头”善名-1","prereqs":[],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"tietou_canhe_4","name":"赏赐","trigger":"在《铁头的餐盒》选“我想要你这个”","desc":"仪式，存续3天，逾期餐盒线关闭。放1金币：1天后触发抉择弹窗《红色的莓果》","prereqs":["铁头的餐盒"],"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"1枚"}
+        ]},
+        {"id":"tietou_canhe_5","name":"红色的莓果","trigger":"完成《赏赐》1天后","desc":"抉择弹窗：选“赦免他们”善名+1、1天后可能触发《让我尝尝》；选“小惩大诫”岩石「秘密」+1；选“你的罪该死”触发《背叛和逃亡》（铁头将成为大敌）；选“有个地方可以吃到更大更甜蜜的果实”触发《巨大的玩具》（通往铁头堕落结局）","prereqs":["赏赐"],"slots":[]},
+        {"id":"tietou_canhe_6","name":"让我尝尝","trigger":"在《红色的莓果》选“赦免他们”1天后；铁头在队、善名≥3；寻思头顶惊叹号的「小圆」","desc":"仪式，存续3天。卡槽：小圆+主角+2金币，可放梅姬/铁头（差分文本）。结算：所有参与角色体魄+1","prereqs":["红色的莓果"],"slots":[
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"2枚"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放置有差分文本"},
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放置有差分文本"}
+        ]},
+        {"id":"tietou_canhe_7","terminal":true,"name":"背叛和逃亡","trigger":"在《红色的莓果》选“你的罪该死”","desc":"仪式，自启动耗时1天。卡槽：铁头+小圆。触发《铁头成为大敌》；小圆提升为青铜品级、体魄/魅力/智慧/生存+1","prereqs":["红色的莓果"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"tietou_canhe_8","terminal":true,"name":"巨大的玩具","trigger":"在《红色的莓果》选“有个地方可以吃到更大更甜蜜的果实”","desc":"仪式，存续3天。卡槽：贾丽拉/娜依拉+铁头+主角，可放白银及以下「纵欲」（无法折卡、「妻子的不满」+1、恶名+1）。结算：铁头堕落（隐藏标记）——此后关闭《让小圆来做粥》《沙尘往事》及其后续，可传密教、可在《阁楼里熟悉的笑声》充当妓女","prereqs":["红色的莓果"],"slots":[
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与娜依拉二选一"},
+          {"card":"娜依拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与贾丽拉二选一"},
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"放入无法折卡、「妻子的不满」+1、恶名+1"}
+        ]},
+        {"id":"tietou_canhe_9","name":"巴拉特收货","trigger":"铁头在队、巴拉特已出场且空闲（见巴拉特篇）；在《铁头的餐盒》选“我想要你这个”3天后","desc":"抉择弹窗：选“答应”触发《石餐盒》；选“婉拒”青铜「机遇」+1","prereqs":["铁头的餐盒"],"slots":[]},
+        {"id":"tietou_canhe_10","name":"石餐盒","trigger":"在《巴拉特收货》选“答应”","desc":"仪式，存续2天耗时2天。卡槽：铁头。结算：金币+4、重置本事件（可重复）","prereqs":["巴拉特收货"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"tietou_canhe_11","name":"大量石餐盒","trigger":"在《铁头的餐盒》选“能多做一些么?”","desc":"仪式，存续3天耗时8天。卡槽：铁头。结算：「石餐盒」+3；此后若完美完成《餐盒收购》本事件将被重置（可重复）","prereqs":["铁头的餐盒"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"tietou_canhe_12","name":"餐盒收购","trigger":"铁头在队、巴拉特已出场且空闲（见巴拉特篇）；在《铁头的餐盒》选“能多做一些么?”3天后","desc":"仪式，存续14天。卡槽：要卖1/2/3个石餐盒——1个金币+2、事件关闭；2个金币+5、事件关闭；3个金币+9、触发《大量石餐盒》、6天后重置本事件（可重复）","prereqs":["铁头的餐盒"],"slots":[
+          {"card":"石餐盒","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"出售1-3个：1个金币+2、2个金币+5、3个金币+9并触发《大量石餐盒》、6天后重置本事件"}
+        ]}
+      ]
+    },
+    {
+      "id": "tietou_yanhui",
+      "name": "宴会与骨笛线",
+      "summary": "善名≥16开启沙尘往事，经宴会提升铁头属性，最终获得部队「蛮人社团」",
+      "steps": [
+        {"id":"tietou_yanhui_1","name":"沙尘往事","trigger":"善名≥16、铁头未堕落、完成《让小圆来做粥》《铁头的餐盒》、未在《救济日》纵欲/杀戮、未强迫小圆；寻思头顶惊叹号的「铁头」","desc":"仪式，存续1天。卡槽：铁头，可放「弑君的计划」换「免于恐惧的自由」+1。结算：铁头魅力+2、战斗+1、智慧+1，3天后触发抉择弹窗《我在等剩饭》","prereqs":["让小圆来做粥","铁头的餐盒"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"弑君的计划","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放入获「免于恐惧的自由」+1"}
+        ]},
+        {"id":"tietou_yanhui_2","name":"我在等剩饭","trigger":"铁头未堕落、未强迫小圆、未在《救济日》纵欲/杀戮；铁头空闲、完成《沙尘往事》3天后","desc":"抉择弹窗：选“跟我入席吧”触发《主人的宴会》；选“把仆人们都叫来”触发《所有人的宴会》；选“那你等着吧”权势+1","prereqs":["沙尘往事"],"slots":[]},
+        {"id":"tietou_yanhui_3","name":"主人的宴会","trigger":"在《我在等剩饭》选“跟我入席吧”","desc":"仪式，自启动耗时1天。卡槽：铁头。结算：铁头社交+2、体魄+1、权势+1；可能触发《骆驼骨笛》","prereqs":["我在等剩饭"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"tietou_yanhui_4","name":"所有人的宴会","trigger":"在《我在等剩饭》选“把仆人们都叫来”","desc":"仪式，长期存续耗时1天。卡槽：主角+铁头+任意角色（梅姬/小圆/快脚有差分文本）。结算：全员社交+1；可能触发《骆驼骨笛》","prereqs":["我在等剩饭"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"tietou_yanhui_5","name":"骆驼骨笛","trigger":"侠名≥20、铁头未堕落、未在《救济日》纵欲/杀戮、未强迫小圆；完成小圆篇《郁郁寡欢》或《主人的宴会》或《所有人的宴会》；寻思头顶惊叹号的「铁头」","desc":"剧情弹窗。结算：获「精致骆驼骨笛」、铁头获{命运的羁绊}","prereqs":["主人的宴会","所有人的宴会"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"tietou_yanhui_6","terminal":true,"name":"吹响骨笛","trigger":"寻思「精致骆驼骨笛」、铁头在队","desc":"仪式，长期存续耗时1天。卡槽：精致骆驼骨笛+8金币。结算：获部队「蛮人社团」（此后若铁头离队，「蛮人社团」也会离队）","prereqs":["骆驼骨笛"],"slots":[
+          {"card":"精致骆驼骨笛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发（卡槽原文作「精制骆驼骨笛」）"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"8枚"}
+        ]}
+      ]
+    },
+    {
+      "id": "tietou_dadi",
+      "name": "大敌线",
+      "summary": "对铁头/小圆纵欲杀戮或在莓果事件重罚后铁头成为大敌，进入循环的铁头大敌战，可斩杀铁头或小圆",
+      "steps": [
+        {"id":"tietou_dadi_1","name":"铁头成为大敌","trigger":"对铁头使用「纵欲」；或铁头未堕落时对小圆使用「杀戮/纵欲」（在《无法拒绝的安慰》纵欲小圆除外）；或完成《背叛和逃亡》","desc":"剧情弹窗。结算：铁头离队、小圆离队、铁头成为{大敌}、触发《招募手下》；铁头提升为白银品级、体魄/魅力/智慧/生存+2（只有从小圆篇《背叛和逃亡》进入大敌线，小圆才会升级）","prereqs":["背叛和逃亡"],"slots":[]},
+        {"id":"tietou_dadi_2","name":"招募手下","trigger":"完成《铁头成为大敌》；《铁头大敌战》运行期间47%概率触发","desc":"铁头大敌战仪式，存续1天，逾期自启动。卡槽：铁头+小圆/蛮人社团/盗贼团伙/铁头的优势+任意角色/部队/情报。检定智慧&隐匿：成功≥5触发《突袭贫民窟》；成功≥3侠名+1、「铁头的优势」-1；成功=0「铁头的优势」+1；未≥5则3-5天后随机再触发一个《铁头大敌战》","prereqs":["铁头成为大敌"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"蛮人社团","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"盗贼团伙","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"铁头的优势","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"每张战斗+1生存+1"}
+        ]},
+        {"id":"tietou_dadi_3","name":"窥视财物","trigger":"《铁头大敌战》运行期间17.5%概率触发","desc":"铁头大敌战仪式，存续1天，逾期自启动。检定体魄&隐匿：成功≥5触发《突袭贫民窟》；成功≥3侠名+1、「铁头的优势」-1；成功=0触发《这不算偷》；未≥5则3-5天后随机再触发一个《铁头大敌战》","prereqs":["铁头成为大敌"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"蛮人社团","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"盗贼团伙","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"铁头的优势","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"每张战斗+1生存+1"}
+        ]},
+        {"id":"tietou_dadi_4","name":"这不算偷","trigger":"《窥视财物》检定为0或空置所有槽位","desc":"仪式，存续1天，逾期自启动。卡槽：铁头+你的随机书籍/装备（失去）+小圆+3金币（失去）（即使小圆不在，铁头一个人也能偷两件）。按被盗物品结算：战斗/体魄≥1的装备归铁头、<1的归小圆、读物使小圆智慧+1、金币纯剧情","prereqs":["窥视财物"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"3枚（失去）"}
+        ]},
+        {"id":"tietou_dadi_5","name":"伺机伤人","trigger":"《铁头大敌战》运行期间17.5%概率触发","desc":"铁头大敌战仪式，存续1天，逾期自启动。检定战斗&隐匿：成功≥5触发《突袭贫民窟》；成功≥3「蛮人社团&盗贼团伙」战斗-1、侠名+1、「铁头的优势」-1；成功=0触发《受害者》；未≥5则3-5天后随机再触发一个《铁头大敌战》","prereqs":["铁头成为大敌"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"蛮人社团","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"盗贼团伙","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"铁头的优势","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"每张战斗+1生存+1"}
+        ]},
+        {"id":"tietou_dadi_6","name":"受害者","trigger":"在《伺机伤人》逾期或检定为0","desc":"仪式，自启动耗时1天。卡槽：任意追随者——其战斗≥3则{受伤}、侠名+1；战斗<3则追随者死亡、权势-1","prereqs":["伺机伤人"],"slots":[]},
+        {"id":"tietou_dadi_7","name":"暗中破坏","trigger":"《铁头大敌战》运行期间12%概率触发","desc":"铁头大敌战仪式，存续1天，逾期自启动。检定体魄&隐匿：成功≥5触发《突袭贫民窟》；成功≥3侠名+1、「铁头的优势」-1；成功=0《治理家业》暂停3天；未≥5则3-5天后随机再触发一个《铁头大敌战》","prereqs":["铁头成为大敌"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"蛮人社团","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"盗贼团伙","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"铁头的优势","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"每张战斗+1生存+1"}
+        ]},
+        {"id":"tietou_dadi_8","name":"无谋的复仇","trigger":"《铁头大敌战》运行期间6%概率触发","desc":"铁头大敌战仪式，存续1天，逾期自启动。检定智慧&隐匿：成功≥5触发《突袭贫民窟》；成功≥3「蛮人社团&盗贼团伙」战斗-1、侠名+1、「铁头的优势」-1；成功=0且主角空闲触发《孤注一掷》；未≥5则3-5天后随机再触发一个《铁头大敌战》","prereqs":["铁头成为大敌"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"蛮人社团","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"盗贼团伙","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"铁头的优势","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"每张战斗+1生存+1"}
+        ]},
+        {"id":"tietou_dadi_9","terminal":true,"name":"孤注一掷","trigger":"在《无谋的复仇》逾期或检定为0时，主角空闲","desc":"仪式，存续3天，逾期自启动。卡槽：铁头+主角+任意追随者/部队/情报+青铜及以下「杀戮」。成功≥1：铁头死亡、小圆死亡、蛮人社团&盗贼团伙死亡、权势+3、侠名+3、获「铁头的拳套」；成功=0：死亡结局「无名人之死」","prereqs":["无谋的复仇"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"蛮人社团","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"盗贼团伙","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"铁头的优势","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"每张战斗+1生存+1"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":""}
+        ]},
+        {"id":"tietou_dadi_10","name":"突袭贫民窟","trigger":"在任一《铁头大敌战》（招募手下/窥视财物/伺机伤人/暗中破坏/无谋的复仇）检定≥5","desc":"仪式，存续3天，逾期3-5天后随机再触发一个《铁头大敌战》。卡槽：铁头+主角+任意追随者/部队/情报+青铜及以下「杀戮/征服」。成功≥3：铁头死亡、蛮人社团&盗贼团伙死亡、获「铁头的拳套」，无苏丹卡/杀戮则权势+3侠名+3、征服则权势+3；成功≥1：「铁头的优势」清零、10天后再触发大敌战；成功=0：死亡结局「无名人之死」。若小圆参与此战且检定≥1：小圆死亡、获读物「小圆的日记」（生存1）","prereqs":["招募手下","窥视财物","伺机伤人","暗中破坏","无谋的复仇"],"slots":[
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"若参与且检定≥1则死亡，获读物「小圆的日记」"},
+          {"card":"蛮人社团","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"盗贼团伙","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"铁头的优势","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"每张战斗+1生存+1"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"与征服二选一"},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"与杀戮二选一"}
+        ]}
+      ]
+    }
+  ]
+}

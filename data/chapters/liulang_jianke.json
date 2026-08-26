@@ -1,0 +1,148 @@
+{
+  "id": "liulang_jianke",
+  "title": "流浪剑客篇",
+  "category": "character",
+  "characters": ["流浪剑客","老库克","故国的忠臣","梅姬","鲁梅拉","阿里木"],
+  "routes": [
+    {
+      "id": "liulang_jianke_join",
+      "name": "入队线",
+      "summary": "侠名≥9、权势≥9开启，招流浪剑客入队；若对其纵欲则决裂，走向复仇与讨伐",
+      "steps": [
+        {"id":"liulang_jianke_join_1","name":"纠纷的任务","trigger":"侠名≥9、权势≥9触发","desc":"仪式，存续7天（逾期权势-1、侠名-1、本篇关闭）。可选对付剑客或贵族：对付剑客时10金币直接入队；纵欲（须主角）成功≥5/≥1均触发《故国的复仇》决裂，成功=0且主角魅力<6死亡结局「无名人之死」；杀戮成功≥3剑客死亡获「哀叹之剑」、成功=0我方角色死亡本篇关闭。对付贵族时各手段（含10金币/奢靡/杀戮/纵欲）均使剑客入队","prereqs":[],"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"不满的贵族","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"10金币"},
+          {"card":"奢靡","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"对付剑客：黄金及以下；对付贵族：白银及以下；金色奢靡须20金币"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"对付剑客：黄金及以下；对付贵族：白银及以下"},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"对付剑客：黄金及以下；对付贵族：白银及以下；须主角"}
+        ]},
+        {"id":"liulang_jianke_join_2","name":"故国的复仇","trigger":"在《纠纷的任务》对流浪剑客使用纵欲且检定≥1","desc":"仪式，存续1天（逾期自启动）。检定隐匿&智慧，成败均重置本事件（失败「剑客的蓄势」+1，每张使敌方战斗+5）；第10次运行后1天触发《讨伐无道》；放黄金及以下「征服」可不折卡直接于1天后触发《讨伐无道》（可重复）","prereqs":["纠纷的任务"],"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"老库克","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"故国的忠臣","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"剑客的蓄势","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"不折卡、关闭检定、1天后触发《讨伐无道》"}
+        ]},
+        {"id":"liulang_jianke_join_3","name":"讨伐无道","trigger":"《故国的复仇》运行10次或在该事件放置「征服」","desc":"仪式，存续1天（逾期自启动）。检定我方战斗&体魄-敌方(15)-「剑客的蓄势」。成功≥3：流浪剑客、老库克、故国的忠臣死亡，获「哀叹之剑」；成功<3：死亡结局「无名人之死」、达成一千零一夜「三头龙」","prereqs":["故国的复仇"],"terminal":true,"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"老库克","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"故国的忠臣","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"剑客的蓄势","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":""}
+        ]}
+      ]
+    },
+    {
+      "id": "liulang_jianke_ruicao",
+      "name": "锐草之原线",
+      "summary": "剑客入队后经《烂纸头》读「建造图录」开启本篇核心《锐草之原》，走向《你最重要的》与剑客更名",
+      "steps": [
+        {"id":"liulang_jianke_ruicao_1","name":"烂纸头","trigger":"流浪剑客、鲁梅拉、阿里木已入队且空闲（后两者为跨篇要求）","desc":"仪式，存续1天（逾期无法触发核心事件《锐草之原》）。购买读物：建造图录/花园景观残本/寝食单，3金币/本（鲁梅拉免费，可全买）。阅读「建造图录」1天后触发《锐草之原》","prereqs":["纠纷的任务"],"slots":[
+          {"card":"建造图录","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"读物，3金币/本（鲁梅拉免费）"},
+          {"card":"花园景观残本","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"读物，3金币/本（鲁梅拉免费）"},
+          {"card":"寝食单","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"读物，3金币/本（鲁梅拉免费）"}
+        ]},
+        {"id":"liulang_jianke_ruicao_2","name":"锐草之原","trigger":"寻思「建造图录」并完成阅读事件1天后","desc":"仪式，长期存续、耗时3天，流浪剑客参与时不可折卡。不放火+剑客参与：成功≥5灵视+1、「哀叹之剑」获白霜标识、可能触发《你最重要的》，失败触发《六尺之下》；不放火+剑客未参与：三重检定（生存/魔力/隐匿）成功获「黄金遗物」、1天后触发《儿子的索要》，失败重置。放火（需魔力≥5角色+生命之水/火焰喷射器）+剑客参与：跳过检定触发《迷失于灰烬中》；放火+未参与：成功获「黄金遗物」触发《儿子的索要》、失败本篇关闭。若将「黄金遗物」上贡《权力的游戏》：权势+1、「谗言」+3、金币+10、本篇关闭","prereqs":["烂纸头"],"slots":[
+          {"card":"建造图录","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"10金币"},
+          {"card":"生命之水","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放火"},
+          {"card":"火焰喷射器","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放火"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"流浪剑客参与时不可折卡"}
+        ]},
+        {"id":"liulang_jianke_ruicao_3","name":"儿子的索要","trigger":"在《锐草之原》不放流浪剑客且检定成功1天后","desc":"仪式，存续3天（逾期本篇关闭）。放流浪剑客+「黄金遗物」（失去）：金币+15、可能触发《你最重要的》","prereqs":["锐草之原"],"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"黄金遗物","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"失去"}
+        ]},
+        {"id":"liulang_jianke_ruicao_4","name":"六尺之下","trigger":"在《锐草之原》不放火且流浪剑客参与并检定失败","desc":"仪式，自启动、耗时4天。流浪剑客{受伤}、可能触发《你最重要的》","prereqs":["锐草之原"],"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"liulang_jianke_ruicao_5","name":"迷失于灰烬中","trigger":"在《锐草之原》放火且流浪剑客参与","desc":"仪式，自启动、耗时4天。流浪剑客战斗/体魄/魅力+1、魔力+2、灵视+1、「哀叹之剑」获灰烬标识、可能触发《你最重要的》","prereqs":["锐草之原"],"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"liulang_jianke_ruicao_6","name":"你最重要的","trigger":"《锐草之原》不放火+流浪剑客参与并检定成功，或完成《迷失于灰烬中》《六尺之下》《儿子的索要》其一后，折断任意苏丹卡1天后触发","desc":"仪式，存续1天（逾期本篇关闭）。卡槽分支：妻子的不满/幸福感→触发《剑之名》、梅姬成为{剑客暗杀目标}；有{命运的羁绊}的追随者→触发《剑之名》、该追随者成为暗杀目标；任意谋反思潮→触发《剑之名》；任意苏丹卡或主角→触发《刀剑问答·流浪剑客》","prereqs":["锐草之原"],"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"触发《剑之名》、梅姬成为{剑客暗杀目标}"},
+          {"card":"幸福感","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"触发《剑之名》、梅姬成为{剑客暗杀目标}"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放置任意苏丹卡或主角：触发《刀剑问答·流浪剑客》"}
+        ]},
+        {"id":"liulang_jianke_ruicao_7","name":"刀剑问答·流浪剑客","trigger":"在《你最重要的》放置苏丹卡或主角","desc":"仪式，存续1天（逾期自启动）。卡槽：流浪剑客+复国的斗志+哀叹之剑+主角，可用黄金及以下「杀戮」。检定战斗&生存：成功≥1不放杀戮触发《剑之名》；放杀戮则剑客死亡、获「哀叹之剑」（白霜/灰烬标识立即升级为「白霜之剑/灰烬之剑」）；成功<1死亡结局「无名人之死」","prereqs":["你最重要的"],"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"复国的斗志","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"哀叹之剑","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":""}
+        ]},
+        {"id":"liulang_jianke_ruicao_8","name":"剑之名","trigger":"在《你最重要的》放置「妻子的不满/幸福感」、有{命运的羁绊}的追随者、梅姬或任意谋反思潮；或在《刀剑问答·流浪剑客》不放杀戮并检定成功","desc":"仪式，存续3天（逾期本篇关闭）。流浪剑客更名为「希尔希纳」、获「哀叹之剑」（白霜/灰烬标识立即升级为「白霜之剑/灰烬之剑」）、触发《誓言的呼唤》","prereqs":["你最重要的"],"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    },
+    {
+      "id": "liulang_jianke_shiyan",
+      "name": "誓言之证线",
+      "summary": "完成《剑之名》后获「誓言之证」，经5个誓言事件将其升至黄金品级，可用《故国的旗帜》补救，并与正教/密教篇联动《敬请圣像》",
+      "steps": [
+        {"id":"liulang_jianke_shiyan_1","name":"誓言的呼唤","trigger":"完成《剑之名》","desc":"仪式，长期存续（逾期本篇关闭）。卡槽：老库克+穿戴「金血之证」（哀叹之剑/白霜之剑/灰烬之剑统称）的角色。获岩石「誓言之证」，寻思触发《誓言之证》系列事件；触发大结局·革命篇《改朝换代》","prereqs":["剑之名"],"slots":[
+          {"card":"老库克","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"哀叹之剑","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"穿戴该剑的角色，三把名剑任选其一（统称金血之证）"},
+          {"card":"白霜之剑","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"穿戴该剑的角色，三把名剑任选其一（统称金血之证）"},
+          {"card":"灰烬之剑","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"穿戴该剑的角色，三把名剑任选其一（统称金血之证）"}
+        ]},
+        {"id":"liulang_jianke_shiyan_2","name":"趋炎附势之徒","trigger":"寻思「誓言之证」概率触发（只会触发一次）","desc":"仪式，存续3天（逾期「谗言」+1、获取誓言失败）。检定魅力+社交，成功≥8（权势+侠名>30时点数要求降低）回应誓言计数+1，失败「谗言」+1；以流浪剑客进行额外社交+1。系列计数达1/3/5时「誓言之证」升青铜/白银/黄金品级，黄金品级达成一千零一夜「故国的旗帜下」","prereqs":["誓言的呼唤"],"slots":[
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"或任意贵族角色；以其进行额外社交+1"}
+        ]},
+        {"id":"liulang_jianke_shiyan_3","name":"忠贞正义之徒","trigger":"寻思「誓言之证」概率触发（只会触发一次）","desc":"仪式，存续3天（逾期获取誓言失败）。检定魅力+社交，成功≥8（善名+侠名>30时要求降低）回应誓言计数+1；以流浪剑客进行额外魅力+1；若恶名≥10关闭检定直接按失败结算","prereqs":["誓言的呼唤"],"slots":[
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"或任意贵族角色；以其进行额外魅力+1"}
+        ]},
+        {"id":"liulang_jianke_shiyan_4","name":"迷信盲从之徒","trigger":"寻思「誓言之证」概率触发（只会触发一次）","desc":"仪式，存续3天（逾期获取誓言失败）。若灵视≥6或穿戴「白霜之剑/灰烬之剑」（哀叹之剑不行）：回应誓言计数+1，以流浪剑客进行其魔力+1；否则获取誓言失败","prereqs":["誓言的呼唤"],"slots":[
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"或任意贵族角色；以其进行魔力+1"}
+        ]},
+        {"id":"liulang_jianke_shiyan_5","name":"欺软怕硬之徒","trigger":"寻思「誓言之证」概率触发（只会触发一次）","desc":"仪式，存续3天（逾期「谗言」+1、获取誓言失败）。卡槽需3支任意部队。固定结算：回应誓言计数+1，以流浪剑客进行其战斗+1","prereqs":["誓言的呼唤"],"slots":[
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"或任意贵族角色；以其进行战斗+1"}
+        ]},
+        {"id":"liulang_jianke_shiyan_6","name":"视财如命之徒","trigger":"寻思「誓言之证」概率触发（只会触发一次）","desc":"仪式，存续3天（逾期「谗言」+1、获取誓言失败）。卡槽需15金币。固定结算：回应誓言计数+1，以流浪剑客进行其战斗+1","prereqs":["誓言的呼唤"],"slots":[
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"15金币"},
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"或任意贵族角色；以其进行战斗+1"}
+        ]},
+        {"id":"liulang_jianke_shiyan_7","name":"故国的旗帜","trigger":"《誓言之证》系列5个事件全部触发后，「誓言之证」仍未达黄金品级时寻思补救","desc":"仪式，存续1天（逾期可再次寻思触发）。放谋反的意图（失去）：回应誓言计数+1（从岩石到黄金共需5张）；放弑君的计划/圣主像（失去）：仅对白银「誓言之证」有效，直接升黄金品级。「誓言之证」还可放入拉伊德篇《阿尔图堡》增加计数（可重复）","prereqs":["趋炎附势之徒","忠贞正义之徒","迷信盲从之徒","欺软怕硬之徒","视财如命之徒"],"slots":[
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"谋反的意图","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"失去；回应誓言计数+1，从岩石到黄金共需5张"},
+          {"card":"弑君的计划","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"失去；仅对白银「誓言之证」有效，直接升黄金品级"},
+          {"card":"圣主像","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"失去；仅对白银「誓言之证」有效，直接升黄金品级"}
+        ]},
+        {"id":"liulang_jianke_shiyan_8","name":"敬请圣像","trigger":"在密教篇《传播密教理念》使用流浪剑客2天后，或在正教篇《领受神恩》放入流浪剑客1天后","desc":"仪式，长期存续。卡槽圣主像+任意情报+对象：黄金「誓言之证」→获饰品「圣主像」（魔力10、唯一）；白银及以下誓言之证→圣主像毁坏、誓言之证升黄金；3/4级神的面容→圣主像毁坏、金骰子+2、「神的耐心」+1；流浪剑客→圣主像毁坏、获「古老的誓约」（大结局龙眼篇/革命篇可获强力部队）；魔力≥5其他角色→检定智慧+魔力，成功≥5获「圣主像」、失败毁坏","prereqs":["誓言的呼唤"],"terminal":true,"slots":[
+          {"card":"圣主像","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"黄金「誓言之证」分支保留为饰品，其余多数分支毁坏"},
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"黄金品级：获饰品「圣主像」；白银及以下：圣主像毁坏、升为黄金品级"},
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"圣主像毁坏、获「古老的誓约」"},
+          {"card":"神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"须3/4级：圣主像毁坏、金骰子+2、「神的耐心」+1"}
+        ]}
+      ]
+    },
+    {
+      "id": "liulang_jianke_shanggong",
+      "name": "上贡与暗杀线",
+      "summary": "把金血之证或誓言之证上贡《权力的游戏》换取收益，但会引发回收与暗杀",
+      "steps": [
+        {"id":"liulang_jianke_shanggong_1","name":"上贡金血之证","trigger":"在《权力的游戏》上贡「哀叹之剑/白霜之剑/灰烬之剑」（需先持有任一名剑）","desc":"「谗言」-3、权势+1、金币+30、达成一千零一夜「马屁的艺术」；1天后「苏丹的猜忌」-1、达成一千零一夜「没有人比我更懂你-旧恩怨了」；1天后可能触发《暗杀》","prereqs":[],"slots":[]},
+        {"id":"liulang_jianke_shanggong_2","name":"催命的账簿","trigger":"在《权力的游戏》上贡「誓言之证」","desc":"「谗言」-3、权势+1、恶名+2、金币+30、达成一千零一夜「马屁的艺术」；1天后「苏丹的猜忌」-1，并触发《回收金血之证》","prereqs":["誓言的呼唤"],"slots":[]},
+        {"id":"liulang_jianke_shanggong_3","name":"回收金血之证","trigger":"完成《催命的账簿》","desc":"仪式，自启动、耗时1天。卡槽：流浪剑客+哀叹之剑/白霜之剑/灰烬之剑或穿戴者。流浪剑客离队、武器损坏或穿戴者死亡；可能触发《暗杀》","prereqs":["催命的账簿"],"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后离队"},
+          {"card":"哀叹之剑","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"四选一（可放穿戴者），结算时武器损坏或穿戴者死亡"},
+          {"card":"白霜之剑","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"四选一（可放穿戴者），结算时武器损坏或穿戴者死亡"},
+          {"card":"灰烬之剑","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"四选一（可放穿戴者），结算时武器损坏或穿戴者死亡"}
+        ]},
+        {"id":"liulang_jianke_shanggong_4","name":"暗杀","trigger":"曾在《你最重要的》生成{剑客暗杀目标}，且完成《上贡金血之证》或《回收金血之证》后自启动","desc":"仪式，耗时1天。成为{剑客暗杀目标}的追随者死亡、流浪剑客退场","prereqs":["你最重要的"],"terminal":true,"slots":[
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后退场"}
+        ]}
+      ]
+    }
+  ]
+}

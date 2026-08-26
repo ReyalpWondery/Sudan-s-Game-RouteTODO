@@ -1,0 +1,66 @@
+{
+  "id": "gaisi",
+  "title": "盖斯篇",
+  "category": "character",
+  "characters": ["盖斯", "哲瓦德", "梅姬"],
+  "routes": [
+    {
+      "id": "gaisi_join",
+      "name": "入队线",
+      "summary": "从《囚牢》救出盖斯，替他查明冤案后收服入队",
+      "steps": [
+        {"id":"gaisi_join_1","name":"脱罪的希望","trigger":"在《囚牢》以任意角色交互盖斯","desc":"仪式，长期存续、耗时1天。卡槽：主角+10金币，获「苏丹的宽恕」；将其放入《囚牢》交互盖斯：盖斯出狱、善名+1，2-4天后触发《盖斯异常失望》","prereqs":[],"slots":[{"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}]},
+        {"id":"gaisi_join_2","name":"盖斯异常失望","trigger":"用「苏丹的宽恕」放出盖斯2-4天后","desc":"抉择弹窗：“那我满足你”→《以身试刀》；“我和苏丹不一样”或“滚，别逼我骂你”→金币+3、2-4天后《诉冤的女人1》","prereqs":["脱罪的希望"],"slots":[]},
+        {"id":"gaisi_join_3","name":"以身试刀","trigger":"在《盖斯异常失望》选“那我满足你”","desc":"仪式，存续3天（逾期权势-1、盖斯篇关闭）。卡槽：盖斯+白银及以下杀戮。结算：盖斯死亡、恶名+1（死路分支）","terminal":true,"prereqs":["盖斯异常失望"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算盖斯死亡"},{"card":"杀戮","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":"白银及以下"}]},
+        {"id":"gaisi_join_4","name":"诉冤的女人1","trigger":"在《盖斯异常失望》选“我和苏丹不一样”或“滚，别逼我骂你”2-4天后","desc":"抉择弹窗：“查明真相”→1天后《实地走访》；“与我无关”→2-4天后《诉冤的女人·2》；另两个选项分别侠名+1/权势+1并关闭盖斯篇","prereqs":["盖斯异常失望"],"slots":[]},
+        {"id":"gaisi_join_5","name":"诉冤的女人·2","trigger":"在《诉冤的女人1》选“与我无关”2-4天后","desc":"抉择弹窗：“那好吧……”→金币+5、1天后《实地走访》；“与我无关”→2-4天后《诉冤的女人·3》；另两个选项关闭盖斯篇","prereqs":["诉冤的女人1"],"slots":[]},
+        {"id":"gaisi_join_6","name":"诉冤的女人·3","trigger":"在《诉冤的女人·2》选“与我无关”2-4天后","desc":"抉择弹窗：“同意交易”→恶名+1、1天后盖斯死亡；“拒绝交易”→诉冤的女人死亡、盖斯篇关闭","terminal":true,"prereqs":["诉冤的女人·2"],"slots":[]},
+        {"id":"gaisi_join_7","name":"实地走访","trigger":"在《诉冤的女人1》选“查明真相”，或在《诉冤的女人·2》选“那好吧”","desc":"仪式，存续3天、耗时7天（逾期2-4天后诉冤的女人死亡、盖斯篇关闭）。卡槽：任意角色+任意情报。检定我方生存≥2触发《初步调查》；失败可重置，累计失败3次盖斯篇关闭","prereqs":["诉冤的女人1","诉冤的女人·2"],"slots":[]},
+        {"id":"gaisi_join_8","name":"初步调查","trigger":"《实地走访》检定成功","desc":"仪式，长期存续。卡槽：任意角色×2+任意情报+3金币。检定魅力+社交≥5触发《深入调查》，失败可重置","prereqs":["实地走访"],"slots":[]},
+        {"id":"gaisi_join_9","name":"深入调查","trigger":"《初步调查》检定成功","desc":"仪式，长期存续。卡槽：盖斯+任意角色×2+任意情报+白银及以下征服。检定社交+智慧≥5：善名+1、权势+1，2天后触发《收服盖斯》","prereqs":["初步调查"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"征服","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":"白银及以下"}]},
+        {"id":"gaisi_join_10","name":"收服盖斯","trigger":"《深入调查》检定成功2天后","desc":"仪式。卡槽：盖斯+谋反思潮。结算：盖斯入队、支持+3、反对清零，达成一千零一夜「正义不应沦落」；白银及以下谋反思潮额外「对苏丹的恐惧」+1；弑君/革命的计划可获黄金内幕、黄金洞察","terminal":true,"prereqs":["深入调查"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"谋反思潮","sultan":false,"maxGrade":"白银","required":false,"consumed":false,"note":"白银及以下"}]}
+      ]
+    },
+    {
+      "id": "gaisi_title",
+      "name": "爵位线",
+      "summary": "盖斯献剑后追查家族世袭头衔，助其荣耀回归升金，分支可走向退场或完美结局",
+      "steps": [
+        {"id":"gaisi_title_1","name":"盖斯献剑","trigger":"权势≥9、完成哲瓦德篇《哲瓦德来访》后，寻思头顶惊叹号的盖斯","desc":"抉择弹窗：“叫住他”→获武器「蒙尘之剑」（战斗4）、线索「爵位的下落？」；“让他走”→盖斯篇关闭","prereqs":["收服盖斯"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}]},
+        {"id":"gaisi_title_2","name":"爵位的下落","trigger":"在《权力的游戏》上贡「爵位的下落？」（失去）","desc":"若哲瓦德已成大敌：完成本事件后在任意事件杀死哲瓦德触发《打听头衔的下落》。若非大敌：检定全员社交≥3则权势+1——哲瓦德存活触发《哲瓦德再次来访》、已死触发《打听头衔的下落》；失败权势-1可重试，第4次失败失去线索并关闭盖斯篇","prereqs":["盖斯献剑"],"slots":[]},
+        {"id":"gaisi_title_3","name":"哲瓦德再次来访","trigger":"盖斯存活、哲瓦德存活且非大敌，《爵位的下落》检定成功","desc":"抉择弹窗：“答应他的要求”→权势+1、触发《收买头衔》；“让他和盖斯协商”→权势+1、可能触发《小型拍卖会》","prereqs":["爵位的下落"],"slots":[]},
+        {"id":"gaisi_title_4","name":"收买头衔","trigger":"在《哲瓦德再次来访》选“答应他的要求”，哲瓦德、盖斯存活","desc":"仪式，存续7天（逾期3天后重置）。卡槽：离群的贵族+10金币+任意角色+任意情报。检定社交+魅力≥4获「盖斯家的世袭头衔」、触发《荣耀回归·1》；失败退金币可重置","prereqs":["哲瓦德再次来访"],"slots":[{"card":"离群的贵族","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}]},
+        {"id":"gaisi_title_5","name":"荣耀回归·1","trigger":"《收买头衔》检定成功，或完成《购买头衔》","desc":"仪式。卡槽：盖斯+盖斯家的世袭头衔（失去）。盖斯升黄金品级、支持+1、社交/魅力+1、权势+2、获{命运的羁绊}，10天后金币+10","terminal":true,"prereqs":["收买头衔","购买头衔"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"盖斯家的世袭头衔","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）"}]},
+        {"id":"gaisi_title_6","name":"打听头衔的下落","trigger":"哲瓦德已死（或已成大敌后被杀死），《爵位的下落》检定成功","desc":"抉择弹窗：“买下它”→1天后《购买头衔》；“告知盖斯”→可能触发《小型拍卖会》","prereqs":["爵位的下落"],"slots":[]},
+        {"id":"gaisi_title_7","name":"购买头衔","trigger":"在《打听头衔的下落》选“买下它”","desc":"仪式，存续5天（逾期触发《真的重要么》）。卡槽：10金币+任意角色/盖斯。获「盖斯家的世袭头衔」、触发《荣耀回归·1》","prereqs":["打听头衔的下落"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"任意角色/盖斯"}]},
+        {"id":"gaisi_title_8","name":"真的重要么","trigger":"盖斯空闲、《购买头衔》逾期","desc":"抉择弹窗：“很重要”→盖斯篇关闭；“不重要”→盖斯获{命运的羁绊}（非完美结局）；“这因人而异”→1天后《最后的道别》","prereqs":["购买头衔"],"slots":[]},
+        {"id":"gaisi_title_9","name":"最后的道别","trigger":"在《真的重要么》选“这因人而异”1天后","desc":"仪式，自启动。卡槽：盖斯。盖斯退场、获饰品「古老的戒指」","terminal":true,"prereqs":["真的重要么"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算盖斯退场"}]},
+        {"id":"gaisi_title_10","name":"小型拍卖会","trigger":"侠名≥5，在《打听头衔的下落》选“告知盖斯”或在《哲瓦德再次来访》选“让他和盖斯协商”","desc":"抉择弹窗：“这些东西我要了”→《恰当的价码》；“沉默”→《过时不候·1》","prereqs":["打听头衔的下落","哲瓦德再次来访"],"slots":[]},
+        {"id":"gaisi_title_11","name":"过时不候·1","trigger":"在《小型拍卖会》选“沉默”","desc":"仪式，自启动。卡槽：盖斯。盖斯退场、获饰品「古老的戒指」（智慧1，非完美结局）","terminal":true,"prereqs":["小型拍卖会"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算盖斯退场"}]},
+        {"id":"gaisi_title_12","name":"恰当的价码","trigger":"在《小型拍卖会》选“这些东西我要了”","desc":"仪式，存续5天（逾期触发《过时不候·2》）。卡槽：10金币。善名+1、获饰品「古老的戒指」、触发《荣耀回归·2》","prereqs":["小型拍卖会"],"slots":[]},
+        {"id":"gaisi_title_13","name":"过时不候·2","trigger":"《恰当的价码》逾期","desc":"仪式，自启动。卡槽：盖斯。盖斯退场（非完美结局）","terminal":true,"prereqs":["恰当的价码"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算盖斯退场"}]},
+        {"id":"gaisi_title_14","name":"荣耀回归·2","trigger":"完成《恰当的价码》","desc":"仪式。卡槽：盖斯+盖斯家的世袭头衔。盖斯升黄金品级、支持+1、社交/魅力+1、权势+2、获{命运的羁绊}，4天后触发《永世流传之物》","prereqs":["恰当的价码"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"盖斯家的世袭头衔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"原文未标注（失去）"}]},
+        {"id":"gaisi_title_15","name":"永世流传之物","trigger":"完成《荣耀回归·2》4天后","desc":"仪式，存续5天（逾期无奖惩）。卡槽：盖斯+古老的戒指（失去）。善名+1、金币+10（完美结局收尾）","terminal":true,"prereqs":["荣耀回归·2"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"古老的戒指","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）"}]}
+      ]
+    },
+    {
+      "id": "gaisi_cult",
+      "name": "密教线",
+      "summary": "有{命运的羁绊}的盖斯参与传播密教理念后获得三张仪式图纸，可筹办剑盾/丰产/内宅仪式",
+      "steps": [
+        {"id":"gaisi_cult_1","name":"盖斯的礼物","trigger":"用有{命运的羁绊}的盖斯参与《传播密教理念》1天后","desc":"剧情弹窗：获「剑盾的仪式图纸」「丰产的仪式图纸」「内宅的仪式图纸」","prereqs":[],"slots":[]},
+        {"id":"gaisi_cult_2","name":"解读剑盾图纸","trigger":"盖斯存活、寻思「剑盾的仪式图纸」","desc":"抉择弹窗：“筹备事件”→《剑盾的仪式》；“还是算了”→可再寻思触发","prereqs":["盖斯的礼物"],"slots":[{"card":"剑盾的仪式图纸","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}]},
+        {"id":"gaisi_cult_3","name":"剑盾的仪式","trigger":"在《解读剑盾图纸》选“筹备事件”","desc":"仪式，存续5天（逾期可再寻思触发）。卡槽：图纸（失去）+任意角色+不高于部队品级的奢靡（需20金币）+10/20金币+任意部队+任意情报。检定2/3号槽生存+体魄≥3：权势+3；<3：权势+1","terminal":true,"prereqs":["解读剑盾图纸"],"slots":[{"card":"剑盾的仪式图纸","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）"},{"card":"奢靡","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于部队品级（需20金币）"}]},
+        {"id":"gaisi_cult_4","name":"解读丰产图纸","trigger":"盖斯存活、寻思「丰产的仪式图纸」","desc":"抉择弹窗：“筹备事件”→《丰产的仪式》；“还是算了”→《销毁图纸》","prereqs":["盖斯的礼物"],"slots":[{"card":"丰产的仪式图纸","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}]},
+        {"id":"gaisi_cult_5","name":"丰产的仪式","trigger":"在《解读丰产图纸》选“筹备事件”","desc":"仪式，存续5天（逾期失去图纸）。卡槽：盖斯+图纸（失去）+主角+黄金及以下杀戮（获唯一「污渍：天使」、免除罪证）。警告：盖斯死亡（无论是否放杀戮）、恶名+1、罪证+1；获「丰产的祝福」（放入《治理家业》得15金币，上贡《权力的游戏》权势+2）","terminal":true,"prereqs":["解读丰产图纸"],"slots":[{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算盖斯死亡（无论是否放杀戮）"},{"card":"丰产的仪式图纸","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）"},{"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"杀戮","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"黄金及以下；放入获唯一「污渍：天使」、免除罪证"}]},
+        {"id":"gaisi_cult_6","name":"销毁图纸","trigger":"在《解读丰产图纸》选“还是算了”","desc":"仪式，存续3天（逾期可再寻思触发）。卡槽：丰产的仪式图纸（失去）。善名+1","terminal":true,"prereqs":["解读丰产图纸"],"slots":[{"card":"丰产的仪式图纸","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）"}]},
+        {"id":"gaisi_cult_7","name":"解读内宅图纸","trigger":"盖斯存活、寻思「内宅的仪式图纸」","desc":"抉择弹窗：“筹备事件”→《内宅的仪式》；“还是算了”→可再寻思触发","prereqs":["盖斯的礼物"],"slots":[{"card":"内宅的仪式图纸","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}]},
+        {"id":"gaisi_cult_8","name":"内宅的仪式","trigger":"在《解读内宅图纸》选“筹备事件”","desc":"仪式，存续1天（逾期可再寻思触发）。卡槽：图纸（失去）+主角+盖斯/梅姬/其他有{激情}的追随者+不高于3号槽品级的纵欲（唯一「污渍：信徒」）。盖斯参与：激情+1，未纵欲1天后可能触发《梅姬谈起盖斯》；梅姬参与：盖斯激情+1、梅姬&主角魅力+2；其他追随者：主角&追随者魅力+2，纵欲则「妻子的不满」+1、未纵欲可能触发《我都知道了！》","prereqs":["解读内宅图纸"],"slots":[{"card":"内宅的仪式图纸","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）"},{"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"盖斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"盖斯/梅姬/其他有{激情}的追随者 三选一"},{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"盖斯/梅姬/其他有{激情}的追随者 三选一"},{"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于3号槽品级；放入获唯一「污渍：信徒」"}]},
+        {"id":"gaisi_cult_9","name":"梅姬谈起盖斯","trigger":"梅姬在队、盖斯空闲，《内宅的仪式》盖斯参与且未纵欲1天后","desc":"抉择弹窗：“坦白”→《挽回的余地·1》；“隐瞒”→《挽回的余地·2》","prereqs":["内宅的仪式"],"slots":[]},
+        {"id":"gaisi_cult_10","name":"挽回的余地·1","trigger":"在《梅姬谈起盖斯》选“坦白”","desc":"仪式，存续3天（逾期「妻子的不满」+1）。卡槽：梅姬+白银及以上饰品。失去该饰品","terminal":true,"prereqs":["梅姬谈起盖斯"],"slots":[{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}]},
+        {"id":"gaisi_cult_11","name":"挽回的余地·2","trigger":"在《梅姬谈起盖斯》选“隐瞒”","desc":"仪式，存续3天（逾期「妻子的不满」+1）。卡槽：梅姬+主角+白银及以上饰品+任意情报。检定主角&梅姬魅力+社交≥3：失去饰品；<3：再「妻子的不满」+1","terminal":true,"prereqs":["梅姬谈起盖斯"],"slots":[{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""}]},
+        {"id":"gaisi_cult_12","name":"我都知道了！","trigger":"《内宅的仪式》以梅姬&盖斯以外有激情的追随者进行且未纵欲","desc":"仪式，存续3天（逾期「妻子的不满」+1）。卡槽：梅姬+主角+任意情报。检定主角&梅姬社交+隐匿≥1逃过一劫；<1：「妻子的不满」+1","terminal":true,"prereqs":["内宅的仪式"],"slots":[{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},{"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""}]}
+      ]
+    }
+  ]
+}

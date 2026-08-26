@@ -1,0 +1,188 @@
+{
+  "id": "naibuhani",
+  "title": "奈布哈尼篇",
+  "category": "character",
+  "characters": ["奈布哈尼", "夏玛", "贾丽拉", "朱娜"],
+  "routes": [
+    {
+      "id": "naibuhani_join",
+      "name": "入队线",
+      "summary": "在欢愉之馆折纵欲/奢靡开启《一桩趣事》让奈布哈尼入队；若先杀戮三妓女则触发挑战支线，大概率关闭本篇",
+      "steps": [
+        {"id":"naibuhani_join_1","name":"有人准备挑战你","trigger":"在《欢愉之馆》杀戮夏玛/贾丽拉/朱娜任意一人1天后自启动","desc":"仪式，耗时5天。放奈布哈尼+「决心」。结算：奈布哈尼穿戴「决心」（战斗+7），触发《护花使者》。触发本事件会导致《一桩趣事》关闭","prereqs":[],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"决心","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"奈布哈尼穿戴，战斗+7"}
+        ]},
+        {"id":"naibuhani_join_2","name":"护花使者","trigger":"完成《有人准备挑战你》","desc":"仪式，存续1天逾期自启动。放奈布哈尼+任意贵族，可放毒蛇毒液/千夫所指/情报/白银及以下杀戮。多数分支：奈布哈尼死亡或本篇关闭；检定成功<3且主角出战则死亡结局「无名人之死」","prereqs":["有人准备挑战你"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"毒蛇毒液","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放置则奈布哈尼死亡、恶名+1、侠名-1"},
+          {"card":"千夫所指","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"配合杀戮则奈布哈尼死亡、恶名+1"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":""}
+        ],"terminal":true},
+        {"id":"naibuhani_join_3","name":"一桩趣事","trigger":"未触发《有人准备挑战你》，且在《欢愉之馆》折断纵欲或奢靡1天后","desc":"仪式，长期存续。放奈布哈尼+主角/梅姬。结算：奈布哈尼入队、支持+1、反对清零，3天后触发《靠不住的盟友》","prereqs":[],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与梅姬二选一"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与主角二选一"}
+        ]},
+        {"id":"naibuhani_join_4","name":"靠不住的盟友","trigger":"《一桩趣事》3天后、奈布哈尼空闲","desc":"仪式，长期循环（玩耍计数=7时奈布哈尼回手牌）。放女人（魅力≥5）或酒可重置；放苏丹卡触发各分支：杀戮→《决裂》或奈布哈尼死亡；纵欲→《寻欢之旅》；奢靡→《肉体展览》（开局30天内）；岩石/青铜/白银征服分别触发《黑街勇士讨伐战》《都城武馆征伐战》《天下武学验证战》；放女人且无苏丹卡触发《愤怒的寻欢客》","prereqs":["一桩趣事"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"烈焰之酒","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去），1天后重置本事件"},
+          {"card":"无名的窖藏","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"不消耗，1天后重置本事件"},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"开局30天内触发《肉体展览》，30天后不折卡"},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"可能触发《寻欢之旅》"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"无女人则不折卡触发《决裂》；有女人则奈布哈尼死亡"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"岩石/青铜/白银三品级只能用一张，分别触发《黑街勇士讨伐战》《都城武馆征伐战》《天下武学验证战》"}
+        ]}
+      ]
+    },
+    {
+      "id": "naibuhani_ally",
+      "name": "靠不住的盟友支线",
+      "summary": "《靠不住的盟友》中放不同苏丹卡引出的战斗与享乐分支事件群",
+      "steps": [
+        {"id":"naibuhani_ally_1","name":"肉体展览","trigger":"在《靠不住的盟友》放置奢靡（须开局30天内、奴隶市场未被烧）","desc":"仪式，存续2天逾期权势-1。可3金币买下女奴：蛮族女奴开启芮尔篇、娇弱女奴开启索拉薇儿篇、有手艺女奴开启哈布娜篇；全空置善名+1。30天后未买任何奴隶则奴隶市场被烧","prereqs":["靠不住的盟友"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"蛮族的女奴","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3金币买下则开启芮尔篇、触发《帮派斗争》"},
+          {"card":"娇弱的女奴","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3金币买下则开启索拉薇儿篇、触发《柔弱的女奴》"},
+          {"card":"有手艺的女奴","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3金币买下则开启哈布娜篇、可能触发《微小的麻烦》"},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"用此折卡须将买奴的3金币替换为6金币"}
+        ]},
+        {"id":"naibuhani_ally_2","name":"愤怒的寻欢客","trigger":"在《靠不住的盟友》放置魅力≥5的女性且不放苏丹卡","desc":"抉择弹窗：劝说被冷落的人善名+1；劝说被偏爱的人权势+1（均1天后重置《靠不住的盟友》）；作壁上观触发《避避风头》。若放的是娜依拉可额外获青铜「洞察」","prereqs":["靠不住的盟友"],"slots":[]},
+        {"id":"naibuhani_ally_3","name":"避避风头","trigger":"在《愤怒的寻欢客》选“作壁上观”","desc":"仪式，自启动耗时3天。结算：1天后重置《靠不住的盟友》","prereqs":["愤怒的寻欢客"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"naibuhani_ally_4","name":"决裂","trigger":"在《靠不住的盟友》放置杀戮且不放置女人","desc":"仪式，存续1天逾期自启动。千夫所指/毒蛇毒液直接杀死奈布哈尼；否则检定战斗&体魄，成功≥3奈布哈尼死亡、成功<3则2号槽死亡（若以主角执行则死亡结局「不自量力」）","prereqs":["靠不住的盟友"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":""},
+          {"card":"千夫所指","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"关闭检定，奈布哈尼死亡、恶名+1"},
+          {"card":"毒蛇毒液","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"关闭检定，奈布哈尼死亡、恶名+1、侠名-1"}
+        ],"terminal":true},
+        {"id":"naibuhani_ally_5","name":"黑街勇士讨伐战","trigger":"在《靠不住的盟友》放置岩石「征服」","desc":"仪式，存续3天，逾期死亡结局「伴君如伴虎」。主角单挑黑街勇士（战斗&体魄5），检定成功≥2侠名+1，失败死亡结局「无名人之死」","prereqs":["靠不住的盟友"],"slots":[
+          {"card":"黑街勇士","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"单挑"}
+        ]},
+        {"id":"naibuhani_ally_6","name":"都城武馆征伐战","trigger":"在《靠不住的盟友》放置青铜「征服」","desc":"仪式，存续3天，逾期死亡结局「伴君如伴虎」。主角（被动卸下装备）单挑武馆高手（战斗&体魄7），成功≥4侠名+1、体魄+1，失败死亡结局「无名人之死」","prereqs":["靠不住的盟友"],"slots":[
+          {"card":"武馆高手","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"单挑，被动卸下装备"}
+        ]},
+        {"id":"naibuhani_ally_7","name":"天下武学验证战","trigger":"在《靠不住的盟友》放置白银「征服」","desc":"仪式，存续3天，逾期死亡结局「伴君如伴虎」。需魔法剑士/小召唤兽+奈布哈尼+主角。两轮检定（魔力、战斗&体魄均对6），检定1成功=0或检定2成功<2均为死亡结局「无名人之死」；成功则主角战斗+1、侠名+1、奈布哈尼魔力+1，触发《天下武学验证战?》","prereqs":["靠不住的盟友"],"slots":[
+          {"card":"魔法剑士","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1/2号槽各一张，与小召唤兽搭配"},
+          {"card":"小召唤兽","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1/2号槽各一张，与魔法剑士搭配"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"naibuhani_ally_8","name":"天下武学验证战?","trigger":"《天下武学验证战》检定成功","desc":"仪式，存续3天。放奈布哈尼+美艳的妓女+主角。检定体魄+魅力+社交：成功≥3权势+2，<3侠名+1，之后重置《靠不住的盟友》。是一千零一夜「眠花宿柳」的必要条件，主角唯一能与美艳的妓女交欢的机会","prereqs":["天下武学验证战"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"美艳的妓女","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    },
+    {
+      "id": "naibuhani_sultan",
+      "name": "苏丹的游戏线",
+      "summary": "纵欲引出寻欢之旅，与蒙面风流客（苏丹）比魅力，最终操办有苏丹参与的盛宴",
+      "steps": [
+        {"id":"naibuhani_sultan_1","name":"寻欢之旅","trigger":"在《靠不住的盟友》纵欲，且《欢愉之馆》未关闭","desc":"抉择弹窗：选“我就要”暂停《权力的游戏》、触发《群龙无首》与《最受欢迎的男人》；选“算了算了”1天后重置《靠不住的盟友》","prereqs":["靠不住的盟友"],"slots":[]},
+        {"id":"naibuhani_sultan_2","name":"最受欢迎的男人","trigger":"在《寻欢之旅》选“我就要”","desc":"仪式，存续3天。先检定智慧&隐匿对10判定是否识破蒙面风流客（苏丹），再比魅力：蒙面风流客胜→触发《苏丹的游戏》；主角胜→识破成功触发《让出金钥匙》、失败则「苏丹的猜忌」+1并触发《游戏的准备》；奈布哈尼胜→识破成功触发《友情提示》、失败触发《钥匙送人了》","prereqs":["寻欢之旅"],"slots":[
+          {"card":"蒙面风流客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"即苏丹"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"须魅力≥5"}
+        ]},
+        {"id":"naibuhani_sultan_3","name":"让出金钥匙","trigger":"在《最受欢迎的男人》识破成功且主角胜出","desc":"抉择弹窗：选“当然应该请您来”白银「内幕」+1、触发《苏丹的游戏》；选“请听我说……”青铜「秘密」+1、触发《游戏的准备》","prereqs":["最受欢迎的男人"],"slots":[]},
+        {"id":"naibuhani_sultan_4","name":"友情提示","trigger":"在《最受欢迎的男人》识破成功且奈布哈尼胜出","desc":"抉择弹窗：选“劝说奈布哈尼放弃”触发《苏丹的游戏》；选“袖手旁观”2天后触发《钥匙送人了》","prereqs":["最受欢迎的男人"],"slots":[]},
+        {"id":"naibuhani_sultan_5","name":"苏丹的游戏","trigger":"蒙面风流客在《最受欢迎的男人》胜出，或在《让出金钥匙》选“当然应该请您来”，或在《友情提示》选“劝说奈布哈尼放弃”","desc":"仪式，存续5天耗时3天，逾期死亡结局「伴君如伴虎」。大型银趴：放征服=死亡结局「无名人之死」；放杀戮则除苏丹外随机死一人（含主角）。结算权势+1；奈费勒在场获{宰相资格}；参与者穿戴「仿制避孕套」可获唯一「君王的种子」","prereqs":["最受欢迎的男人","让出金钥匙","友情提示"],"slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"放置即死亡结局「无名人之死」"},
+          {"card":"奢靡","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"黄金纵欲需检定社交&魅力对3"},
+          {"card":"杀戮","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"除苏丹外的参与者随机死一个（包括主角）"}
+        ],"terminal":true},
+        {"id":"naibuhani_sultan_6","name":"游戏的准备","trigger":"在《让出金钥匙》选“请听我说……”，或《最受欢迎的男人》主角胜出但未识破苏丹","desc":"仪式，长期存续耗时3天。放布提娜+30金币（2天后）或40金币（3天后）暂时关闭《欢愉之馆》并触发《你的游戏》。想让苏丹参与《你的游戏》，须在《权力的游戏》临近结束时完成本事件","prereqs":["让出金钥匙","最受欢迎的男人"],"slots":[
+          {"card":"布提娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"另需30或40金币"}
+        ]},
+        {"id":"naibuhani_sultan_7","name":"你的游戏","trigger":"完成《游戏的准备》2天或3天后","desc":"仪式，存续1天逾期自启动。自办银趴，苏丹是否到场取决于《权力的游戏》状态。苏丹来了：权势+1、「苏丹的猜忌」-1，达成一千零一夜「没有人比我更懂你盛宴」；没来也可达成「寻欢作乐的高手」。放征服且苏丹在=死亡结局「伴君如伴虎」。在本仪式杀戮会导致奈布哈尼后续离队。结算后重启《欢愉之馆》、触发《寻欢作乐的高手》","prereqs":["游戏的准备"],"slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"若桌面有《权力的游戏》则苏丹来不了"},
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与贾丽拉/朱娜三选一"},
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与夏玛/朱娜三选一"},
+          {"card":"朱娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"与夏玛/贾丽拉三选一"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"仅折卡；苏丹没来时「苏丹的猜忌」额外+1"},
+          {"card":"纵欲","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"仅折卡；苏丹没来时「苏丹的猜忌」额外+1"},
+          {"card":"杀戮","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"除苏丹/主角外的槽位随机死1个；会导致奈布哈尼后续离队"},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"苏丹在=死亡结局「伴君如伴虎」；苏丹不在则检定主角体魄对全员"}
+        ]},
+        {"id":"naibuhani_sultan_8","name":"寻欢作乐的高手","trigger":"完成《你的游戏》（或《终极羞辱》《夜间工作》）","desc":"仪式，长期存续。放奈布哈尼+主角。未在《你的游戏》杀戮：不再触发《靠不住的盟友》；曾杀戮：奈布哈尼离队、支持清零、反对+3","prereqs":["你的游戏"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ],"terminal":true}
+      ]
+    },
+    {
+      "id": "naibuhani_girls",
+      "name": "三妓女游戏线",
+      "summary": "奈布哈尼胜出且钥匙送人后，夏玛/贾丽拉/朱娜中存活者各自开启一场游戏，逾期则进入《浪子的悲哀》摘除近卫标签",
+      "steps": [
+        {"id":"naibuhani_girls_1","name":"钥匙送人了","trigger":"在《最受欢迎的男人》识破失败且奈布哈尼胜出，或在《友情提示》选“袖手旁观”2天后","desc":"剧情弹窗。若夏玛&贾丽拉&朱娜已死：奈布哈尼离队；若三人都已赎身或死亡：不再触发《靠不住的盟友》；若有人存活且仍是{妓女}：随机触发《朱娜的游戏》《贾丽拉的游戏》《夏玛的游戏》之一","prereqs":["最受欢迎的男人","友情提示"],"slots":[]},
+        {"id":"naibuhani_girls_2","name":"朱娜的游戏","trigger":"《钥匙送人了》触发时朱娜存活且是{妓女}（多人满足则随机其一）","desc":"仪式，存续3天，逾期朱娜死亡、重启《欢愉之馆》、1天后触发《浪子的悲哀》。全局随机吸入3人成为被覆者。不放苏丹卡+放主角：被覆者社交+1、不再触发《靠不住的盟友》、触发日常篇《苏丹的戏弄》；放苏丹卡：恶名+1、奈布哈尼离队，杀戮/纵欲会杀死朱娜或被覆者","prereqs":["钥匙送人了"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"朱娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放苏丹卡于4号槽则朱娜死亡"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3-7号槽可放主角或任意苏丹卡"},
+          {"card":"被覆者","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"8/9/10号槽，全局范围随机吸入3人"}
+        ],"terminal":true},
+        {"id":"naibuhani_girls_3","name":"贾丽拉的游戏","trigger":"《钥匙送人了》触发时贾丽拉存活且是{妓女}（多人满足则随机其一）","desc":"仪式，存续3天，逾期1天后重置《靠不住的盟友》。放奢靡→《共襄盛举》；纵欲→《侍奉君主》；杀戮→《无妄之灾》；征服→《以一敌百》；空置则按主角8项属性之和≠42触发《夜间工作》、=42触发《终极羞辱》","prereqs":["钥匙送人了"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"触发《共襄盛举》"},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"触发《侍奉君主》"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"触发《无妄之灾》"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"触发《以一敌百》"}
+        ]},
+        {"id":"naibuhani_girls_4","name":"共襄盛举","trigger":"在《贾丽拉的游戏》放置奢靡","desc":"仪式，每天结算1次最多存续6天。每天需放10金币，给钱平安过关；某一天不给钱即死亡结局「伴君如伴虎」","prereqs":["贾丽拉的游戏"],"slots":[
+          {"card":"倒计时","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"共5张，每天消耗1张且每天都需处理，归零后事件关闭；另每天需10金币"}
+        ]},
+        {"id":"naibuhani_girls_5","name":"侍奉君主","trigger":"在《贾丽拉的游戏》放置纵欲","desc":"仪式，耗时0天。可放「苏丹的猜忌」抵消1点猜忌。检定主角体魄+生存：成功≥8主角{受伤}、重启《欢愉之馆》；<8死亡结局「无名人之死」","prereqs":["贾丽拉的游戏"],"slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"苏丹的猜忌","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"放置则「苏丹的猜忌」-1"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":""}
+        ]},
+        {"id":"naibuhani_girls_6","name":"无妄之灾","trigger":"在《贾丽拉的游戏》放置杀戮","desc":"仪式，耗时0天。随机一名全局角色成为被覆者并死亡，重启《欢愉之馆》","prereqs":["贾丽拉的游戏"],"slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"被覆者","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"全局随机一位，结算时死亡"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":""}
+        ]},
+        {"id":"naibuhani_girls_7","name":"以一敌百","trigger":"在《贾丽拉的游戏》放置征服","desc":"仪式，耗时0天。需任意苏丹的军队，可放「苏丹的猜忌」抵消1点。检定主角体魄+生存：成功≥10主角{受伤}、重启《欢愉之馆》；<10死亡结局「无名人之死」","prereqs":["贾丽拉的游戏"],"slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"苏丹的猜忌","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"放置则「苏丹的猜忌」-1"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":"原文卡槽作「纵欲」，疑为「征服」之误（本事件由放置征服触发）"}
+        ]},
+        {"id":"naibuhani_girls_8","name":"夜间工作","trigger":"在《贾丽拉的游戏》不用苏丹卡且主角8项属性之和≠42","desc":"仪式，耗时0天。神秘的客人（梅姬/夏玛/朱娜/贾丽拉/奈费勒之一）到访并检定对应属性，失败各有小惩罚（妻子的不满/权势-1/侠名-1/受伤等）。无论成败：金币+3、触发《寻欢作乐的高手》","prereqs":["贾丽拉的游戏"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"神秘的客人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"可能是梅姬/夏玛/朱娜/贾丽拉/奈费勒"},
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"naibuhani_girls_9","name":"终极羞辱","trigger":"在《贾丽拉的游戏》不放苏丹卡且主角8项属性之和=42","desc":"仪式，耗时0天。结算：触发《寻欢作乐的高手》","prereqs":["贾丽拉的游戏"],"slots":[
+          {"card":"神秘的客人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"naibuhani_girls_10","name":"夏玛的游戏","trigger":"《钥匙送人了》触发时夏玛存活且是{妓女}（多人满足则随机其一）","desc":"仪式，存续3天，逾期夏玛死亡、重启《欢愉之馆》、1天后触发《浪子的悲哀》。交错槽位放人，可在偶数槽放黄金及以下苏丹卡：杀戮/纵欲杀死对应槽位角色（恶名+1、奈布哈尼离队），奢靡/征服若主角参与则死亡结局「无名人之死」、未参与则全员死亡。不放苏丹卡+主角参与：不再触发《靠不住的盟友》、触发日常篇《苏丹的戏弄》","prereqs":["钥匙送人了"],"slots":[
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/4/6/8/10号槽可放主角或任意苏丹卡"}
+        ],"terminal":true},
+        {"id":"naibuhani_girls_11","name":"浪子的悲哀","trigger":"《夏玛的游戏》《贾丽拉的游戏》《朱娜的游戏》逾期","desc":"仪式，存续3天。结算：不再触发《靠不住的盟友》。放谋反思潮：「免于恐惧的自由」+1、奈布哈尼不再是{苏丹的近卫}；放密教思潮：「不洁的思绪」+1、奈布哈尼摘下近卫标签并成为{密教徒}（本篇摘除近卫标签的主要途径）","prereqs":["朱娜的游戏","贾丽拉的游戏","夏玛的游戏"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ],"terminal":true}
+      ]
+    }
+  ]
+}

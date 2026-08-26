@@ -1,0 +1,96 @@
+{
+  "id": "falajie",
+  "title": "法拉杰篇",
+  "category": "character",
+  "characters": ["法拉杰", "梅姬"],
+  "routes": [
+    {
+      "id": "falajie_guli",
+      "name": "鼓励线",
+      "summary": "善名≥8开启的鼓励/激励链，最终走向三人行的《欲望与幸福》，可让法拉杰获得{命运的羁绊}",
+      "steps": [
+        {"id":"falajie_guli_1","name":"鼓励","trigger":"善名≥8，寻思头顶惊叹号的「法拉杰」","desc":"仪式，存续3天、耗时1天，逾期鼓励线关闭。卡槽：法拉杰+主角或梅姬三选二：2☆勇武战斗+1、3☆机警隐匿+1、4☆风度社交+1（收益仅对法拉杰生效）。若梅姬同时参与《鼓励》《激励》，后续《欲望与幸福》法拉杰可获{命运的羁绊}","prereqs":[],
+        "slots":[
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；仪式必需"},
+          {"card":"主角/梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2/3/4★三选二，收益仅对法拉杰生效"},
+          {"card":"勇武","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2☆：法拉杰战斗+1"},
+          {"card":"机警","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3☆：法拉杰隐匿+1"},
+          {"card":"风度","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4☆：法拉杰社交+1"}
+        ]},
+        {"id":"falajie_guli_2","name":"激励","trigger":"善名≥12、法拉杰非{密教徒}，寻思「法拉杰」","desc":"仪式，存续3天、耗时1天，逾期鼓励线关闭。卡槽同上三选二：2☆博文智慧+2、3☆仪表魅力+2、4☆有力体魄+2。结算法拉杰激情+1；若此后在《在家行淫》纵欲法拉杰：法拉杰获{命运的羁绊}、「妻子的不满」+1、鼓励线关闭","prereqs":["鼓励"],
+        "slots":[
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；仪式必需"},
+          {"card":"主角/梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2/3/4★三选二，收益仅对法拉杰生效"},
+          {"card":"博文","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2☆：法拉杰智慧+2"},
+          {"card":"仪表","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3☆：法拉杰魅力+2"},
+          {"card":"有力","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4☆：法拉杰体魄+2"}
+        ]},
+        {"id":"falajie_guli_3","name":"为什么不用我","trigger":"善名≥19、法拉杰非{密教徒}且未在《在家行淫》纵欲法拉杰，寻思「法拉杰」","desc":"抉择：选“我们不是好兄弟吗？”2天后触发《我爱的是您的妻子》；“我不能对妻子不忠”法拉杰激情-1、获饰品「琥珀宝石吊坠」（线路中断）；“只是因为时机未到”无奖惩","prereqs":["激励"],
+        "slots":[
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"falajie_guli_4","name":"我爱的是您的妻子","trigger":"法拉杰空闲，在《为什么不用我》选“我们不是好兄弟吗？”2天后","desc":"抉择：选“我们三个可以一起分享快乐”触发《欲望与幸福》；“我什么都没听到”无奖惩（线路中断）","prereqs":["为什么不用我"],
+        "slots":[]},
+        {"id":"falajie_guli_5","name":"欲望与幸福","trigger":"在《我爱的是您的妻子》选“我们三个可以一起分享快乐”","desc":"仪式，存续15天、耗时1天，逾期无奖惩事件关闭。卡槽：法拉杰+主角+梅姬+不高于法拉杰品级的「纵欲」。若梅姬参与过《鼓励&激励》：无论是否纵欲法拉杰获{命运的羁绊}；若梅姬缺席：纵欲=死亡结局「永恒之梦」（一千零一夜「沉入梦中」），不纵欲=「妻子的不满」+1","prereqs":["我爱的是您的妻子"],"terminal":true,
+        "slots":[
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于法拉杰品级；纵欲且梅姬缺席鼓励&激励则死亡结局「永恒之梦」"}
+        ]}
+      ]
+    },
+    {
+      "id": "falajie_juhui",
+      "name": "聚会线",
+      "summary": "侠名≥12、恶名<3开启，筹办激进聚会逐步升级为革命沙龙，可获军队或使法拉杰堕落为密教徒",
+      "steps": [
+        {"id":"falajie_juhui_1","name":"筹办激进的聚会","trigger":"侠名≥12、恶名<3，寻思头顶惊叹号的「法拉杰」","desc":"抉择：选“接受”触发《青年的帷幕》；选“拒绝”聚会线关闭","prereqs":[],
+        "slots":[
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"falajie_juhui_2","name":"青年的帷幕","trigger":"在《筹办激进的聚会》选“接受”","desc":"仪式，存续7天、耗时1天，逾期法拉杰魅力-1。卡槽：激进的群众+法拉杰+主角（仅杀戮时须参与）。放岩石「杀戮」：关闭其他结算，恶名+1、权势+3、魅力-1；无杀戮时放谋反思潮（对苏丹的恐惧/免于恐惧的自由/谋反的意图/弑君的计划）：「对苏丹的恐惧」+1、魅力+1；放金币按档位获善名/情报，15金币档：侠名+1、善名+1、魅力/社交+1、「对苏丹的恐惧」+1。全部可选槽空置：魅力-1","prereqs":["筹办激进的聚会"],
+        "slots":[
+          {"card":"激进的群众","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"仅杀戮时须参与"},
+          {"card":"杀戮","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"关闭其他结算：恶名+1、权势+3、法拉杰魅力-1"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"无杀戮时生效，按1-10/11-14/15档位获善名/情报/侠名"},
+          {"card":"谋反思潮","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"无杀戮时生效（对苏丹的恐惧/免于恐惧的自由/谋反的意图/弑君的计划）：「对苏丹的恐惧」+1、法拉杰魅力+1"}
+        ]},
+        {"id":"falajie_juhui_3","name":"危险的聚会","trigger":"侠名≥15、恶名<6、触发过《筹办激进的聚会》（无论如何抉择），寻思「法拉杰」","desc":"仪式，存续7天、耗时1天，逾期魅力-1。卡槽：激进的贵族+法拉杰+主角。放青铜及以下「杀戮」：恶名+1、权势+4、魅力-1；无杀戮时放青铜及以上谋反思潮：魅力+1、金币+10、「免于恐惧的自由」+1；放金币按档位获善名/情报，15金币档另得侠名+1、「免于恐惧的自由」+1。空置：魅力-1","prereqs":["筹办激进的聚会"],
+        "slots":[
+          {"card":"激进的贵族","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"青铜及以下；关闭其他结算：恶名+1、权势+4、法拉杰魅力-1"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"无杀戮时生效，按1-10/11-14/15档位获善名/情报/侠名"},
+          {"card":"谋反思潮","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"青铜及以上：法拉杰魅力+1、金币+10、「免于恐惧的自由」+1"}
+        ]},
+        {"id":"falajie_juhui_4","name":"革命的沙龙","trigger":"侠名≥18、恶名<9、触发过《筹办激进的聚会》（无论如何抉择），寻思「法拉杰」","desc":"仪式，存续7天、耗时1天，逾期魅力-1。卡槽：法拉杰+激进的贵族+主角，放白银及以上「谋反思潮/密教思潮」需配15金币。非密教徒+谋反的意图：白银「激进的军队」（智慧0战斗10）、「苏丹的猜忌」+1；+弑君的计划：黄金「激进的军队」（智慧10战斗15）；+古老的信仰/新世界：「盲目的军队」（白银/黄金）、「不洁的思绪」+1、恶名+3、法拉杰成为{密教徒}、魔力+5、法拉杰堕落。放白银及以下「杀戮」：恶名+1、权势+5、魅力-1。空置：魅力-1","prereqs":["筹办激进的聚会"],"terminal":true,
+        "slots":[
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"激进的贵族","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；关闭其他结算：恶名+1、权势+5、法拉杰魅力-1"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"放思潮时需配15金币；无思潮+1金币：随机黄金「情报」+1、善名+1、侠名+1"},
+          {"card":"谋反思潮/密教思潮","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"白银及以上；按思潮种类获「激进的军队」/「盲目的军队」或使法拉杰成为{密教徒}并堕落"}
+        ]}
+      ]
+    },
+    {
+      "id": "falajie_beipan",
+      "name": "背叛",
+      "summary": "恶名≥14时法拉杰背叛主角，检定失败即死亡结局",
+      "steps": [
+        {"id":"falajie_beipan_1","name":"背叛","trigger":"恶名≥14、法拉杰非{密教徒}、法拉杰未堕落","desc":"仪式，存续3天、耗时1天，逾期死亡结局「因果报应」。卡槽：法拉杰+主角+任意情报+不高于法拉杰品级的「纵欲/杀戮」。检定骰子=主角体魄&战斗-法拉杰体魄&战斗：成功≥2可无苏丹卡（恶名-1）、纵欲（仅折卡、法拉杰不离队）或杀戮（法拉杰死亡、恶名+1）；成功<2死亡结局「因果报应」（一千零一夜「冤冤相报」）","prereqs":[],"terminal":true,
+        "slots":[
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于法拉杰品级；仅折卡、法拉杰不会离队"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于法拉杰品级；法拉杰死亡、恶名+1"}
+        ]}
+      ]
+    }
+  ]
+}

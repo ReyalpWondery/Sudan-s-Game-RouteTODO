@@ -1,0 +1,373 @@
+{
+  "id": "richang",
+  "title": "日常篇",
+  "category": "base",
+  "characters": ["苏丹", "阿卜德", "鲁梅拉", "阿萨尔", "艾迪勒", "梅姬", "法拉杰", "拜铃耶", "伊曼"],
+  "routes": [
+    {
+      "id": "richang_court",
+      "name": "上朝与朝政线",
+      "summary": "每日自启动的朝政循环：上朝影响谗言、触发苏丹的戏弄与宫廷决斗",
+      "steps": [
+        {"id":"richang_court_1","name":"权力的游戏","trigger":"开局第1天被动触发，此后每天自启动","desc":"每日结算的朝政仪式。可派贵族上朝影响支持/反对并获得情报（贝姬夫人每次金币+1）；上贡金币权势+1（权势<5时），上贡谋反思潮直接死亡结局「伴君如伴虎」，上贡罪证/苏丹的猜忌触发《苏丹的戏弄》；主角上朝可用同品级纵欲/杀戮折苏丹卡，分别触发王妃个人篇或《宫廷决斗》。谗言=3则次日权势-5并触发《苏丹的戏弄》；苏丹倦怠=7时本事件变为《群龙无首》。（可重复）","prereqs":[],"slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定被动吸入"},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"主角上朝且与在场王妃品级一致时折卡，触发对应妃子个人篇"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"主角上朝且与在场大臣品级一致时折卡，触发《宫廷决斗》（全局限一次）"},
+          {"card":"征服","sultan":true,"maxGrade":null,"required":false,"consumed":false,"note":"无法折断；主角+征服即死亡结局「伴君如伴虎」"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"上贡：权势+1（仅权势<5时有效）"},
+          {"card":"罪证","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"上贡：权势-5并触发《苏丹的戏弄》（可重复）"},
+          {"card":"苏丹的猜忌","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"上贡（限一次）：权势-5并触发《苏丹的戏弄》"},
+          {"card":"苏丹的乳链","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"上贡：权势+3、「苏丹的猜忌」+1；作为上朝者装备则上朝者死亡、权势-3"}
+        ]},
+        {"id":"richang_court_2","name":"群龙无首","trigger":"《权力的游戏》中苏丹倦怠达到7点时替代触发，存续4天后回归","desc":"可在此3合1升级同名情报/谋反思潮/密教思潮；可逐级合成谋反链：誓言之证+对苏丹的恐惧→免于恐惧的自由→谋反的意图→弑君的计划，再加革命的构思合成「革命的计划」。（可重复）","prereqs":["权力的游戏"],"slots":[
+          {"card":"苏丹的统治","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"固定被动放置"},
+          {"card":"革命的构思","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）与「弑君的计划」合成「革命的计划」"},
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）与谋反思潮逐级合成"},
+          {"card":"对苏丹的恐惧","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"×2+岩石「誓言之证」合成「免于恐惧的自由」"},
+          {"card":"免于恐惧的自由","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"×2+青铜「誓言之证」合成「谋反的意图」"},
+          {"card":"谋反的意图","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"×2+白银「誓言之证」合成「弑君的计划」"},
+          {"card":"弑君的计划","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"与「革命的构思」合成「革命的计划」"}
+        ]},
+        {"id":"richang_court_3","name":"宫廷决斗","trigger":"在《权力的游戏》放置与在场大臣品级相同的「杀戮」（全局限一次）","desc":"存续1天，逾期死亡结局「伴君如伴虎」。三段检定（战斗/体魄/战斗&体魄），成功对方死亡、权势+1；失败我方出战者死亡，若主角出战则死亡结局「无名人之死」。可用千夫所指/毒蛇毒液直接毒杀（恶名+1）","prereqs":["权力的游戏"],"terminal":true,"slots":[
+          {"card":"千夫所指","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽可放：关闭检定、1号槽死亡、恶名+1"},
+          {"card":"毒蛇毒液","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽可放：关闭检定、1号槽死亡、恶名+1"}
+        ]},
+        {"id":"richang_court_4","name":"宫廷决斗·阿卜德","trigger":"阿卜德在场时在《权力的游戏》放置黄金「杀戮」","desc":"存续3天，逾期死亡结局「未战而逃」。最多五段检定（敌方战斗10、盾卫/剑卫6、群战20）；成功阿卜德死亡、参与者战斗+1、权势+1；失败我方参与者死亡。可用千夫所指/毒蛇毒液毒杀（恶名+1）","prereqs":["权力的游戏"],"terminal":true,"slots":[
+          {"card":"阿卜德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"阿卜德的盾卫","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽固定吸入"},
+          {"card":"阿卜德的剑卫","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽固定吸入"},
+          {"card":"千夫所指","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"6号槽可放：关闭检定、阿卜德死亡、恶名+1"},
+          {"card":"毒蛇毒液","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"6号槽可放：关闭检定、阿卜德死亡、恶名+1"}
+        ]},
+        {"id":"richang_court_5","name":"苏丹的戏弄","trigger":"《权力的游戏》内「谗言」达到3张的次日（其他篇章也有特殊触发）","desc":"每天结算最多存续6天，逾期死亡结局「伴君如伴虎」。按苏丹耐心随机索要贡品：13金币（权势+1）/女性追随者（触发《苏丹的欢愉》，拉伊德兄妹会死亡）/战斗≥4角色（按品级触发四种对决）/任意大餐（权势+1）。（可重复）","prereqs":["权力的游戏"],"slots":[
+          {"card":"苏丹的耐心","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"倒计时牌×3~5，每天-1张"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"贡品之一：13金币（耐心为3），权势+1"}
+        ]},
+        {"id":"richang_court_6","name":"苏丹的欢愉","trigger":"在《苏丹的戏弄》上贡一位女性追随者","desc":"自启动耗时7天，该追随者受伤。被贡者魅力≥2可获随机黄金情报，否则金币+3","prereqs":["苏丹的戏弄"],"slots":[]},
+        {"id":"richang_court_7","name":"和野狗对决","trigger":"在《苏丹的戏弄》上贡战斗≥4的岩石品级角色","desc":"检定我方战斗&体魄-野狗(3)：成功≥3权势+1、金币+3；失败我方角色死亡","prereqs":["苏丹的戏弄"],"slots":[
+          {"card":"野狗","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"固定吸入；成功≥3则野狗死亡、权势+1、金币+3"}
+        ]},
+        {"id":"richang_court_8","name":"和囚犯对决","trigger":"在《苏丹的戏弄》上贡战斗≥4的青铜品级角色","desc":"检定我方战斗&体魄-死囚(5)：成功≥3权势+1、金币+6；失败我方角色死亡","prereqs":["苏丹的戏弄"],"slots":[
+          {"card":"死囚","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"固定吸入；成功≥3则死囚死亡、权势+1、金币+6"}
+        ]},
+        {"id":"richang_court_9","name":"和狮子对决","trigger":"在《苏丹的戏弄》上贡战斗≥4的白银品级角色","desc":"检定我方战斗&体魄-狮子(10)：成功≥3权势+1、金币+10；失败我方角色死亡","prereqs":["苏丹的戏弄"],"slots":[
+          {"card":"狮子","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"固定吸入；成功≥3则狮子死亡、权势+1、金币+10"}
+        ]},
+        {"id":"richang_court_10","name":"和巨人对决","trigger":"在《苏丹的戏弄》上贡战斗≥4的黄金品级角色","desc":"检定我方战斗&体魄-巨人(14)：成功≥3权势+1、金币+20；失败我方角色死亡","prereqs":["苏丹的戏弄"],"slots":[
+          {"card":"巨人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"固定吸入；成功≥3则巨人死亡、权势+1、金币+20"}
+        ]},
+        {"id":"richang_court_11","name":"被弃的丑态","trigger":"寻思「苏丹的猜忌」","desc":"放猜忌+任意贵族追随者：猜忌-1、该追随者离队、权势-1。警告：「苏丹的猜忌」牌面倒计时结束即死亡结局「嫌隙丛生」。（可重复寻思触发）","prereqs":[],"slots":[
+          {"card":"苏丹的猜忌","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；结算猜忌-1、该贵族追随者离队、权势-1"}
+        ]}
+      ]
+    },
+    {
+      "id": "richang_house",
+      "name": "家业经营线",
+      "summary": "治理家业赚金币、缴纳维持费、用奢靡卡升级居所",
+      "steps": [
+        {"id":"richang_house_1","name":"治理家业","trigger":"第1天被动触发，存续1天每天自动重置","desc":"派角色检定智慧+社交赚金币（成功≥3金币+5）；可放入空屋/绿洲/险峻小径等增产，吸入升级居所后每3天自动产金币（奇观+5）；放「苏丹的猜忌」可消猜忌但善名/侠名/灵视-1且7天无产出。计入日常弹窗计数。（可重复）","prereqs":[],"slots":[
+          {"card":"空置的旧居","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽（限一次）：触发巴拉特篇《房屋出租》"},
+          {"card":"空置的宅邸","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽（限一次）：触发巴拉特篇《房屋出租》"},
+          {"card":"空置的房间","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽（限一次）：触发巴拉特篇《房屋出租》"},
+          {"card":"被找到的绿洲","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"金币+1/次"},
+          {"card":"繁荣的城市","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"金币+1/次（麦娜尔篇）"},
+          {"card":"逐渐启智的仆人","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"金币+1/次（娜依拉篇）"},
+          {"card":"中国","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"纯剧情（麦娜尔篇）"},
+          {"card":"鹿头装饰","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）金币+1（古利斯篇，须4号槽有牌方可放入）"},
+          {"card":"险峻小径","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"金币+2/次；7次后失去并「苏丹的猜忌」+1（法尔达克篇）"},
+          {"card":"丰产的祝福","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）金币+15（盖斯篇）"},
+          {"card":"昂贵的香料","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）金骰子+1（娜依拉篇）"},
+          {"card":"苏丹的猜忌","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"须主角参与、限一次：猜忌-1，善名/侠名/灵视-1，7天无产出"}
+        ]},
+        {"id":"richang_house_2","name":"维持家业","trigger":"困难难度下从第5天开始每5天触发1次","desc":"需缴纳5金币；不足则「信誉」-1，信誉=0即死亡结局「跌落」。（可重复）","prereqs":[],"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"缴纳0~5金币，不足5则「信誉」-1"},
+          {"card":"信誉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"计数牌×3，归零即死亡结局「跌落」"}
+        ]},
+        {"id":"richang_house_3","name":"稍加整修/全面整修/扩建","trigger":"寻思岩石/青铜/白银「奢靡」（整修系列与大兴土木仅能触发一个）","desc":"放奢靡+3/5/10金币（按品级）折卡获对应升级居所（每3天金币+1/2/3）与空屋；不给金币也可折卡但只得「临时帐篷」并「妻子的不满」+1。（可重复寻思触发）","prereqs":[],"terminal":true,"slots":[
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":"寻思触发（岩石/青铜/白银奢靡对应三种整修，系列仅能触发一个）"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"按奢靡品级付3/5/10金币；不付则获「临时帐篷」并「妻子的不满」+1"}
+        ]},
+        {"id":"richang_house_4","name":"大兴土木","trigger":"寻思黄金「奢靡」（与整修系列仅能触发一个）","desc":"放黄金奢靡+20金币：获「奇观」（每3天金币+5）与黄金「空置的房间」。（可重复寻思触发）","prereqs":[],"terminal":true,"slots":[
+          {"card":"奢靡","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"寻思触发（与整修系列仅能触发一个）"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"20金币"}
+        ]}
+      ]
+    },
+    {
+      "id": "richang_book",
+      "name": "书店与淘书线",
+      "summary": "阿萨尔的书店买书增强角色，买满20本后开启淘书系列并永久关店",
+      "steps": [
+        {"id":"richang_book_1","name":"书店营业","trigger":"第1天被动触发，长期存续完成后自动重置","desc":"阿萨尔坐镇，1金币买随机「读物」（卡池63件，其中7本带《》的书可触发探险仪式）；检定成功另获情报。买3本触发鲁梅拉篇《书店门口的乞丐》；买满20本永久关闭、开启阿萨尔篇并触发《淘书》系列；放「苏丹的猜忌」触发《焚书》。（可重复）","prereqs":[],"slots":[
+          {"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"苏丹的猜忌","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"放入：猜忌-1、《书店营业》永久关闭、触发《焚书》"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"1金币：随机「读物」+1"},
+          {"card":"借书证","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"替代金币（命运商店解锁）"}
+        ]},
+        {"id":"richang_book_2","name":"阅读","trigger":"寻思任意「读物」（读物主要来自《书店营业》/淘书/赃物商人）","desc":"按读物属性增强读者（多数读物对读者属性有要求，鲁梅拉可无视）；部分读物触发新事件。（可重复）","prereqs":["书店营业"],"slots":[
+          {"card":"读物","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；1号槽放所寻思的读物"}
+        ]},
+        {"id":"richang_book_3","name":"焚书","trigger":"在《书店营业》放置「苏丹的猜忌」","desc":"致命警告：阿萨尔、鲁梅拉必死（不放苏丹卡也会死），《书店营业》永久关闭。可用白银及以下杀戮/奢靡折卡（恶名+1/+3）","prereqs":["书店营业"],"terminal":true,"slots":[
+          {"card":"鲁梅拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入；结算时死亡"},
+          {"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽固定吸入；结算时死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"折卡：恶名+1"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"折卡：恶名+1"},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"折卡：恶名+3"},
+          {"card":"学会徽章","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"若有：「学会徽章」-1、权势-1"}
+        ]},
+        {"id":"richang_book_4","name":"淘书·去城外","trigger":"《书店营业》买满20本书后，每3天随机触发三个淘书事件之一","desc":"放阿萨尔+任意角色+3金币+情报，检定生存+智慧：成功≥4获随机读物，累计成功3次触发《这不是偷》；失败失去金币。（可重复）","prereqs":["书店营业"],"slots":[
+          {"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3金币；检定失败失去所放金币"}
+        ]},
+        {"id":"richang_book_5","name":"这不是偷","trigger":"在《淘书·去城外》检定成功3次","desc":"抉择弹窗：「你们走吧，把书留下」善名+1；「我要惩罚你们」侠名+1、金币+3","prereqs":["淘书·去城外"],"terminal":true,"slots":[]},
+        {"id":"richang_book_6","name":"淘书·去上城区","trigger":"《书店营业》买满20本书后，每3天随机触发三个淘书事件之一","desc":"卡槽同城外淘书，检定魅力+社交：成功≥4获随机读物，累计成功3次触发《你礼貌吗？》；失败返还金币。（可重复）","prereqs":["书店营业"],"slots":[
+          {"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3金币；检定失败返还所放金币"}
+        ]},
+        {"id":"richang_book_7","name":"你礼貌吗？","trigger":"在《淘书·去上城区》检定成功3次","desc":"抉择弹窗：「当面讽刺他」侠名+1、金币+6；「回去收拾他」权势+1","prereqs":["淘书·去上城区"],"terminal":true,"slots":[]},
+        {"id":"richang_book_8","name":"淘书·去黑街","trigger":"《书店营业》买满20本书后，每3天随机触发三个淘书事件之一","desc":"卡槽同城外淘书，检定战斗+体魄：成功≥4获随机读物，累计成功3次触发《先到先得》；失败受伤。（可重复）","prereqs":["书店营业"],"slots":[
+          {"card":"阿萨尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3金币；检定失败则{受伤}"}
+        ]},
+        {"id":"richang_book_9","name":"先到先得","trigger":"在《淘书·去黑街》检定成功3次","desc":"抉择弹窗：「和他争抢」侠名+1、「罪证」+1；「看看今天带的卡」恶名+1、金币+3","prereqs":["淘书·去黑街"],"terminal":true,"slots":[]}
+      ]
+    },
+    {
+      "id": "richang_shop",
+      "name": "日常设施线",
+      "summary": "赃物商人、欢愉之馆、装备商人、医馆等长期挂账的日常设施",
+      "steps": [
+        {"id":"richang_shop_1","name":"赃物商人","trigger":"在命运商店解锁后，第1天被动触发，长期存续自动重置","desc":"5金币+非动物/怪物追随者鉴定「未鉴定的赃物」获随机装备/读物（卡池64件每件限一次）；购买20次后可能触发阿里木篇《狗窝》。（可重复）","prereqs":[],"slots":[
+          {"card":"未鉴定的赃物","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"鉴定消耗，获随机「装备/读物」"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"5金币"}
+        ]},
+        {"id":"richang_shop_2","name":"欢愉之馆","trigger":"第2天被动触发，长期存续完成后自动重置","desc":"主角携2/4/8金币（对应妓女品级）找朱娜/贾丽拉/夏玛（后续解锁索拉薇儿），无论检定成败都可折纵欲/奢靡/杀戮卡（每个妓女每种卡限一次；杀戮妓女死亡恶名+1）；首次纵欲/奢靡12天后开启奈布哈尼篇《一桩趣事》，杀戮妓女触发其失败线。放「苏丹的猜忌」消猜忌但获得「不举的传言」：14天内折纵欲即死亡结局「无名人之死」。（可重复）","prereqs":[],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"朱娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽每1-2天自动刷新（后续可解锁索拉薇儿）"},
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽每1-2天自动刷新（后续可解锁索拉薇儿）"},
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽每1-2天自动刷新（后续可解锁索拉薇儿）"},
+          {"card":"苏丹的猜忌","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"全馆限一次：猜忌-1、主角获「不举的传言」"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"2/4/8金币对应妓女品级（岩/铜/金），折奢靡时翻倍"},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于妓女品级；正常检定，成败皆可折卡"},
+          {"card":"奢靡","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于妓女品级；金币翻倍，正常检定"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于妓女品级；关闭检定、妓女死亡、恶名+1"}
+        ]},
+        {"id":"richang_shop_3","name":"装备商人","trigger":"第4天被动触发，长期存续，商品每7天刷新","desc":"耗时0天：2/5/10/20金币购买岩石/青铜/白银/黄金装备，卡池48件、购买上限28件。（可重复）","prereqs":[],"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"按品级2/5/10/20金币购买装备"}
+        ]},
+        {"id":"richang_shop_4","name":"做好准备","trigger":"第4天被动触发，长期存续完成后自动重置","desc":"放穿戴装备的角色：青铜「机遇」+1。（可重复）","prereqs":[],"slots":[]},
+        {"id":"richang_shop_5","name":"医馆","trigger":"有角色受伤或疾病时触发，长期存续","desc":"1金币治愈受伤/疾病；放置主角可能触发萨米尔篇《意外的到访》。（可重复）","prereqs":[],"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"1金币治愈{受伤}或{疾病}"}
+        ]},
+        {"id":"richang_shop_6","name":"疾病发作","trigger":"每7天检测是否存在受伤/疾病的角色，有则自启动","desc":"放疗伤草药/生命之水/精心调配的伤药可治愈；空置则检定体魄，失败该角色死亡。（可重复）","prereqs":[],"slots":[
+          {"card":"疗伤草药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"治愈{受伤/疾病}"},
+          {"card":"生命之水","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"治愈{受伤/疾病}"},
+          {"card":"精心调配的伤药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"治愈{受伤/疾病}"}
+        ]}
+      ]
+    },
+    {
+      "id": "richang_think",
+      "name": "寻思资源事件线",
+      "summary": "寻思金币/情报/苏丹卡随机触发的刷资源小事件",
+      "steps": [
+        {"id":"richang_think_1","name":"黑吃黑","trigger":"寻思「金币」随机触发五个金币事件之一","desc":"检定隐匿：成功≥5权势+1、金币+3；≥3金币+2；≥1金币+1；=0受伤。（可重复）","prereqs":[],"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发（随机触发五个金币事件之一）"}
+        ]},
+        {"id":"richang_think_2","name":"行猎游戏","trigger":"寻思「金币」随机触发五个金币事件之一","desc":"检定生存：成功≥5权势+1、金币+5；≥3金币+3；≥1金币+1。（可重复）","prereqs":[],"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发（随机触发五个金币事件之一）"}
+        ]},
+        {"id":"richang_think_3","name":"出卖苦力","trigger":"寻思「金币」随机触发五个金币事件之一","desc":"检定体魄：成功≥5金币+4；≥3金币+3；≥1金币+2；=0金币+1。（可重复）","prereqs":[],"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发（随机触发五个金币事件之一）"}
+        ]},
+        {"id":"richang_think_4","name":"宫廷事务","trigger":"寻思「金币」随机触发五个金币事件之一","desc":"检定社交：成功≥5随机2-5金币；≥3随机1-4金币；≥1金币+1。（可重复）","prereqs":[],"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发（随机触发五个金币事件之一）"}
+        ]},
+        {"id":"richang_think_5","name":"酒馆拳斗","trigger":"寻思「金币」随机触发五个金币事件之一","desc":"检定战斗：成功≥5金币+3；≥3金币+2；≥1金币+1；=0受伤。（可重复）","prereqs":[],"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发（随机触发五个金币事件之一）"}
+        ]},
+        {"id":"richang_think_6","name":"皇家图书馆","trigger":"寻思任意「情报」随机触发两个情报事件之一","desc":"检定智慧：成功≥5随机白银情报；≥3青铜；≥1岩石。（可重复）","prereqs":[],"slots":[
+          {"card":"情报","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发（随机触发两个情报事件之一）"}
+        ]},
+        {"id":"richang_think_7","name":"宴会上演出","trigger":"寻思任意「情报」随机触发两个情报事件之一","desc":"检定魅力：成功≥5随机白银情报+金币+1；≥3青铜+金币+1；≥1岩石+金币+1。（可重复）","prereqs":[],"slots":[
+          {"card":"情报","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发（随机触发两个情报事件之一）"}
+        ]},
+        {"id":"richang_think_8","name":"超级大撒币","trigger":"完成装修系列事件后，寻思青铜及以下「奢靡」","desc":"主角+10金币折奢靡，检定隐匿：成功≥1主角虔信+1、隐匿+1且不再触发；失败受伤、可再次寻思触发","prereqs":["稍加整修/全面整修/扩建"],"terminal":true,"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"10金币"},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":"寻思触发（青铜及以下奢靡；需已完成装修系列）"}
+        ]},
+        {"id":"richang_think_9","name":"登高之人","trigger":"寻思青铜及以下「征服」","desc":"耗时2天，主角折征服卡检定生存：成功≥1生存+1且不再触发；失败死亡结局「无名人之死」","prereqs":[],"terminal":true,"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":"寻思触发（青铜及以下征服）"}
+        ]}
+      ]
+    },
+    {
+      "id": "richang_card",
+      "name": "在家折卡线",
+      "summary": "在家折纵欲/杀戮苏丹卡及其逾期衍生事件",
+      "steps": [
+        {"id":"richang_card_1","name":"在家行淫","trigger":"寻思黄金及以下「纵欲」（每天限一次）","desc":"主角对任意非怪物追随者折纵欲卡：对方无激情则离队、支持清零、反对+3、「妻子的不满」+1，有激情仅「妻子的不满」+1。大量特殊结算：对铁头/小圆会触发铁头篇《铁头成为大敌》，拜铃耶获「污渍：信徒」，镜灵物性+3等；纵欲过的角色有隐藏标记，品级变化后才可再纵欲。（可重复）","prereqs":[],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发（黄金及以下纵欲）；须不高于对象品级"},
+          {"card":"荒唐的情诗","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）使3号槽对象被视为有{激情}"}
+        ]},
+        {"id":"richang_card_2","name":"饥不择食","trigger":"《在家行淫》逾期且持有青铜及以下「纵欲」","desc":"主角折纵欲检定魅力：成功≥1恶名+1、魅力+1且不再触发；失败受伤、恶名+1、3天后重置","prereqs":["在家行淫"],"terminal":true,"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":"青铜及以下纵欲"}
+        ]},
+        {"id":"richang_card_3","name":"残忍的牺牲","trigger":"寻思黄金及以下「杀戮」（每天限一次）","desc":"主角杀死任意非怪物追随者折杀戮卡：3号槽死亡、恶名+1。特殊结算：杀梅姬达成「情非得已」，杀小圆触发铁头篇《铁头成为大敌》，杀伊曼（非离教徒）触发正教篇《与正教决裂》，杀拜铃耶获「污渍：天使」。（可重复）","prereqs":[],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发（黄金及以下杀戮）；须不高于牺牲者品级"}
+        ]},
+        {"id":"richang_card_4","name":"荣誉杀戮","trigger":"《残忍的牺牲》逾期且持有青铜及以下「杀戮」","desc":"主角折杀戮检定战斗：成功≥1战斗+1且不再触发；失败死亡结局「不自量力」","prereqs":["残忍的牺牲"],"terminal":true,"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":"青铜及以下杀戮"},
+          {"card":"千夫所指","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"关闭检定，可折卡但无检定成功的收益"},
+          {"card":"毒蛇毒液","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"关闭检定，可折卡但无检定成功的收益"}
+        ]}
+      ]
+    },
+    {
+      "id": "richang_crime",
+      "name": "罪证处理线",
+      "summary": "手牌持有「罪证」后的销毁、藏匿与艾迪勒追查审判链",
+      "steps": [
+        {"id":"richang_crime_1","name":"破坏证据","trigger":"寻思「罪证」","desc":"1金币+角色检定隐匿+智慧（权势≥5/10需求降低）：成功≥3「罪证」-1；失败「罪证」+1。（可重复寻思触发）","prereqs":[],"slots":[
+          {"card":"罪证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；检定成功≥3则「罪证」-1，失败「罪证」+1"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"1金币"}
+        ]},
+        {"id":"richang_crime_2","name":"隐匿小屋·扩建","trigger":"手牌有「空屋」时，寻思头顶带惊叹号的「罪证」","desc":"放罪证+8金币+任意空屋（空置的房间/宅邸/旧居），结算触发《隐匿小屋》","prereqs":[],"slots":[
+          {"card":"罪证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发（需手牌有「空屋」）"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"8金币"}
+        ]},
+        {"id":"richang_crime_3","name":"隐匿小屋","trigger":"完成《隐匿小屋·扩建》","desc":"长期存续耗时7天：最多藏匿3张「罪证」（每张1金币），期间罪证脱离手牌、不触发相关事件。（可重复）","prereqs":["隐匿小屋·扩建"],"slots":[
+          {"card":"罪证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"最多藏匿3张，期间脱离手牌"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"每张罪证需1金币"}
+        ]},
+        {"id":"richang_crime_4","name":"调查罪证","trigger":"每4-6天检查手牌，若持有「罪证」则触发","desc":"存续5天，艾迪勒来查：社交+智慧检定配合武力威慑成功可暂停检查4天；逾期或检定失败将触发《论罪与辩护》","prereqs":[],"slots":[
+          {"card":"罪证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"艾迪勒","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽固定吸入"}
+        ]},
+        {"id":"richang_crime_5","name":"论罪与辩护","trigger":"《调查罪证》逾期或检定失败1天后","desc":"存续3天：贵族辩护+诉讼金（最多50金币）检定消除罪证，权势越高越容易；可用任意追随者顶罪直接清零罪证（顶罪者死亡）；已完成《权势之盾》则直接清零。逾期或检定失败触发《罪证确凿》","prereqs":["调查罪证"],"slots":[
+          {"card":"罪证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入手牌所有「罪证」"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"诉讼金：最多50金币"}
+        ]},
+        {"id":"richang_crime_6","name":"罪证确凿","trigger":"《论罪与辩护》逾期或检定失败1天后","desc":"抉择弹窗：「接受审判」即死亡结局「伴君如伴虎」；「交钱赎罪」触发《交钱赎罪》；「进献妻妾」触发《进献妻妾》","prereqs":["论罪与辩护"],"slots":[]},
+        {"id":"richang_crime_7","name":"交钱赎罪","trigger":"在《罪证确凿》选择「交钱赎罪」","desc":"存续5天，逾期死亡结局「伴君如伴虎」。失去40金币了事","prereqs":["罪证确凿"],"terminal":true,"slots":[
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"40金币"}
+        ]},
+        {"id":"richang_crime_8","name":"进献妻妾","trigger":"在《罪证确凿》选择「进献妻妾」","desc":"存续5天，逾期死亡结局「伴君如伴虎」。献上梅姬/法图娜{侧室}/小圆{侧室}/娜依拉{新妻}（后几位需完成个人篇获得标签），该妻妾永久离队","prereqs":["罪证确凿"],"terminal":true,"slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"妻妾四选一；永久离队"},
+          {"card":"法图娜","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"妻妾四选一（需{侧室}标签）；永久离队"},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"妻妾四选一（需{侧室}标签）；永久离队"},
+          {"card":"娜依拉","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"妻妾四选一（需{新妻}标签）；永久离队"}
+        ]}
+      ]
+    },
+    {
+      "id": "richang_mad",
+      "name": "疯狂与幻觉线",
+      "summary": "持有「疯狂」后的消解手段与六种疯癫幻觉差分事件",
+      "steps": [
+        {"id":"richang_mad_1","name":"消解疯狂","trigger":"寻思「疯狂」","desc":"用超臭香水/4张幸福感/造物之容/一截斩断的绳索（失去）使疯狂-1；梅姬/法拉杰可分担但每次体魄下降且感染计数=3时死亡；{密教徒}法拉杰会啃食主角，啃食计数=5死亡结局「无名人之死」；阿图娜尔最多用3次。（可重复寻思触发）","prereqs":[],"slots":[
+          {"card":"疯狂","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽"},
+          {"card":"超臭香水","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）「疯狂」-1"},
+          {"card":"幸福感","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）×4张：「疯狂」-1"},
+          {"card":"造物之容","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）「疯狂」-1"},
+          {"card":"一截斩断的绳索","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）「疯狂」-1"},
+          {"card":"错乱学习机","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"不消耗：50%主角智慧-1社交+1，50%「疯狂」-1"},
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"「疯狂」-1、灵视+1，最多使用3次"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"分担「疯狂」-1；自身体魄下降，感染计数=3时死亡"},
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"分担「疯狂」-1；{密教徒}法拉杰改为啃食主角，啃食计数=5死亡结局「无名人之死」"}
+        ]},
+        {"id":"richang_mad_2","name":"疯癫与幻觉1·皮肤","trigger":"每3-7天检测手牌，持「疯狂」则随机触发六种差分之一","desc":"缓解物：理性（疯狂-1）/拜铃耶（限一次：灵视+1、恶名+1、获「蜘蛛斗篷」，不再触发本差分）/伊曼（体魄+1）/伤药（灵视+1）；空置按疯狂层数受伤/诅咒，疯狂≥3死亡结局「无名人之死」","prereqs":[],"slots":[
+          {"card":"疯狂","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽固定吸入"},
+          {"card":"正神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽"},
+          {"card":"邪神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4号槽"},
+          {"card":"理性","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）「疯狂」-1"},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、恶名+1、获「蜘蛛斗篷」，不再触发本差分"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、主角体魄+1，不再触发本差分"},
+          {"card":"疗伤草药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"生命之水","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"精心调配的伤药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"}
+        ]},
+        {"id":"richang_mad_3","name":"疯癫与幻觉2·窥视","trigger":"每3-7天检测手牌，持「疯狂」则随机触发六种差分之一","desc":"拜铃耶（限一次）：灵视+1、金骰子+1，本仪式替换为《墙垣之外》；5金币缓解但《治理家业》暂停7天；空置按疯狂层数扣魅力/智慧，疯狂≥3死亡结局「无名人之死」","prereqs":[],"slots":[
+          {"card":"疯狂","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽固定吸入"},
+          {"card":"正神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽"},
+          {"card":"邪神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4号槽"},
+          {"card":"理性","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）「疯狂」-1"},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、金骰子+1，本仪式替换为《墙垣之外》"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、主角魅力+1，不再触发本差分"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"5金币：灵视+1、《治理家业》暂停7天，不再触发本差分"},
+          {"card":"疗伤草药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"生命之水","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"精心调配的伤药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"}
+        ]},
+        {"id":"richang_mad_4","name":"墙垣之外","trigger":"在《疯癫与幻觉2·窥视》放置拜铃耶后替换而来","desc":"存续3天，逾期无奖惩：金骰子+1、灵视+1","prereqs":["疯癫与幻觉2·窥视"],"slots":[
+          {"card":"疯狂","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"正神的面容","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽固定吸入"},
+          {"card":"邪神的面容","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽固定吸入"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽固定吸入"}
+        ]},
+        {"id":"richang_mad_5","name":"疯癫与幻觉3","trigger":"每3-7天检测手牌，持「疯狂」则随机触发六种差分之一","desc":"拜铃耶（限一次）：灵视+1、获「狂信者之油」；伊曼（限一次）：虔信+1；放任意武器：灵视+1但主角社交-8、生存-8、体魄-3；空置扣生存/社交并增加谗言","prereqs":[],"slots":[
+          {"card":"疯狂","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽固定吸入"},
+          {"card":"正神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽"},
+          {"card":"邪神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4号槽"},
+          {"card":"理性","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）「疯狂」-1"},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、获「狂信者之油」，不再触发本差分"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、虔信+1，不再触发本差分"},
+          {"card":"疗伤草药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"生命之水","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"精心调配的伤药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"}
+        ]},
+        {"id":"richang_mad_6","name":"狂信者之油","trigger":"寻思「狂信者之油」（由《疯癫与幻觉3》放拜铃耶获得）","desc":"涂油使任意追随者（主角/镜灵除外）成为{密教徒}：魔力+2、魅力+2、灵视+1、「窥视黑暗」+1。注意很多特殊入教事件无法靠涂油触发。（可重复寻思触发）","prereqs":["疯癫与幻觉3"],"terminal":true,"slots":[
+          {"card":"狂信者之油","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；（失去）使追随者成为{密教徒}"}
+        ]},
+        {"id":"richang_mad_7","name":"疯癫与幻觉4·倒刺","trigger":"每3-7天检测手牌，持「疯狂」则随机触发六种差分之一","desc":"拜铃耶（限一次）：主角体魄+1、魅力+1；伊曼（限一次）：主角生存+1；空置按疯狂层数扣魅力/社交/体魄并受伤，疯狂≥3死亡结局「无名人之死」","prereqs":[],"slots":[
+          {"card":"疯狂","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽固定吸入"},
+          {"card":"正神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽"},
+          {"card":"邪神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4号槽"},
+          {"card":"理性","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）「疯狂」-1"},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、主角体魄+1、魅力+1，不再触发本差分"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、主角生存+1，不再触发本差分"},
+          {"card":"疗伤草药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"生命之水","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"精心调配的伤药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"}
+        ]},
+        {"id":"richang_mad_8","name":"疯癫与幻觉5·饥饿","trigger":"每3-7天检测手牌，持「疯狂」则随机触发六种差分之一","desc":"需3/10金币按疯狂层数缓解，疯狂≥3时金币无效必须吃人（追随者死亡、恶名+1、罪证+1）；无可吃者即死亡结局「无名人之死」。拜铃耶（限一次）：主角体魄+3、拜铃耶魔力+3","prereqs":[],"slots":[
+          {"card":"疯狂","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽固定吸入"},
+          {"card":"正神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽"},
+          {"card":"邪神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4号槽"},
+          {"card":"理性","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）「疯狂」-1"},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、主角体魄+3、拜铃耶魔力+3，不再触发本差分"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、主角体魄+1，不再触发本差分"},
+          {"card":"疗伤草药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"生命之水","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"精心调配的伤药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"「疯狂」=1需3金币、=2需10金币、≥3金币无效必须吃人"}
+        ]},
+        {"id":"richang_mad_9","name":"疯癫与幻觉6·怪物","trigger":"每3-7天检测手牌，持「疯狂」则随机触发六种差分之一","desc":"拜铃耶（限一次）：两名追随者死亡换取随机两个「怪物」；伊曼（限一次）：众人魅力+1；空置降支持并全员受伤，疯狂≥3时检定失败即死亡结局「无名人之死」、成功则两追随者死亡且罪证+2","prereqs":[],"slots":[
+          {"card":"疯狂","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽固定吸入"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽固定吸入"},
+          {"card":"正神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽"},
+          {"card":"邪神的面容","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4号槽"},
+          {"card":"理性","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）「疯狂」-1"},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、6/7号槽死亡、随机获两个「怪物」，不再触发本差分"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"本系列限一次：灵视+1、2/6/7号槽魅力+1，不再触发本差分"},
+          {"card":"疗伤草药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"生命之水","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"},
+          {"card":"精心调配的伤药","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）灵视+1"}
+        ]}
+      ]
+    }
+  ]
+}

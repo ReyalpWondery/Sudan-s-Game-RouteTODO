@@ -1,0 +1,408 @@
+{
+  "id": "sanyaojing",
+  "title": "三妖精篇",
+  "category": "character",
+  "characters": [
+    "小薇",
+    "小安",
+    "小留",
+    "妖精女王"
+  ],
+  "routes": [
+    {
+      "id": "sanyaojing_lamp",
+      "name": "提灯与妖精获取",
+      "summary": "打碎冒险篇获得的妖精的提灯，随机获得三只妖精之一",
+      "steps": [
+        {
+          "id": "sanyaojing_lamp_1",
+          "name": "打碎提灯",
+          "trigger": "寻思「妖精的提灯」（冒险篇《妖精森林》获取）",
+          "desc": "仪式，存续1天。放妖精的提灯（失去）+主角。随机获得「小薇/小安/小留」之一，抽到小留时金骰子+1。可在《神秘的援助》复制提灯以集齐3个妖精。逾期可再次寻思触发（可重复）",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "妖精的提灯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "寻思触发；放入后失去"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sanyaojing_xiaowei",
+      "name": "小薇线",
+      "summary": "小薇参与战斗检定累积计数，最终召唤妖精女王",
+      "steps": [
+        {
+          "id": "sanyaojing_xiaowei_1",
+          "name": "小薇在找你",
+          "trigger": "小薇或装备小薇的角色参与三次有{战斗}检定的仪式",
+          "desc": "抉择弹窗：选1-3项（钱/力量/快乐）后小薇战斗+1，此后每次战斗检定小薇战斗计数+1，并每7天触发《杀人检查》；选“呵呵，我不上当”则小薇线关闭",
+          "prereqs": [
+            "打碎提灯"
+          ],
+          "slots": []
+        },
+        {
+          "id": "sanyaojing_xiaowei_2",
+          "name": "杀人检查",
+          "trigger": "在《小薇在找你》选1-3项后每7天自启动一次",
+          "desc": "仪式，放小薇。战斗计数≥5：小薇重投+1、计数清零（第2次达成时事件关闭，可能触发《小薇召唤妖精女王》）；计数=0：小薇重投-1、社交-2开始闹脾气，下次结算计数≥1才恢复",
+          "prereqs": [
+            "小薇在找你"
+          ],
+          "slots": [
+            {
+              "card": "小薇",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "sanyaojing_xiaowei_3",
+          "name": "小薇召唤妖精女王",
+          "trigger": "小薇战斗计数≥5的情况下完成2次《杀人检查》；小薇在队、完成《心灵之战·7》、未触发过《妖精的笼子》",
+          "desc": "抉择：选“去安排吧”触发《妖精的笼子》（另外两只妖精的召唤事件关闭）；选“别傻了”小薇线关闭；其余选项读剧情后重选",
+          "prereqs": [
+            "杀人检查"
+          ],
+          "slots": [],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "sanyaojing_xiaoan",
+      "name": "小安线",
+      "summary": "纵欲小安并累积纵欲计数，最终召唤妖精女王",
+      "steps": [
+        {
+          "id": "sanyaojing_xiaoan_1",
+          "name": "小安在找你",
+          "trigger": "在《在家行淫》纵欲小安",
+          "desc": "抉择弹窗：选1-3项后主角穿戴「小安的任务计时」，期间任意仪式纵欲计数+1；选“呵呵，我不上当”则小安线关闭",
+          "prereqs": [
+            "打碎提灯"
+          ],
+          "slots": []
+        },
+        {
+          "id": "sanyaojing_xiaoan_2",
+          "name": "身体检查",
+          "trigger": "「小安的任务计时」倒计时清零次日自启动",
+          "desc": "仪式，放主角+小安。纵欲计数≥1：主角魅力+1、计数清零重新计时（第2次达成时不再穿戴计时，可能触发《小安召唤妖精女王》）；计数=0：主角体魄-1。注意纵欲计数在完成纵欲1天后才记上",
+          "prereqs": [
+            "小安在找你"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "小安",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "sanyaojing_xiaoan_3",
+          "name": "小安召唤妖精女王",
+          "trigger": "纵欲计数≥1的情况下完成《身体检查》2次；小安在队、完成《心灵之战·8》、未触发过《妖精的笼子》",
+          "desc": "抉择：选“去安排吧”触发《妖精的笼子》（另外两只妖精的召唤事件关闭）；选“别傻了”小安线关闭；其余选项读剧情后重选",
+          "prereqs": [
+            "身体检查"
+          ],
+          "slots": [],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "sanyaojing_xiaoliu",
+      "name": "小留线",
+      "summary": "攒金币听小留讲故事，最终召唤妖精女王",
+      "steps": [
+        {
+          "id": "sanyaojing_xiaoliu_1",
+          "name": "小留在找你",
+          "trigger": "持有金币≥40；小留参与《治理家业/权力的游戏/浴场的消息/书店营业/淘书》2次",
+          "desc": "抉择弹窗：选1-3项后金币+5，并按持有金币触发后续：≥100触发《留的故事》，≥50触发《人类魔法·1》，<50触发《人类魔法·2》；选“呵呵，我不上当”则小留线关闭",
+          "prereqs": [
+            "打碎提灯"
+          ],
+          "slots": []
+        },
+        {
+          "id": "sanyaojing_xiaoliu_2",
+          "name": "人类魔法·1",
+          "trigger": "《小留在找你》选1-3项时50≤金币<100；此后每10天检查手牌重复触发直到触发《留的故事》",
+          "desc": "仪式，放小留。金币+5（可重复）",
+          "prereqs": [
+            "小留在找你"
+          ],
+          "slots": [
+            {
+              "card": "小留",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "sanyaojing_xiaoliu_3",
+          "name": "人类魔法·2",
+          "trigger": "《小留在找你》选1-3项时金币<50；此后每10天检查手牌重复触发直到触发《留的故事》",
+          "desc": "仪式，放小留+20金币（不足则有多少吸多少）。失去所吸入的金币（可重复）",
+          "prereqs": [
+            "小留在找你"
+          ],
+          "slots": [
+            {
+              "card": "小留",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "sanyaojing_xiaoliu_4",
+          "name": "留的故事",
+          "trigger": "持有金币≥100时立即触发（含《小留在找你》后攒到100的情况）",
+          "desc": "仪式，放小留。可能触发《小留召唤妖精女王》，《人类魔法·1/2》彻底关闭",
+          "prereqs": [
+            "小留在找你"
+          ],
+          "slots": [
+            {
+              "card": "小留",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "sanyaojing_xiaoliu_5",
+          "name": "小留召唤妖精女王",
+          "trigger": "完成《留的故事》；小留在队、完成《心灵之战·9》、未触发过《妖精的笼子》",
+          "desc": "抉择：选“去安排吧”触发《妖精的笼子》（另外两只妖精的召唤事件关闭）；选“别傻了”小留线关闭；其余选项读剧情后重选",
+          "prereqs": [
+            "留的故事"
+          ],
+          "slots": [],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "sanyaojing_queen",
+      "name": "妖精女王线",
+      "summary": "从妖精的笼子到集齐三花恳求女王，争取妖精女王提灯与完美结局",
+      "steps": [
+        {
+          "id": "sanyaojing_queen_1",
+          "name": "妖精的笼子",
+          "trigger": "在任一《召唤妖精女王》事件中选“去安排吧”",
+          "desc": "仪式，长期存续。放非贵族追随者+5金币+任意情报。获「黄金骨笼」、触发《三岔路口》；检定隐匿+社交<4额外「罪证」+1；若前周目完成过本事件可退回2/3号槽卡牌",
+          "prereqs": [
+            "小薇召唤妖精女王",
+            "小安召唤妖精女王",
+            "小留召唤妖精女王"
+          ],
+          "slots": []
+        },
+        {
+          "id": "sanyaojing_queen_2",
+          "name": "三岔路口",
+          "trigger": "完成《妖精的笼子》",
+          "desc": "仪式，长期存续。放8金币+主角+一只妖精。每周目用一只妖精完成得到一朵对应的花（金色=小留、紫色=小安、绿色=小薇），集齐3朵至少需三周目；未集齐：「乙太」+1；集齐（含本次）：触发《恳求女王》",
+          "prereqs": [
+            "妖精的笼子"
+          ],
+          "slots": [
+            {
+              "card": "金色的花",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "小留对应的花"
+            },
+            {
+              "card": "紫色的花",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "小安对应的花"
+            },
+            {
+              "card": "绿色的花",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "小薇对应的花"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "小薇",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "三只妖精三选一"
+            },
+            {
+              "card": "小安",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "三只妖精三选一"
+            },
+            {
+              "card": "小留",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "三只妖精三选一"
+            }
+          ]
+        },
+        {
+          "id": "sanyaojing_queen_3",
+          "name": "恳求女王",
+          "trigger": "完成《三岔路口》、集齐3朵花",
+          "desc": "仪式，存续3天（逾期三妖精篇关闭）。放三只妖精，单选组合：对抗女王需情报+4名魔力≥5角色+黄金骨笼，四轮智慧+魔力检定成功≥5可将「黄金骨笼」变为「妖精女王提灯」并达成一千零一夜「妖精女王」；任一轮失败则该轮角色死亡；献上祭品（乙太/黄金品级装备）或检定失败：本周目在队的妖精变成动物（小薇→牛、小安→鸡、小留→驴），命运商店解锁对应商品",
+          "prereqs": [
+            "三岔路口"
+          ],
+          "slots": [
+            {
+              "card": "小薇",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "小留",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "小安",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "黄金骨笼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "对抗女王路线"
+            },
+            {
+              "card": "乙太",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "献上祭品路线（与黄金品级装备二选一，失去）"
+            }
+          ]
+        },
+        {
+          "id": "sanyaojing_queen_4",
+          "name": "女王的祝福",
+          "trigger": "寻思「妖精女王提灯」（必须手动点√开启）",
+          "desc": "仪式，耗时0天。放提灯+非动物/怪物角色（每人限一次）。各属性10%概率+3，另有概率全属性+1、支持+3。5天后可再次寻思触发，完成5次触发《女王的逃亡》（可重复）",
+          "prereqs": [
+            "恳求女王"
+          ],
+          "slots": [
+            {
+              "card": "妖精女王提灯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "sanyaojing_queen_5",
+          "name": "女王的逃亡",
+          "trigger": "完成5次《女王的祝福》后自启动",
+          "desc": "仪式。放提灯+受过女王祝福的角色（主角不会被吸入）+可选部队/角色/情报。检定1魔力+生存≥5进入检定2，失败则提灯与受祝福角色退场；检定2魔力+魅力：成功≥7则提灯回到手牌（此后无法再触发《女王的祝福》），失败<7时无部队则全员退场（完美结局：女王携带所有受过祝福的角色全员退场）、有部队则受祝福角色{受伤}、提灯回到手牌",
+          "prereqs": [
+            "女王的祝福"
+          ],
+          "slots": [
+            {
+              "card": "妖精女王提灯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

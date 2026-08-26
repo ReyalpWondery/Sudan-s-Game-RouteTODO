@@ -1,0 +1,230 @@
+{
+  "id": "rena",
+  "title": "热娜篇",
+  "category": "character",
+  "characters": ["热娜"],
+  "routes": [
+    {
+      "id": "rena_base",
+      "name": "珠宝线（基础）",
+      "summary": "在命运商店解锁热娜后寻思她开启珠宝设计，反复寻访宝石并镶嵌装备，是全篇的地基",
+      "steps": [
+        {"id":"rena_base_1","name":"珠宝设计","trigger":"寻思「热娜」（逾期可再次寻思触发）","desc":"仪式，存续1天耗时1天。卡槽：热娜+5金币，可放特殊材料关闭检定直接换饰品（精美的蓝纱→湛蓝丝巾、帝国之花残页→白银吊坠、巨狼头颅→狼头围巾、夜晚的结晶→封印之晶、蛇王之鳞→蛇王之傲），可放理性提供20点灵感。无材料时检定（骰子=热娜智慧+灵感）：成功≥9黄金装备/≥6白银/≥6以下青铜/≥1岩石，=0无收益不退钱。结算：灵感清零、触发《宝石原石》。热娜成为密教徒后造物卡池新增黄金造物","prereqs":[],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；1号槽参与仪式"},
+          {"card":"火龙鳞片","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"特殊材料：关闭检定，有特殊文本但无收益（屠龙篇）"},
+          {"card":"精美的蓝纱","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"特殊材料：获饰品「湛蓝丝巾」（哈布娜篇）"},
+          {"card":"帝国之花残页","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"特殊材料：获饰品「白银吊坠」（娜依拉篇）"},
+          {"card":"巨狼头颅","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"特殊材料：获饰品「狼头围巾」（哲巴尔篇）"},
+          {"card":"夜晚的结晶","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"特殊材料：获饰品「封印之晶」（萨米尔篇）"},
+          {"card":"蛇王之鳞","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"特殊材料：获饰品「蛇王之傲」（古利斯篇）"},
+          {"card":"理性","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"正常检定，提供20点灵感"}
+        ]},
+        {"id":"rena_base_2","name":"宝石原石","trigger":"完成1次《珠宝设计》且检定成功","desc":"仪式，长期存续耗时2天。卡槽：任意角色+2金币；另放4金币进高级寻访（收益更好），可放任意情报。检定智慧+社交，成功获普通/高级宝石（大小玛瑙/红玉髓/紫水晶/祖母绿/红宝石/蓝宝石）。结算后重新触发本事件；取得任意宝石后可能触发《请热娜帮忙》《做最好的珠宝商》；完成《牛骨大狂热》后概率额外获「牛骨」。热娜离队则永久关闭本仪式（可重复）","prereqs":["珠宝设计"],
+        "slots":[]},
+        {"id":"rena_base_3","name":"请热娜帮忙","trigger":"在《宝石原石》获得宝石后寻思「热娜」（可重复触发）","desc":"抉择弹窗：选“设计珠宝饰品”触发《珠宝设计》；选“镶嵌宝石”触发《宝石镶嵌》","prereqs":["宝石原石"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"rena_base_4","name":"宝石镶嵌","trigger":"在《请热娜帮忙》选“镶嵌宝石”（逾期可再次寻思触发）","desc":"仪式，存续1天耗时1天。卡槽：2金币+任意装备+任意宝石。无宝石的装备获得宝石属性；已有宝石的装备可拆回宝石或更换新宝石","prereqs":["请热娜帮忙"],
+        "slots":[]},
+        {"id":"rena_base_5","name":"做最好的珠宝商","trigger":"在《宝石原石》获得宝石后折断「奢靡」","desc":"抉择弹窗：计划一/二/三均无收益可重选；选“我全都看过了”触发《宝石之宴》，并可能触发《权臣的格调》《穷人的订单》（开启三个订单计划的分支点）","prereqs":["宝石原石"],
+        "slots":[
+          {"card":"奢靡","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"折断「奢靡」触发，品级不限"}
+        ],"terminal":true}
+      ]
+    },
+    {
+      "id": "rena_diamond",
+      "name": "钻石线",
+      "summary": "集齐全种类宝石后开启，夺取染血的钻石坑并决定其归属，是「小颗钻石」的主要来源",
+      "steps": [
+        {"id":"rena_diamond_1","name":"钻石！?","trigger":"热娜在队、已取得全种类宝石（玛瑙/红玉髓/紫水晶/祖母绿/红宝石/蓝宝石，不分大小，已用掉的也算）","desc":"剧情弹窗。结算：「小颗钻石」+1、触发《不妥当的珍宝》","prereqs":["宝石原石"],
+        "slots":[]},
+        {"id":"rena_diamond_2","name":"不妥当的珍宝","trigger":"完成《钻石！?》","desc":"仪式，存续3天。第1-2次逾期或9号槽空置完成仅5-10天后重新触发；第3次逾期或第3次空置完成则钻石线关闭（后者苏丹震怒）。卡槽：3颗小颗钻石（可各用10金币购入）+阿里木的猜疑+拉伊德的警惕。9号槽放角色检定生存+隐匿：成功≥10（买下全部3颗钻石则只需≥5）触发《染血的钻石坑》，失败本事件永久关闭","prereqs":["钻石！?"],
+        "slots":[
+          {"card":"小颗钻石","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1/2/3号槽共3颗；6/7/8号槽可各用10金币购入对应钻石"},
+          {"card":"阿里木的猜疑","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"拉伊德的警惕","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"正文结算处亦作「拉伊德的猜疑」"}
+        ]},
+        {"id":"rena_diamond_3","name":"染血的钻石坑","trigger":"派人参与《不妥当的珍宝》并检定成功","desc":"仪式，存续7天（逾期钻石线关闭）。卡槽：矿场主+护卫队+监工队+角色+部队+情报+角色+白银及以下「征服」。检定1战斗（敌方12）：成功≥2敌方全灭、战斗加成、白银「秘密」+1；放征服额外白银「洞察」+1、权势+3、「苏丹的猜忌」-1、金币+10并达成一千零一夜「血宝藏」；成功<2我方全员死亡。无征服时进检定2（社交+隐匿≥4）：获地点「染血的钻石坑」，失败「苏丹的猜忌」+1","prereqs":["不妥当的珍宝"],
+        "slots":[
+          {"card":"矿场主","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"敌方单位"},
+          {"card":"矿场护卫队","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"敌方单位"},
+          {"card":"矿场监工队","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"敌方单位"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"使用征服有额外收益并关闭检定2"}
+        ]},
+        {"id":"rena_diamond_4","name":"如何处置钻石坑","trigger":"寻思「染血的钻石坑」","desc":"抉择弹窗：“献给苏丹”将钻石坑放入《权力的游戏》，金币+10、权势+3、「谗言」-10、「苏丹的猜忌」-1，也能达成「血宝藏」（此后无法再获得钻石）；“一切维持原貌”触发《染血的财富》；“工人们必须得到解放”触发《希望之钻》","prereqs":["染血的钻石坑"],
+        "slots":[
+          {"card":"染血的钻石坑","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"rena_diamond_5","name":"染血的财富","trigger":"在《如何处置钻石坑》选“一切维持原貌”","desc":"仪式，长期存续耗时3天。卡槽：染血的钻石坑+挖矿的奴隶×4+多名角色（梅姬/法拉杰/拉伊德/阿里木/哲巴尔/奈布哈尼/鲁梅拉不可放入）；放螺旋钻地机则关闭检定、失去钻石坑和奴隶、直接「小颗钻石」+5但「苏丹的猜忌」+1。四重检定经营矿坑：随机获宝石/金币/小颗钻石，检定4成功≥5奴隶+1，完成后重新触发本仪式；拜铃耶参与额外「乙太」+1（可重复）","prereqs":["如何处置钻石坑"],
+        "slots":[
+          {"card":"染血的钻石坑","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"地点卡"},
+          {"card":"挖矿的奴隶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽共×4（若无则跳过检定1）；检定失败会-1"},
+          {"card":"螺旋钻地机","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"关闭检定：失去钻石坑与所有奴隶，「小颗钻石」+5、「苏丹的猜忌」+1，事件关闭"}
+        ]},
+        {"id":"rena_diamond_6","name":"希望之钻","trigger":"在《如何处置钻石坑》选“工人们必须得到解放”","desc":"仪式，耗时1天。卡槽：染血的钻石坑（失去）+拉伊德/阿里木/古利斯/巴拉特/拜铃耶/带{命运的羁绊}的铁头。参与者魅力+1、社交+1、战斗+1；3天后获食材「肥鸽子」，将其放入哈比卜篇《能吃吗?好吃吗?怎么吃?》获「香烤肥鸽」「大颗钻石」，此后每8-10天「小颗钻石」+1。注意：走此分支将无法触发《献给苏丹的珍宝》、无法达成完美结局","prereqs":["如何处置钻石坑"],
+        "slots":[
+          {"card":"染血的钻石坑","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":""},
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽任选其一"},
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽任选其一"},
+          {"card":"古利斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽任选其一"},
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽任选其一"},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽任选其一"},
+          {"card":"铁头","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽任选其一；铁头需带{命运的羁绊}"}
+        ],"terminal":true}
+      ]
+    },
+    {
+      "id": "rena_plan1",
+      "name": "计划一·宝石之宴",
+      "summary": "做最好的珠宝商后举办宝石之宴，随机接取三种富人订单赚金币与灵感",
+      "steps": [
+        {"id":"rena_plan1_1","name":"宝石之宴","trigger":"完成《做最好的珠宝商》（选“我全都看过了”）","desc":"仪式，长期存续耗时1天。卡槽：梅姬/娜依拉(新妻)+镶嵌宝石的装备×3+5金币+白银及以下「奢靡」（须填满所有槽位）。结算：参与者魅力+1、社交+1、随机触发一个《计划一》订单；使用奢靡额外魅力+2、社交+1、魔力+1、权势+1、侠名+1","prereqs":["做最好的珠宝商"],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽，与娜依拉任选其一"},
+          {"card":"娜依拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"需为「新妻」；1号槽，与梅姬任选其一"},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"须填满所有槽位；使用奢靡有额外收益"}
+        ]},
+        {"id":"rena_plan1_2","name":"贵妇人的珠宝订单","trigger":"完成《宝石之宴》随机触发《计划一》三种订单之一、场上没有其他订单","desc":"仪式，耗时2天。卡槽：热娜+5金币+大颗红宝石/蓝宝石/钻石（失去）+任意红/蓝/钻石（失去）。有红宝石：灵感+5、金币+15；有蓝宝石：灵感+10、金币+20、智慧+1；有钻石：灵感+20、金币+30、智慧+1、支持+1、权势+1。1天后随机触发下一个计划一订单","prereqs":["宝石之宴"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"大颗红宝石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽任选其一；按宝石种类决定收益"},
+          {"card":"大颗蓝宝石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽任选其一；按宝石种类决定收益"},
+          {"card":"大颗钻石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽任选其一；按宝石种类决定收益"}
+        ]},
+        {"id":"rena_plan1_3","name":"贵公子的珠宝订单","trigger":"完成《宝石之宴》随机触发《计划一》三种订单之一、场上没有其他订单","desc":"仪式，耗时2天。卡槽：热娜+5金币+大颗祖母绿/红宝石/蓝宝石（失去）。祖母绿：灵感+5、金币+15；红宝石：灵感+10、金币+20、侠名+1；蓝宝石：灵感+15、金币+25、侠名+2。1天后随机触发下一个计划一订单","prereqs":["宝石之宴"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"大颗祖母绿","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽任选其一；按宝石种类决定收益"},
+          {"card":"大颗红宝石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽任选其一；按宝石种类决定收益"},
+          {"card":"大颗蓝宝石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽任选其一；按宝石种类决定收益"}
+        ]},
+        {"id":"rena_plan1_4","name":"小狗的珠宝订单","trigger":"完成《宝石之宴》随机触发《计划一》三种订单之一、场上没有其他订单","desc":"仪式，耗时2天。卡槽：热娜+5金币+任意紫水晶/祖母绿/红宝石（失去）。紫水晶：灵感+5、金币+15；祖母绿：灵感+10、金币+20；红宝石：灵感+15、金币+25、权势+1。1天后随机触发下一个计划一订单","prereqs":["宝石之宴"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"紫水晶","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"},
+          {"card":"祖母绿","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"},
+          {"card":"红宝石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"}
+        ]},
+        {"id":"rena_plan1_5","name":"宝石的底板","trigger":"热娜存活、完成《计划一》3个订单后每3-5天重复触发","desc":"仪式，耗时0天。卡槽：特定角色+与其相称的宝石（失去）。固定结算热娜灵感+10；1号槽角色按组合获得属性+1（如玛瑙+拉伊德战斗+1、祖母绿+梅姬魅力+1、牛骨+阿迪莱魅力+1等共21种组合）（可重复）","prereqs":["贵妇人的珠宝订单","贵公子的珠宝订单","小狗的珠宝订单"],
+        "slots":[]}
+      ]
+    },
+    {
+      "id": "rena_plan2",
+      "name": "计划二·权臣的格调",
+      "summary": "以权臣身份接单，最终向苏丹献宝并接受品鉴王冠的考验，奖励通往多条结局篇",
+      "steps": [
+        {"id":"rena_plan2_1","name":"权臣的格调","trigger":"热娜在队、完成《做最好的珠宝商》后使用主角参与一次《权力的游戏》且“支持-反对≥2”","desc":"剧情弹窗。结算：触发《计划二》系列事件（桌面上不能有其他订单）","prereqs":["做最好的珠宝商"],
+        "slots":[]},
+        {"id":"rena_plan2_2","name":"宠妃的珠宝订单","trigger":"完成《权臣的格调》随机触发《计划二》三种订单之一、场上没有其他订单","desc":"仪式，耗时2天。卡槽：热娜+5金币+大颗红宝石/蓝宝石/钻石（失去）。灵感+10/15/20、金币+9；此后《权力的游戏》出现安苏亚/萨达尔尼/莎姬或黄金品级阿图娜尔时，分别权势+1/侠名+1/黄金「内幕」+1~2。1天后随机触发下一个计划二订单","prereqs":["权臣的格调"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"大颗红宝石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽任选其一；按宝石种类决定收益"},
+          {"card":"大颗蓝宝石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽任选其一；按宝石种类决定收益"},
+          {"card":"大颗钻石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽任选其一；按宝石种类决定收益"}
+        ]},
+        {"id":"rena_plan2_3","name":"女奴的珠宝订单","trigger":"完成《权臣的格调》随机触发《计划二》三种订单之一、场上没有其他订单","desc":"仪式，耗时2天。卡槽：热娜+3金币+任意紫水晶/祖母绿/红宝石（失去）。灵感+10~15、金币+10、权势+1~2、主角智慧+1；放祖母绿额外获饰品「老玫瑰花环」（魅力2）。1天后随机触发下一个计划二订单","prereqs":["权臣的格调"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"紫水晶","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"},
+          {"card":"祖母绿","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一；额外获饰品「老玫瑰花环」"},
+          {"card":"红宝石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"}
+        ]},
+        {"id":"rena_plan2_4","name":"献给苏丹的珍宝","trigger":"持有任意「钻石」、完成《权臣的格调》、场上没有其他订单","desc":"仪式，耗时2天。卡槽：热娜+10金币+任意钻石（失去）+可选祖母绿/红宝石/蓝宝石/钻石+20金币+黄金及以下「奢靡」（须填满）。4/5号槽空置：灵感+20、权势+1；放入宝石：灵感+20、权势+2、「苏丹的猜忌」-1、达成一千零一夜「新王冠」。均触发《苏丹的征召》","prereqs":["权臣的格调"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"钻石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"3号槽必填（任意大小）；4/5号槽可额外放"},
+          {"card":"祖母绿","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"4/5号槽可选（任意大小）"},
+          {"card":"红宝石","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"4/5号槽可选（任意大小）"},
+          {"card":"蓝宝石","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"4/5号槽可选（任意大小）"},
+          {"card":"奢靡","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"须填满所有槽位"}
+        ]},
+        {"id":"rena_plan2_5","name":"苏丹的征召","trigger":"完成《献给苏丹的珍宝》","desc":"仪式，自启动耗时3天。卡槽：热娜。结算：触发《品鉴王冠》","prereqs":["献给苏丹的珍宝"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"rena_plan2_6","name":"品鉴王冠","trigger":"完成《苏丹的征召》","desc":"仪式，存续1天（逾期死亡结局「无名人之死」）。卡槽：热娜+主角+奈布哈尼/哲巴尔/法里斯+贝姬夫人/哈桑+娜依拉/法图娜/梅姬/拉伊德娜。3/4/5号槽全空置：热娜死亡；部分空置：纯剧情；全部填满：获饰品「王冠上的金叶」（魅力1社交1支持1），此后完成全部9种订单可触发《帝国最好的珠宝匠》。填满且保持热娜在队的长期奖励：灵视篇《心灵之战10》获「思考的人像」、屠龙篇《三人交谈》后获「黄金晶簇之盾」、革命篇《苏丹的城墙》后获部队「宝石旗帜下」","prereqs":["苏丹的征召"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽任选其一；3-5号槽全空置则热娜死亡"},
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽任选其一；3-5号槽全空置则热娜死亡"},
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽任选其一；3-5号槽全空置则热娜死亡"},
+          {"card":"贝姬夫人","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4号槽任选其一；3-5号槽全空置则热娜死亡"},
+          {"card":"哈桑","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4号槽任选其一；3-5号槽全空置则热娜死亡"},
+          {"card":"娜依拉","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽任选其一；3-5号槽全空置则热娜死亡"},
+          {"card":"法图娜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽任选其一；3-5号槽全空置则热娜死亡"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽任选其一；3-5号槽全空置则热娜死亡"},
+          {"card":"拉伊德娜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽任选其一；3-5号槽全空置则热娜死亡"}
+        ]}
+      ]
+    },
+    {
+      "id": "rena_plan3",
+      "name": "计划三·穷人的订单",
+      "summary": "拥有2级舍馆后接穷人订单，完成后解锁特殊宝石「牛骨」系列",
+      "steps": [
+        {"id":"rena_plan3_1","name":"穷人的订单","trigger":"完成《做最好的珠宝商》、热娜在队、拥有2级《舍馆》次日","desc":"剧情弹窗。结算：触发《计划三》系列事件（桌面上不能有其他订单）","prereqs":["做最好的珠宝商"],
+        "slots":[]},
+        {"id":"rena_plan3_2","name":"年轻人的珠宝订单","trigger":"完成《穷人的订单》随机触发《计划三》三种订单之一","desc":"仪式，耗时2天。卡槽：热娜+1金币+任意紫水晶/祖母绿/红宝石（失去）。灵感+5/10/15、金币+3、青铜/白银「情报」；祖母绿侠名+1、红宝石侠名+2且支持+1。1天后随机触发下一个计划三订单","prereqs":["穷人的订单"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"紫水晶","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"},
+          {"card":"祖母绿","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"},
+          {"card":"红宝石","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"}
+        ]},
+        {"id":"rena_plan3_3","name":"恋人的珠宝订单","trigger":"完成《穷人的订单》随机触发《计划三》三种订单之一","desc":"仪式，耗时2天。卡槽：热娜+1金币+任意红玉髓/紫水晶/祖母绿（失去）。灵感+5/15/20、金币+2、青铜/白银「情报」；紫水晶善名+1、祖母绿善名+2且侠名+1。1天后随机触发下一个计划三订单","prereqs":["穷人的订单"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"红玉髓","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"},
+          {"card":"紫水晶","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"},
+          {"card":"祖母绿","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"}
+        ]},
+        {"id":"rena_plan3_4","name":"母亲的珠宝订单","trigger":"完成《穷人的订单》随机触发《计划三》三种订单之一","desc":"仪式，耗时2天。卡槽：热娜+1金币+任意玛瑙/红玉髓/紫水晶（失去）。灵感+10/10/20、金币+1、善名与青铜/白银「情报」；紫水晶额外白银「秘密」+1。梅姬在队时「幸福感」+1。1天后随机触发下一个计划三订单","prereqs":["穷人的订单"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"玛瑙","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"},
+          {"card":"红玉髓","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"},
+          {"card":"紫水晶","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"任意大小；3号槽任选其一"}
+        ]},
+        {"id":"rena_plan3_5","name":"牛骨","trigger":"完成《计划三》的全部订单","desc":"剧情弹窗。结算：宝石「牛骨」+1、触发《不一样的宝石》","prereqs":["年轻人的珠宝订单","恋人的珠宝订单","母亲的珠宝订单"],
+        "slots":[]},
+        {"id":"rena_plan3_6","name":"不一样的宝石","trigger":"完成《牛骨》","desc":"仪式，长期存续耗时1天。卡槽：2/3号槽放特定角色（梅姬/娜依拉/奈布哈尼/哲巴尔/法里斯/蒙面战士/法图娜/法拉杰/盖斯/阿迪莱/扎齐伊/巴拉特/贵族鲁梅拉/镜灵(非猫)）。结算：所有参与者魅力+1、3天后触发《牛骨大狂热》","prereqs":["牛骨"],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"娜依拉","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"蒙面战士","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"法图娜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"法拉杰","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"盖斯","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"扎齐伊","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"巴拉特","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"贵族鲁梅拉","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3号槽，从列表中任选"},
+          {"card":"镜灵","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"非猫形态；2/3号槽，从列表中任选"}
+        ]},
+        {"id":"rena_plan3_7","name":"牛骨大狂热","trigger":"完成《不一样的宝石》3天后","desc":"仪式，长期存续耗时1天。卡槽：热娜+任意角色。结算：宝石「牛骨」+3、2号槽角色饰品槽+1；此后可在《宝石原石》寻访到「牛骨」","prereqs":["不一样的宝石"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    },
+    {
+      "id": "rena_final",
+      "name": "完美结局",
+      "summary": "完成全部9种订单并保住王冠上的金叶，热娜升为黄金品级",
+      "steps": [
+        {"id":"rena_final_1","name":"帝国最好的珠宝匠","trigger":"三个计划所有9种订单都已完成、且在《品鉴王冠》获得了「王冠上的金叶」","desc":"仪式，自启动耗时1天。卡槽：热娜。结算：热娜获{命运的羁绊}、提升为黄金品级、体魄/魅力/智慧/隐匿/战斗/社交/生存/魔力+1（完美结局条件）","prereqs":["品鉴王冠"],
+        "slots":[
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    }
+  ]
+}

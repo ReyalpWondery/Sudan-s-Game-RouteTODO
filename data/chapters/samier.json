@@ -1,0 +1,1014 @@
+{
+  "id": "samier",
+  "title": "萨米尔篇",
+  "category": "character",
+  "characters": [
+    "萨米尔",
+    "安妮塔",
+    "卡帕尔"
+  ],
+  "routes": [
+    {
+      "id": "samier_yigu",
+      "name": "遗孤线",
+      "summary": "萨达尔尼篇帮助她后开启，收容遗孤安妮塔并让萨米尔收养她；与医典线互斥（触发《意外的到访》后本线关闭）",
+      "steps": [
+        {
+          "id": "samier_yigu_1",
+          "name": "萨米尔的邀约",
+          "trigger": "萨达尔尼篇《贿赂主管》或《潜入篡改》检定成功1天后",
+          "desc": "弹窗。若已触发医典线《意外的到访》：本弹窗标志遗孤线关闭、安妮塔相关剧情不再出现；否则白银「秘密」+1",
+          "prereqs": [],
+          "slots": []
+        },
+        {
+          "id": "samier_yigu_2",
+          "name": "走上面的花影",
+          "trigger": "尚未触发《意外的到访》、萨达尔尼篇《贿赂主管》或《潜入篡改》检定成功1天后",
+          "desc": "仪式，存续5天（逾期遗孤线关闭）。放萨米尔+主角+白银及以下「杀戮」：杀戮→萨米尔死亡、恶名+1、「谗言」+1；不杀戮→获「折叠的纸条」",
+          "prereqs": [
+            "萨米尔的邀约"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "白银及以下"
+            }
+          ]
+        },
+        {
+          "id": "samier_yigu_3",
+          "name": "金子、水晶与污泥",
+          "trigger": "寻思「折叠的纸条」",
+          "desc": "仪式，存续1天（逾期遗孤线关闭）。放折叠的纸条+任意非动物角色+任意情报；权势≥15跳过检定直接成功，否则检定社交+魅力：成功≥3触发《小小守护者》，失败事件关闭",
+          "prereqs": [
+            "走上面的花影"
+          ],
+          "slots": [
+            {
+              "card": "折叠的纸条",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "samier_yigu_4",
+          "name": "小小守护者",
+          "trigger": "《金子、水晶与污泥》检定成功",
+          "desc": "仪式，长期存续。放任意非动物角色+5金币（可用青铜及以下「奢靡」折卡，须10金币且「苏丹的猜忌」+1）。未触发《意外的到访》→触发《故国的遗孤》；已触发→退还金币、遗孤线关闭",
+          "prereqs": [
+            "金子、水晶与污泥"
+          ],
+          "slots": [
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "青铜及以下；须10金币，「苏丹的猜忌」+1"
+            }
+          ]
+        },
+        {
+          "id": "samier_yigu_5",
+          "name": "故国的遗孤",
+          "trigger": "尚未触发《意外的到访》、完成《小小守护者》",
+          "desc": "仪式，长期存续。放安妮塔+一名角色决定走向（属性加成仅生效于安妮塔）：主角→安妮塔入队；梅姬/鲁梅拉→魅力/智慧+1、1天后触发《意外的客人》；折叠的纸条→1天后触发《意外的客人》；阿迪莱→体魄+2、触发《萨米尔的感谢》；阿里木/伊曼/拜铃耶→已建《苗圃》触发《萨米尔的感谢》、未建则安妮塔入队；哲瓦德→阿鲁米娜存活则社交+2并触发《萨米尔的感谢》、已死则安妮塔入队；萨米尔已死时多数分支改为安妮塔直接入队",
+          "prereqs": [
+            "小小守护者"
+          ],
+          "slots": [
+            {
+              "card": "安妮塔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽单选"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽单选"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽单选"
+            },
+            {
+              "card": "折叠的纸条",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽单选；萨米尔已死的分支中失去"
+            },
+            {
+              "card": "阿迪莱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽单选"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽单选"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽单选"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽单选"
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽单选"
+            }
+          ]
+        },
+        {
+          "id": "samier_yigu_6",
+          "name": "萨米尔的感谢",
+          "trigger": "在《故国的遗孤》放置阿迪莱，或放置哲瓦德且阿鲁米娜存活，或放置阿里木/伊曼/拜铃耶且已建《苗圃》",
+          "desc": "仪式，自启动。放萨米尔：支持+1、反对清零，金币+8、失去「折叠的纸条」",
+          "prereqs": [
+            "故国的遗孤"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yigu_7",
+          "name": "意外的客人",
+          "trigger": "萨米尔存活、在《故国的遗孤》放置梅姬/鲁梅拉/折叠的纸条1天后",
+          "desc": "仪式，自启动。放安妮塔+萨米尔：萨米尔收养安妮塔、不再触发医典线《意外的到访》；支持+1、反对清零、「宫廷熏香」+3、失去「折叠的纸条」",
+          "prereqs": [
+            "故国的遗孤"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "安妮塔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yigu_8",
+          "name": "无趣的礼物",
+          "trigger": "在《权力的游戏》上贡安妮塔",
+          "desc": "仪式差分：安妮塔死亡、恶名+2、权势+1",
+          "prereqs": [
+            "故国的遗孤"
+          ],
+          "slots": [],
+          "terminal": true
+        },
+        {
+          "id": "samier_yigu_9",
+          "name": "萨米尔的失望",
+          "trigger": "对安妮塔使用「杀戮/纵欲」，或在《权力的游戏》上贡安妮塔1天后",
+          "desc": "仪式，自启动。放萨米尔+折叠的纸条（失去）。未触发《意外的到访》或已完成「医典」：萨米尔支持清零、反对+3、萨米尔篇关闭、不再出现于《书店营业》；已触发《意外的到访》但未完成「医典」：萨米尔死亡",
+          "prereqs": [
+            "故国的遗孤"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "折叠的纸条",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "samier_yidian",
+      "name": "医典线",
+      "summary": "在《医馆》放置主角开启，卷入死婴案倒计时，协助萨米尔修编医典并查明真相",
+      "steps": [
+        {
+          "id": "samier_yidian_1",
+          "name": "意外的到访",
+          "trigger": "尚未触发《意外的客人》、在《医馆》放置主角（触发后遗孤线关闭）",
+          "desc": "仪式，长期存续。放卡帕尔+任意角色+任意情报；检定社交+智慧：成功≥2获青铜/白银「内幕」各+1。固定获「精心调配的伤药」+2，可能触发《处决》",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "卡帕尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_2",
+          "name": "处决",
+          "trigger": "《意外的到访》10天后仍未完成《给你五天时间》，或在《给你五天时间》检定失败",
+          "desc": "仪式，自启动。放萨米尔+卡帕尔：萨米尔死亡、卡帕尔死亡（双死警告）",
+          "prereqs": [
+            "意外的到访"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "卡帕尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_3",
+          "name": "给你五天时间",
+          "trigger": "完成《意外的到访》后10天内，以主角参与《权力的游戏》",
+          "desc": "仪式。检定社交+魅力：成功≥4立即触发抉择《花荫下的密谈》，次日触发《死婴案件调查》《后宫质询》并获「倒计时」+5；成功<4→权势-3、触发《处决》",
+          "prereqs": [
+            "意外的到访"
+          ],
+          "slots": []
+        },
+        {
+          "id": "samier_yidian_4",
+          "name": "花荫下的密谈",
+          "trigger": "在《给你五天时间》检定成功",
+          "desc": "抉择弹窗（“那我就收下了”/“我不会这么做”）：固定获「萨米尔的认罪书」、触发《萨米尔的请求》",
+          "prereqs": [
+            "给你五天时间"
+          ],
+          "slots": []
+        },
+        {
+          "id": "samier_yidian_5",
+          "name": "萨米尔的请求",
+          "trigger": "完成《花荫下的密谈》",
+          "desc": "仪式，存续1天（逾期触发《不愿面对的真相-1》）。放萨米尔+隐匿≥5的角色：已完成遗孤线《意外的客人》→获「构陷的铁证」；未完成→触发《不愿面对的真相-2》",
+          "prereqs": [
+            "花荫下的密谈"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_6",
+          "name": "不愿面对的真相-1",
+          "trigger": "完成《萨米尔的请求》（含其逾期）",
+          "desc": "仪式，自启动、耗时5天。放萨米尔：触发《医典第一篇》",
+          "prereqs": [
+            "萨米尔的请求"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_7",
+          "name": "不愿面对的真相-2",
+          "trigger": "完成《萨米尔的请求》且未完成《意外的客人》",
+          "desc": "仪式，自启动、耗时3天。放萨米尔+《萨米尔的请求》的参与者：触发《医典第一篇》",
+          "prereqs": [
+            "萨米尔的请求"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_8",
+          "name": "医典第一篇",
+          "trigger": "完成《不愿面对的真相-1/2》",
+          "desc": "仪式，存续1天（逾期：卡帕尔存活触发《医典第二篇》、已死触发《医典修编中》）。放萨米尔；卡帕尔存活时2号槽可放10金币+生存或智慧≥5的追随者及相关读物（无增益可空置）。触发《医典第二篇》",
+          "prereqs": [
+            "不愿面对的真相-1",
+            "不愿面对的真相-2"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "荒野集",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽读物，卡帕尔存活时可放"
+            },
+            {
+              "card": "沙漠之书",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽读物，卡帕尔存活时可放"
+            },
+            {
+              "card": "动物与植物图鉴",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽读物，卡帕尔存活时可放"
+            },
+            {
+              "card": "雨林！雨林！",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽读物，卡帕尔存活时可放"
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_9",
+          "name": "医典第二篇",
+          "trigger": "完成《医典第一篇》（或其逾期且卡帕尔存活）",
+          "desc": "仪式，存续1天（逾期触发《医典修编中》）。放萨米尔+10金币+战斗或隐匿≥5的追随者（哈比卜有文本差分）。触发《最后篇章》",
+          "prereqs": [
+            "医典第一篇"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "有文本差分"
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_10",
+          "name": "医典修编中",
+          "trigger": "《医典第一篇》逾期且卡帕尔已死，或《医典第二篇》逾期",
+          "desc": "仪式，自启动（惩罚性延误，可能赶不上倒计时）。由第一篇触发→触发《医典第二篇》；由第二篇触发→触发《最后篇章》",
+          "prereqs": [
+            "医典第一篇"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_11",
+          "name": "最后篇章",
+          "trigger": "完成《医典第二篇》",
+          "desc": "仪式，存续1天、耗时2天。放萨米尔+贵族角色/智慧≥5的追随者/鲁梅拉/夏玛：派遣3人→获「医典」，可能触发《僻静之地-1/2》，《死婴案件调查》进行中额外获「构陷的铁证」；不足3人→触发《最最最后篇章》",
+          "prereqs": [
+            "医典第二篇"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_12",
+          "name": "最最最后篇章",
+          "trigger": "在《最后篇章》放置的协助者不足3人",
+          "desc": "仪式，自启动、耗时2天。放萨米尔：获「医典」，可能触发《僻静之地-1/2》，《死婴案件调查》进行中额外获「构陷的铁证」",
+          "prereqs": [
+            "最后篇章"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_13",
+          "name": "死婴案件调查",
+          "trigger": "在《给你五天时间》检定成功",
+          "desc": "仪式，每天结算1次、最多存续12天。「倒计时」初始5张、每天-1，清零时：未完成《后宫质询》→死亡结局「伴君如伴虎」；已完成→卡帕尔死亡、权势-3、失去认罪书与铁证。放主角可请求延时（已完成质询后检定社交+智慧≥4则倒计时+5）；放「萨米尔的认罪书」→触发《御医之死》；放「构陷的铁证」→权势+3、金币+10、失去认罪书，铁证来自《萨米尔的请求》则萨米尔的父亲死亡并触发《医典第一篇》",
+          "prereqs": [
+            "给你五天时间"
+          ],
+          "slots": [
+            {
+              "card": "倒计时",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "初始5张、每天-1张"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "请求延时"
+            },
+            {
+              "card": "萨米尔的认罪书",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "证物槽；触发《御医之死》"
+            },
+            {
+              "card": "构陷的铁证",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "证物槽"
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_14",
+          "name": "后宫质询",
+          "trigger": "在《给你五天时间》检定成功（《死婴案件调查》期间逾期会不断重置）",
+          "desc": "仪式，存续1天。放主角+一名后宫角色：莎姬→侠名+1；萨达尔尼→「倒计时」+1；安苏亚→权势+1；法德耶→随机白银「情报」+1；上述角色均死亡→纯剧情",
+          "prereqs": [
+            "给你五天时间"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "莎姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽单选"
+            },
+            {
+              "card": "萨达尔尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽单选"
+            },
+            {
+              "card": "安苏亚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽单选"
+            },
+            {
+              "card": "法德耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽单选"
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_15",
+          "name": "御医之死",
+          "trigger": "在《死婴案件调查》放置「萨米尔的认罪书」",
+          "desc": "仪式，自启动。放萨米尔+卡帕尔：萨米尔死亡、卡帕尔死亡、权势+1、侠名-2、金币+10（双死警告）",
+          "prereqs": [
+            "死婴案件调查"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "卡帕尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_16",
+          "name": "僻静之地-1",
+          "trigger": "《死婴案件调查》倒计时结束且已完成《后宫质询》、同时完成「医典」，满足后1-2天",
+          "desc": "仪式，长期存续、耗时2天。放8金币→侠名+2、「强身补药」+2；放16金币（可用白银及以下「奢靡」折卡）→权势+2、「强身补药」+1",
+          "prereqs": [
+            "死婴案件调查",
+            "后宫质询",
+            "最后篇章"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "白银及以下；须16金币"
+            }
+          ]
+        },
+        {
+          "id": "samier_yidian_17",
+          "name": "僻静之地-2",
+          "trigger": "在《死婴案件调查》放置「构陷的铁证」、同时完成「医典」，满足后1-2天",
+          "desc": "仪式，长期存续、耗时2天。放8金币→侠名+2、「强身补药」+1；放16金币（可用白银及以下「奢靡」折卡）→权势+2、「强身补药」+1",
+          "prereqs": [
+            "死婴案件调查",
+            "最后篇章"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "白银及以下；须16金币"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "samier_shui",
+      "name": "生命之水与诡异订单线",
+      "summary": "医典完成后结合玛希尔篇的「生命之水」仿制新药，并卷入怪物的诡异订单",
+      "steps": [
+        {
+          "id": "samier_shui_1",
+          "name": "珍贵的样品",
+          "trigger": "在玛希尔篇成功研发「生命之水」、完成《最后篇章》或《最最最后篇章》、萨米尔存活，满足后1天",
+          "desc": "仪式，长期存续、耗时5天。放「生命之水」（失去）：获「仿制生命之水」",
+          "prereqs": [
+            "最后篇章"
+          ],
+          "slots": [
+            {
+              "card": "生命之水",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_shui_2",
+          "name": "治愈伤痛?",
+          "trigger": "寻思「仿制生命之水」",
+          "desc": "仪式，存续1天（逾期可再次寻思）。放仿制生命之水（失去）+受伤目标：治动物/人类→治愈{受伤}并触发《不可忽视的痛苦》；治怪物→治愈{受伤}并触发《救命》（可重复）",
+          "prereqs": [
+            "珍贵的样品"
+          ],
+          "slots": [
+            {
+              "card": "仿制生命之水",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "samier_shui_3",
+          "name": "不可忽视的痛苦",
+          "trigger": "在《治愈伤痛?》治疗动物/人类",
+          "desc": "仪式，长期存续。1号槽放5金币/拉伊德/哲巴尔/法里斯/拜铃耶/法尔达克/伊曼即可（多放无额外收益）：触发《新药研发》",
+          "prereqs": [
+            "治愈伤痛?"
+          ],
+          "slots": [
+            {
+              "card": "拉伊德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽单选"
+            },
+            {
+              "card": "哲巴尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽单选"
+            },
+            {
+              "card": "法里斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽单选"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽单选"
+            },
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽单选"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽单选"
+            }
+          ]
+        },
+        {
+          "id": "samier_shui_4",
+          "name": "新药研发",
+          "trigger": "完成《不可忽视的痛苦》",
+          "desc": "仪式，存续5天、耗时3天（逾期善名+1）。放萨米尔+玛希尔+智慧≥6的角色：善名+2、侠名+1",
+          "prereqs": [
+            "不可忽视的痛苦"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_shui_5",
+          "name": "救命",
+          "trigger": "在《治愈伤痛?》治疗怪物",
+          "desc": "仪式，存续1天（逾期萨米尔死亡）。放萨米尔+主角+任意情报；检定魔力+智慧：成功≥5→萨米尔支持+1、灵视+1、权势+1、触发《诡异的订单》；失败→死亡结局「无名人之死」",
+          "prereqs": [
+            "治愈伤痛?"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_shui_6",
+          "name": "诡异的订单",
+          "trigger": "在《救命》检定成功",
+          "desc": "仪式，存续5天、耗时3天（逾期萨米尔死亡、「疯狂」+1）。放萨米尔+玛希尔+魔力≥6的角色：获「诡异的订单包裹」、触发《并非为人类准备的》",
+          "prereqs": [
+            "救命"
+          ],
+          "slots": [
+            {
+              "card": "萨米尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_shui_7",
+          "name": "并非为人类准备的",
+          "trigger": "完成《诡异的订单》",
+          "desc": "仪式，存续3天（逾期「仿制生命之水」+10并触发《失约的惩罚》）。放任意角色+诡异的订单包裹并单选：交给正教→虔信+2、金币+8、触发《失约的惩罚》；交给密教→拜铃耶存活获读物「纹身图样」（灵视+2）并触发《失约的惩罚》、已死则灵视+1并获「夜晚的结晶」；静待怪物→灵视+1、3天后获「夜晚的结晶」",
+          "prereqs": [
+            "诡异的订单"
+          ],
+          "slots": [
+            {
+              "card": "诡异的订单包裹",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2/3/4号槽单选"
+            }
+          ]
+        },
+        {
+          "id": "samier_shui_8",
+          "name": "失约的惩罚",
+          "trigger": "《并非为人类准备的》逾期，或选择“交给正教”/“交给密教”且拜铃耶存活",
+          "desc": "仪式，存续1天（逾期自启动）。放主角+任意情报；检定魔力+智慧：成功≥7纯剧情；失败→死亡结局「无名人之死」",
+          "prereqs": [
+            "并非为人类准备的"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_shui_9",
+          "name": "治愈伤痛",
+          "trigger": "《并非为人类准备的》逾期后寻思「仿制生命之水」（注意先分割堆叠库存再寻思，否则一次性消耗全部）",
+          "desc": "仪式，存续1天（逾期可再次寻思）。放仿制生命之水（失去）+受伤的任意角色：治愈{受伤}（可重复）",
+          "prereqs": [
+            "并非为人类准备的"
+          ],
+          "slots": [
+            {
+              "card": "仿制生命之水",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "samier_shui_10",
+          "name": "夜晚的馈赠",
+          "trigger": "寻思「夜晚的结晶」",
+          "desc": "仪式，存续1天（逾期可再次寻思）。放「医典」+夜晚的结晶（失去）：「医典」提升为黄金品级、生存+2、智慧+2（可重复）",
+          "prereqs": [
+            "并非为人类准备的"
+          ],
+          "slots": [
+            {
+              "card": "夜晚的结晶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "寻思触发"
+            },
+            {
+              "card": "医典",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "samier_shui_11",
+          "name": "暗夜之饮",
+          "trigger": "在哈比卜篇《能吃吗?好吃吗?怎么吃?》放入「夜晚的结晶」制成并寻思「暗夜之饮」",
+          "desc": "仪式，存续1天（逾期可再次寻思）。放暗夜之饮（失去）+最多4名任意角色：2号槽智慧+2、3号槽体魄+2、4号槽隐匿+2、5号槽战斗+2（可重复）",
+          "prereqs": [
+            "并非为人类准备的"
+          ],
+          "slots": [
+            {
+              "card": "暗夜之饮",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "寻思触发"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

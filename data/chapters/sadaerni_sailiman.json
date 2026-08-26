@@ -1,0 +1,75 @@
+{
+  "id": "sadaerni_sailiman",
+  "title": "萨达尔尼&赛里曼篇",
+  "category": "character",
+  "characters": ["萨达尔尼","赛里曼"],
+  "routes": [
+    {
+      "id": "sadaerni_sailiman_main",
+      "name": "完美线（信物线）",
+      "summary": "从《权力的游戏》纵欲萨达尔尼开始，替她保守秘密并处理赛里曼，最终获得萨达尔尼的信物",
+      "steps": [
+        {"id":"sadaerni_sailiman_main_1","name":"勇武的证明","trigger":"《权力的游戏》萨达尔尼在场时放置“主角+白银纵欲”","desc":"仪式，存续7天（逾期死亡结局「伴君如伴虎」）。卡槽主角+任意情报。检定体魄+战斗：成功≥5获「凶兽的头颅」、体魄&战斗+1；成功≥3则{受伤}仍获头颅；<3则{受伤}并重置本事件","prereqs":[],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""}
+        ]},
+        {"id":"sadaerni_sailiman_main_2","name":"爱的伪证","trigger":"《权力的游戏》萨达尔尼在场时放置“主角+白银纵欲”（需先持有凶兽的头颅）","desc":"仪式，存续7天（逾期死亡结局「伴君如伴虎」）。放置「凶兽的头颅」（失去），触发《萨达尔尼来访》，达成一千零一夜「蔷薇花下死」","prereqs":["勇武的证明"],"slots":[
+          {"card":"凶兽的头颅","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"放置后失去"}
+        ]},
+        {"id":"sadaerni_sailiman_main_3","name":"萨达尔尼来访","trigger":"在《爱的伪证》放置「凶兽的头颅」","desc":"仪式。卡槽萨达尔尼+单选“与她欢愉/和她谈谈”：主角选谈谈或以梅姬任选→获「萨达尔尼的秘密」、触发《保守秘密》；主角选欢愉→萨达尔尼退场、可能触发《欢愉的代价》；都不选→纯剧情、萨达尔尼篇关闭","prereqs":["爱的伪证"],"slots":[
+          {"card":"萨达尔尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"sadaerni_sailiman_main_4","name":"保守秘密","trigger":"在《萨达尔尼来访》以主角选“谈谈”或以梅姬任选一项","desc":"仪式。放萨达尔尼的侍女+「萨达尔尼的秘密」。选敲诈：第1/2/3次金币+4/+3/+2、萨达尔尼反对+1，第3次触发《无名的暗杀·赛里曼》并关闭本事件；选保密：失去秘密，同时触发《潜入篡改》《贿赂主管》《消除隐患》","prereqs":["萨达尔尼来访"],"slots":[
+          {"card":"萨达尔尼的侍女","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"萨达尔尼的秘密","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"选“保密”时失去；选“敲诈”则保留"}
+        ]},
+        {"id":"sadaerni_sailiman_main_5","name":"潜入篡改","trigger":"在《保守秘密》选“保密”","desc":"仪式。任意角色+任意情报，检定隐匿+智慧：成功≥3获「修改的证明」（唯一）、关闭《贿赂主管》，可能触发萨米尔篇《萨米尔的邀约》或《走廊上的花影》；失败则主角{受伤}、其他人关入《囚牢》","prereqs":["保守秘密"],"slots":[]},
+        {"id":"sadaerni_sailiman_main_6","name":"贿赂主管","trigger":"在《保守秘密》选“保密”","desc":"仪式。放拉扎格+15金币，直接获「修改的证明」（唯一）、关闭《潜入篡改》，可能触发萨米尔篇《萨米尔的邀约》或《走廊上的花影》。与《潜入篡改》二选一","prereqs":["保守秘密"],"slots":[
+          {"card":"拉扎格","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"需15金币（贿赂）"}
+        ]},
+        {"id":"sadaerni_sailiman_main_7","name":"消除隐患","trigger":"在《保守秘密》选“保密”（需先由《潜入篡改》或《贿赂主管》获得修改的证明）","desc":"仪式。放萨达尔尼的侍女+「修改的证明」。金币+10、1天后萨达尔尼支持+3，2-3天后触发《真正的报偿》","prereqs":["潜入篡改","贿赂主管"],"slots":[
+          {"card":"萨达尔尼的侍女","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"修改的证明","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"sadaerni_sailiman_main_8","name":"真正的报偿","trigger":"完成《消除隐患》2-3天后","desc":"仪式。放萨达尔尼+主角/热娜/萨米尔。主角执行：无金币检定隐匿+体魄≥1、放10金币检定魅力+社交≥3（退回金币），成功1-2天后触发《貌合神离》；失败{受伤}、前3次2-3天后重置；以热娜/萨米尔执行失去金币、金币+5并重置；第4次失败触发《无名的暗杀·赛里曼》、萨达尔尼篇关闭","prereqs":["消除隐患"],"slots":[
+          {"card":"萨达尔尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角/热娜/萨米尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"三选一"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"10金币；主角执行检定后退回，热娜/萨米尔执行则失去（完全没有必要放）"}
+        ]},
+        {"id":"sadaerni_sailiman_main_9","name":"貌合神离","trigger":"《真正的报偿》检定成功1-2天后","desc":"仪式。放萨达尔尼+主角/热娜/萨米尔，触发抉择弹窗《浪漫约会地》","prereqs":["真正的报偿"],"slots":[
+          {"card":"萨达尔尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角/热娜/萨米尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"三选一"}
+        ]},
+        {"id":"sadaerni_sailiman_main_10","name":"浪漫约会地","trigger":"完成《貌合神离》","desc":"抉择弹窗：选“杀了他”触发《不留后患》；选“先谈谈”触发《一线生机》","prereqs":["貌合神离"],"slots":[]},
+        {"id":"sadaerni_sailiman_main_11","name":"不留后患","trigger":"在《浪漫约会地》选“杀了他”","desc":"仪式。放赛里曼+任意角色，可放白银及以下「杀戮」免除「罪证」。赛里曼死亡、获「赛里曼的头颅」、「罪证」+1，触发《最后的疯狂》","prereqs":["浪漫约会地"],"slots":[
+          {"card":"赛里曼","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"结算时赛里曼死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；放置可免除本仪式的「罪证」"}
+        ]},
+        {"id":"sadaerni_sailiman_main_12","name":"一线生机","trigger":"在《浪漫约会地》选“先谈谈”","desc":"仪式。放赛里曼+任意角色+任意情报；放任意谋反思潮跳过检定直接成功，放密教思潮跳过检定但赛里曼成为{密教徒}、「不洁的思绪」+1；空置检定社交+魅力≥5：赛里曼入队、更名「蒙面战士」、获「赛里曼的伪造死讯」；<5则赛里曼死亡、获「赛里曼的头颅」。结算触发《最后的疯狂》","prereqs":["浪漫约会地"],"slots":[
+          {"card":"赛里曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"检定成功则入队（更名「蒙面战士」）；失败则死亡"}
+        ]},
+        {"id":"sadaerni_sailiman_main_13","name":"最后的疯狂","trigger":"完成《不留后患》或《一线生机》","desc":"仪式。放萨达尔尼的侍女+「赛里曼的头颅」或「赛里曼的伪造死讯」（失去），获「萨达尔尼的信物」（用于大结局·逃亡篇《逃离苏丹的游戏》、大结局·革命篇相关事件），即完美结局","prereqs":["不留后患","一线生机"],"terminal":true,"slots":[
+          {"card":"萨达尔尼的侍女","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"赛里曼的头颅","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"与「赛里曼的伪造死讯」二选一"},
+          {"card":"赛里曼的伪造死讯","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"与「赛里曼的头颅」二选一"}
+        ]}
+      ]
+    },
+    {
+      "id": "sadaerni_sailiman_assassin",
+      "name": "欢愉与暗杀线",
+      "summary": "在《萨达尔尼来访》选欢愉引出苏丹介入，或敲诈/反复失败引出赛里曼的暗杀",
+      "steps": [
+        {"id":"sadaerni_sailiman_assassin_1","name":"欢愉的代价","trigger":"《萨达尔尼来访》以主角选“与她欢愉”、苏丹闲置","desc":"仪式，存续1天（逾期自启动）。卡槽苏丹+主角+第3槽：空置→死亡结局「顺水推舟」；放黄金「杀戮」→触发《无名的暗杀·赛里曼》、达成一千零一夜「一尸两命」","prereqs":["萨达尔尼来访"],"slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"苏丹本人"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"第3槽：空置则死亡结局「顺水推舟」；放黄金「杀戮」触发《无名的暗杀·赛里曼》"}
+        ]},
+        {"id":"sadaerni_sailiman_assassin_2","name":"无名的暗杀·赛里曼","trigger":"在《欢愉的代价》放置「杀戮」；或在《保守秘密》选“敲诈”3次；或在《真正的报偿》重复使用三次热娜/萨米尔","desc":"仪式，存续1天（逾期死亡结局「一时大意」）。卡槽刺客+主角+任意情报，检定主角体魄&战斗-刺客体魄&战斗(10)：成功≥1战斗+1、赛里曼死亡、获「赛里曼的头颅」；<1死亡结局「因果报应」（可达成「冤冤相报」）。将「赛里曼的头颅」上贡《权力的游戏》可折断白银及以下「杀戮」","prereqs":["欢愉的代价"],"terminal":true,"slots":[
+          {"card":"刺客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    }
+  ]
+}

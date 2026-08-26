@@ -1,0 +1,582 @@
+{
+  "id": "shaji",
+  "title": "莎姬篇",
+  "category": "character",
+  "characters": [
+    "莎姬",
+    "斯瓦萨尔"
+  ],
+  "routes": [
+    {
+      "id": "shaji_start",
+      "name": "开端与信物线",
+      "summary": "在《权力的游戏》以黄金纵欲开启莎姬篇，取得「莎姬的信物」，是全篇的地基",
+      "steps": [
+        {
+          "id": "shaji_start_1",
+          "name": "金子般的女人",
+          "trigger": "《权力的游戏》莎姬在场时放置“主角+黄金纵欲”",
+          "desc": "仪式，存续7天，逾期死亡结局「伴君如伴虎」。卡槽：莎姬+30金币+任意奇珍（失去）+魅力≥3的装备（失去）。触发《迎接莎姬》，达成一千零一夜「蔷薇花下死」",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": true,
+              "consumed": true,
+              "note": "在《权力的游戏》与主角一同放置触发本事件"
+            },
+            {
+              "card": "莎姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "shaji_start_2",
+          "name": "迎接莎姬",
+          "trigger": "完成《金子般的女人》",
+          "desc": "仪式，存续3天，逾期权势-2、莎姬篇关闭。卡槽：莎姬+另一角色——必须放贵族（主角/梅姬有特殊文本），放非贵族则权势-2、「谗言」+1、莎姬篇关闭。触发《欲望或野心》",
+          "prereqs": [
+            "金子般的女人"
+          ],
+          "slots": [
+            {
+              "card": "莎姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽须放贵族角色，放非贵族则莎姬篇关闭"
+            }
+          ]
+        },
+        {
+          "id": "shaji_start_3",
+          "name": "欲望或野心",
+          "trigger": "「圣主像」未毁、在《迎接莎姬》以贵族接待莎姬",
+          "desc": "仪式，存续3天，逾期权势-1、莎姬篇关闭。选项：“占有”——灵视≥10触发《离奇的故事》，<10则莎姬篇关闭；“聊聊”——触发《离奇的故事》。若额外放入3级以上「神的面容」：高原的圣主死亡、1天后直接触发《莎姬的谢礼》",
+          "prereqs": [
+            "迎接莎姬"
+          ],
+          "slots": [
+            {
+              "card": "莎姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3/4号槽单选"
+            },
+            {
+              "card": "神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3级以上（纯净/毁灭/创造/腐败之神）；放入则不再结算占有/聊聊，高原的圣主死亡、1天后触发《莎姬的谢礼》"
+            }
+          ]
+        },
+        {
+          "id": "shaji_start_4",
+          "name": "离奇的故事",
+          "trigger": "在《欲望或野心》选“聊聊”，或选“占有”且灵视≥10、未持有3/4级「神的面容」",
+          "desc": "抉择弹窗：“我来助你”获「莎姬的信物」（15天内必须寻思它并完成《莎姬的噩梦》，否则莎姬死亡）；“我可不想掺和”莎姬篇关闭",
+          "prereqs": [
+            "欲望或野心"
+          ],
+          "slots": [],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "shaji_yan",
+      "name": "阉奴合作线",
+      "summary": "持信物且权势≥15时与阉奴斯瓦萨尔合作，是获取「君王的种子」的途径之一",
+      "steps": [
+        {
+          "id": "shaji_yan_1",
+          "name": "净身阉奴",
+          "trigger": "持有「莎姬的信物」、权势≥15",
+          "desc": "仪式，长期存续。卡槽：热娜/隐匿≥5的角色+社交≥5的非贵族追随者+8金币+黄金「内幕」。1天后触发《书店偶遇》",
+          "prereqs": [
+            "离奇的故事"
+          ],
+          "slots": [
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "或任意隐匿≥5的角色"
+            },
+            {
+              "card": "内幕",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "黄金品级"
+            }
+          ]
+        },
+        {
+          "id": "shaji_yan_2",
+          "name": "书店偶遇",
+          "trigger": "完成《净身阉奴》1天后",
+          "desc": "仪式，存续3天，逾期事件关闭。卡槽：斯瓦萨尔+任意角色+5金币+任意情报。检定智慧+社交：成功≥5与阉奴达成合作、可能触发《温暖的小腹》；<5事件关闭",
+          "prereqs": [
+            "净身阉奴"
+          ],
+          "slots": [
+            {
+              "card": "斯瓦萨尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "shaji_yan_3",
+          "name": "温暖的小腹",
+          "trigger": "《书店偶遇》检定成功后7天内：在《权力的游戏》上贡「奇巧双头龙」或任意情诗，或在任意事件折断任意品级「纵欲」，1天后触发",
+          "desc": "抉择弹窗：“你应该完成契约”——失去「莎姬的信物」、1天后莎姬死亡并触发《狂乱的圣主》；“我可以处理得更好”——获「君王的种子」（唯一）。5天后触发《斯瓦萨尔的结局》",
+          "prereqs": [
+            "书店偶遇"
+          ],
+          "slots": [
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "触发条件之一：7天内在任意事件折断任意品级纵欲（或在《权力的游戏》上贡「奇巧双头龙」/任意情诗）"
+            }
+          ]
+        },
+        {
+          "id": "shaji_yan_4",
+          "name": "斯瓦萨尔的结局",
+          "trigger": "完成《温暖的小腹》5天后",
+          "desc": "剧情弹窗：若已在日常篇《下水道的鳄鱼》捕获或击杀「小鳄鱼」——斯瓦萨尔退场、侠名+1、随机「读物」+1；否则斯瓦萨尔死亡",
+          "prereqs": [
+            "温暖的小腹"
+          ],
+          "slots": [],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "shaji_taozi",
+      "name": "苏丹的套子线",
+      "summary": "侠名≥10时调查苏丹的私生活，获「仿制避孕套」，是获取「君王的种子」的另一途径",
+      "steps": [
+        {
+          "id": "shaji_taozi_1",
+          "name": "苏丹的私生活",
+          "trigger": "侠名≥10、持有「莎姬的信物」时完成1次《欢愉之馆》",
+          "desc": "仪式，长期存续。卡槽：热娜/隐匿≥5的角色+社交≥5的非贵族追随者+8金币+黄金「内幕」。1天后触发《苏丹的套子》",
+          "prereqs": [
+            "离奇的故事"
+          ],
+          "slots": [
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "或任意隐匿≥5的角色"
+            },
+            {
+              "card": "内幕",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "黄金品级"
+            }
+          ]
+        },
+        {
+          "id": "shaji_taozi_2",
+          "name": "苏丹的套子",
+          "trigger": "完成《苏丹的私生活》1天后",
+          "desc": "仪式，耗时3天，共三轮检定（生存+智慧/智慧/隐匿+社交，各需成功≥5），任何一轮失败则关闭后续检定、1天后重置本事件。三轮全过获「仿制避孕套」——让任意女性角色穿戴参与《苏丹的欢愉》或奈布哈尼篇《你的游戏》《苏丹的游戏》即可获得「君王的种子」（可重复）",
+          "prereqs": [
+            "苏丹的私生活"
+          ],
+          "slots": [],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "shaji_shengmeng",
+      "name": "噩梦与圣主线",
+      "summary": "寻思「莎姬的信物」开启噩梦，用四种方式解决高原的圣主，迎来莎姬的谢礼与完美结局",
+      "steps": [
+        {
+          "id": "shaji_shengmeng_1",
+          "name": "莎姬的噩梦",
+          "trigger": "寻思「莎姬的信物」",
+          "desc": "仪式，存续1天，可再次寻思触发，但必须在15天内完成，否则莎姬死亡、「苏丹的猜忌」+1。卡槽2“缓解逼迫”（伊曼/拜铃耶/圣主像/弑君的计划/白银及以下「誓言之证」）：重置信物倒计时。卡槽3“解决圣主”：君王的种子→冻结倒计时、触发《星神的契约》；伊曼→《焚星》；拜铃耶→《猎神》；3/4级「神的面容」→移除信物、1天后触发《莎姬的谢礼》；黄金「誓言之证」→移除信物、获「星神的信仰」、1天后触发《莎姬的谢礼》",
+          "prereqs": [
+            "离奇的故事"
+          ],
+          "slots": [
+            {
+              "card": "莎姬的信物",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发；●卡槽。按解决方式被移除（神的面容/黄金誓言之证）或冻结倒计时（君王的种子/伊曼/拜铃耶）"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "缓解逼迫（重置倒计时）或解决圣主：冻结倒计时、触发《焚星》"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "缓解逼迫（重置倒计时）或解决圣主：冻结倒计时、触发《猎神》"
+            },
+            {
+              "card": "圣主像",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "缓解逼迫：重置信物倒计时"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "缓解逼迫：重置信物倒计时"
+            },
+            {
+              "card": "誓言之证",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "白银及以下：缓解逼迫、重置倒计时；黄金品级：解决圣主，移除信物、获「星神的信仰」、1天后触发《莎姬的谢礼》"
+            },
+            {
+              "card": "君王的种子",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "解决圣主：冻结倒计时、触发《星神的契约》"
+            },
+            {
+              "card": "神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3/4级，解决圣主：移除信物、1天后触发《莎姬的谢礼》"
+            }
+          ]
+        },
+        {
+          "id": "shaji_shengmeng_2",
+          "name": "焚星",
+          "trigger": "在《莎姬的噩梦》使用伊曼“解决圣主”",
+          "desc": "仪式，存续3天、耗时5天，逾期信物倒计时解冻、可重新寻思。卡槽：信物（失去）+3名智慧≥5的角色/任意天象+20金币；可放任意正教思潮（虔信+1）、黄金及以下「征服」获「罪孽：裂隙」（唯一）。结算：灵视+1、侠名+1、1天后触发《莎姬的谢礼》",
+          "prereqs": [
+            "莎姬的噩梦"
+          ],
+          "slots": [
+            {
+              "card": "莎姬的信物",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": ""
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true,
+              "note": "黄金及以下：获「罪孽：裂隙」（唯一）"
+            }
+          ]
+        },
+        {
+          "id": "shaji_shengmeng_3",
+          "name": "猎神",
+          "trigger": "在《莎姬的噩梦》使用拜铃耶“解决圣主”",
+          "desc": "仪式，存续3天。以人为祭品需祭品体魄&魔力+主持人魔力&魅力≥30。三轮检定：检定1失败则2天后触发《狂乱的圣主》（以人为祭品则祭品死亡、灵视+1、1天后触发《莎姬的谢礼》；以君王的种子为祭品则莎姬死亡、「苏丹的猜忌」+1）；检定2失败全员{诅咒}；检定3成功≥3：高原的圣主死亡、「乙太」+3、1天后触发《莎姬的谢礼》，以人为祭品且放「生命之水」可救活祭品并使其体魄+2、魔力+2。可放黄金及以下「征服」获「污渍：王冠」",
+          "prereqs": [
+            "莎姬的噩梦"
+          ],
+          "slots": [
+            {
+              "card": "莎姬的信物",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": ""
+            },
+            {
+              "card": "君王的种子",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "3号槽祭品二选一：任意追随者（死亡）或君王的种子（失去）；以种子为祭品则莎姬死亡、「苏丹的猜忌」+1"
+            },
+            {
+              "card": "生命之水",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "以人为祭品时可救活祭品并使其体魄+2、魔力+2；以种子为祭品时不需要"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true,
+              "note": "黄金及以下：获「污渍：王冠」"
+            }
+          ]
+        },
+        {
+          "id": "shaji_shengmeng_4",
+          "name": "星神的契约",
+          "trigger": "在《莎姬的噩梦》使用「君王的种子」“解决圣主”",
+          "desc": "仪式，存续1天。需信物+君王的种子（均失去）+主持人+诱饵（主角或追随者），主持人魔力&魅力+诱饵体魄&魅力须≥20，自动吸入3/4级「神的面容」。检定魔力≥8：追随者为诱饵触发《向星星许愿》，主角为诱饵触发《星之衰》；主角另获属性提升（无神的面容：六项+4；有：魔力+5、体魄+3，并按神的种类附加对正神/邪神的怀疑+3或「疯狂」+3）。检定<8：退回种子和祭品、2天后触发《狂乱的圣主》。固定结算：1天后触发《莎姬的谢礼》",
+          "prereqs": [
+            "莎姬的噩梦"
+          ],
+          "slots": [
+            {
+              "card": "莎姬的信物",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": ""
+            },
+            {
+              "card": "君王的种子",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "检定失败则退回"
+            },
+            {
+              "card": "神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "自动吸入3/4级（创造/纯净/腐败/毁灭之神），影响主角属性提升与怀疑/疯狂"
+            }
+          ]
+        },
+        {
+          "id": "shaji_shengmeng_5",
+          "name": "向星星许愿",
+          "trigger": "在《星神的契约》以追随者为诱饵并检定成功",
+          "desc": "仪式，存续5天，逾期诱饵（1号槽）死亡。选项分支：放任意苏丹卡→诱饵死亡、获「星光信标」（大结局革命篇可杀死女术士达成真结局）；放谋反的意图/弑君计划→诱饵死亡、获「直通宫内的暗道」（革命篇可跳过多个战斗仪式直击苏丹）；放3级神的面容→诱饵提升为黄金品级、体魄/魅力/魔力+4；放4级毁灭之神/腐败之神→诱饵死亡，高原的圣主将在大结局降神篇正神/邪神降临线助战",
+          "prereqs": [
+            "星神的契约"
+          ],
+          "slots": [
+            {
+              "card": "苏丹卡",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "2号槽多选一。任意苏丹卡：诱饵死亡、获「星光信标」（大结局革命篇《帷幕之后》用，可杀死女术士达成真结局）"
+            },
+            {
+              "card": "谋反的意图",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一。与弑君的计划同效：诱饵死亡、获「直通宫内的暗道」（革命篇可跳过多个战斗仪式直击苏丹）"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一。与谋反的意图同效：诱饵死亡、获「直通宫内的暗道」"
+            },
+            {
+              "card": "神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一。3级：诱饵提升为黄金品级、体魄/魅力/魔力+4；4级毁灭/腐败之神：诱饵死亡，高原的圣主将在大结局降神篇正神/邪神降临线助战"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "shaji_shengmeng_6",
+          "name": "星之衰",
+          "trigger": "在《星神的契约》以主角为诱饵并检定成功",
+          "desc": "仪式，自启动。放被困的星神：灵视+1、「疯狂」+1，3-7天后重置本事件（可重复）",
+          "prereqs": [
+            "星神的契约"
+          ],
+          "slots": [
+            {
+              "card": "被困的星神",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "shaji_shengmeng_7",
+          "name": "狂乱的圣主",
+          "trigger": "在《温暖的小腹》选“你应该完成契约”1天后；或在《猎神》检定1失败；或在《星神的契约》检定失败",
+          "desc": "仪式，存续1天，逾期自启动。三轮检定（魔力+生存/魔力+生存/魔力&战斗对抗圣主），检定1/2失败对应槽位角色死亡，检定3成功≥8：虔信+1、金骰子+2，<8则5-8号槽{诅咒}并重置本事件。可放正教思潮（检定3成功后虔信+1）、黄金及以下「征服」获「罪孽：裂隙」（唯一）；放毁灭/腐败之神可关闭检定、金骰子+1（可重复）",
+          "prereqs": [
+            "温暖的小腹",
+            "猎神",
+            "星神的契约"
+          ],
+          "slots": [
+            {
+              "card": "高原的圣主",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "星灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "鲁梅拉篇产生，参与各轮检定"
+            },
+            {
+              "card": "神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "毁灭/腐败之神：关闭检定、金骰子+1；纯净之神：关闭检定、对正神的怀疑+3；创造之神：关闭检定、对邪神的怀疑+3"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true,
+              "note": "黄金及以下：检定3成功后获「罪孽：裂隙」（唯一）"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "shaji_shengmeng_8",
+          "name": "莎姬的谢礼",
+          "trigger": "以下任一达成1天后：在《欲望或野心》持3/4级神的面容选“占有”；在《莎姬的噩梦》放置3/4级神的面容或黄金誓言之证；完成《焚星》；在《猎神》完成检定3、或检定1失败且以人为祭品；完成《星神的契约》",
+          "desc": "剧情弹窗：金币+50、权势+2、莎姬支持+2、反对清零，次日触发《黄金体验》。此后《权力的游戏》莎姬在场时放入「苏丹的猜忌」：猜忌-1、权势+1，达成一千零一夜「没有人比我更懂你-枕边风」",
+          "prereqs": [
+            "欲望或野心",
+            "莎姬的噩梦",
+            "焚星",
+            "猎神",
+            "星神的契约"
+          ],
+          "slots": []
+        },
+        {
+          "id": "shaji_shengmeng_9",
+          "name": "黄金体验",
+          "trigger": "完成《莎姬的谢礼》",
+          "desc": "仪式，存续7天，逾期权势-1。卡槽：莎姬+主角+「疯狂」。结算：主角魅力+2、莎姬激情+1、「疯狂」-1。完美结局",
+          "prereqs": [
+            "莎姬的谢礼"
+          ],
+          "slots": [
+            {
+              "card": "莎姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "疯狂",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "结算「疯狂」-1"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

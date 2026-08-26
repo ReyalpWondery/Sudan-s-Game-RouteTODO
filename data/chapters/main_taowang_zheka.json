@@ -1,0 +1,505 @@
+{
+  "id": "main_taowang_zheka",
+  "title": "麦娜尔篇、大结局·逃亡篇/全折卡篇",
+  "category": "main",
+  "characters": [
+    "麦娜尔",
+    "梅姬",
+    "苏丹",
+    "女术士"
+  ],
+  "routes": [
+    {
+      "id": "main_taowang_zheka_mainal",
+      "name": "麦娜尔线",
+      "summary": "第14天起带麦娜尔探索绿洲，最终送她远行并获得逃亡目的地「中国」（当前版本麦娜尔无法入队）",
+      "steps": [
+        {
+          "id": "main_taowang_zheka_mainal_1",
+          "name": "探索未知绿洲",
+          "trigger": "第14天被动触发",
+          "desc": "仪式，存续3天耗时3天（逾期2-3天后重置）。卡槽：麦娜尔+任意角色+3金币+任意情报。检定全员体魄+生存：成功≥3获地点「被找到的绿洲」、善名+1、麦娜尔反对清零，3天后触发《暗潮涌动·1》；成功<3则重置本事件",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "麦娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "main_taowang_zheka_mainal_2",
+          "name": "暗潮涌动·1",
+          "trigger": "《探索未知绿洲》检定成功3天后",
+          "desc": "仪式，存续1天耗时3天（逾期3天后触发《绝地探索》）。卡槽1：被找到的绿洲（失去）；卡槽2放青铜及以下征服：恶名+1、金币+10，触发《一个人的绝地探索》；不放苏丹卡3天后触发《绝地探索》",
+          "prereqs": [
+            "探索未知绿洲"
+          ],
+          "slots": [
+            {
+              "card": "被找到的绿洲",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "（失去）"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "青铜及以下；放置则恶名+1、金币+10，触发《一个人的绝地探索》"
+            }
+          ]
+        },
+        {
+          "id": "main_taowang_zheka_mainal_3",
+          "name": "一个人的绝地探索",
+          "trigger": "在《暗潮涌动·1》放置征服",
+          "desc": "仪式，自启动耗时3天。卡槽：麦娜尔。结算：麦娜尔退场（麦娜尔线关闭）",
+          "prereqs": [
+            "暗潮涌动·1"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "麦娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "main_taowang_zheka_mainal_4",
+          "name": "绝地探索",
+          "trigger": "在《暗潮涌动·1》不使用苏丹卡3天后（或其逾期）",
+          "desc": "仪式，存续1天耗时5天（逾期麦娜尔退场）。卡槽：麦娜尔+任意角色+任意情报。检定全员体魄+生存：成功≥5获地点「繁荣的城市」、2号槽体魄+2生存+2、善名+1、麦娜尔支持+1，3天后触发《暗潮涌动·2》；成功<5麦娜尔死亡、2号槽受伤、金币+2",
+          "prereqs": [
+            "暗潮涌动·1"
+          ],
+          "slots": [
+            {
+              "card": "麦娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "main_taowang_zheka_mainal_5",
+          "name": "暗潮涌动·2",
+          "trigger": "《绝地探索》检定成功3天后",
+          "desc": "仪式，存续1天耗时3天（逾期3天后触发《麦娜尔的道别》）。卡槽1：繁荣的城市（失去）；卡槽2放白银及以下征服：恶名+1、金币+10，触发《悄无声息的离去》",
+          "prereqs": [
+            "绝地探索"
+          ],
+          "slots": [
+            {
+              "card": "繁荣的城市",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "（失去）"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "白银及以下；放置则恶名+1、金币+10，触发《悄无声息的离去》"
+            }
+          ]
+        },
+        {
+          "id": "main_taowang_zheka_mainal_6",
+          "name": "悄无声息的离去",
+          "trigger": "在《暗潮涌动·2》放置征服",
+          "desc": "仪式，自启动耗时3天。卡槽：麦娜尔。结算：麦娜尔退场（麦娜尔线关闭）",
+          "prereqs": [
+            "暗潮涌动·2"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "麦娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "main_taowang_zheka_mainal_7",
+          "name": "麦娜尔的道别",
+          "trigger": "在《暗潮涌动·2》未放苏丹卡3天后（或其逾期）",
+          "desc": "仪式，存续1天耗时1天（逾期麦娜尔退场）。卡槽：麦娜尔；卡槽2放5金币：麦娜尔退场，5天后触发《远方的乐土》",
+          "prereqs": [
+            "暗潮涌动·2"
+          ],
+          "slots": [
+            {
+              "card": "麦娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "main_taowang_zheka_mainal_8",
+          "name": "远方的乐土",
+          "trigger": "在《麦娜尔的道别》放置5金币5天后",
+          "desc": "仪式，长期存续耗时0天。卡槽：1金币。获地点「中国」（大结局·逃亡篇可选目的地之一），达成一千零一夜「远方国度」",
+          "prereqs": [
+            "麦娜尔的道别"
+          ],
+          "terminal": true,
+          "slots": []
+        }
+      ]
+    },
+    {
+      "id": "main_taowang_zheka_escape",
+      "name": "逃亡线",
+      "summary": "折断任意杀戮卡后梅姬提议逃跑，带同伴与财物逃离苏丹的游戏，达成伪胜利结局",
+      "steps": [
+        {
+          "id": "main_taowang_zheka_escape_1",
+          "name": "我们逃跑吧",
+          "trigger": "梅姬在队、折断任意杀戮卡1天后",
+          "desc": "抉择弹窗：选“接受”触发《逃离苏丹的游戏》；选“拒绝”则大结局·逃亡篇关闭",
+          "prereqs": [],
+          "slots": []
+        },
+        {
+          "id": "main_taowang_zheka_escape_2",
+          "name": "逃离苏丹的游戏",
+          "trigger": "在《我们逃跑吧》选择“接受”",
+          "desc": "仪式，长期存续耗时1天。卡槽1：遥远的绿洲/中国（目的地，中国需完成麦娜尔线《远方的乐土》）；卡槽2：大炸弹/螺旋钻地机/萨达尔尼的信物（失去）。触发《出发!》与《逃亡倒计时》，达成一千零一夜「遥远的乐土」；按声望值获善名/权势/侠名/灵视的遮掩（≥30/24/18/12/6对应+5/4/3/2/1），每张遮掩使倒计时存续+1天。警告：逃离时只能持有1张苏丹卡，否则必然进入死亡结局「无名人之死」；目的地为「遥远的绿洲」时所有追随者没有个人后日谈",
+          "prereqs": [
+            "我们逃跑吧"
+          ],
+          "slots": [
+            {
+              "card": "遥远的绿洲",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "卡槽1目的地，与中国二选一"
+            },
+            {
+              "card": "中国",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "卡槽1目的地，与遥远的绿洲二选一；需完成麦娜尔线《远方的乐土》获得"
+            },
+            {
+              "card": "大炸弹",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "卡槽2三选一（失去）"
+            },
+            {
+              "card": "螺旋钻地机",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "卡槽2三选一（失去）"
+            },
+            {
+              "card": "萨达尔尼的信物",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "卡槽2三选一（失去）"
+            }
+          ]
+        },
+        {
+          "id": "main_taowang_zheka_escape_3",
+          "name": "逃亡倒计时",
+          "trigger": "完成《逃离苏丹的游戏》",
+          "desc": "仪式，每天结算1次，最多可存续40天以上。卡槽1-4：四种遮掩；卡槽5：任意追随者/双胞胎（每人限一次，放入者不可参与逃离）；卡槽6放10金币：「被打包的财物」+1（直接吸入《出发!》）；卡槽7：有{命运的羁绊}的追随者被吸入《出发!》（参与逃离的同伴至少1位、最多7位）。结算：1-5号槽有牌则随机扣减1张继续；1-5号槽空置则死亡结局「无名人之死」",
+          "prereqs": [
+            "逃离苏丹的游戏"
+          ],
+          "slots": [
+            {
+              "card": "权势的遮掩",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "卡槽1-4四种遮掩之一；每天结算随机扣减1张"
+            },
+            {
+              "card": "善名的遮掩",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "卡槽1-4四种遮掩之一；每天结算随机扣减1张"
+            },
+            {
+              "card": "侠名的遮掩",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "卡槽1-4四种遮掩之一；每天结算随机扣减1张"
+            },
+            {
+              "card": "灵视的遮掩",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "卡槽1-4四种遮掩之一；每天结算随机扣减1张"
+            }
+          ]
+        },
+        {
+          "id": "main_taowang_zheka_escape_4",
+          "name": "出发!",
+          "trigger": "完成《逃离苏丹的游戏》",
+          "desc": "仪式，存续1天耗时1天（逾期自启动）。卡槽1：逃离时放入的遥远的绿洲/中国；卡槽2主角；卡槽3任意苏丹卡；卡槽4被打包的财物；卡槽5-11：《逃亡倒计时》7号槽吸入的追随者（至少1位）。持有不止一张苏丹卡触发《裂魂之夜》；仅持一张触发《最后的苏丹卡》；按目的地/财物/同伴进入不同后日谈",
+          "prereqs": [
+            "逃离苏丹的游戏"
+          ],
+          "slots": [
+            {
+              "card": "遥远的绿洲",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "卡槽1目的地，与中国二选一（《逃离苏丹的游戏》1号槽放入的卡）"
+            },
+            {
+              "card": "中国",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "卡槽1目的地，与遥远的绿洲二选一"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "苏丹卡",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "任意品级；持有不止一张则触发《裂魂之夜》死亡结局"
+            },
+            {
+              "card": "被打包的财物",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "卡槽4○；数量影响后日谈"
+            }
+          ]
+        },
+        {
+          "id": "main_taowang_zheka_escape_5",
+          "name": "裂魂之夜",
+          "trigger": "完成《出发!》时持有不止一张苏丹卡",
+          "desc": "仪式，自启动耗时0天。卡槽：主角。结算：死亡结局「无名人之死」",
+          "prereqs": [
+            "出发!"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "main_taowang_zheka_escape_6",
+          "name": "最后的苏丹卡",
+          "trigger": "完成《出发!》时仅持有一张苏丹卡（卡种不同名称略有不同，机制相同）",
+          "desc": "仪式，存续1天耗时1天（逾期自启动）。卡槽1放星灵：女术士死亡且2/3号槽结算关闭；卡槽2：出发时放入的苏丹卡；卡槽3按卡种结算——杀戮：主角被刺瞎/追随者死亡；征服：主角检定生存+体魄≥8仅差分剧情/追随者退场；纵欲：空置则死亡结局「无名人之死」、追随者成为下一个玩家；奢靡：失去被打包的财物（仅差分剧情）。固定达成一千零一夜「遥远乐土」；目的地为中国达成伪胜利结局「逃往中国」+Steam成就「自由」，为遥远的绿洲达成伪胜利结局「逃往遥远的绿洲」+Steam成就「调和」",
+          "prereqs": [
+            "出发!"
+          ],
+          "slots": [
+            {
+              "card": "星灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "卡槽1；放置则女术士死亡、2/3号槽所有结算关闭"
+            },
+            {
+              "card": "苏丹卡",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "卡槽2，《出发!》放入的苏丹卡，任意品级；其卡种决定卡槽3的结算"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "卡槽3：苏丹卡为杀戮/征服时为★，纵欲时为☆；杀戮→主角被刺瞎，征服→检定生存+体魄≥8仅差分剧情，纵欲→仅差分剧情"
+            },
+            {
+              "card": "被打包的财物",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "卡槽3：仅奢靡时可放（○）；有与没有都仅是差分剧情"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "main_taowang_zheka_zheka",
+      "name": "全折卡线",
+      "summary": "折断所有苏丹卡触发的大结局，含真胜利结局「收集者」与伪胜利结局「无数次」",
+      "steps": [
+        {
+          "id": "main_taowang_zheka_zheka_1",
+          "name": "深渊的邀请",
+          "trigger": "主角是{邪恶化身}、折断所有苏丹卡仅剩最后一张时触发（出现在《治理家业》附近，无提示悄然出现）",
+          "desc": "仪式，长期存续耗时0天。卡槽1主角；卡槽2放入最后一张苏丹卡（任意品级）：纵欲→真胜利结局「交媾罗网」、杀戮→「自戕之锋」、奢靡→「金色荒芜」、征服→「凯旋尸骸」；卡槽3/4/5：有{命运的羁绊}的追随者。达成Steam成就「慈爱」",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "卡槽2四选一（任意品级）：真胜利结局「交媾罗网」"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "卡槽2四选一（任意品级）：真胜利结局「自戕之锋」"
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "卡槽2四选一（任意品级）：真胜利结局「金色荒芜」"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "卡槽2四选一（任意品级）：真胜利结局「凯旋尸骸」"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "main_taowang_zheka_zheka_2",
+          "name": "苏丹的奖赏",
+          "trigger": "折断所有苏丹卡",
+          "desc": "仪式，存续1天耗时1天（逾期死亡结局「无名人之死」）。卡槽1苏丹、卡槽2-8除主角外的随机贵族角色、卡槽9主角。达成伪胜利结局「无数次」、一千零一夜「游戏没有结束」。注意：通过其他大结局仪式折断苏丹卡不会进入本篇",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "苏丹",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "卡槽9★"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "main_taowang_zheka_zheka_3",
+          "name": "女术士的邀请",
+          "trigger": "14天内折断所有苏丹卡（第14天当天完成无法触发）",
+          "desc": "仪式，长期存续耗时0天。卡槽：主角。达成真胜利结局「收集者」",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

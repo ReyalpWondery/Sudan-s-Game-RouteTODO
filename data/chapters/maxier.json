@@ -1,0 +1,711 @@
+{
+  "id": "maxier",
+  "title": "玛希尔篇",
+  "category": "character",
+  "characters": [
+    "玛希尔"
+  ],
+  "routes": [
+    {
+      "id": "maxier_join",
+      "name": "入队与研究线",
+      "summary": "从项目投资到玛希尔入队，开启长期研究，是全篇的地基",
+      "steps": [
+        {
+          "id": "maxier_join_1",
+          "name": "项目投资",
+          "trigger": "持有金币≥10时每3-5天检查手牌触发",
+          "desc": "仪式，存续4天。卡槽：玛希尔+任意角色+5金币（可放奢靡折卡需10金币）。检定成功≥5获奇珍「星空之镜」，失败获「水晶镜片」",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "折奢靡须10金币"
+            }
+          ]
+        },
+        {
+          "id": "maxier_join_2",
+          "name": "扩建天文台",
+          "trigger": "寻思「星空之镜」",
+          "desc": "仪式。放星空之镜+5金币。随机「天象」+1，触发《天文台》，计入一千零一夜「奇珍之家」",
+          "prereqs": [
+            "项目投资"
+          ],
+          "slots": [
+            {
+              "card": "星空之镜",
+              "required": true,
+              "consumed": false,
+              "note": "放入后不失去"
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true
+            }
+          ]
+        },
+        {
+          "id": "maxier_join_3",
+          "name": "天文台",
+          "trigger": "完成《扩建天文台》后每7天自启动一次",
+          "desc": "可反复触发。随机「天象」+1",
+          "prereqs": [
+            "扩建天文台"
+          ],
+          "slots": [
+            {
+              "card": "星空之镜",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true
+            }
+          ]
+        },
+        {
+          "id": "maxier_join_4",
+          "name": "寻思-天象",
+          "trigger": "寻思任意「天象」",
+          "desc": "抉择：选“进行科研”触发《群星的研究》；其他选项按天象种类获得不同收益（灵视/金骰子/回到上一天等）",
+          "prereqs": [
+            "天文台"
+          ],
+          "slots": [
+            {
+              "card": "天象",
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发；任意「天象」卡"
+            }
+          ]
+        },
+        {
+          "id": "maxier_join_5",
+          "name": "群星的研究",
+          "trigger": "寻思任意「天象」选“进行科研”",
+          "desc": "仪式，耗时3天。放天象+2名智慧≥5角色。结算：「理性」+1",
+          "prereqs": [
+            "寻思-天象"
+          ],
+          "slots": [
+            {
+              "card": "天象",
+              "required": true,
+              "consumed": false,
+              "note": "放入所寻思的那张天象"
+            }
+          ]
+        },
+        {
+          "id": "maxier_join_6",
+          "name": "寻思-理性",
+          "trigger": "寻思「理性」",
+          "desc": "抉择：立即使用灵视-1；先留着可再次寻思",
+          "prereqs": [
+            "群星的研究"
+          ],
+          "slots": [
+            {
+              "card": "理性",
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "maxier_join_7",
+          "name": "项目投资·二",
+          "trigger": "完成《项目投资》4-6天后",
+          "desc": "仪式，存续4天。空置或奢靡：检定成功≥5获「生命之水」+3，3-5天后触发《收服玛希尔》；杀戮：玛希尔死亡（断绝后续）",
+          "prereqs": [
+            "项目投资"
+          ],
+          "slots": [
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "折奢靡须10金币"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "放杀戮则玛希尔死亡"
+            }
+          ]
+        },
+        {
+          "id": "maxier_join_8",
+          "name": "收服玛希尔",
+          "trigger": "不杀戮完成《项目投资·二》3-5天后",
+          "desc": "仪式，自启动。放玛希尔。结算：「乙太」+2、玛希尔入队",
+          "prereqs": [
+            "项目投资·二"
+          ],
+          "slots": [
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "maxier_join_9",
+          "name": "长期研究",
+          "trigger": "玛希尔入队后寻思「玛希尔」（可重复触发）",
+          "desc": "仪式，耗时7天。放玛希尔+5-20金币，建议放「乙太」。成功获随机发明（大炸弹/热气球等）。完成后的额外结算开启多条支线：侠名≥13触发权杖线《男人真正想要的》；恶名≥10触发行尸线《天才的想法》；密教基地+乙太研发≥3获「武器附魔仪式图纸」触发《血炼熔炉》；「神的乙太」有剩余触发《偷窃圣血》",
+          "prereqs": [
+            "收服玛希尔"
+          ],
+          "slots": [
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发；仪式也须放入"
+            },
+            {
+              "card": "乙太",
+              "required": false,
+              "consumed": true,
+              "note": "放入额外获乙太研发计数+1；不放则按失败结算"
+            },
+            {
+              "card": "圣主像",
+              "required": false,
+              "consumed": true,
+              "note": "额外「乙太」+3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maxier_zhang",
+      "name": "生命权杖线",
+      "summary": "侠名≥13开启，让主角戴上生命权杖",
+      "steps": [
+        {
+          "id": "maxier_zhang_1",
+          "name": "男人真正想要的",
+          "trigger": "侠名≥13、完成《长期研究》",
+          "desc": "仪式。金钱/力量/爱情/知识任选后选“姑且先多问一句”或“确实是个好想法”进入后续；选“把这东西从我面前拿走”则权杖线关闭",
+          "prereqs": [
+            "长期研究"
+          ],
+          "slots": []
+        },
+        {
+          "id": "maxier_zhang_2",
+          "name": "创造正强者",
+          "trigger": "在《男人真正想要的》选择继续",
+          "desc": "仪式。放生命权杖+玛希尔+主角。主角穿戴「生命权杖」（不可卸下），玛希尔激情+1；此后可《在家行淫》纵欲玛希尔。1天后可能触发《快乐使我旋转》、3天后可能触发《合金装备·幻痛》",
+          "prereqs": [
+            "男人真正想要的"
+          ],
+          "slots": [
+            {
+              "card": "生命权杖",
+              "required": true,
+              "consumed": false,
+              "note": "主角穿戴，不可卸下"
+            },
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "maxier_zhang_3",
+          "name": "快乐使我旋转",
+          "trigger": "朱娜/贾丽拉/夏玛至少两人仍是妓女、完成《创造正强者》1天后",
+          "desc": "仪式，最多重置6次。放穿戴权杖的主角+妓女+纵欲卡：「妻子的不满」+1、3天后触发《御前试合》；空置则本事件关闭",
+          "prereqs": [
+            "创造正强者"
+          ],
+          "slots": [
+            {
+              "card": "朱娜",
+              "required": true,
+              "consumed": false,
+              "note": "与贾丽拉/夏玛三选一"
+            },
+            {
+              "card": "贾丽拉",
+              "required": true,
+              "consumed": false,
+              "note": "与朱娜/夏玛三选一"
+            },
+            {
+              "card": "夏玛",
+              "required": true,
+              "consumed": false,
+              "note": "与朱娜/贾丽拉三选一"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "不高于妓女品级"
+            }
+          ]
+        },
+        {
+          "id": "maxier_zhang_4",
+          "name": "御前试合",
+          "trigger": "在《快乐使我旋转》放置穿戴权杖的主角3天后",
+          "desc": "仪式，存续3天。逾期：已拆下权杖则权势-2，未拆下则死亡结局「伴君如伴虎」。可用纵欲折卡",
+          "prereqs": [
+            "快乐使我旋转"
+          ],
+          "slots": [
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true
+            },
+            {
+              "card": "生命权杖",
+              "required": false,
+              "consumed": true,
+              "note": "放入生命权杖（失去）：金币+20、权势+2"
+            }
+          ]
+        },
+        {
+          "id": "maxier_zhang_5",
+          "name": "合金装备·幻痛",
+          "trigger": "灵视≥5、完成《创造正强者》3天后",
+          "desc": "仪式，自启动。放穿戴权杖的角色。「疯狂」+1、触发《自然新生》",
+          "prereqs": [
+            "创造正强者"
+          ],
+          "slots": [
+            {
+              "card": "生命权杖",
+              "required": true,
+              "consumed": false,
+              "note": "放入穿戴权杖的角色"
+            }
+          ]
+        },
+        {
+          "id": "maxier_zhang_6",
+          "name": "自然新生",
+          "trigger": "完成《合金装备·幻痛》",
+          "desc": "仪式。需「生命之水」：拆下「生命权杖」进入手牌（无生命之水则权杖线关闭、「疯狂」+1）。拆下后可寻思权杖选“永久收藏”开启雕塑线",
+          "prereqs": [
+            "合金装备·幻痛"
+          ],
+          "slots": [
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "生命之水",
+              "required": false,
+              "consumed": true,
+              "note": "无生命之水则权杖线关闭"
+            }
+          ]
+        },
+        {
+          "id": "maxier_zhang_7",
+          "name": "扩建生命权杖雕塑",
+          "trigger": "寻思「生命权杖」后选“永久收藏”",
+          "desc": "仪式。放生命权杖+20金币，可用奢靡折卡。获「承阳剑」（结局时才能入手牌），触发《承阳武士》，计入一千零一夜「奇珍之家」",
+          "prereqs": [
+            "自然新生"
+          ],
+          "slots": [
+            {
+              "card": "生命权杖",
+              "required": true,
+              "consumed": true,
+              "note": "寻思触发；仪式中（失去）"
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true
+            }
+          ]
+        },
+        {
+          "id": "maxier_zhang_8",
+          "name": "承阳武士",
+          "trigger": "完成《扩建生命权杖雕塑》",
+          "desc": "仪式，自启动每7天循环。放承阳剑：每7天战斗+3。「承阳剑」在大结局（龙眼篇《布道》/降神篇/革命篇《集结部队》）时可进入手牌",
+          "prereqs": [
+            "扩建生命权杖雕塑"
+          ],
+          "slots": [
+            {
+              "card": "承阳剑",
+              "required": true,
+              "consumed": false
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "maxier_shi",
+      "name": "行尸线",
+      "summary": "恶名≥10开启，制造并改造复活的行尸",
+      "steps": [
+        {
+          "id": "maxier_shi_1",
+          "name": "天才的想法",
+          "trigger": "恶名≥10、完成《长期研究》",
+          "desc": "抉择弹窗：选“没别人，进来吧”→二级选项（拼命反抗/摸就摸吧）都触发《不洁的原料》；选“下次再说”行尸线关闭",
+          "prereqs": [
+            "长期研究"
+          ],
+          "slots": []
+        },
+        {
+          "id": "maxier_shi_2",
+          "name": "不洁的原料",
+          "trigger": "在《天才的想法》选“没别人，进来吧”",
+          "desc": "仪式，存续10天（逾期行尸线关闭）。放玛希尔+10金币或追随者（死亡）。1天后触发《见证奇迹的时刻》；放追随者+杀戮会触发《苏丹的诘问·行尸》",
+          "prereqs": [
+            "天才的想法"
+          ],
+          "slots": [
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "不高于2号槽角色品级；放追随者+杀戮触发《苏丹的诘问·行尸》"
+            }
+          ]
+        },
+        {
+          "id": "maxier_shi_3",
+          "name": "苏丹的诘问·行尸",
+          "trigger": "在《不洁的原料》放置“追随者+杀戮”",
+          "desc": "仪式，存续3天。检定社交+魅力，失败触发《一笔罚款》；逾期也触发《一笔罚款》",
+          "prereqs": [
+            "不洁的原料"
+          ],
+          "slots": []
+        },
+        {
+          "id": "maxier_shi_4",
+          "name": "一笔罚款",
+          "trigger": "《苏丹的诘问·行尸》逾期或检定失败",
+          "desc": "仪式，存续3天（逾期死亡结局「伴君如伴虎」）。放8金币",
+          "prereqs": [
+            "苏丹的诘问·行尸"
+          ],
+          "slots": []
+        },
+        {
+          "id": "maxier_shi_5",
+          "name": "见证奇迹的时刻",
+          "trigger": "完成《不洁的原料》1天后",
+          "desc": "仪式。放复活的行尸+玛希尔+主角。检定全员战斗+体魄≥3：立即触发《处理行尸》；失败死亡结局「无名人之死」",
+          "prereqs": [
+            "不洁的原料"
+          ],
+          "slots": [
+            {
+              "card": "复活的行尸",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "maxier_shi_6",
+          "name": "处理行尸",
+          "trigger": "《见证奇迹的时刻》检定成功立即触发",
+          "desc": "抉择：选“它将大有作为！”获「复活的行尸」；选“这东西不太行”行尸线关闭",
+          "prereqs": [
+            "见证奇迹的时刻"
+          ],
+          "slots": []
+        },
+        {
+          "id": "maxier_shi_7",
+          "name": "用行尸做什么呢",
+          "trigger": "玛希尔存活、寻思「复活的行尸」（可重复触发）",
+          "desc": "抉择：“开始赚钱吧”触发《行尸动力工坊》；“想要提升它的性能”触发《逐渐完美的造物》",
+          "prereqs": [
+            "处理行尸"
+          ],
+          "slots": [
+            {
+              "card": "复活的行尸",
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "maxier_shi_8",
+          "name": "行尸动力工坊",
+          "trigger": "在《用行尸做什么呢》选“开始赚钱吧”",
+          "desc": "仪式，耗时3天，可重复。放空置：金币+10；放「税收法律的补丁」：金币+3",
+          "prereqs": [
+            "用行尸做什么呢"
+          ],
+          "slots": [
+            {
+              "card": "复活的行尸",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "税收法律的补丁",
+              "required": false,
+              "consumed": false,
+              "note": "放入：金币+3"
+            }
+          ]
+        },
+        {
+          "id": "maxier_shi_9",
+          "name": "逐渐完美的造物",
+          "trigger": "在《用行尸做什么呢》选“想要提升它的性能”",
+          "desc": "仪式，可重复。焊接装备/优化部件（祭品强化体魄）/乙太充能（强化战斗）。完成5次后行尸成为{部队}将领；>10次无法改造",
+          "prereqs": [
+            "用行尸做什么呢"
+          ],
+          "slots": [
+            {
+              "card": "复活的行尸",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "不高于6号槽祭品品级；无杀戮则罪证+1、恶名+1"
+            }
+          ]
+        },
+        {
+          "id": "maxier_shi_10",
+          "name": "交税",
+          "trigger": "完成《行尸动力工坊》3次、齐亚德存活",
+          "desc": "抉择：“老老实实交税”出现幕后牌「税收法律的补丁」（工坊增收）；“和他讲法律”触发《苏丹的索要》",
+          "prereqs": [
+            "行尸动力工坊"
+          ],
+          "slots": []
+        },
+        {
+          "id": "maxier_shi_11",
+          "name": "苏丹的索要",
+          "trigger": "在《交税》选“和他讲法律”",
+          "desc": "仪式，存续5天（逾期死亡结局「伴君如伴虎」）。放复活的行尸（失去）。2-3天后触发《苏丹的报复》",
+          "prereqs": [
+            "交税"
+          ],
+          "slots": [
+            {
+              "card": "复活的行尸",
+              "required": true,
+              "consumed": true
+            }
+          ]
+        },
+        {
+          "id": "maxier_shi_12",
+          "name": "苏丹的报复",
+          "trigger": "完成《苏丹的索要》2-3天后",
+          "desc": "仪式，存续5天（逾期死亡结局「伴君如伴虎」）。放玛希尔：玛希尔死亡",
+          "prereqs": [
+            "苏丹的索要"
+          ],
+          "slots": [
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": true,
+              "note": "玛希尔死亡"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "maxier_other",
+      "name": "支线事件（圣血/血炼/热气球）",
+      "summary": "与正教篇、密教篇联动的支线",
+      "steps": [
+        {
+          "id": "maxier_other_1",
+          "name": "偷窃圣血",
+          "trigger": "完成一次《长期研究》（「神的乙太」有剩余且主角非教领）",
+          "desc": "仪式，存续14天，可通过《长期研究》再次触发。需玛希尔+任意角色（隐匿/战斗/社交分工）。成功「乙太」+1；可能触发正教篇《监守自盗》",
+          "prereqs": [
+            "长期研究"
+          ],
+          "slots": [
+            {
+              "card": "玛希尔",
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "maxier_other_2",
+          "name": "血炼熔炉",
+          "trigger": "寻思「武器附魔仪式图纸」（密教基地+乙太研发≥3后由《长期研究》获得）",
+          "desc": "仪式，可重复。放图纸+有{黑暗知识}角色+武器+祭品（死亡）。祭品为小留/小安/小薇可得武器「裂空」",
+          "prereqs": [
+            "长期研究"
+          ],
+          "slots": [
+            {
+              "card": "武器附魔仪式图纸",
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发；可重复使用"
+            },
+            {
+              "card": "小留",
+              "required": false,
+              "consumed": true,
+              "note": "祭品（死亡）：炼成武器「裂空」，限一把"
+            },
+            {
+              "card": "小安",
+              "required": false,
+              "consumed": true,
+              "note": "祭品（死亡）：炼成武器「裂空」，限一把"
+            },
+            {
+              "card": "小薇",
+              "required": false,
+              "consumed": true,
+              "note": "祭品（死亡）：炼成武器「裂空」，限一把"
+            }
+          ]
+        },
+        {
+          "id": "maxier_other_3",
+          "name": "热气球升降场",
+          "trigger": "寻思「热气球」（《长期研究》产物）",
+          "desc": "仪式。放热气球+9金币。获「高空侦查」+1，触发《扩建热气球升降场》，计入「奇珍之家」",
+          "prereqs": [
+            "长期研究"
+          ],
+          "slots": [
+            {
+              "card": "热气球",
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发；仪式中不失去"
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true
+            }
+          ]
+        },
+        {
+          "id": "maxier_other_4",
+          "name": "扩建热气球升降场",
+          "trigger": "完成《热气球升降场》相关扩建后长期存续",
+          "desc": "仪式，耗时7天自动重启。放热气球+任意角色：检定体魄，成功生存+2，「高空侦查」+1",
+          "prereqs": [
+            "热气球升降场"
+          ],
+          "slots": [
+            {
+              "card": "热气球",
+              "required": true,
+              "consumed": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

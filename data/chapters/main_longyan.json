@@ -1,0 +1,1409 @@
+{
+  "id": "main_longyan",
+  "title": "大结局·龙眼篇",
+  "category": "main",
+  "characters": [
+    "主角",
+    "梅姬",
+    "玛希尔",
+    "苏丹",
+    "羊肉炉"
+  ],
+  "routes": [
+    {
+      "id": "main_longyan_xian",
+      "name": "献苏丹线",
+      "summary": "把龙眼宝石上贡给苏丹，换权势并折一张苏丹卡",
+      "steps": [
+        {
+          "id": "main_longyan_xian_1",
+          "name": "龙眼献苏丹",
+          "trigger": "在《权力的游戏》上贡「龙眼宝石」（失去）",
+          "desc": "权势+3、「谗言」清零、达成一千零一夜「马屁的艺术」，触发《盛大恩赐》",
+          "prereqs": [],
+          "slots": []
+        },
+        {
+          "id": "main_longyan_xian_2",
+          "name": "盛大恩赐",
+          "trigger": "在《权力的游戏》上贡「龙眼宝石」后",
+          "desc": "仪式，存续3天（逾期关闭）。卡槽：黄金及以下「奢靡/纵欲/杀戮/征服」。折断一张苏丹卡",
+          "prereqs": [
+            "龙眼献苏丹"
+          ],
+          "slots": [
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": true,
+              "consumed": true,
+              "note": "黄金及以下，不同卡种文案不同"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": true,
+              "consumed": true,
+              "note": "黄金及以下，不同卡种文案不同"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": true,
+              "consumed": true,
+              "note": "黄金及以下，不同卡种文案不同"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": true,
+              "consumed": true,
+              "note": "黄金及以下，不同卡种文案不同"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "main_longyan_yanjiu",
+      "name": "研究与打磨线",
+      "summary": "寻思龙眼宝石并交给玛希尔研究，层层强化为「完美的龙眼」，最终打磨决定结局走向",
+      "steps": [
+        {
+          "id": "main_longyan_yanjiu_1",
+          "name": "处置龙眼宝石",
+          "trigger": "寻思「龙眼宝石」",
+          "desc": "抉择弹窗：选“这将是一件非凡的礼物”触发《举世无双的赠礼》；选“研究一下它能做什么”触发《龙眼的研究》（原文标注属玛希尔篇）",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "龙眼宝石",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_yanjiu_2",
+          "name": "龙眼的研究",
+          "trigger": "寻思「龙眼宝石」并选“研究一下它能做什么”",
+          "desc": "仪式，存续1天（逾期可再次寻思）。放龙眼宝石+任意角色。放玛希尔：「乙太」+1、黄金「预兆」+1、触发《魔力熔炉》；放哈桑/3级以上神的面容：特殊文本、可再次触发",
+          "prereqs": [
+            "处置龙眼宝石"
+          ],
+          "slots": [
+            {
+              "card": "龙眼宝石",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_yanjiu_3",
+          "name": "魔力熔炉",
+          "trigger": "在《龙眼的研究》放置玛希尔",
+          "desc": "仪式，长期存续、耗时3天。放龙眼宝石+乙太（失去）+玛希尔+魔力之和≥50的卡牌（失去，情报可堆叠）。玛希尔魔力+1、体魄+1，触发《龙眼的雕琢》",
+          "prereqs": [
+            "龙眼的研究"
+          ],
+          "slots": [
+            {
+              "card": "龙眼宝石",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "乙太",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": ""
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "4-11号槽另须放入魔力之和≥50的卡牌（失去，情报可堆叠）"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_yanjiu_4",
+          "name": "龙眼的雕琢",
+          "trigger": "完成《魔力熔炉》",
+          "desc": "仪式，长期存续、耗时3天。放龙眼宝石（失去）+乙太（失去）+玛希尔+2名智慧≥10角色+黄金品级武器（失去）。获「完美的龙眼」、玛希尔魔力&体魄+1、其他角色魔力+1，触发《龙眼怎么用》",
+          "prereqs": [
+            "魔力熔炉"
+          ],
+          "slots": [
+            {
+              "card": "龙眼宝石",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": ""
+            },
+            {
+              "card": "乙太",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": ""
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_yanjiu_5",
+          "name": "龙眼怎么用",
+          "trigger": "完成《龙眼的雕琢》",
+          "desc": "抉择弹窗：权力的象征/强大的武器/探究世界的秘密/这取决于它的制造者你啊。选项影响《最后的打磨》由玛希尔打磨时的结算；固定触发《最后的打磨》",
+          "prereqs": [
+            "龙眼的雕琢"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_longyan_yanjiu_6",
+          "name": "最后的打磨",
+          "trigger": "完成《龙眼怎么用》",
+          "desc": "仪式，长期存续、耗时1天。放完美的龙眼（失去）+乙太（失去）+玛希尔/主角+钻石或60金币（失去）+2个3级以上「神的面容」（失去，出自声望篇灵视线）。警告：已完成降神篇《觐见苏丹》或《受孕》则死亡结局「篡夺之罪」；已触发革命篇《于黎明前》则退回卡牌并关闭。同时放正神+邪神的面容：清除所有仪式、触发创世线《往新世界》。主角打磨不放面容：触发《趁生命气息逗留》；入圣主角放面容：可能触发成神线《神的御座1/2/3》。玛希尔打磨按《龙眼怎么用》抉择结算：无面容时分别为伪胜利结局「寂静黎明」/金骰子+20/解锁「陶土钥匙」/获四大发明；放面容时神被消灭，分别获命运羁绊/「光明之眼」或「黑暗之眼」/武器「舒尼雅」或「那由多」/伪胜利结局「终极造物」",
+          "prereqs": [
+            "龙眼怎么用"
+          ],
+          "slots": [
+            {
+              "card": "完美的龙眼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": ""
+            },
+            {
+              "card": "乙太",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": ""
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽：玛希尔/主角二选一，决定打磨结算走向"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽：玛希尔/主角二选一，决定打磨结算走向"
+            },
+            {
+              "card": "大颗钻石",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "4号槽：或小颗钻石×3或60金币"
+            },
+            {
+              "card": "小颗钻石",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "需×3；或大颗钻石或60金币"
+            },
+            {
+              "card": "神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "5/6号槽：3级以上（出自声望篇灵视线），正神/邪神的面容的组合决定结局分支"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "main_longyan_gift",
+      "name": "赠礼线",
+      "summary": "把龙眼宝石作为礼物送给追随者，换羁绊与权势",
+      "steps": [
+        {
+          "id": "main_longyan_gift_1",
+          "name": "举世无双的赠礼",
+          "trigger": "寻思「龙眼宝石」并选“这将是一件非凡的礼物”",
+          "desc": "仪式，存续1天（逾期可再次寻思）。放龙眼宝石（失去）+角色：主角/梅姬权势+2（梅姬另触发《举世无双的爱》）、阿迪莱获{命运的羁绊}、哲巴尔拒绝接受、其他非怪物非动物追随者获{命运的羁绊}。受赠者被动穿戴宝石、无法卸下也无加成；原文提示宝石另有研究与入《百科全书》等更有价值的用途",
+          "prereqs": [
+            "处置龙眼宝石"
+          ],
+          "slots": [
+            {
+              "card": "龙眼宝石",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "受赠：权势+2"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "受赠：权势+2、触发《举世无双的爱》"
+            },
+            {
+              "card": "阿迪莱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "受赠：获{命运的羁绊}、权势+1、善名+1"
+            },
+            {
+              "card": "哲巴尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "拒绝接受、可重新寻思使用"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_gift_2",
+          "name": "举世无双的爱",
+          "trigger": "《举世无双的赠礼》放置梅姬",
+          "desc": "仪式，存续7天。卡槽：「妻子的不满」。结算：「妻子的不满」-1，7天后再次触发本事件（无限循环）（可重复）",
+          "prereqs": [
+            "举世无双的赠礼"
+          ],
+          "slots": [
+            {
+              "card": "妻子的不满",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "结算时「妻子的不满」-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main_longyan_jiasheng",
+      "name": "伪胜利线（趁生命气息逗留）",
+      "summary": "最后的打磨不放神的面容、由主角打磨，按梅姬与陶土钥匙组合进入四种伪胜利结局",
+      "steps": [
+        {
+          "id": "main_longyan_jiasheng_1",
+          "name": "趁生命气息逗留",
+          "trigger": "《最后的打磨》不放神的面容、由主角进行打磨",
+          "desc": "仪式，存续1天（逾期自启动）。放主角+完美的龙眼+梅姬+陶土钥匙。按组合进入伪胜利结局：梅姬+陶土钥匙=「完美幻梦1」、仅陶土钥匙=「完美幻梦2」、仅梅姬=「热闹的小家」、都没=「寂静的林地」；另达成一千零一夜「萤火之光」",
+          "prereqs": [
+            "最后的打磨"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "完美的龙眼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "与陶土钥匙的组合决定四种伪胜利结局"
+            },
+            {
+              "card": "陶土钥匙",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "与梅姬的组合决定四种伪胜利结局"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "main_longyan_chenshen",
+      "name": "成神线",
+      "summary": "入圣主角在最后的打磨放入神的面容，登神、布道、组建神军，最终倾覆苏丹之塔并迎来真胜利结局",
+      "steps": [
+        {
+          "id": "main_longyan_chenshen_1",
+          "name": "神的御座1",
+          "trigger": "未完成马尔基娜篇《初试神威》；完成《最后的打磨》时主角已入圣、放入正神或邪神的面容",
+          "desc": "剧情弹窗：触发《成神》；按曾放入的面容成为正神或邪神",
+          "prereqs": [
+            "最后的打磨"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_longyan_chenshen_2",
+          "name": "神的御座2",
+          "trigger": "已完成马尔基娜篇《初试神威》；完成《最后的打磨》时主角已入圣、放入正神的面容",
+          "desc": "抉择：“我将成为更好的守护者”成为正神、触发《成神》；“我对禁欲系的人设有点不能接受”成为新神、触发《疏离感》",
+          "prereqs": [
+            "最后的打磨"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_longyan_chenshen_3",
+          "name": "神的御座3",
+          "trigger": "已完成马尔基娜篇《初试神威》；完成《最后的打磨》时主角已入圣、放入邪神的面容",
+          "desc": "抉择：“坐上这个宝座”成为邪神、触发《成神》；“这个发臭的便盆休想困住我”成为新神、触发《疏离感》",
+          "prereqs": [
+            "最后的打磨"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_longyan_chenshen_4",
+          "name": "成神",
+          "trigger": "完成《神的御座1》，或在《神的御座2》选“我将成为更好的守护者”，或在《神的御座3》选“坐上这个宝座”（三者任一）",
+          "desc": "仪式，长期存续、耗时1天。已入圣的主角/双胞胎提升为黄金品级、成为{神明}；未入圣则更名「圣者」、不再是主角、全属性+2。触发《神座》《你的代言人》",
+          "prereqs": [
+            "神的御座1",
+            "神的御座2",
+            "神的御座3"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "已入圣提升为黄金品级{神明}；未入圣更名「圣者」、全属性+2"
+            },
+            {
+              "card": "双胞胎",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "与主角同规则"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_5",
+          "name": "疏离感",
+          "trigger": "在《神的御座2》选“我对禁欲系的人设有点不能接受”或在《神的御座3》选“这个发臭的便盆休想困住我”（新神路线）",
+          "desc": "仪式，长期存续、耗时1天。卡槽与结算与《成神》完全一样",
+          "prereqs": [
+            "神的御座2",
+            "神的御座3"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "与《成神》完全一样"
+            },
+            {
+              "card": "双胞胎",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "与《成神》完全一样"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_6",
+          "name": "神座",
+          "trigger": "完成《成神》或《疏离感》",
+          "desc": "仪式，自启动、耗时1天。放成为{神明}的主角：金骰子+1、重置本仪式，直到完成《倾覆之塔》（可重复）",
+          "prereqs": [
+            "成神",
+            "疏离感"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "须已成为{神明}"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_7",
+          "name": "你的代言人",
+          "trigger": "完成《成神》或《疏离感》",
+          "desc": "仪式，存续1天（逾期死亡结局「在真空之中」）。放除梅姬外有{命运的羁绊}的追随者（若《最后的打磨》由玛希尔完成则只能选玛希尔）。成为{神的代言人}、触发《布道》；{神的侍从}额外魔力&魅力+3；正神获「君权神授」、邪神获「昼夜契约」、新神获「轮回纪元」。警告：代言人此后死亡则进入死亡结局「断绝」",
+          "prereqs": [
+            "成神",
+            "疏离感"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_longyan_chenshen_8",
+          "name": "布道",
+          "trigger": "完成《你的代言人》",
+          "desc": "仪式，存续3天（逾期死亡结局「在真空之中」）。放{神的代言人}+君权神授/昼夜契约/轮回纪元+至少3名除梅姬外追随者。追随者体魄+1、触发《蚁群》；奈费勒存活则其死亡；四近卫存活则触发《近卫的职责》；已触发玛希尔篇《承阳武士》则获武器「承阳剑」；流浪剑客参与且有{古老的誓约}可在《蚁群》获部队「星之战士」",
+          "prereqs": [
+            "你的代言人"
+          ],
+          "slots": [
+            {
+              "card": "君权神授",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "昼夜契约",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "轮回纪元",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：正神/邪神/新神对应道具任选"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_9",
+          "name": "近卫的职责",
+          "trigger": "完成《布道》；奈布哈尼/赛里曼/哲巴尔/法里斯至少一人存活",
+          "desc": "仪式，自启动、耗时0天。四近卫卸装备、去除追随者/密教徒标签、恢复{苏丹的近卫}标签——他们转到苏丹阵营对抗你",
+          "prereqs": [
+            "布道"
+          ],
+          "slots": [
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "存活才入槽"
+            },
+            {
+              "card": "赛里曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "存活才入槽"
+            },
+            {
+              "card": "哲巴尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "存活才入槽"
+            },
+            {
+              "card": "法里斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "存活才入槽"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_10",
+          "name": "蚁群",
+          "trigger": "完成《布道》",
+          "desc": "仪式，存续1天（逾期死亡结局「在真空之中」）。放神权道具+{神的代言人}+追随者（升黄金品级、战斗&魔力&体魄+5、成{神选冠军}）+怪物/动物（成{部队}）+至少一支部队（战斗&体魄+2）。触发《土丘》；流浪剑客曾参与《布道》且有{古老的誓约}则获部队「星之战士」",
+          "prereqs": [
+            "布道"
+          ],
+          "slots": [
+            {
+              "card": "君权神授",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "昼夜契约",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "轮回纪元",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽：正神/邪神/新神对应道具任选"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_11",
+          "name": "土丘",
+          "trigger": "完成《蚁群》",
+          "desc": "仪式，存续1天、耗时0天（逾期自启动）。三轮战斗检定（我方神选冠军等 vs 随机「苏丹的精兵」），各槽位角色按成功度死亡、失败计数累积。触发《蚁穴》、可能触发《火焰大王》；完成过哈布娜篇《蓝巾》则获「蓝巾军」",
+          "prereqs": [
+            "蚁群"
+          ],
+          "slots": [
+            {
+              "card": "苏丹的精兵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3/4/5号槽随机出现；检定时可能死亡"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_12",
+          "name": "火焰大王",
+          "trigger": "完成《土丘》时持有「火焰大王」且其不是{神选冠军}",
+          "desc": "仪式，存续1天、耗时0天（逾期无奖惩）。放火焰大王+神权道具：火焰大王体魄+9、战斗+6、魔力+6，获「火焰大王军」",
+          "prereqs": [
+            "土丘"
+          ],
+          "slots": [
+            {
+              "card": "火焰大王",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "君权神授",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "昼夜契约",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "轮回纪元",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：正神/邪神/新神对应道具任选"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_13",
+          "name": "蚁穴",
+          "trigger": "完成《土丘》",
+          "desc": "仪式，存续1天、耗时0天（逾期自启动）。卡槽与三轮检定同《土丘》。固定触发《宝盒》",
+          "prereqs": [
+            "土丘"
+          ],
+          "slots": [
+            {
+              "card": "苏丹的精兵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3/4/5号槽随机出现；检定时可能死亡"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_14",
+          "name": "宝盒",
+          "trigger": "完成《蚁穴》",
+          "desc": "仪式，存续1天、耗时0天（逾期自启动）。卡槽与三轮检定同《土丘》。固定触发《倾覆之塔》",
+          "prereqs": [
+            "蚁穴"
+          ],
+          "slots": [
+            {
+              "card": "苏丹的精兵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3/4/5号槽随机出现；检定时可能死亡"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_15",
+          "name": "倾覆之塔",
+          "trigger": "完成《宝盒》",
+          "desc": "仪式，存续1天、耗时0天（逾期自启动）。放神权道具+{神的代言人}+{神选冠军}+苏丹+苏丹的近卫+升级过的怪物/动物+圣者+一张计划类卡牌（理性/疯狂/弑君的计划/革命的计划等）。检定成功≥1获「苏丹的尸体」、失败获「被摧毁的王座」；苏丹死亡、近卫槽死亡，触发《神与人》，所有已出现且存活的角色统统入队",
+          "prereqs": [
+            "宝盒"
+          ],
+          "slots": [
+            {
+              "card": "君权神授",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "昼夜契约",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "轮回纪元",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "苏丹",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "4号槽；结算时苏丹死亡"
+            },
+            {
+              "card": "苏丹的近卫",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "5/6/7/8号槽；结算时死亡"
+            },
+            {
+              "card": "圣者",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "10号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "11号槽任选其一"
+            },
+            {
+              "card": "疯狂",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "11号槽任选其一"
+            },
+            {
+              "card": "幸福感",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "11号槽任选其一"
+            },
+            {
+              "card": "新世界",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "11号槽任选其一"
+            },
+            {
+              "card": "完美世界",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "11号槽任选其一"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "11号槽任选其一"
+            },
+            {
+              "card": "黄金品级誓言之证",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "11号槽任选其一"
+            },
+            {
+              "card": "革命的构思",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "11号槽任选其一"
+            },
+            {
+              "card": "革命的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "11号槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chenshen_16",
+          "name": "神与人",
+          "trigger": "完成《倾覆之塔》",
+          "desc": "仪式，长期存续、耗时1天。放神明主角+神权道具+{神的代言人}+4-9号槽任意追随者。放入角色改变{神性}{人性}：君权神授线神性>人性→真胜利结局「重归纯净」、人性≥神性→「安宁」；昼夜契约线→「梦的神话」/「梦境之王」；轮回纪元线→「无情轮回」/「无数次再会」（另解锁苏丹和四近卫的《后日谈》）。3-9号槽角色进入《后日谈》",
+          "prereqs": [
+            "倾覆之塔"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "须已成为{神明}"
+            },
+            {
+              "card": "君权神授",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "昼夜契约",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：正神/邪神/新神对应道具任选"
+            },
+            {
+              "card": "轮回纪元",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：正神/邪神/新神对应道具任选"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "main_longyan_chuangshi",
+      "name": "创世线",
+      "summary": "最后的打磨同时放入正神与邪神的面容，进入新世界直面羊肉炉，选择臣服或反抗创造新世界",
+      "steps": [
+        {
+          "id": "main_longyan_chuangshi_1",
+          "name": "往新世界",
+          "trigger": "在《最后的打磨》同时放入「正神的面容」和「邪神的面容」",
+          "desc": "仪式，存续1天、耗时0天（逾期自启动）。放主角+陶土钥匙：放钥匙触发《羊肉炉气坏了》；不放则死亡结局「循环回响」",
+          "prereqs": [
+            "最后的打磨"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "陶土钥匙",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "不放则死亡结局「循环回响」"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chuangshi_2",
+          "name": "羊肉炉气坏了",
+          "trigger": "在《往新世界》放入「陶土钥匙」",
+          "desc": "抉择弹窗：“羊肉炉大人，请听我说…”触发《臣服》；“不能信任这只羊”触发《羊肉炉的飞升》《尘世墨水》，且所有已出现且存活的角色统统入队（包括苏丹）",
+          "prereqs": [
+            "往新世界"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_longyan_chuangshi_3",
+          "name": "臣服",
+          "trigger": "在《羊肉炉气坏了》选“请听我说…”",
+          "desc": "仪式，存续1天（逾期死亡结局「循环回响」）。卡槽：读物/饰品/武器/乙太/奴隶/梅姬/娜依拉。触发《期待》；若《苗圃》收养过孤儿，孤儿全部进入手牌",
+          "prereqs": [
+            "羊肉炉气坏了"
+          ],
+          "slots": [
+            {
+              "card": "乙太",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一（读物/饰品/武器/奴隶等类别亦可）"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一（新妻）"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chuangshi_4",
+          "name": "期待",
+          "trigger": "完成《臣服》",
+          "desc": "仪式，存续1天（逾期死亡结局「循环回响」）。卡槽：大餐/孤儿/贝姬夫人/新月/哈比卜/鲁梅拉/扎齐伊。触发《敌人》",
+          "prereqs": [
+            "臣服"
+          ],
+          "slots": [
+            {
+              "card": "贝姬夫人",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一（大餐/孤儿亦可）"
+            },
+            {
+              "card": "新月",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chuangshi_5",
+          "name": "敌人",
+          "trigger": "完成《期待》",
+          "desc": "仪式，存续1天（逾期死亡结局「循环回响」）。卡槽：思潮/苏丹的猜忌/妻子的不满/各类奢侈品。触发《蓝图》，获得所有曾阅读过的读物",
+          "prereqs": [
+            "期待"
+          ],
+          "slots": [
+            {
+              "card": "苏丹的猜忌",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一（思潮类亦可）"
+            },
+            {
+              "card": "妻子的不满",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "帝国之花",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "美容药膏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一（原文OCR作“美容药骨”）"
+            },
+            {
+              "card": "小药瓶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "流光溢彩的丝绸",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "昂贵的香料",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "一罐蜜饯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "无名的窖藏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            },
+            {
+              "card": "奇巧双头龙",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chuangshi_6",
+          "name": "蓝图",
+          "trigger": "完成《敌人》",
+          "desc": "仪式，存续1天（逾期死亡结局「循环回响」）。放「百科全书目录」：真胜利结局「宇宙图书馆」、达成一千零一夜「理解一切」；放其他读物：伪胜利结局「神的仆人」。另达成Steam成就「自由」（网传未测试）",
+          "prereqs": [
+            "敌人"
+          ],
+          "slots": [
+            {
+              "card": "百科全书目录",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "放此书→真胜利结局「宇宙图书馆」；放其他读物→伪胜利结局「神的仆人」"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "main_longyan_chuangshi_7",
+          "name": "羊肉炉的飞升",
+          "trigger": "在《羊肉炉气坏了》选“不能信任这只羊”",
+          "desc": "仪式，存续7天、耗时1天（逾期自启动）。7天倒计时，每天「最后的时间」-1；须在此前完成《尘世墨水》→《陶土之门》，否则死亡结局「循环回响」",
+          "prereqs": [
+            "羊肉炉气坏了"
+          ],
+          "slots": [
+            {
+              "card": "最后的时间",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "×7，每天-1倒计时"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chuangshi_8",
+          "name": "尘世墨水",
+          "trigger": "在《羊肉炉气坏了》选“不能信任这只羊”",
+          "desc": "仪式，存续1天、耗时1天（逾期自启动）。放入特定卡牌生成「飞升之梯」（主角/双胞胎/梅姬/苏丹/玛希尔/火焰大王/黄金苏丹卡等可直接生成；部分角色须完美完成其个人篇），集满3张触发《自我认同》、不足则重置。注意多数卡牌第一天不可用（疑似BUG）",
+          "prereqs": [
+            "羊肉炉气坏了"
+          ],
+          "slots": [
+            {
+              "card": "飞升之梯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1/2/3号槽，由放入的卡牌生成"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "4号槽"
+            },
+            {
+              "card": "幻之金币",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "镜灵篇消耗品，可放入并直接生成一张「飞升之梯」"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chuangshi_9",
+          "name": "自我认同",
+          "trigger": "获得3张「飞升之梯」、完成《尘世墨水》",
+          "desc": "仪式，存续1天、耗时0天（逾期死亡结局「循环回响」）。放「撤销存在」+主角+3号槽符合条件卡牌（如哈桑须完成《羊肉炉的诗》、热娜须有命运的羁绊等；放不符合条件的卡牌直接死亡结局「循环回响」）。成功：失去3号槽卡牌、触发《虚空之火》",
+          "prereqs": [
+            "尘世墨水"
+          ],
+          "slots": [
+            {
+              "card": "撤销存在",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽"
+            },
+            {
+              "card": "妻子的不满",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "3号槽任选其一，结算时失去"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "3号槽：须已完成哈桑篇《羊肉炉的诗》，结算时失去"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "3号槽：须有{命运的羁绊}或完成哈桑篇《舞姬的拜访》，结算时失去"
+            },
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "3号槽：须有{命运的羁绊}或完成哈桑篇《珠宝匠来访》，结算时失去"
+            },
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "3号槽：须已完成《初试神威》或哈桑篇《妆娘造访》，结算时失去"
+            },
+            {
+              "card": "双胞胎",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "3号槽：须完成《同命鸟》，结算时失去"
+            },
+            {
+              "card": "贝姬夫人",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "3号槽：须完成《喵，喵喵》，结算时失去"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chuangshi_10",
+          "name": "虚空之火",
+          "trigger": "完成《自我认同》",
+          "desc": "仪式，长期存续、耗时1天。放卡牌生成「虚空护盾」，集满3张触发《造化之风》、不足则重置；有效卡牌要求与《尘世墨水》完全相同",
+          "prereqs": [
+            "自我认同"
+          ],
+          "slots": [
+            {
+              "card": "虚空护盾",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1/2/3号槽，由放入的卡牌生成"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "4-7号槽与《尘世墨水》完全相同"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chuangshi_11",
+          "name": "造化之风",
+          "trigger": "成功完成《虚空之火》",
+          "desc": "仪式，长期存续、耗时1天。放卡牌生成「造物的工具」，集满3张触发《陶土之门》、不足则重置；有效卡牌同《尘世墨水》",
+          "prereqs": [
+            "虚空之火"
+          ],
+          "slots": [
+            {
+              "card": "造物的工具",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1/2/3号槽，由放入的卡牌生成"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "4-7号槽与《尘世墨水》完全相同"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chuangshi_12",
+          "name": "陶土之门",
+          "trigger": "成功完成《造化之风》",
+          "desc": "仪式，长期存续、耗时1天。卡槽含「陶土钥匙」+主角；放卡牌生成「第一推动力」，集满3张触发《终极问题》、不足则重置；有效卡牌同《尘世墨水》",
+          "prereqs": [
+            "造化之风"
+          ],
+          "slots": [
+            {
+              "card": "第一推动力",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1/2/3号槽，由放入的卡牌生成"
+            },
+            {
+              "card": "陶土钥匙",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "4号槽"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "5号槽；6/7/8号槽同《尘世墨水》5/6/7号槽"
+            }
+          ]
+        },
+        {
+          "id": "main_longyan_chuangshi_13",
+          "name": "终极问题",
+          "trigger": "完成《陶土之门》、《羊肉炉的飞升》倒计时未清零",
+          "desc": "仪式，长期存续、耗时1天。卡槽：主角/梅姬/幸福感。放主角：真胜利结局「诸神的面容」、Steam成就「创造」；放梅姬/幸福感：真胜利结局「纠正一切」（均为最终结局）。倒计时只剩1张「最后的时间」时触发可达成一千零一夜「最后时刻」",
+          "prereqs": [
+            "陶土之门",
+            "羊肉炉的飞升"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽任选其一：主角→真胜利结局「诸神的面容」"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽任选其一：梅姬/幸福感→真胜利结局「纠正一切」"
+            },
+            {
+              "card": "幸福感",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽任选其一：梅姬/幸福感→真胜利结局「纠正一切」"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

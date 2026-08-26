@@ -1,0 +1,237 @@
+{
+  "id": "main_geming",
+  "title": "大结局·革命篇",
+  "category": "main",
+  "characters": ["苏丹", "奈费勒", "流浪剑客", "娜依拉", "奈布哈尼", "法里斯", "哲巴尔", "蒙面战士", "女术士"],
+  "routes": [
+    {
+      "id": "main_geming_main",
+      "name": "起兵主线",
+      "summary": "从改朝换代到誓师，开启革命并拉起部队，全篇地基",
+      "steps": [
+        {"id":"main_geming_main_1","name":"改朝换代","trigger":"完成奈费勒篇《密会》且未放苏丹卡；或完成流浪剑客篇《誓言的呼唤》；或在安苏亚篇《安苏亚妃来访》放入谋反思潮（不可让梅姬欢愉）","desc":"仪式，长期存续耗时1天。卡槽：九支军团+革命的正当性（弑君的计划/革命的计划/黄金征服/黄金誓言之证）。若放入黄金誓言之证但流浪剑客已死：死亡结局「黯淡之星」。若阿图娜尔已为后宫支持者：获「万逝戒」","prereqs":[],
+        "slots":[
+          {"card":"铁盔军团","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"军团槽位"},
+          {"card":"净钢武士团","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"军团槽位（OCR作净钢武土团）"},
+          {"card":"狮子骑士","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"军团槽位"},
+          {"card":"金刃军团","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"军团槽位"},
+          {"card":"铜盾军团","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"军团槽位"},
+          {"card":"蝮蛇武士团","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"军团槽位"},
+          {"card":"鳄鱼卫士","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"军团槽位"},
+          {"card":"羽骑兵","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"军团槽位"},
+          {"card":"沙暴骑士","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"军团槽位"},
+          {"card":"弑君的计划","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"革命的正当性（任选其一）"},
+          {"card":"革命的计划","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"革命的正当性（任选其一）"},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"革命的正当性（任选其一）；黄金「征服」"},
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"革命的正当性（任选其一）；黄金「誓言之证」，流浪剑客已死则死亡结局「黯淡之星」"}
+        ]},
+        {"id":"main_geming_main_2","name":"于黎明前","trigger":"完成《改朝换代》","desc":"仪式，存续3天（逾期死亡结局「谋逆者之血」）。放革命的正当性+主角+至少3名追随者。结算：关闭苏丹卡倒计时、触发《集结部队》（5天倒计时），可能触发各助阵事件；誓言之证可获「高原骑兵」「高原步兵」","prereqs":["改朝换代"],
+        "slots":[
+          {"card":"革命的正当性","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"在《改朝换代》10号槽放入的卡牌（弑君的计划/革命的计划/黄金征服/誓言之证）"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"main_geming_main_3","name":"集结部队","trigger":"完成《于黎明前》","desc":"仪式，自启动耗时1天。放「最后的时间」×5（每天减一张）+革命的正当性。倒计时结束清空桌面仪式、触发《誓师》，可能触发《苏丹的近卫们》《镜子的援军》；若正当性不是黄金征服则触发《奈费勒的毒箭》","prereqs":["于黎明前"],
+        "slots":[
+          {"card":"最后的时间","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"需5张，每天减一张，归零进入结算"},
+          {"card":"革命的正当性","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"不是黄金征服则触发《奈费勒的毒箭》"}
+        ]},
+        {"id":"main_geming_main_4","name":"誓师","trigger":"完成《集结部队》","desc":"仪式，存续1天（逾期死亡结局「谋逆者之血」）。需革命的正当性+主角+传令官（高隐匿生存）+旗手（高魅力）+至少一支部队；每支部队可放10金币使其战斗+2体魄+2。结算：全体追随者与部队战斗+1，触发《苏丹的城墙》，可能触发《古老的道路》","prereqs":["集结部队"],"terminal":true,
+        "slots":[
+          {"card":"革命的正当性","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"每支部队可放10金币：对应部队战斗+2、体魄+2"},
+          {"card":"龙卷风","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"部队槽位不可放入「龙卷风」"}
+        ]}
+      ]
+    },
+    {
+      "id": "main_geming_support",
+      "name": "助阵支线",
+      "summary": "革命期间各篇章角色与部队前来助阵的弹窗与小仪式",
+      "steps": [
+        {"id":"main_geming_support_1","name":"各方助阵·1","trigger":"完成《于黎明前》且达成相应条件","desc":"弹窗：桌面有芮尔篇《芮尔的匪帮》则芮尔入队且匪帮成员入手牌；曾在拉伊德篇《困顿的堡垒》放入金币则关闭《阿图尔堡》、获部队「流民部队」","prereqs":["于黎明前"],
+        "slots":[]},
+        {"id":"main_geming_support_2","name":"娜依拉的索求","trigger":"完成《于黎明前》、娜依拉为大敌","desc":"仪式，存续3天（逾期死亡结局「谋逆者之血」）。可放40金币关闭检定躲过一劫；否则派人+情报检定战斗+隐匿：成功≥5娜依拉死亡，失败死亡结局「谋逆者之血」","prereqs":["于黎明前"],
+        "slots":[
+          {"card":"娜依拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"检定成功≥5娜依拉死亡"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"40金币：关闭检定，躲过一劫"}
+        ]},
+        {"id":"main_geming_support_3","name":"烈焰呼唤","trigger":"已完成奈费勒篇火焰大王线《勇气与团结》、完成《于黎明前》","desc":"仪式，存续14天。放火焰大王+任意未穿戴装备角色：该角色变为「火焰大王」入队，获部队「火焰大王军」","prereqs":["于黎明前"],
+        "slots":[
+          {"card":"火焰大王","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"main_geming_support_4","name":"冒险者们的报恩","trigger":"完成《于黎明前》、完成过至少1次哈比卜篇《冒险者酒吧》","desc":"仪式，长期存续耗时0天。放任意角色：获部队「冒险者佣兵」","prereqs":["于黎明前"],
+        "slots":[]},
+        {"id":"main_geming_support_5","name":"奈费勒的毒箭","trigger":"完成《集结部队》且革命的正当性不是黄金征服","desc":"仪式，存续1天。放奈费勒（大敌也可）+主角：获饰品「奈费勒的毒箭」（穿戴者可参与《王之舞》）；若奈费勒是宰相额外获「军队的支持」「国民的支持」「官吏的支持」","prereqs":["集结部队"],
+        "slots":[
+          {"card":"奈费勒","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"即使是大敌也无影响"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"main_geming_support_6","name":"镜子的援军","trigger":"已完成镜灵篇贵族线《镜土的领主》、完成《集结部队》","desc":"仪式，存续1天。放镜灵+任意部队+主角：复制该部队","prereqs":["集结部队"],
+        "slots":[
+          {"card":"镜灵","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"main_geming_support_7","name":"各方助阵·2","trigger":"完成《苏丹的城墙》且达成相应条件","desc":"弹窗：苗圃集齐5种美德获「苗圃的守卫者」；完成哈布娜篇《蓝巾》获「蓝巾军」；铁头为大敌获「蛮人社团」；完成热娜篇《品鉴王冠》且热娜在队获「宝石旗帜下」","prereqs":["苏丹的城墙"],
+        "slots":[]}
+      ]
+    },
+    {
+      "id": "main_geming_siege",
+      "name": "正面攻城线",
+      "summary": "攻破城墙、燃烧城市、皇宫三道防线，直面苏丹并以连场决斗弑君",
+      "steps": [
+        {"id":"main_geming_siege_1","name":"苏丹的城墙","trigger":"完成《誓师》","desc":"仪式，存续1天（逾期死亡结局「战败者之血」）。三路攻坚：传令官+旗手+情报，7/8/9号槽放部队或角色（放角色战胜后失去战力）；放萨达尔尼的信物/大炸弹/螺旋钻地机或军队的支持/天命所归可直接胜利。胜利≥2触发《燃烧的城市》，失败≥2死亡结局「战败者之血」","prereqs":["誓师"],
+        "slots":[
+          {"card":"苏丹的精兵","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4/5/6号槽随机敌方精兵（黄金战斗20/白银15/青铜10），战胜后死亡"},
+          {"card":"流民部队","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"7/8/9号槽可放"},
+          {"card":"冒险者佣兵","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"7/8/9号槽可放"},
+          {"card":"萨达尔尼的信物","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"特殊卡牌：对应分路直接胜利、该路精兵死亡；本篇只能用一次"},
+          {"card":"大炸弹","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"特殊卡牌：对应分路直接胜利、该路精兵死亡；本篇只能用一次"},
+          {"card":"螺旋钻地机","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"特殊卡牌：对应分路直接胜利、该路精兵死亡；本篇只能用一次"},
+          {"card":"军队的支持","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）对应分路直接胜利、获得该路「苏丹的精兵」；本篇只能用一次"},
+          {"card":"天命所归","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）对应分路直接胜利、获得该路「苏丹的精兵」；本篇只能用一次"}
+        ]},
+        {"id":"main_geming_siege_2","name":"燃烧的城市","trigger":"通过《苏丹的城墙》","desc":"仪式，存续1天（逾期死亡结局「战败者之血」）。与城墙同构的三路攻坚；放国民的支持/大炸弹/天命所归/蓝巾军可直接胜利。胜利≥2触发《皇宫》，失败≥2死亡结局「战败者之血」","prereqs":["苏丹的城墙"],
+        "slots":[
+          {"card":"苏丹的精兵","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4/5/6号槽随机敌方精兵，战胜后死亡"},
+          {"card":"流民部队","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"7/8/9号槽可放"},
+          {"card":"冒险者佣兵","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"7/8/9号槽可放"},
+          {"card":"国民的支持","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"特殊卡牌：对应分路直接胜利；本篇只能用一次"},
+          {"card":"大炸弹","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"特殊卡牌：对应分路直接胜利；本篇只能用一次"},
+          {"card":"天命所归","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"特殊卡牌：对应分路直接胜利；本篇只能用一次"},
+          {"card":"蓝巾军","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"需搭配奈布哈尼：对应分路直接胜利；本篇只能用一次"},
+          {"card":"阿里木的手下","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"OCR残损（原文作「同里木的手下」），疑为可直接胜利的特殊卡牌"}
+        ]},
+        {"id":"main_geming_siege_3","name":"皇宫","trigger":"通过《燃烧的城市》","desc":"仪式，存续1天（逾期死亡结局「战败者之血」）。三路攻坚；放官吏的支持/蓝巾军（需搭配奈布哈尼）可直接胜利。胜利≥2触发《直面苏丹》；若4近卫均已无近卫标签改为触发《近卫们的承诺》。失败≥2死亡结局「战败者之血」","prereqs":["燃烧的城市"],
+        "slots":[
+          {"card":"苏丹的精兵","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4/5/6号槽随机敌方精兵，战胜后死亡"},
+          {"card":"流民部队","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"7/8/9号槽可放"},
+          {"card":"冒险者佣兵","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"7/8/9号槽可放"},
+          {"card":"官吏的支持","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"特殊卡牌：对应分路直接胜利、该路精兵死亡；本篇只能用一次"},
+          {"card":"蓝巾军","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"需搭配奈布哈尼：对应分路直接胜利、该路精兵死亡；本篇只能用一次"}
+        ]},
+        {"id":"main_geming_siege_4","name":"直面苏丹","trigger":"通过《皇宫》","desc":"仪式，自启动耗时0天。苏丹方满编（霸气/斩王剑/杀生者/黄金甲/四近卫/赛里曼等），我方放主角等14槽角色与武器，各自装备身前武器，触发《光之舞》","prereqs":["皇宫"],
+        "slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"霸气","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"斩王剑","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀生者","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"黄金甲","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"赛里曼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"伊喀尔与胡赛","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"斩首斧","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"琉璃锋","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"骑兵之刃","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"main_geming_siege_5","name":"光之舞","trigger":"完成《直面苏丹》","desc":"仪式，存续1天（逾期死亡结局「无名人之死」）。需破「神秘的魔戒」：放万逝戒/亘誓戒/星灵/入圣主角/穿戴那由多或舒尼雅的角色可直接过关；否则需4/5/6/7号槽魔力之和≥20后检定魅力+魔力，成功≥5触发《剑之舞》，失败该角色死亡但仍触发《剑之舞》；魔力<20直接死亡结局","prereqs":["直面苏丹"],
+        "slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"万逝戒","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2号槽二选一：直接破除魔戒"},
+          {"card":"亘誓戒","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2号槽二选一：直接破除魔戒"},
+          {"card":"星灵","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽：直接破除魔戒"}
+        ]},
+        {"id":"main_geming_siege_6","name":"剑之舞","trigger":"完成《光之舞》","desc":"仪式，存续1天（逾期死亡结局「无名人之死」）。先全体检定战斗&体魄，失败死亡结局「无名人之死」；随后最多5场一对一单挑（我方单人体魄检定），成功≥3敌方死亡、失败双方同死。全部通过后触发《王之舞》","prereqs":["光之舞"],
+        "slots":[
+          {"card":"近卫军","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"5号槽敌方"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"8号槽"}
+        ]},
+        {"id":"main_geming_siege_7","name":"王之舞","trigger":"完成《剑之舞》","desc":"仪式，存续1天（逾期死亡结局「无名人之死」）。放苏丹+流浪剑客+革命的正当性+主角+穿戴「奈费勒的毒箭」的追随者+情报。检定我方战斗&体魄对苏丹（32）：成功获「苏丹的尸体」、触发《帷幕之后》；失败死亡结局「无名人之死」","prereqs":["剑之舞"],"terminal":true,
+        "slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""},
+          {"card":"革命的正当性","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈费勒的毒箭","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽放穿戴该饰品的追随者"}
+        ]}
+      ]
+    },
+    {
+      "id": "main_geming_guard",
+      "name": "近卫暗道线",
+      "summary": "策反苏丹的四近卫、走暗道绕过攻城，由近卫们擒住苏丹任其处置",
+      "steps": [
+        {"id":"main_geming_guard_1","name":"苏丹的近卫们","trigger":"奈布哈尼/哲巴尔/蒙面战士/法里斯至少一人在队、完成《集结部队》","desc":"仪式，存续1天。放已入队的四近卫：若4人均已无近卫标签，奈布哈尼&法里斯&哲巴尔临时离队准备刺杀（退还装备），之后可触发《近卫们的承诺》；仍带近卫标签者离队","prereqs":["集结部队"],
+        "slots":[
+          {"card":"蒙面战士","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"已入队的蒙面战士"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"已入队的奈布哈尼"},
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"已入队的法里斯"},
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"已入队的哲巴尔"}
+        ]},
+        {"id":"main_geming_guard_2","name":"古老的道路","trigger":"完成《誓师》、持有「直通宫内的暗道」","desc":"仪式，存续1天。放暗道+主角：跳过《苏丹的城墙》及其后续，直接触发《直面苏丹》；若4近卫均已无近卫标签则改为触发《近卫们的承诺》","prereqs":["誓师"],
+        "slots":[
+          {"card":"直通宫内的暗道","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"main_geming_guard_3","name":"近卫们的承诺","trigger":"完成《苏丹的近卫们》且4近卫均已无近卫标签、完成《皇宫》或《古老的道路》","desc":"仪式，自启动。四近卫擒住苏丹：已偷取「万逝戒」则四近卫归队；未偷取但主角已入圣或持有那由多/舒尼雅则苏丹失去魔戒、四近卫归队；都不满足则四近卫死亡、苏丹失去魔戒。触发《为所欲为》","prereqs":["苏丹的近卫们"],
+        "slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"蒙面战士","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"main_geming_guard_4","name":"为所欲为","trigger":"完成《近卫们的承诺》","desc":"仪式，存续1天（逾期无法进入结局，疑似BUG）。四选一处置苏丹：杀了他获「苏丹的尸体」；流放他获「被流放的苏丹」（Steam成就「宽容」）；囚禁他获「被囚禁的苏丹」；侮辱他获「被侮辱的苏丹」（主角穿戴生命权杖达成一千零一夜「生命权杖」）。触发《帷幕之后》","prereqs":["近卫们的承诺"],"terminal":true,
+        "slots":[
+          {"card":"苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2/3/4/5号槽单选：放主角"},
+          {"card":"承阳剑","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"仅选「杀了他」时可放剑"}
+        ]}
+      ]
+    },
+    {
+      "id": "main_geming_ending",
+      "name": "结局结算线",
+      "summary": "弑君后处置女术士、晋升处刑定国策，数十种大结局在此收束",
+      "steps": [
+        {"id":"main_geming_ending_1","name":"帷幕之后","trigger":"革命篇通过《王之舞》或《为所欲为》；屠龙篇通过《试刃之锋》或《战败者的挽歌》","desc":"仪式，存续1天。放火龙头颅/誓言之证/革命的计划/黄金征服/弑君的计划+主角；3号槽空置则女术士逃走，放被困的星神/星光信标/黑暗之眼/光明之眼/那由多/舒尼雅则女术士死亡（达成一千零一夜「真正的解脱」）。结算：所有存活角色入队、大敌退场，触发《阶梯》","prereqs":["王之舞"],
+        "slots":[
+          {"card":"火龙头颅","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽任选其一"},
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽任选其一"},
+          {"card":"革命的计划","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽任选其一"},
+          {"card":"弑君的计划","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽任选其一"},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"1号槽任选其一；黄金征服"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"被困的星神","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽：女术士死亡，达成一千零一夜「真正的解脱」"},
+          {"card":"星光信标","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽：女术士死亡，达成一千零一夜「真正的解脱」"},
+          {"card":"黑暗之眼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽：女术士死亡，达成一千零一夜「真正的解脱」"},
+          {"card":"光明之眼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽：女术士死亡，达成一千零一夜「真正的解脱」"},
+          {"card":"那由多","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽：女术士死亡，达成一千零一夜「真正的解脱」"},
+          {"card":"舒尼雅","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽：女术士死亡，达成一千零一夜「真正的解脱」"}
+        ]},
+        {"id":"main_geming_ending_2","name":"阶梯","trigger":"完成《帷幕之后》","desc":"仪式，长期存续。晋升/处刑最多各5人，每人使传统或改革+1（决定《果实》国策）；处刑自己为真胜利结局「罪己」（已入圣则为「受国之垢」）。善名/恶名/侠名/权势≥15会额外增减传统或改革。誓言之证开局时处刑希尔希纳直接死亡结局「死兆星」","prereqs":["帷幕之后"],
+        "slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"1号槽；晋升/处刑的传统改革点数加诸于此主角"}
+        ]},
+        {"id":"main_geming_ending_3","name":"果实","trigger":"完成《阶梯》","desc":"仪式，长期存续。按正当性限定新苏丹与宰相人选（Steam成就「领袖」），传统与改革差额定国策（守成/平衡/变革），组合出数十种真伪结局；主角不做苏丹或宰相时梅姬存活为真胜利「长夜将尽」、已死为伪胜利「无尽夜」；放入「百科全书目录」强制真结局「尽在书中」（成就「知识」）","prereqs":["阶梯"],"terminal":true,
+        "slots":[
+          {"card":"政权存在的正当性","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"在前置事件已确定、无法更改：火龙头颅/誓言之证/革命的计划/黄金征服/弑君的计划"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽选新苏丹：所有情况下都可做苏丹"},
+          {"card":"希尔希纳","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽选新苏丹：1号槽为「誓言之证」时才能做苏丹"},
+          {"card":"奈费勒","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽选新苏丹：1号槽为「革命的计划」时才能做苏丹"},
+          {"card":"莎姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽选新苏丹：1号槽为黄金征服/弑君的计划时才能做苏丹，达成一千零一夜「女苏丹」"},
+          {"card":"萨达尔尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽选新苏丹：1号槽为黄金征服/弑君的计划时才能做苏丹"},
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽选宰相：已成为{宫中支持者}时方可"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽选宰相：5号槽为「完美世界」时方可"},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽选宰相：5号槽为「新世界」时方可"},
+          {"card":"苏丹的尸体","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽让人提供的象征物（任选其一）"},
+          {"card":"被囚禁的苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽让人提供的象征物（任选其一）"},
+          {"card":"被流放的苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽让人提供的象征物（任选其一）"},
+          {"card":"被侮辱的苏丹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽让人提供的象征物（任选其一）"},
+          {"card":"亘誓戒","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽让人提供的象征物（任选其一）"},
+          {"card":"光明之眼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽：唯主角做苏丹时可放入，国策强制「平衡」"},
+          {"card":"黑暗之眼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4号槽：唯主角做苏丹时可放入，国策强制「平衡」"},
+          {"card":"理性","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽扶植信仰：提供2点改革"},
+          {"card":"新世界","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽扶植信仰：拜铃耶可做宰相"},
+          {"card":"完美世界","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽扶植信仰：伊曼可做宰相"},
+          {"card":"星神的信仰","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽扶植信仰：唯1号槽为「誓言之证」时方可放入"},
+          {"card":"百科全书目录","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽：唯主角做苏丹时可放入，强制真结局「尽在书中」（成就「知识」）"}
+        ]}
+      ]
+    }
+  ]
+}

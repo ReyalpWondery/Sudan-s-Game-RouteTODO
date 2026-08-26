@@ -1,0 +1,802 @@
+{
+  "id": "faerdake_qiyade",
+  "title": "法尔达克篇、齐亚德篇",
+  "category": "character",
+  "characters": [
+    "法尔达克",
+    "齐亚德",
+    "鲁梅拉",
+    "梅姬"
+  ],
+  "routes": [
+    {
+      "id": "faerdake_join",
+      "name": "法尔达克入队线",
+      "summary": "完成《权力的游戏》15次后苏丹捉弄法尔达克，经修暗渠或祈雨献祭使其入队，并可招募异乡人军队",
+      "steps": [
+        {
+          "id": "faerdake_join_1",
+          "name": "苏丹的捉弄",
+          "trigger": "完成《权力的游戏》（主动放置角色）15次",
+          "desc": "仪式，存续7天（逾期死亡结局「期限已至」）。法尔达克+主角+白银及以下奢靡/纵欲/征服/杀戮：奢靡触发《兴修宫殿》；纵欲触发《质子的请求》但成婚线关闭；征服/杀戮则法尔达克死亡",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": true,
+              "consumed": true,
+              "note": "3号槽四张苏丹卡任选其一，奢靡触发《兴修宫殿》"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": true,
+              "consumed": true,
+              "note": "3号槽四张苏丹卡任选其一，纵欲关闭成婚线"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": true,
+              "consumed": true,
+              "note": "3号槽四张苏丹卡任选其一，征服则法尔达克死亡"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": true,
+              "consumed": true,
+              "note": "3号槽四张苏丹卡任选其一，杀戮则法尔达克死亡"
+            }
+          ]
+        },
+        {
+          "id": "faerdake_join_2",
+          "name": "兴修宫殿",
+          "trigger": "在《苏丹的捉弄》放置「奢靡」",
+          "desc": "仪式，存续7天、耗时3天，逾期无奖惩。放10金币。善名+1、触发抉择《质子的请求》",
+          "prereqs": [
+            "苏丹的捉弄"
+          ],
+          "slots": []
+        },
+        {
+          "id": "faerdake_join_3",
+          "name": "质子的请求",
+          "trigger": "以纵欲/杀戮完成《苏丹的捉弄》，或完成《兴修宫殿》",
+          "desc": "抉择弹窗：帮助修建暗渠→触发《修建暗渠》；举行献祭事件→触发《祈雨献祭》",
+          "prereqs": [
+            "苏丹的捉弄",
+            "兴修宫殿"
+          ],
+          "slots": []
+        },
+        {
+          "id": "faerdake_join_4",
+          "name": "修建暗渠",
+          "trigger": "在《质子的请求》选“帮助修建暗渠”",
+          "desc": "仪式，长期存续、耗时7天。8金币+任意角色（可加到3人，合计生存须≥10）。参与者体魄+2、善名+1，触发《法尔达克的友谊》、1-2天后触发齐亚德篇《税务官的请求1》",
+          "prereqs": [
+            "质子的请求"
+          ],
+          "slots": []
+        },
+        {
+          "id": "faerdake_join_5",
+          "name": "祈雨献祭",
+          "trigger": "在《质子的请求》选“举行献祭事件”",
+          "desc": "仪式，长期存续、耗时3天。需有{黑暗知识}的角色+任意角色+祭品（死亡）+任意情报，全员总魔力须≥5。检定魔力：成功≥2则「窥视黑暗」+1、灵视+1、触发《法尔达克的友谊》及齐亚德篇《税务官的请求1》；失败3次则法尔达克篇、齐亚德篇关闭",
+          "prereqs": [
+            "质子的请求"
+          ],
+          "slots": []
+        },
+        {
+          "id": "faerdake_join_6",
+          "name": "法尔达克的友谊",
+          "trigger": "完成《修建暗渠》或《祈雨献祭》",
+          "desc": "仪式，存续3天（逾期也会法尔达克入队）。法尔达克+谋反思潮/密教思潮（不同思潮给恐惧+1/黄金秘密/使法尔达克成为密教徒等）。固定结算：法尔达克入队",
+          "prereqs": [
+            "修建暗渠",
+            "祈雨献祭"
+          ],
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "对苏丹的恐惧",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽思潮可选其一：「对苏丹的恐惧」+1"
+            },
+            {
+              "card": "免于恐惧的自由",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽思潮可选其一：「对苏丹的恐惧」+1"
+            },
+            {
+              "card": "谋反的意图",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽思潮可选其一：「对苏丹的恐惧」+1"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽思潮可选其一：黄金「秘密」+1"
+            },
+            {
+              "card": "窥视黑暗",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽思潮可选其一：法尔达克成为{密教徒}"
+            },
+            {
+              "card": "古老的信仰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽思潮可选其一：法尔达克成为{密教徒}"
+            },
+            {
+              "card": "新世界",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽思潮可选其一：法尔达克成为{密教徒}、黄金「秘密」+1"
+            }
+          ]
+        },
+        {
+          "id": "faerdake_join_7",
+          "name": "老乡见老乡",
+          "trigger": "侠名≥3、法尔达克入队后派他去《舍馆》1天后",
+          "desc": "仪式，自启动、耗时3天。法尔达克社交+1、可能触发《为您效劳》",
+          "prereqs": [
+            "法尔达克的友谊"
+          ],
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "faerdake_join_8",
+          "name": "为您效劳",
+          "trigger": "权势≥5、侠名≥5、完成《老乡见老乡》",
+          "desc": "仪式，存续5天（逾期无奖惩）。法尔达克+神秘人+第三槽任选（任意部队：智慧+2／18金币：体魄+2／谋反的意图或弑君的计划：魅力+2且部队为战斗10生存10）。均获部队「异乡人军队」",
+          "prereqs": [
+            "老乡见老乡"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "神秘人",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "谋反的意图",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3号槽任选其一，此项使异乡人军队为战斗10生存10"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3号槽任选其一，此项使异乡人军队为战斗10生存10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faerdake_hun",
+      "name": "法尔达克成婚线",
+      "summary": "法尔达克入队后为他与鲁梅拉证婚成婚，婚礼上可提醒二人逃跑以换取其中一人归队；与逃亡线互斥",
+      "steps": [
+        {
+          "id": "faerdake_hun_1",
+          "name": "法尔达克有些苦恼",
+          "trigger": "权势≥4、未在《苏丹的捉弄》对法尔达克纵欲；法尔达克入队后寻思头顶惊叹号的法尔达克",
+          "desc": "抉择弹窗：选“我甚至可以为你介绍”触发《证婚人》、逃亡线关闭；选“这样是不会得到幸福的”则侠名+1、成婚线关闭",
+          "prereqs": [
+            "法尔达克的友谊"
+          ],
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "faerdake_hun_2",
+          "name": "证婚人",
+          "trigger": "在《法尔达克有些苦恼》选“我甚至可以为你介绍”",
+          "desc": "仪式，存续5天（逾期婚介失败、3天后重置，失败3次关闭）。放鲁梅拉：婚介成功、可能触发《第一眼》；放梅姬：「妻子的不满」+1且失败；其他女性追随者失败",
+          "prereqs": [
+            "法尔达克有些苦恼"
+          ],
+          "slots": [
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽人选之一，婚介成功"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽人选之一，婚介失败且「妻子的不满」+1"
+            }
+          ]
+        },
+        {
+          "id": "faerdake_hun_3",
+          "name": "第一眼",
+          "trigger": "善名≥5、权势≥5、在《证婚人》放置鲁梅拉",
+          "desc": "仪式，存续7天（逾期成婚线关闭）。法尔达克+鲁梅拉+主角+18金币+青铜以上饰品（失去）。鲁梅拉成为{贵族}、法尔达克&鲁梅拉魅力+1，1天后可能触发《年轻人的婚礼》",
+          "prereqs": [
+            "证婚人"
+          ],
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "faerdake_hun_4",
+          "name": "年轻人的婚礼",
+          "trigger": "善名≥5、权势≥5，完成《第一眼》1天后",
+          "desc": "仪式，存续10天（逾期权势-1）。主角/梅姬+法尔达克+鲁梅拉+白银及以下奢靡+5/15金币（折卡需15金币）；6号槽提醒二人逃跑可触发《归乡之路》（放主角则法尔达克可归队，放梅姬则鲁梅拉可归队）。随机白银情报+1、法尔达克获{命运的羁绊}、鲁梅拉更换立绘",
+          "prereqs": [
+            "第一眼"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽与梅姬二选一，选主角则《归乡之路》后法尔达克可归队"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽与主角二选一，选梅姬则《归乡之路》后鲁梅拉可归队"
+            },
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "4号槽白银及以下"
+            }
+          ]
+        },
+        {
+          "id": "faerdake_hun_5",
+          "name": "归乡之路",
+          "trigger": "在《年轻人的婚礼》6号槽放主角或梅姬提醒逃跑，并派法尔达克或鲁梅拉参与《权力的游戏》",
+          "desc": "仪式，自启动、耗时7天。主角提醒：鲁梅拉永久离队、法尔达克归队且社交+1智慧+2、获饰品「朝露之冠」；梅姬提醒：法尔达克永久离队、鲁梅拉归队且社交+1智慧+2、获「曲直迷思」「石中火」「黄沙之战」",
+          "prereqs": [
+            "年轻人的婚礼"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faerdake_tao",
+      "name": "法尔达克逃亡线",
+      "summary": "借麦娜尔篇绿洲情报获得「险峻小径」，助法尔达克逃离苏丹；与成婚线互斥，失败则法尔达克死亡",
+      "steps": [
+        {
+          "id": "faerdake_tao_1",
+          "name": "法尔达克思念家乡",
+          "trigger": "善名≥5、麦娜尔篇《探索未知绿洲》检定成功、尚未触发《证婚人》；法尔达克入队后寻思头顶惊叹号的法尔达克",
+          "desc": "抉择弹窗：选“委婉提醒”获「险峻小径」（放《治理家业》每天金币+2，但用7次后失去且「苏丹的猜忌」+1，失去将导致逃亡失败）、可能触发《应许时刻》、成婚线关闭；选“严厉警告”则逃亡线关闭",
+          "prereqs": [
+            "法尔达克的友谊"
+          ],
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "faerdake_tao_2",
+          "name": "应许时刻",
+          "trigger": "在《法尔达克思念家乡》选“委婉提醒”，善名≥9、派法尔达克参与《权力的游戏》",
+          "desc": "仪式，长期存续、耗时1天。法尔达克+主角三槽单选：劝说→《同一场风暴》；帮助→《让我成为你的盾》；老鼠→法尔达克智慧+1、获武器「坎佩尔末刃」、可能触发《老鼠一样的逃亡》。若已失去「险峻小径」则逃亡线关闭",
+          "prereqs": [
+            "法尔达克思念家乡"
+          ],
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2/3/4号槽单选，分别对应劝说/帮助/老鼠"
+            }
+          ]
+        },
+        {
+          "id": "faerdake_tao_3",
+          "name": "同一场风暴",
+          "trigger": "在《应许时刻》选“劝说”",
+          "desc": "仪式，存续3天（逾期逃亡线关闭）。法尔达克+主角+白银及以下「纵欲」。不纵欲：法尔达克社交+1、获{命运的羁绊}；纵欲：纵欲过他则「妻子的不满」+1，未纵欲过则获{命运的羁绊}",
+          "prereqs": [
+            "应许时刻"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "3号槽白银及以下，可不放"
+            }
+          ]
+        },
+        {
+          "id": "faerdake_tao_4",
+          "name": "让我成为你的盾",
+          "trigger": "在《应许时刻》选“帮助”",
+          "desc": "仪式，存续3天（逾期可能触发《老鼠一样的逃亡》；若已失去「险峻小径」则逃亡线关闭）。法尔达克+任意部队/谋反的意图/弑君的计划。法尔达克智慧+1、体魄+1、获{命运的羁绊}",
+          "prereqs": [
+            "应许时刻"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "谋反的意图",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽任选其一"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "faerdake_tao_5",
+          "name": "老鼠一样的逃亡",
+          "trigger": "权势≥7、《群龙无首》在桌面；或《让我成为你的盾》逾期，或在《应许时刻》选“老鼠”",
+          "desc": "仪式，存续5天（逾期法尔达克死亡）。险峻小径+法尔达克+部队（放朱娜/贾丽拉/夏玛/索拉薇儿或坎佩尔末刃可跳过检定）+10金币+情报。检定权势：成功≥3法尔达克退场、达成一千零一夜「像老鼠一样」、5天后获驯兽（名称OCR残缺）；成功<3权势-1、法尔达克死亡",
+          "prereqs": [
+            "应许时刻",
+            "让我成为你的盾"
+          ],
+          "terminal": true,
+          "slots": [
+            {
+              "card": "险峻小径",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽选项，跳过检定直接按成功结算、额外权势+1"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽选项，跳过检定直接按成功结算、额外权势+1"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽选项，跳过检定直接按成功结算、额外权势+1"
+            },
+            {
+              "card": "索拉薇儿",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽选项，跳过检定直接按成功结算、额外权势+1"
+            },
+            {
+              "card": "坎佩尔末刃",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "3号槽选项（失去），跳过检定直接按成功结算"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qiyade_shuiwu",
+      "name": "齐亚德税务官线",
+      "summary": "齐亚德存活且完成法尔达克篇暗渠/献祭后开启，三次税务官抉择积累善行计数，决定面圣领赏还是镇压暴乱",
+      "steps": [
+        {
+          "id": "qiyade_shuiwu_1",
+          "name": "税务官的请求1",
+          "trigger": "齐亚德存活，完成法尔达克篇《修建暗渠》或《祈雨献祭》1-2天后",
+          "desc": "抉择弹窗：施以严惩→触发《严厉刑罚》；许以重利→触发《仁慈的许诺》",
+          "prereqs": [
+            "修建暗渠",
+            "祈雨献祭"
+          ],
+          "slots": []
+        },
+        {
+          "id": "qiyade_shuiwu_2",
+          "name": "严厉刑罚",
+          "trigger": "在《税务官的请求1》选“施以严惩”",
+          "desc": "仪式，长期存续、耗时3天。智慧≥5+体魄≥5的角色。恶名+1、金币+5、5天后触发《税务官的请求·2》",
+          "prereqs": [
+            "税务官的请求1"
+          ],
+          "slots": []
+        },
+        {
+          "id": "qiyade_shuiwu_3",
+          "name": "仁慈的许诺",
+          "trigger": "在《税务官的请求1》选“许以重利”",
+          "desc": "仪式，长期存续、耗时3天。魅力≥5的角色+5金币。善名+1、善行计数+1、5天后触发《税务官的请求·2》",
+          "prereqs": [
+            "税务官的请求1"
+          ],
+          "slots": []
+        },
+        {
+          "id": "qiyade_shuiwu_4",
+          "name": "税务官的请求·2",
+          "trigger": "齐亚德存活，完成《严厉刑罚》或《仁慈的许诺》5天后",
+          "desc": "抉择弹窗：促成谈判→触发《促成谈判》；强硬驱逐→触发《强硬驱逐》",
+          "prereqs": [
+            "严厉刑罚",
+            "仁慈的许诺"
+          ],
+          "slots": []
+        },
+        {
+          "id": "qiyade_shuiwu_5",
+          "name": "促成谈判",
+          "trigger": "在《税务官的请求·2》选“促成谈判”",
+          "desc": "仪式，长期存续、耗时3天。社交≥6的角色+6金币。侠名+1、善行计数+1、5天后触发《税务官的请求3》",
+          "prereqs": [
+            "税务官的请求·2"
+          ],
+          "slots": []
+        },
+        {
+          "id": "qiyade_shuiwu_6",
+          "name": "强硬驱逐",
+          "trigger": "在《税务官的请求·2》选“强硬驱逐”",
+          "desc": "仪式，长期存续、耗时3天。1/2号槽需战斗≥6的角色。金币+5、善名+1、5天后触发《税务官的请求3》",
+          "prereqs": [
+            "税务官的请求·2"
+          ],
+          "slots": []
+        },
+        {
+          "id": "qiyade_shuiwu_7",
+          "name": "税务官的请求3",
+          "trigger": "齐亚德存活，完成《促成谈判》或《强硬驱逐》5天后",
+          "desc": "抉择弹窗：核查漏洞→触发《核查漏洞》；神圣审判→触发《神圣审判》",
+          "prereqs": [
+            "促成谈判",
+            "强硬驱逐"
+          ],
+          "slots": []
+        },
+        {
+          "id": "qiyade_shuiwu_8",
+          "name": "神圣审判",
+          "trigger": "在《税务官的请求3》选“神圣审判”",
+          "desc": "仪式，长期存续、耗时1天。放伊曼/魔力≥8的角色。恶名+1、金币+5，触发《善行计数结算》、达成一千零一夜「功过孰论」",
+          "prereqs": [
+            "税务官的请求3"
+          ],
+          "slots": [
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "或任意魔力≥8的角色"
+            }
+          ]
+        },
+        {
+          "id": "qiyade_shuiwu_9",
+          "name": "核查漏洞",
+          "trigger": "在《税务官的请求3》选“核查漏洞”，启动需权势≥2",
+          "desc": "仪式，长期存续、耗时1天。智慧≥8的角色+任意角色+任意情报。检定智慧&社交-5：成功≥3则参与者社交+1、权势+2、善行计数+1、触发《善行计数结算》、达成「功过孰论」；失败则重置本事件",
+          "prereqs": [
+            "税务官的请求3"
+          ],
+          "slots": []
+        },
+        {
+          "id": "qiyade_shuiwu_10",
+          "name": "善行计数结算",
+          "trigger": "完成《核查漏洞》或《神圣审判》",
+          "desc": "剧情弹窗：善行计数=3触发《苏丹的质询·齐亚德》；善行计数<3触发《诸地暴乱》",
+          "prereqs": [
+            "核查漏洞",
+            "神圣审判"
+          ],
+          "slots": []
+        },
+        {
+          "id": "qiyade_shuiwu_11",
+          "name": "苏丹的质询·齐亚德",
+          "trigger": "《善行计数结算》时善行计数=3",
+          "desc": "仪式，存续3天（逾期死亡结局「伴君如伴虎」）。主角+8金币。主角社交+2、生存+1，获部队「追随者部队」（战斗8）",
+          "prereqs": [
+            "善行计数结算"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "qiyade_shuiwu_12",
+          "name": "诸地暴乱",
+          "trigger": "《善行计数结算》时善行计数<3",
+          "desc": "仪式，存续3天（逾期死亡结局「多行不义」）。反抗者部队+2名角色+部队+情报，6号槽可放谋反的意图/弑君的计划/岩石「征服」。检定战斗&体魄-5：成功≥3则角色战斗/体魄+1、权势+1（放征服可折卡但反抗者部队死亡，放谋反思潮且不放部队则获「反抗者部队」）；成功<3则反抗者部队死亡、全员{受伤}、我方部队战斗-1",
+          "prereqs": [
+            "善行计数结算"
+          ],
+          "slots": [
+            {
+              "card": "反抗者部队",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "谋反的意图",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽可选，未放置部队时获「反抗者部队」"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽可选，未放置部队时获「反抗者部队」"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "岩石",
+              "required": false,
+              "consumed": true,
+              "note": "6号槽可选，折卡但反抗者部队死亡"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

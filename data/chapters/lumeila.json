@@ -1,0 +1,72 @@
+{
+  "id": "lumeila",
+  "title": "鲁梅拉篇",
+  "category": "character",
+  "characters": ["鲁梅拉", "老赌鬼", "阿萨尔"],
+  "routes": [
+    {
+      "id": "lumeila_join",
+      "name": "入队线",
+      "summary": "书店门口接济乞书少女，让鲁梅拉入队成为随从",
+      "steps": [
+        {"id":"lumeila_join_1","name":"书店门口的乞丐","trigger":"日常篇《书店营业》购入3本书后触发","desc":"存续2天，逾期1-2天后再次触发。卡槽：衣衫褴褛的女孩+任意读物（暂时失去、事后归还）。2-3天后触发《还书的少女》","prereqs":[],"slots":[{"card":"衣衫褴褛的女孩","required":true,"consumed":false}]},
+        {"id":"lumeila_join_2","name":"还书的少女","trigger":"《书店门口的乞丐》2天后","desc":"卡槽可放岩石杀戮/纵欲（回收读物但鲁梅拉死亡、断线）；奢靡（须5金币）或放5金币：善名/魅力收益并鲁梅拉入队；全部空置也可入队。入队后鲁梅拉可无视阅读条件读所有书，累计读3/10/30本达成一千零一夜「爱书如狂」系列","prereqs":["书店门口的乞丐"],"terminal":true,"slots":[{"card":"衣衫褴褛的女孩","required":true,"consumed":false},{"card":"杀戮","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"鲁梅拉死亡、断线"},{"card":"纵欲","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"鲁梅拉死亡、断线"},{"card":"奢靡","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"须5金币，鲁梅拉入队"}]}
+      ]
+    },
+    {
+      "id": "lumeila_fly",
+      "name": "飞升线",
+      "summary": "从读书谈论起步，走古语教学与星灵仪式，让鲁梅拉入圣或变身星灵",
+      "steps": [
+        {"id":"lumeila_fly_1","name":"关于普通人的书","trigger":"鲁梅拉阅读书籍≥5，寻思头顶惊叹号的「鲁梅拉」","desc":"抉择弹窗：“写书人狭隘”侠名+1、“未记于纸页上”青铜洞察+1，两者2天后触发《仇人的牛奶》；“不值得记录”权势+1、鲁梅拉篇关闭","prereqs":[],"slots":[]},
+        {"id":"lumeila_fly_2","name":"仇人的牛奶","trigger":"在《关于普通人的书》选“写书人狭隘”或“未记于纸页上”2天后","desc":"抉择弹窗：“应该留下”善名+1、可能触发《想学古语》（飞升线）；“不该留下”侠名+1、可能触发《她要去复仇》（复仇线，需侠名≥11）；“别浪费仆人的时间了”权势+1、鲁梅拉篇关闭","prereqs":["关于普通人的书"],"slots":[]},
+        {"id":"lumeila_fly_3","name":"想学古语","trigger":"权势≥12、《仇人的牛奶》选“应该留下”，寻思头顶惊叹号的「鲁梅拉」","desc":"抉择弹窗：“同意”触发《古语教学》；“拒绝”青铜洞察+1、鲁梅拉篇关闭","prereqs":["仇人的牛奶"],"slots":[]},
+        {"id":"lumeila_fly_4","name":"古语教学","trigger":"在《想学古语》选“同意”","desc":"仪式，存续5天耗时3天，逾期鲁梅拉篇关闭。卡槽：鲁梅拉+主角+5金币+任意情报（可放青铜奢靡须10金币：权势+1）。检定智慧：成功≥2两人智慧+1，否则鲁梅拉智慧+1；固定触发《整理祭祀文档》","prereqs":["想学古语"],"slots":[{"card":"鲁梅拉","required":true,"consumed":false},{"card":"主角","required":true,"consumed":false},{"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"须10金币，权势+1"}]},
+        {"id":"lumeila_fly_5","name":"整理祭祀文档","trigger":"完成《古语教学》","desc":"抉择弹窗：“同意”触发《编修之苦》；“回绝”「谗言」+1、鲁梅拉篇关闭","prereqs":["古语教学"],"slots":[]},
+        {"id":"lumeila_fly_6","name":"编修之苦","trigger":"在《整理祭祀文档》选“同意”","desc":"仪式，长期存续耗时1天，可重复：金币+1并再次触发。完成3次后触发《古语老师上门》、本事件关闭","prereqs":["整理祭祀文档"],"slots":[{"card":"鲁梅拉","required":true,"consumed":false}]},
+        {"id":"lumeila_fly_7","name":"古语老师上门","trigger":"完成3次《编修之苦》","desc":"抉择弹窗：“对，她是该挨鞭子”权势+1、鲁梅拉篇关闭；“我看该道歉的是你”「谗言」+1、侠名+1、获读物「星灵咒文残卷」","prereqs":["编修之苦"],"slots":[]},
+        {"id":"lumeila_fly_8","name":"星灵咒文残卷","trigger":"寻思「星灵咒文残卷」（《古语老师上门》选“我看该道歉的是你”获得）","desc":"仪式，长期存续耗时1天。卡槽：星灵咒文残卷（失去）+鲁梅拉+主角。两人智慧+1、获「学会徽章」，3天后触发《星灵之夜前夕》","prereqs":["古语老师上门"],"slots":[{"card":"星灵咒文残卷","required":true,"consumed":true,"note":"寻思触发；仪式中失去"},{"card":"鲁梅拉","required":true,"consumed":false},{"card":"主角","required":true,"consumed":false}]},
+        {"id":"lumeila_fly_9","name":"学会藏书室","trigger":"寻思「学会徽章」","desc":"仪式，存续1天耗时5天，逾期可再次寻思触发。放徽章+随机读物3本，每本3金币可买下；买书4/7/10次徽章升为青铜/白银/黄金品级，品级越高刷出高品级读物概率越高（可重复）","prereqs":["星灵咒文残卷"],"slots":[{"card":"学会徽章","required":true,"consumed":false,"note":"寻思触发"}]},
+        {"id":"lumeila_fly_10","name":"星灵之夜前夕","trigger":"完成《星灵咒文残卷》3天后","desc":"抉择弹窗：“唤回鲁梅拉”灵视+1、触发《星灵之夜·1》（鲁梅拉入圣）；“赞颂未知的存在”灵视+2、触发《星灵之夜·2》（鲁梅拉成为星灵）","prereqs":["星灵咒文残卷"],"slots":[]},
+        {"id":"lumeila_fly_11","name":"星灵之夜·1","trigger":"在《星灵之夜前夕》选“唤回鲁梅拉”","desc":"仪式，自启动耗时3天。鲁梅拉体魄/魅力/智慧/隐匿+1、魔力+2，入圣并提升为白银品级、去除{纵欲的痕迹}","prereqs":["星灵之夜前夕"],"terminal":true,"slots":[{"card":"鲁梅拉","required":true,"consumed":false}]},
+        {"id":"lumeila_fly_12","name":"星灵之夜·2","trigger":"在《星灵之夜前夕》选“赞颂未知的存在”","desc":"仪式，自启动耗时1天。鲁梅拉变身「星灵」退场（不入手牌），达成一千零一夜「熟悉的星星」；完成灵视篇《心灵之战·15》时星灵加入手牌，各大结局篇中星灵会自动出现在关键仪式帮你跳过检定或解锁特殊结局","prereqs":["星灵之夜前夕"],"terminal":true,"slots":[]}
+      ]
+    },
+    {
+      "id": "lumeila_revenge",
+      "name": "复仇线",
+      "summary": "侠名≥11时支持鲁梅拉向老赌鬼复仇，包含亲手复仇与借暗娼老板设宴的多条分支",
+      "steps": [
+        {"id":"lumeila_revenge_1","name":"她要去复仇","trigger":"侠名≥11、《仇人的牛奶》选“不该留下”，寻思头顶惊叹号的「鲁梅拉」","desc":"抉择弹窗：“阻止她”权势+1、后续关闭；“帮助她”立即触发《我是来复仇的》；“让她自己处理”3-5天后可能触发《自己的故事》","prereqs":["仇人的牛奶"],"slots":[]},
+        {"id":"lumeila_revenge_2","name":"我是来复仇的","trigger":"在《她要去复仇》选“帮助她”1天后","desc":"抉择弹窗：“当然可以”触发《复仇》；“该死的不止他”老赌鬼进入权势篇《囚牢》、2天后触发《暗娼老板设宴》；“怎么可能”3-5天后可能触发《自己的故事》","prereqs":["她要去复仇"],"slots":[]},
+        {"id":"lumeila_revenge_3","name":"自己的故事","trigger":"《她要去复仇》选“让她自己处理”、或《我是来复仇的》选“怎么可能”、或《复仇》逾期，3-5天后寻思有惊叹号的「鲁梅拉」","desc":"剧情弹窗。获读物「蠢妓女和活恶棍」（复仇未果的收尾分支）","prereqs":["她要去复仇","我是来复仇的","复仇"],"terminal":true,"slots":[]},
+        {"id":"lumeila_revenge_4","name":"复仇","trigger":"在《我是来复仇的》选“当然可以”","desc":"仪式，存续3天，逾期3-5天后可能触发《自己的故事》。卡槽：老赌鬼+鲁梅拉+主角（可放岩石杀戮：免除「罪证」但「谗言」+1）。老赌鬼死亡、「罪证」+1、侠名+1、鲁梅拉战斗+1并获{命运的羁绊}；若鲁梅拉存活12天后获读物「孤女复仇记」、34天后可能触发《来出书吧》（此路径未测试成功）","prereqs":["我是来复仇的"],"slots":[{"card":"老赌鬼","required":true,"consumed":true,"note":"结算中死亡"},{"card":"鲁梅拉","required":true,"consumed":false},{"card":"主角","required":false,"consumed":false},{"card":"杀戮","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"免除「罪证」但「谗言」+1"}]},
+        {"id":"lumeila_revenge_5","name":"孤女复仇记","trigger":"寻思「孤女复仇记」（《复仇》后获得）","desc":"仪式，存续1天，逾期可再次寻思触发。卡槽：孤女复仇记+非动物/非怪物角色。智慧+1、生存+1，触发《该由谁杀了他》","prereqs":["复仇"],"slots":[{"card":"孤女复仇记","required":true,"consumed":false,"note":"寻思触发"}]},
+        {"id":"lumeila_revenge_6","name":"该由谁杀了他","trigger":"鲁梅拉存活、完成《孤女复仇记》（仅能触发一次）","desc":"抉择弹窗：“就写是你杀了他吧”金币+10、侠名+1；“照实写，是我杀了他”金币+10。两者3天后触发《受赏》","prereqs":["孤女复仇记"],"slots":[]},
+        {"id":"lumeila_revenge_7","name":"受赏","trigger":"完成《该由谁杀了他》3天后","desc":"仪式，长期存续耗时1天。按放置对象给赏：鲁梅拉智慧+3；梅姬魅力+2；主角金币+5并获「黄金臂环」（魅力5）；其他追随者魅力+1但「妻子的不满」+1（同时放梅姬可抵消）","prereqs":["该由谁杀了他"],"terminal":true,"slots":[{"card":"鲁梅拉","required":true,"consumed":false,"note":"卡槽1为鲁梅拉/梅姬/主角/其他追随者择一放入"},{"card":"梅姬","required":true,"consumed":false,"note":"卡槽1择一放入"},{"card":"主角","required":true,"consumed":false,"note":"卡槽1择一放入"},{"card":"妻子的不满","required":false,"consumed":false,"note":"同时放入梅姬可消除此不满"}]},
+        {"id":"lumeila_revenge_8","name":"暗娼老板设宴","trigger":"在《我是来复仇的》选“该死的不止他”2天后","desc":"抉择弹窗三分支：“收钱了事”触发《在阴影中·1》；“以命偿还”触发《在阴影中·2》；“利用他”触发《在阴影中·3》","prereqs":["我是来复仇的"],"slots":[]},
+        {"id":"lumeila_revenge_9","name":"在阴影中·1","trigger":"在《暗娼老板设宴》选“收钱了事”","desc":"仪式，存续3天，逾期2天后再次触发（最多3次）。卡槽：鲁梅拉+任意角色+任意情报。检定智慧+社交：成功≥2金币+10、鲁梅拉社交+1、2天后触发《哪种痛苦令人印象深刻》；失败金币+5、触发《为她买书》","prereqs":["暗娼老板设宴"],"slots":[{"card":"鲁梅拉","required":true,"consumed":false}]},
+        {"id":"lumeila_revenge_10","name":"为她买书","trigger":"《在阴影中·1》检定失败","desc":"仪式，存续3天，逾期鲁梅拉篇关闭。卡槽：鲁梅拉；放5金币善名+1、鲁梅拉智慧+1并获读物「蜘蛛的网」，10金币额外获1本随机读物（可放青铜奢靡须10金币：权势+1）。2天后触发《哪种痛苦令人印象深刻》","prereqs":["在阴影中·1"],"slots":[{"card":"鲁梅拉","required":true,"consumed":false},{"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"须10金币，权势+1"}]},
+        {"id":"lumeila_revenge_11","name":"在阴影中·2","trigger":"在《暗娼老板设宴》选“以命偿还”","desc":"仪式，存续3天，逾期2天后再次触发（最多3次）。卡槽：鲁梅拉+任意角色+任意情报（可放青铜杀戮/征服）。检定体魄+战斗：成功≥2善名+1、鲁梅拉战斗+1、「罪证」+1、2天后触发《哪种痛苦令人印象深刻》（苏丹卡免罪证，征服额外获「空置的宅邸」）；失败所有参与者死亡","prereqs":["暗娼老板设宴"],"slots":[{"card":"鲁梅拉","required":true,"consumed":false},{"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"免除「罪证」"},{"card":"征服","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"额外获「空置的宅邸」"}]},
+        {"id":"lumeila_revenge_12","name":"在阴影中·3","trigger":"在《暗娼老板设宴》选“利用他”","desc":"仪式，存续3天，逾期2天后再次触发（最多3次）。卡槽：鲁梅拉+任意角色+5金币+任意情报。检定魅力+社交：成功≥2金币+10、鲁梅拉智慧+1；失败白银洞察+1。固定结算：3天后触发剧情弹窗《血墙》","prereqs":["暗娼老板设宴"],"slots":[{"card":"鲁梅拉","required":true,"consumed":false}]},
+        {"id":"lumeila_revenge_13","name":"哪种痛苦令人印象深刻","trigger":"鲁梅拉存活、完成《在阴影中·1》或《在阴影中·2》或《为她买书》2天后","desc":"抉择弹窗，确定读物「复仇的滋味」属性：“饥饿”体魄+2、“幻灭”智慧+2、“火焰”隐匿+2。此后让鲁梅拉去权势篇《囚牢》见老赌鬼，1天后触发《卧室门口的抄本》","prereqs":["在阴影中·1","在阴影中·2","为她买书"],"slots":[]},
+        {"id":"lumeila_revenge_14","name":"血墙","trigger":"完成《在阴影中·3》3天后","desc":"剧情弹窗。此后让鲁梅拉去权势篇《囚牢》见老赌鬼，1天后触发《卧室门口的抄本》","prereqs":["在阴影中·3"],"slots":[]},
+        {"id":"lumeila_revenge_15","name":"卧室门口的抄本","trigger":"完成《哪种痛苦令人印象深刻》或《血墙》后，在权势篇《囚牢》放置鲁梅拉与老赌鬼交互1天后","desc":"剧情弹窗。前置为《哪种痛苦令人印象深刻》获「复仇的滋味」（属性因前文抉择而异）；前置为《血墙》获读物「血之墙」","prereqs":["哪种痛苦令人印象深刻","血墙"],"slots":[]},
+        {"id":"lumeila_revenge_16","name":"复仇的滋味","trigger":"寻思「复仇的滋味」（《卧室门口的抄本》获得）","desc":"仪式，存续1天，逾期可再次寻思触发。卡槽：复仇的滋味+任意角色。按《哪种痛苦令人印象深刻》的选择体魄/智慧/隐匿+2，金币+3、鲁梅拉获{命运的羁绊}；可能触发《来出书吧》","prereqs":["卧室门口的抄本"],"slots":[{"card":"复仇的滋味","required":true,"consumed":false,"note":"寻思触发"}]},
+        {"id":"lumeila_revenge_17","name":"血之墙","trigger":"寻思「血之墙」（《卧室门口的抄本》获得的读物）","desc":"仪式，存续1天，无逾期惩罚、重新寻思即可。卡槽：血之墙+非动物/非怪物角色。魔力+2、体魄+1，金币+3、鲁梅拉获{命运的羁绊}","prereqs":["卧室门口的抄本"],"slots":[{"card":"血之墙","required":true,"consumed":false,"note":"寻思触发"}]}
+      ]
+    },
+    {
+      "id": "lumeila_book",
+      "name": "出书线",
+      "summary": "复仇后把鲁梅拉的故事出版成书，赚取持续版税并换取藏书",
+      "steps": [
+        {"id":"lumeila_book_1","name":"来出书吧","trigger":"阿萨尔与鲁梅拉存活，完成《复仇的滋味》3-4天后（或完成《复仇》3-4天后，此路径未测试成功）","desc":"抉择弹窗：“同意”3天后弹窗金币+3、触发《请支持正版》；“拒绝”出书线关闭；“我需要问问作者的意见”触发《一本书的诞生》","prereqs":["复仇的滋味"],"slots":[]},
+        {"id":"lumeila_book_2","name":"一本书的诞生","trigger":"在《来出书吧》选“我需要问问作者的意见”","desc":"仪式，存续3天，完成或逾期均3天后弹窗金币+3、触发《请支持正版》。卡槽：5金币（奢靡须翻倍）；放青铜奢靡额外获读物「印刷方略」。侠名+1","prereqs":["来出书吧"],"slots":[{"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"卡槽需5金币、奢靡须翻倍为10金币；额外获读物「印刷方略」"}]},
+        {"id":"lumeila_book_3","name":"请支持正版","trigger":"在《来出书吧》选“同意”，或《一本书的诞生》完成或逾期","desc":"仪式，存续3天，逾期盗版横行、金币+2但后续关闭。按声望用不同属性检定（侠名≥10用战斗+体魄；恶名≥10用隐匿+生存；权势≥10用社交+魅力；均<10用社交+智慧需成功≥5），失败均导致盗版横行、后续关闭。检定成功且不杀戮：3天后收版税金币+3、触发《也许应该分享给她》，此后每3天版税金币+3；用杀戮则恶名+1、书不受欢迎、后续关闭","prereqs":["来出书吧","一本书的诞生"],"slots":[{"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"用杀戮则恶名+1、书不受欢迎、后续关闭"}]},
+        {"id":"lumeila_book_4","name":"也许应该分享给她","trigger":"《请支持正版》不使用杀戮并检定成功3天后","desc":"仪式，存续3天，逾期出书线关闭。卡槽：鲁梅拉+金币（1-2金币鲁梅拉智慧+1；3金币另善名+1）。1天后剧情弹窗、弹窗次日触发《故事的赞助人》","prereqs":["请支持正版"],"slots":[{"card":"鲁梅拉","required":true,"consumed":false}]},
+        {"id":"lumeila_book_5","name":"故事的赞助人","trigger":"完成《也许应该分享给她》2天后（同日收到版税3金币），之后每次收到版税会再次触发","desc":"仪式，存续2天耗时3天，无逾期惩罚。卡槽：鲁梅拉+3金币。按固定顺序获得10本读物（碎肉与骨粉、迷宫之心……宇宙之弦），全部获得后本事件关闭但版税不会停止（可重复）","prereqs":["也许应该分享给她"],"slots":[{"card":"鲁梅拉","required":true,"consumed":false}]}
+      ]
+    }
+  ]
+}

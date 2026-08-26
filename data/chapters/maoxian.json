@@ -1,0 +1,134 @@
+{
+  "id": "maoxian",
+  "title": "冒险篇",
+  "category": "base",
+  "characters": ["哲巴尔", "拜铃耶", "伊曼", "阿穆尔", "拉伊德", "杰莫尔", "哈马尔", "贝姬夫人", "玛希尔", "鲁梅拉", "梅姬"],
+  "routes": [
+    {
+      "id": "maoxian_bath",
+      "name": "浴场线",
+      "summary": "第1天自动开启的浴场打听消息，是全篇几乎所有随机冒险事件的入口",
+      "steps": [
+        {"id": "maoxian_bath_1", "name": "浴场里的消息", "trigger": "第1天被动触发，完成次日自动重新触发", "desc": "仪式，长期存续耗时1天。卡槽：任意贵族（穿戴「贝姬夫人」即算贵族）+任意情报/苏丹的猜忌+1金币（或洗浴金卡免费入场）。检定魅力+社交，成功≥1获随机情报并概率触发《食人的野狗》《下水道的鳄鱼》《毒蛇山谷》《袭杀凶狮》《神赐骏马》《远近闻名的哈马尔兄弟》《被流民侵占的宅邸》《阴森的宅邸》之一。注意：放「苏丹的猜忌」则主角魅力-3、本事件永久关闭（可重复）", "prereqs": [], "slots": [{"card": "贝姬夫人", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "穿戴者视为{贵族}，可进入1号贵族槽"}, {"card": "苏丹的猜忌", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "放入则关闭检定、主角魅力-3、本事件永久关闭"}, {"card": "洗浴金卡", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "命运商店解锁；免费且非{贵族}也可入场"}]},
+        {"id": "maoxian_bath_2", "name": "食人的野狗", "trigger": "《浴场里的消息》检定成功时概率触发", "desc": "仪式，存续3天。可放青铜及以下征服折卡，或放奢靡+8金币直接杀死狗群。检定战斗&体魄对狗群(3)：成功≥2善名+1；诱饵必受伤；失败受伤、3-5天后重置（可重复）", "prereqs": ["浴场里的消息"], "slots": [{"card": "作恶的狗群", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "敌方"}, {"card": "征服", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下；检定≥1即可折卡"}, {"card": "奢靡", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下；须8金币，关闭检定、作恶的狗群死亡"}], "terminal": true},
+        {"id": "maoxian_bath_3", "name": "毒蛇山谷", "trigger": "《浴场里的消息》检定成功时概率触发", "desc": "仪式，长期存续耗时2天。检定1体魄+生存成功≥1获消耗品「毒蛇毒液」（决斗类仪式直接胜利）+5金币；检定2智慧+生存成功≥2获「疗伤草药」。失败1天后重置（可重复）", "prereqs": ["浴场里的消息"], "slots": [], "terminal": true},
+        {"id": "maoxian_bath_4", "name": "远近闻名的哈马尔兄弟", "trigger": "《浴场里的消息》检定成功时概率触发", "desc": "仪式，存续3天。可放白银及以下征服。检定战斗&体魄对杰莫尔/哈马尔(17)：成功≥2全员战斗+1、二人进《囚牢》（可10金币/人赎出入队）；失败我方全员死亡、事件重置——高风险（可重复）", "prereqs": ["浴场里的消息"], "slots": [{"card": "杰莫尔", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "敌方；进《囚牢》后可赎出入队"}, {"card": "哈马尔", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "敌方；进《囚牢》后可赎出入队"}, {"card": "征服", "sultan": true, "maxGrade": "白银", "required": false, "consumed": true, "note": "白银及以下"}], "terminal": true},
+        {"id": "maoxian_bath_5", "name": "被流民侵占的宅邸", "trigger": "《浴场里的消息》检定成功时概率触发", "desc": "仪式，长期存续。无苏丹卡：检定社交&战斗对(5)，成功≥2拉伊德进《囚牢》、开启拉伊德篇；放征服额外获白银「空置的宅邸」；放奢靡（8金币）检定社交成功≥3则善名+1、赎出拉伊德入队，但失败则权势-1且拉伊德篇永久关闭", "prereqs": ["浴场里的消息"], "slots": [{"card": "拉伊德", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "敌方"}, {"card": "征服", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下"}, {"card": "奢靡", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下；须8金币"}], "terminal": true},
+        {"id": "maoxian_bath_6", "name": "神赐骏马", "trigger": "《浴场里的消息》检定成功时概率触发", "desc": "仪式，存续3天。检定智慧+生存，成功≥2获驯兽「骏马」；失败3-5天后重置（可重复）", "prereqs": ["浴场里的消息"], "slots": [], "terminal": true},
+        {"id": "maoxian_bath_7", "name": "赌马", "trigger": "拥有任意坐骑3-5天后触发（不限于《神赐骏马》）", "desc": "仪式，存续1天。押注对应敌方品级的金币，检定坐骑体魄+角色生存：赢返还双倍金币，输失去金币。可能触发法里斯篇《黑街赛狗》。5天后重置（可重复）", "prereqs": [], "slots": [{"card": "紧张的骑手", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "敌方骑手，随机其一"}, {"card": "娴熟的骑手", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "敌方骑手，随机其一"}, {"card": "高傲的骑手", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "敌方骑手，随机其一"}, {"card": "冷淡的骑手", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "敌方骑手，随机其一"}]}
+      ]
+    },
+    {
+      "id": "maoxian_eyu",
+      "name": "鳄鱼线",
+      "summary": "捕获小鳄鱼并扩建鳄鱼池，可定期销毁罪证",
+      "steps": [
+        {"id": "maoxian_eyu_1", "name": "下水道的鳄鱼", "trigger": "《浴场里的消息》检定成功时概率触发", "desc": "仪式，长期存续。检定生存&战斗对(4)：成功≥3获驯兽「小鳄鱼」。注意：本事件不成功将导致莎姬篇《温暖的小腹》后斯瓦萨尔死亡。失败1天后重置（可重复）", "prereqs": ["浴场里的消息"], "slots": []},
+        {"id": "maoxian_eyu_2", "name": "解释", "trigger": "穿戴「小鳄鱼」进行《浴场里的消息》", "desc": "仪式，存续1天，逾期恶名+1、罪证+2。放白银及以下杀戮：权势+1；不放：恶名+1、罪证+2", "prereqs": ["下水道的鳄鱼"], "slots": [{"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "杀戮", "sultan": true, "maxGrade": "白银", "required": false, "consumed": true, "note": "白银及以下"}], "terminal": true},
+        {"id": "maoxian_eyu_3", "name": "扩建鳄鱼池", "trigger": "寻思「小鳄鱼」", "desc": "仪式，存续1天。放小鳄鱼+5金币（可放青铜及以下奢靡折卡）。触发《鳄鱼池》，计入一千零一夜「奇珍之家」", "prereqs": ["下水道的鳄鱼"], "slots": [{"card": "小鳄鱼", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "寻思触发"}, {"card": "奢靡", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下"}]},
+        {"id": "maoxian_eyu_4", "name": "鳄鱼池", "trigger": "完成《扩建鳄鱼池》", "desc": "仪式，长期存续耗时7天。放小鳄鱼+罪证：罪证-1。可再次寻思触发（可重复）", "prereqs": ["扩建鳄鱼池"], "slots": [{"card": "小鳄鱼", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "罪证", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "结算罪证-1"}]}
+      ]
+    },
+    {
+      "id": "maoxian_lang",
+      "name": "狼穴线",
+      "summary": "追踪狼王到狼穴恶战，赚取属性成长",
+      "steps": [
+        {"id": "maoxian_lang_1", "name": "狼王的踪迹", "trigger": "《浴场里的消息》检定成功时概率触发", "desc": "仪式，长期存续。检定智慧+生存：成功≥1则1天后触发《狼穴恶战》；失败受伤、1天后重置（可重复）", "prereqs": ["浴场里的消息"], "slots": []},
+        {"id": "maoxian_lang_2", "name": "狼穴恶战", "trigger": "《狼王的踪迹》检定成功1天后", "desc": "仪式，长期存续。可放青铜及以下征服折卡。检定体魄+战斗：成功≥3战斗+1，≥1体魄+1且受伤；失败受伤、1天后重置（可重复）", "prereqs": ["狼王的踪迹"], "slots": [{"card": "征服", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下；检定≥1即可折卡"}], "terminal": true}
+      ]
+    },
+    {
+      "id": "maoxian_shi",
+      "name": "凶狮线",
+      "summary": "袭杀或喂养凶狮：可刷钱，也可喂养12次后收服或杀死山狮",
+      "steps": [
+        {"id": "maoxian_shi_1", "name": "袭杀凶狮", "trigger": "《浴场里的消息》检定成功时概率触发", "desc": "仪式，存续2天。放奢靡（须1金币）关闭检定、触发《喂养凶狮》；放青铜征服正常检定仅折卡。检定体魄&战斗对山狮(6)：成功≥2山狮死亡、善名+1、战斗+1。逾期或检定失败触发《商人的遗物》；每逾期/失败5次将触发《凶狮肆虐》", "prereqs": ["浴场里的消息"], "slots": [{"card": "山狮", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "敌方"}, {"card": "奢靡", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下；须1金币，关闭检定、触发《喂养凶狮》"}, {"card": "征服", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下；正常检定、仅折卡"}]},
+        {"id": "maoxian_shi_2", "name": "商人的遗物", "trigger": "《袭杀凶狮》逾期、折断奢靡或检定失败1天后", "desc": "仪式，存续1天。检定智慧+隐匿成功≥1获随机1-4金币。可主动逾期《袭杀凶狮》反复刷钱（可重复）", "prereqs": ["袭杀凶狮"], "slots": []},
+        {"id": "maoxian_shi_3", "name": "喂养凶狮", "trigger": "在《袭杀凶狮》使用「奢靡」", "desc": "仪式，存续1天，逾期触发《凶狮肆虐》。放山狮+1金币：喂养≤11次反复触发本事件；满12次触发《山狮最后的索求》（可重复）", "prereqs": ["袭杀凶狮"], "slots": [{"card": "山狮", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}]},
+        {"id": "maoxian_shi_4", "name": "凶狮肆虐", "trigger": "《袭杀凶狮》逾期或检定失败累计5次后，或《喂养凶狮》逾期1天后", "desc": "仪式，自启动。随机追随者死亡，4-5天后重新触发《袭杀凶狮》（若由《喂养凶狮》逾期所致则不再触发）——死亡警告", "prereqs": ["袭杀凶狮", "喂养凶狮"], "slots": []},
+        {"id": "maoxian_shi_5", "name": "山狮最后的索求", "trigger": "《喂养凶狮》满12次后触发", "desc": "仪式，存续3天，逾期山狮退场、事件关闭。放祭品（非怪物追随者，死亡）：获驯兽「山狮」（体魄5战斗6）；无祭品则检定战斗&体魄对(11)：成功山狮死亡、善名+1，失败受伤、山狮退场", "prereqs": ["喂养凶狮"], "slots": [{"card": "山狮", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "敌方"}, {"card": "征服", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下；检定≥1即可折卡"}], "terminal": true}
+      ]
+    },
+    {
+      "id": "maoxian_zhai",
+      "name": "阴森宅邸线",
+      "summary": "调查闹鬼宅邸，牵出法务官阿穆尔的凶案与后续复仇/超度分支",
+      "steps": [
+        {"id": "maoxian_zhai_1", "name": "阴森的宅邸", "trigger": "《浴场里的消息》检定成功时概率触发", "desc": "仪式，长期存续。主角+追随者/拜铃耶。征服或无卡：检定魔力+魅力，失败主角被诅咒（体魄/魅力/智慧-3）；无论成败获「邪术的痕迹」，触发《未解的凶案》《如何安息》《神圣的襄助》及拜铃耶篇《邪恶的线索》。拜铃耶参与则关闭检定与所有后续；杀戮拜铃耶获唯一「污渍：天使」但拜铃耶死亡；纵欲则全员被诅咒", "prereqs": ["浴场里的消息"], "slots": [{"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "拜铃耶", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "参与则关闭检定与所有后续"}, {"card": "杀戮", "sultan": true, "maxGrade": null, "required": false, "consumed": true, "note": "不高于追随者品级"}, {"card": "纵欲", "sultan": true, "maxGrade": null, "required": false, "consumed": true, "note": "不高于追随者品级；追随者须有{激情}"}, {"card": "征服", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下"}]},
+        {"id": "maoxian_zhai_2", "name": "神圣的襄助", "trigger": "完成《阴森的宅邸》时不放置杀戮", "desc": "仪式，长期存续。放伊曼+邪术的痕迹：检定魅力+社交，成功≥1获「白蜜琥珀宝珠」+2并触发《以神的名义》，成功=0宝珠+1。若已在正教篇触发《与正教决裂》则本事件关闭", "prereqs": ["阴森的宅邸"], "slots": [{"card": "伊曼", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "邪术的痕迹", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}]},
+        {"id": "maoxian_zhai_3", "name": "以神的名义", "trigger": "完成《神圣的襄助》", "desc": "仪式，长期存续。放正教思潮+异端祭品（玛希尔/被俘的异教徒/拜铃耶等死亡）：1号槽虔信+1、金币+3~5；放其他追随者则其离队、反对+5、事件重置（可重复）", "prereqs": ["神圣的襄助"], "slots": [{"card": "正教思潮", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "任意正教思潮"}, {"card": "玛希尔", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "异端祭品选项之一：死亡"}, {"card": "异端的头颅", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "异端祭品选项之一（失去）"}, {"card": "被俘的异教徒", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "异端祭品选项之一：死亡"}, {"card": "拜铃耶", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "异端祭品选项之一：死亡"}, {"card": "拜铃耶的头颅", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "异端祭品选项之一（失去）"}]},
+        {"id": "maoxian_zhai_4", "name": "未解的凶案", "trigger": "完成《阴森的宅邸》时不放置杀戮", "desc": "仪式，长期存续。检定隐匿+社交（权势≥5可降低需求）：成功≥2获「尚未失效的罪证」，触发《幕后真凶》（阿穆尔存活）或《无法追溯的罪行》（阿穆尔已死）；失败累计3次事件关闭", "prereqs": ["阴森的宅邸"], "slots": []},
+        {"id": "maoxian_zhai_5", "name": "无法追溯的罪行", "trigger": "持有「尚未失效的罪证」且阿穆尔死亡（本篇以外事件身亡）", "desc": "仪式，长期存续。失去罪证：侠名+1", "prereqs": ["未解的凶案"], "slots": [{"card": "尚未失效的罪证", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": ""}], "terminal": true},
+        {"id": "maoxian_zhai_6", "name": "宫廷处刑", "trigger": "在《权力的游戏》上贡「尚未失效的罪证」", "desc": "仪式，长期存续。放阿穆尔+青铜及以下杀戮：阿穆尔死亡，获「法务官的头颅」", "prereqs": ["未解的凶案"], "slots": [{"card": "阿穆尔", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "结算死亡，获「法务官的头颅」"}, {"card": "杀戮", "sultan": true, "maxGrade": "青铜", "required": true, "consumed": true, "note": "青铜及以下"}], "terminal": true},
+        {"id": "maoxian_zhai_7", "name": "幕后真凶", "trigger": "《未解的凶案》检定成功且阿穆尔存活", "desc": "仪式，长期存续。放阿穆尔+罪证（失去），派角色单选：诛杀→触发《为她们复仇》（将导致阿穆尔死亡）；威胁→阿穆尔入队、支持+5，触发拜铃耶篇《夜的栖身地》", "prereqs": ["未解的凶案"], "slots": [{"card": "阿穆尔", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "尚未失效的罪证", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": ""}]},
+        {"id": "maoxian_zhai_8", "name": "为她们复仇", "trigger": "在《幕后真凶》选“诛杀”", "desc": "仪式，长期存续。放千夫所指/毒蛇毒液可强制成功，放杀戮可免除罪证。检定战斗&体魄对(2)：成功≥1阿穆尔死亡、获「法务官的头颅」、罪证+1；失败则派出的角色死亡", "prereqs": ["幕后真凶"], "slots": [{"card": "阿穆尔", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "结算死亡"}, {"card": "千夫所指", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "强制检定成功且免除罪证"}, {"card": "毒蛇毒液", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "强制检定成功且免除罪证"}, {"card": "杀戮", "sultan": true, "maxGrade": "青铜", "required": false, "consumed": true, "note": "青铜及以下；免除检定成功时产生的罪证"}], "terminal": true},
+        {"id": "maoxian_zhai_9", "name": "如何安息", "trigger": "完成《阴森的宅邸》时放置征服或不放苏丹卡", "desc": "仪式，长期存续。放阿穆尔：其变成「不死的生灵」入队；放「白蜜琥珀宝珠」或「法务官的头颅」强制检定成功。检定魔力+魅力：成功≥2灵视+1；失败灵视+1但被诅咒、事件重置（可重复）", "prereqs": ["阴森的宅邸"], "slots": [{"card": "阿穆尔", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "强制检定成功；变成「不死的生灵」入队"}, {"card": "伊曼", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "强制检定成功；金币+3"}, {"card": "拜铃耶", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "强制检定成功；魔力+1"}, {"card": "法务官的头颅", "sultan": false, "maxGrade": null, "required": false, "consumed": true, "note": "强制检定成功且关闭1号槽收益"}, {"card": "白蜜琥珀宝珠", "sultan": false, "maxGrade": null, "required": false, "consumed": true, "note": "强制检定成功且关闭1号槽收益"}]}
+      ]
+    },
+    {
+      "id": "maoxian_duobao",
+      "name": "夺宝奇兵线",
+      "summary": "读完《夺宝奇兵》探索暗影神殿，获可重置苏丹卡倒计时的暗影罗盘",
+      "steps": [
+        {"id": "maoxian_duobao_1", "name": "暗影神殿", "trigger": "寻思「《夺宝奇兵》」并完成阅读事件", "desc": "仪式，存续2天耗时3天，可再寻思触发。哲巴尔+书（失去）+3名角色；放祭品（非怪物/动物追随者，死亡）可关闭检定直接获「暗影罗盘」。双检定（魔力≥1、战斗+体魄≥5）：全成功全员战斗+1、获饰品「暗影罗盘」；检定2失败则3/4/5号槽死亡、回收书可再触发", "prereqs": [], "slots": [{"card": "哲巴尔", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "《夺宝奇兵》", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "寻思触发；仪式中失去"}]},
+        {"id": "maoxian_duobao_2", "name": "逆转时光", "trigger": "寻思「暗影罗盘」", "desc": "仪式，耗时0天。放暗影罗盘+任意苏丹卡：该苏丹卡倒计时重置为7天。罗盘使用3次后失去（可重复，限3次）", "prereqs": ["暗影神殿"], "slots": [{"card": "暗影罗盘", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "寻思触发；使用3次后失去"}]}
+      ]
+    },
+    {
+      "id": "maoxian_yaojing",
+      "name": "妖精国游记线",
+      "summary": "读完《妖精国游记》探索妖精森林，获妖精的提灯",
+      "steps": [
+        {"id": "maoxian_yaojing_1", "name": "妖精森林", "trigger": "寻思「《妖精国游记》」并完成阅读事件", "desc": "仪式，存续2天耗时3天，可再寻思触发。哲巴尔+书（失去）+生存/战斗/智慧/魅力≥4的角色各1名分槽。四段检定失败对应槽位死亡（检定4失败哲巴尔死亡），成功获「妖精的提灯」——寻思它触发妖精篇《打碎提灯》", "prereqs": [], "slots": [{"card": "哲巴尔", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "检定4失败则死亡"}, {"card": "《妖精国游记》", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "寻思触发；仪式中失去"}], "terminal": true}
+      ]
+    },
+    {
+      "id": "maoxian_shanfeng",
+      "name": "呼啸的山风线",
+      "summary": "读完《呼啸的山风》穿越狂风峡谷，获可召唤龙卷风部队的风之护符",
+      "steps": [
+        {"id": "maoxian_shanfeng_1", "name": "狂风峡谷", "trigger": "寻思「《呼啸的山风》」并完成阅读事件", "desc": "仪式，存续2天耗时3天，可再寻思触发。哲巴尔+书（失去）+魔力≥5、穿戴弓箭、生存≥4、体魄≥4的角色。四段检定：全过获饰品「风之护符」；检定4失败6号槽受伤、回收书可再触发", "prereqs": [], "slots": [{"card": "哲巴尔", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "《呼啸的山风》", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "寻思触发；仪式中失去"}, {"card": "弓箭", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "由4号槽角色穿戴"}]},
+        {"id": "maoxian_shanfeng_2", "name": "召唤龙卷风", "trigger": "寻思「风之护符」", "desc": "仪式，耗时3天。放风之护符+任意角色+7金币：检定魔力，按成功点获「小/中/大/超大龙卷风」消耗品部队（战斗10/15/20/30）。护符使用3次后失去（可重复，限3次）", "prereqs": ["狂风峡谷"], "slots": [{"card": "风之护符", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "寻思触发；使用3次后失去"}]}
+      ]
+    },
+    {
+      "id": "maoxian_huangsha",
+      "name": "黄沙的背后线",
+      "summary": "读完《黄沙的背后》远征无尽黄沙，获通往特殊结局的地点",
+      "steps": [
+        {"id": "maoxian_huangsha_1", "name": "无尽黄沙", "trigger": "寻思「《黄沙的背后》」并完成阅读事件", "desc": "仪式，存续2天耗时7天，可再寻思触发。书（失去）+哲巴尔+生存/战斗/智慧≥4角色+5金币。检定体魄+生存：成功≥10全员生存+1、获地点「遥远的绿洲」（用于降神篇、大结局逃亡篇特殊结局）；失败全员（不含哲巴尔）受伤、回收书可再触发", "prereqs": [], "slots": [{"card": "《黄沙的背后》", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "寻思触发；仪式中失去"}, {"card": "哲巴尔", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}], "terminal": true}
+      ]
+    },
+    {
+      "id": "maoxian_shedian",
+      "name": "群蛇山谷线",
+      "summary": "读完《群蛇山谷》闯毒蛇神殿，获毒蛇之链并逐步净化为纯洁之纱",
+      "steps": [
+        {"id": "maoxian_shedian_1", "name": "毒蛇神殿", "trigger": "寻思「《群蛇山谷》」并完成阅读事件", "desc": "仪式，存续7天耗时3天，可再寻思触发。书（失去）+体魄/智慧/魅力/魔力≥7角色分槽四连检定（均需成功≥6）：全过金币+10、获「毒蛇毒液」、服装「毒蛇之链」；任一检定失败对应槽位角色死亡。贝姬夫人入任意槽可使该槽检定直接成功并提前获毒液", "prereqs": [], "slots": [{"card": "《群蛇山谷》", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "寻思触发；仪式中失去"}, {"card": "贝姬夫人", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "放入任意槽位：该槽检定直接成功并提前获「毒蛇毒液」"}]},
+        {"id": "maoxian_shedian_2", "name": "欲望之蛇", "trigger": "任意角色穿戴「毒蛇之链」且空闲时触发", "desc": "仪式，长期存续。主角+穿戴毒蛇之链的追随者，可放白银及以下纵欲折卡：「毒蛇之链」升级为「欲蛇之纱」、「妻子的不满」+1。欲蛇之纱可在正教篇《忏悔》中使用（可重复）", "prereqs": ["毒蛇神殿"], "slots": [{"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "毒蛇之链", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "由追随者穿戴；结算升级为「欲蛇之纱」"}, {"card": "纵欲", "sultan": true, "maxGrade": "白银", "required": false, "consumed": true, "note": "白银及以下"}]},
+        {"id": "maoxian_shedian_3", "name": "蛇之净化", "trigger": "持有「欲蛇之纱」且主角在正教篇《纯净者的启示》后成为教领", "desc": "仪式，存续7天，逾期权势-2、善名-2、「疯狂」+1。放欲蛇之纱：灵视+1、升级为「纯洁之纱」（魅力4社交1魔力2）", "prereqs": ["欲望之蛇"], "slots": [{"card": "欲蛇之纱", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "结算升级为「纯洁之纱」"}], "terminal": true}
+      ]
+    },
+    {
+      "id": "maoxian_zhongzhen",
+      "name": "忠贞不渝线",
+      "summary": "读完《忠贞不渝》攀荆棘之塔，获可捕获任意NPC为驯兽的荆棘戒指",
+      "steps": [
+        {"id": "maoxian_zhongzhen_1", "name": "荆棘与塔", "trigger": "寻思「《忠贞不渝》」并完成阅读事件", "desc": "仪式，存续1天耗时3天，可再寻思触发。书（失去）+5金币+4名角色。四连检定（生存+智慧≥3、隐匿+体魄≥4、魔力+智慧≥5、魅力+社交≥6）：全过获秘宝「荆棘戒指」；检定4失败6号槽死亡，其余失败退出可再触发", "prereqs": [], "slots": [{"card": "《忠贞不渝》", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "寻思触发；仪式中失去"}]},
+        {"id": "maoxian_zhongzhen_2", "name": "异色花园", "trigger": "寻思「荆棘戒指」", "desc": "仪式，自启动。捕获随机非追随者（苏丹除外）：主角参与则恶名+3、罪证+2、谗言+2，该角色成为{怪物}{驯兽}入队并永久穿戴荆棘戒指；放杀戮可折卡免罪证谗言。警告：被捕获者的个人篇关闭、其相关事件无法触发（可重复）", "prereqs": ["荆棘与塔"], "slots": [{"card": "荆棘戒指", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "寻思触发"}, {"card": "主角", "sultan": false, "maxGrade": null, "required": false, "consumed": false, "note": "不参与则无事发生"}, {"card": "杀戮", "sultan": true, "maxGrade": null, "required": false, "consumed": true, "note": "不高于2号槽角色品级；可折卡、2号槽不死并免除罪证谗言"}]}
+      ]
+    },
+    {
+      "id": "maoxian_tianniu",
+      "name": "天牛之血线",
+      "summary": "读完《天牛之血》深入群山研究石之天平，走向复活死者或主角永生",
+      "steps": [
+        {"id": "maoxian_tianniu_1", "name": "群山深处", "trigger": "寻思「《天牛之血》」并完成阅读事件", "desc": "仪式，存续7天耗时7天，可再寻思触发。书（失去）+6金币+魔力≥5主角+体魄/智慧/生存≥5角色。四连检定均需成功≥8：全过获「石之天平」（「疯狂」+1）；中途失败有侠名-3等惩罚、可再触发", "prereqs": [], "slots": [{"card": "《天牛之血》", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "寻思触发；仪式中失去"}, {"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "须魔力≥5"}]},
+        {"id": "maoxian_tianniu_2", "name": "石之天平的研究", "trigger": "寻思「石之天平」", "desc": "仪式，耗时5天，可再寻思触发。放石之天平（失去）+乙太+9金币，玛希尔/鲁梅拉/拜铃耶单选：选复活获「生命之心」，选永生获「永恒之心」", "prereqs": ["群山深处"], "slots": [{"card": "石之天平", "sultan": false, "maxGrade": null, "required": true, "consumed": true, "note": "寻思触发；仪式中失去"}, {"card": "乙太", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "玛希尔", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "4/5号槽单选"}, {"card": "鲁梅拉", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "4/5号槽单选"}, {"card": "拜铃耶", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "4/5号槽单选"}]},
+        {"id": "maoxian_tianniu_3", "name": "复活死者", "trigger": "梅姬/奈费勒/伊曼/奈布哈尼/夏玛/贾丽拉/朱娜至少1人死亡后，寻思「生命之心」", "desc": "仪式，耗时1天。放生命之心+主角+对应角色的墓碑：被复活者变成{怪物}、青铜品级、固定属性（体魄3魅力2魔力2）、永久穿戴「生命之心」（可重复）", "prereqs": ["石之天平的研究"], "slots": [{"card": "生命之心", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "寻思触发"}, {"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}, {"card": "墓碑", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "梅姬/奈费勒/伊曼/奈布哈尼/夏玛/贾丽拉/朱娜的墓碑，每次寻思随机刷出一个"}]},
+        {"id": "maoxian_tianniu_4", "name": "永生的允诺", "trigger": "寻思「永恒之心」", "desc": "仪式，耗时1天。放永恒之心+主角：主角永久穿戴「永恒之心」（不可卸）、成为{邪恶化身}（可重复）", "prereqs": ["石之天平的研究"], "slots": [{"card": "永恒之心", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": "寻思触发"}, {"card": "主角", "sultan": false, "maxGrade": null, "required": true, "consumed": false, "note": ""}]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "fadeye_falisi",
+  "title": "法德耶&法里斯篇",
+  "category": "character",
+  "characters": ["法德耶", "法里斯"],
+  "routes": [
+    {
+      "id": "fadeye_falisi_dog",
+      "name": "法里斯入队线（赛狗线）",
+      "summary": "从黑街赛狗赢小狗哨子开始，经赛狗风波让法里斯入队并拼凑出月牙之死的真相",
+      "steps": [
+        {"id":"fadeye_falisi_dog_1","name":"黑街赛狗","trigger":"完成日常篇《赌马》、侠名≥4、法里斯存活","desc":"仪式，存续1天（逾期法里斯篇关闭）。押注赛狗1-10金币，3轮检定（骰子=狗体魄+生存）；押「月牙」赢并通过3轮共3次：获「小狗哨子」；完成次数≥3且权势≥10：本事件关闭、触发《超高校级黑街赛狗》（可重复）","prereqs":[],"slots":[
+          {"card":"月牙","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"押月牙高概率获胜"},
+          {"card":"黑将军","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"雨天","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"硬骨","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"fadeye_falisi_dog_2","name":"比喂喂更有用","trigger":"寻思「小狗哨子」","desc":"长期存续、耗时0天。放小狗哨子+任意角色：驯兽槽+1","prereqs":["黑街赛狗"],"slots":[
+          {"card":"小狗哨子","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"fadeye_falisi_dog_3","name":"超高校级黑街赛狗","trigger":"权势≥10、完成《黑街赛狗》次数≥3","desc":"仪式，存续1天（逾期法里斯篇关闭）。押「月牙」赢或押其他狗检定失败：月牙死亡、触发《复仇的请求》；押其他狗3轮全赢：双倍奖金但法里斯支持清零、反对+3、法里斯篇关闭","prereqs":["黑街赛狗"],"slots":[
+          {"card":"月牙","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"押月牙赢则月牙死亡"},
+          {"card":"黑将军","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"雨天","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"硬骨","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"9号槽黄金及以下「奢靡」折卡；10号槽对应石/铜/银/金「奢靡」额外下注10/20/30/40金币"}
+        ]},
+        {"id":"fadeye_falisi_dog_4","name":"复仇的请求","trigger":"在《超高校级黑街赛狗》押「月牙」赢，或押其他赛犬但检定失败","desc":"仪式，存续7天（逾期法里斯篇关闭）。帮助他：检定魅力+生存，成功≥3法里斯入队；无论结果触发《拼凑真相》。拒绝他：法里斯篇关闭","prereqs":["超高校级黑街赛狗"],"slots":[
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"fadeye_falisi_dog_5","name":"拼凑真相","trigger":"完成《复仇的请求》","desc":"仪式，耗时3天。至少派1名调查者启动，协助者可放角色或情报；4项检定分别获毒药/赞助人/受益者/通灵的线索；集齐全部线索后触发《唯一的答案》，集齐前可再次触发（可重复）","prereqs":["复仇的请求"],"slots":[]},
+        {"id":"fadeye_falisi_dog_6","name":"唯一的答案","trigger":"在《拼凑真相》获得全部线索","desc":"仪式。放法里斯+主角+4条线索。密教思潮：法里斯成为{密教徒}、可能触发《月牙,我心爱的月牙》；青铜及以下杀戮：成功法里斯死亡，失败死亡结局「无名人之死」。固定结算：可能触发法德耶篇《苏丹的特使?》；无苏丹卡且法里斯未入队时法里斯入队、支持+1","prereqs":["拼凑真相"],"slots":[
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"赞助人的线索","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"毒药的线索","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"受益者的线索","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"通灵的线索","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"青铜及以下；检定失败则死亡结局「无名人之死」"}
+        ]}
+      ]
+    },
+    {
+      "id": "fadeye_falisi_fadeye",
+      "name": "法德耶线",
+      "summary": "从《权力的游戏》纵欲法德耶开始，招待她并拒绝纵欲可走向个人线完美结局",
+      "steps": [
+        {"id":"fadeye_falisi_fadeye_1","name":"比最好更好的","trigger":"日常篇《权力的游戏》法德耶在场时，放置“主角+岩石纵欲”","desc":"仪式，存续7天，逾期死亡结局「伴君如伴虎」。单选放置：玛希尔金币+5；拉伊德死亡+「苏丹的猜忌」；魅魔/大魅魔（失去）可关闭降神篇《苏丹的诘问·邪神》；其他魅力≥5女性触发日常篇《苏丹的欢愉》。固定结算：1天后触发《法德耶来访》","prereqs":[],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"触发需放置“主角+岩石纵欲”"},
+          {"card":"纵欲","sultan":true,"maxGrade":"岩石","required":true,"consumed":true,"note":"触发条件放置"},
+          {"card":"玛希尔","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"单选选项：金币+5"},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"单选选项：「不洁的思绪」+1"},
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"单选选项：拉伊德死亡、「苏丹的猜忌」+1"},
+          {"card":"娜依拉","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"单选选项：获{掠夺之欢}、黄金「秘密」+1、金币+3"},
+          {"card":"魅魔/大魅魔","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"单选选项：失去，不再触发降神篇《苏丹的诘问·邪神》"}
+        ]},
+        {"id":"fadeye_falisi_fadeye_2","name":"法德耶来访","trigger":"完成《比最好更好的》1天后、法德耶存活且空闲","desc":"仪式，存续3天（逾期法德耶篇关闭）。选项：享用她→法德耶篇关闭；招待她→善名+1、支持+1、1天后可能触发《苏丹的特使?》；杀死她→法德耶死亡、触发日常篇《苏丹的戏弄》；放已完成《唯一的答案》的法里斯→法德耶死亡（无法获得「新月」，不推荐）","prereqs":["比最好更好的"],"slots":[
+          {"card":"法德耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"单选选项：享用她/招待她/杀死她"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"单选选项：招待她"},
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"单选选项：须已完成《唯一的答案》；法德耶死亡、无法获得「新月」"},
+          {"card":"杀戮","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"选“杀死她”时必须放入，其他情况无法放入"}
+        ]},
+        {"id":"fadeye_falisi_fadeye_3","name":"苏丹的特使?","trigger":"完成《唯一的答案》，且在《法德耶来访》选“招待”法德耶，全部满足1天后","desc":"仪式，存续2天（逾期法德耶篇关闭）。放法德耶+主角/梅姬；放岩石「纵欲」（须主角）：折卡失败、2天后法德耶死亡；不纵欲：触发《绝望中的救赎》","prereqs":["法德耶来访","唯一的答案"],"slots":[
+          {"card":"法德耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"主角或梅姬"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"主角或梅姬"},
+          {"card":"纵欲","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"须主角；放置则折卡失败、2天后法德耶死亡"}
+        ]},
+        {"id":"fadeye_falisi_fadeye_4","name":"绝望中的救赎","trigger":"完成《苏丹的特使?》且未放置纵欲","desc":"仪式，存续5天（逾期2天后法德耶死亡）。谋反思潮：3天后触发《第一次帮助》（通向个人线完美的唯一途径）；密教思潮：法德耶成为{密教徒}；正教思潮：2-3天后法德耶死亡；幸福感（失去）：1天后可能触发《古怪的邀请》","prereqs":["苏丹的特使?"],"slots":[
+          {"card":"法德耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"幸福感","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"选项之一；失去，1天后可能触发《古怪的邀请》"}
+        ]},
+        {"id":"fadeye_falisi_fadeye_5","name":"第一次帮助","trigger":"在《绝望中的救赎》放置任意谋反思潮3天后","desc":"剧情弹窗：随机黄金「情报」+2，3天后触发《第二次帮助》","prereqs":["绝望中的救赎"],"slots":[]},
+        {"id":"fadeye_falisi_fadeye_6","name":"第二次帮助","trigger":"完成剧情弹窗《第一次帮助》3天后","desc":"剧情弹窗：权势+2，3天后触发《第三次帮助》","prereqs":["第一次帮助"],"slots":[]},
+        {"id":"fadeye_falisi_fadeye_7","name":"第三次帮助","trigger":"完成剧情弹窗《第二次帮助》3天后","desc":"剧情弹窗：「对苏丹的恐惧」+1；1天后可能触发《古怪的邀请》；3天后持有「苏丹的猜忌」时触发《法德耶的帮助》","prereqs":["第二次帮助"],"slots":[]},
+        {"id":"fadeye_falisi_fadeye_8","name":"法德耶的帮助","trigger":"完成《第三次帮助》3天后，若持「苏丹的猜忌」则触发","desc":"仪式，存续3天（逾期无奖惩）。放法德耶+苏丹的猜忌：法德耶死亡、「苏丹的猜忌」-1、达成一千零一夜「没有人比我更懂你-替罪」","prereqs":["第三次帮助"],"terminal":true,"slots":[
+          {"card":"法德耶","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"放置后法德耶死亡"},
+          {"card":"苏丹的猜忌","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"「苏丹的猜忌」-1，达成一千零一夜「没有人比我更懂你-替罪」"}
+        ]}
+      ]
+    },
+    {
+      "id": "fadeye_falisi_xinyue",
+      "name": "新月线",
+      "summary": "法德耶与法里斯两条线汇合后获得驯兽「新月」，培养新月并可走向复生月牙",
+      "steps": [
+        {"id":"fadeye_falisi_xinyue_1","name":"古怪的邀请","trigger":"在《绝望中的救赎》放置「幸福感」或完成《第三次帮助》，且法德耶&法里斯存活、完成《唯一的答案》，全部满足1天后","desc":"仪式，存续5天（逾期法里斯篇关闭）。获驯兽「新月」（体魄1）、法里斯不再是{苏丹的近卫}；0-2天后触发《新月想出去玩》","prereqs":["唯一的答案","绝望中的救赎"],"slots":[
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"fadeye_falisi_xinyue_2","name":"新月想出去玩","trigger":"完成《古怪的邀请》0-2天后","desc":"仪式，存续5天（逾期0-2天后重置）。陪玩者收益：主角体魄+1、梅姬获「幸福感」、贝姬夫人/奈布哈尼魅力+1、热娜灵感+10、哈桑获读物「小狗与月亮之歌」、阿迪莱社交+1、哈比卜智慧+1、硕大兽骨金骰子+1。完成5次后触发《新月升起》（可重复）","prereqs":["古怪的邀请"],"slots":[
+          {"card":"新月","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"陪玩者选项：体魄+1"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"陪玩者选项：「幸福感」+1"},
+          {"card":"贝姬夫人","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"陪玩者选项：魅力+1"},
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"陪玩者选项：灵感+10"},
+          {"card":"哈桑","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"陪玩者选项：获读物「小狗与月亮之歌」（驯兽槽+1）"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"陪玩者选项：魅力+1"},
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"陪玩者选项：社交+1"},
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"陪玩者选项：智慧+1"},
+          {"card":"硕大兽骨","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"陪玩者选项：可反复使用，金骰子+1（古利斯篇获得）"}
+        ]},
+        {"id":"fadeye_falisi_xinyue_3","name":"新月升起","trigger":"完成《新月想出去玩》5次","desc":"仪式，自启动。新月生存&战斗+3、体魄+2、成为{装备}，达成一千零一夜「新月升起」；若新月参与过《芮尔的匪帮》/《苗圃》另有加成。若曾在《唯一的答案》放入密教思潮：触发《月牙,我心爱的月牙》","prereqs":["新月想出去玩"],"slots":[
+          {"card":"新月","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后成为{装备}"}
+        ]},
+        {"id":"fadeye_falisi_xinyue_4","name":"月牙,我心爱的月牙","trigger":"在《唯一的答案》放入密教思潮，且完成《新月升起》","desc":"仪式，自启动。新月死亡；「复生月牙」入队（追随者/怪物/驯兽/装备，体魄4隐匿3战斗6生存9魔力1，饰品槽2个）","prereqs":["新月升起","唯一的答案"],"terminal":true,"slots":[
+          {"card":"法里斯","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"新月","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"新月死亡"},
+          {"card":"复生月牙","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    }
+  ]
+}

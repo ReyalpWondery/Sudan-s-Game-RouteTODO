@@ -1,0 +1,117 @@
+{
+  "id": "alimu",
+  "title": "阿里木篇",
+  "category": "character",
+  "characters": ["阿里木", "赫米尔", "白肚皮"],
+  "routes": [
+    {
+      "id": "alimu_join",
+      "name": "入队线",
+      "summary": "从抓贼开始，追回赃物、清理腐烂之巢，最终让阿里木入队的主线",
+      "steps": [
+        {"id":"alimu_join_1","name":"抓贼","trigger":"完成《修建舍馆》后折任意苏丹卡（建馆同时折卡也会触发）","desc":"仪式，存续1天、逾期自启动。放赫米尔+最多2金币+非动物角色+情报。检定战斗&体魄成功≥3：拿回金币、触发《如何处置赫米尔》；失败失去金币，下次折卡再次触发（可重复）","prereqs":[],"slots":[
+          {"card":"赫米尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"}
+        ]},
+        {"id":"alimu_join_2","name":"如何处置赫米尔","trigger":"《抓贼》检定成功","desc":"抉择：“放了算了”1天后触发《阿里木到访》（V1.0版该项会导致后续无法触发）；“留着销卡”赫米尔进入手牌、1天后触发《阿里木到访》","prereqs":["抓贼"],"slots":[]},
+        {"id":"alimu_join_3","name":"小贼的命运","trigger":"寻思「赫米尔」（可再次寻思触发）","desc":"仪式，存续1天。放赫米尔+主角；可放岩石「杀戮」：赫米尔死亡（断绝后续）","prereqs":["如何处置赫米尔"],"slots":[
+          {"card":"赫米尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；1号槽"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽"},
+          {"card":"杀戮","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"3号槽，放置则赫米尔死亡（断绝后续）"}
+        ]},
+        {"id":"alimu_join_4","name":"阿里木到访","trigger":"赫米尔存活、完成《如何处置赫米尔》1天后","desc":"抉择：“呵斥他”或“挑衅他”触发《先钱后货》；“赞扬他”通往《一手拿货》","prereqs":["如何处置赫米尔"],"slots":[]},
+        {"id":"alimu_join_5","name":"先钱后货","trigger":"在《阿里木到访》选“呵斥他”或“挑衅他”","desc":"仪式，存续3天（逾期失去被窃金、触发《夜盗》；不派人视同逾期）。派人+赫米尔：随机《赃物商人》物品2件、归还赫米尔、退回被窃金、可能触发《狗崽子丢失》；派人无赫米尔：物品1件、失去被窃金、次日触发《夜盗》","prereqs":["阿里木到访"],"slots":[
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"阿里木的赃物","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽"},
+          {"card":"赫米尔","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"4号槽，放置则结算归还阿里木（失去），退回被窃金并可能触发《狗崽子丢失》"}
+        ]},
+        {"id":"alimu_join_6","name":"一手拿货","trigger":"在《阿里木到访》选“赞扬他”","desc":"仪式，存续3天（逾期触发《夜盗》；不派人视同逾期）。派人+5金币：物品1件、阿里木篇关闭；派人+赫米尔：物品1件、归还赫米尔、可能触发《狗崽子丢失》","prereqs":["阿里木到访"],"slots":[
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"阿里木的赃物","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽"},
+          {"card":"赫米尔","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"4号槽，与5金币二选一；放置则归还（失去），可能触发《狗崽子丢失》"}
+        ]},
+        {"id":"alimu_join_7","name":"夜盗","trigger":"在《先钱后货》或《一手拿货》未将赫米尔归还阿里木（含逾期）","desc":"仪式，存续1天、逾期自启动。检定隐匿&体魄(6)：成功≥8退回被窃金，但阿里木死亡、赫米尔死亡；失败失去被窃金、赫米尔退场、阿里木篇关闭","prereqs":["先钱后货","一手拿货"],"terminal":true,"slots":[
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"1号槽，检定成功≥8则死亡"},
+          {"card":"赫米尔","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"2号槽，成功≥8死亡、失败退场"}
+        ]},
+        {"id":"alimu_join_8","name":"狗崽子丢失","trigger":"在《先钱后货》或《一手拿货》将赫米尔归还阿里木后，折任意苏丹卡立即触发","desc":"抉择：“接受”触发《腐烂之巢》；“拒绝”阿里木篇关闭","prereqs":["先钱后货","一手拿货"],"slots":[]},
+        {"id":"alimu_join_9","name":"腐烂之巢","trigger":"在《狗崽子丢失》选“接受”","desc":"仪式，存续3天（逾期篇关闭）。卡槽：白肚皮+坚固的地窖大门+阿里木。检定1战斗&体魄(8)（侠名或恶名≥10跳过）：失败篇关闭；成功进检定2生存&隐匿：成功≥6获「小贼的哨子」。无论成败均触发《乞儿们》《白肚皮》","prereqs":["狗崽子丢失"],"slots":[
+          {"card":"白肚皮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"坚固的地窖大门","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽"},
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽，参与两项检定"}
+        ]},
+        {"id":"alimu_join_10","name":"白肚皮","trigger":"《腐烂之巢》检定1成功","desc":"仪式，存续3天（逾期篇关闭）。放「小贼的哨子」（失去）1天后触发《拉磨》；或放白银及以下纵欲/征服/杀戮折卡：纵欲或征服→白肚皮死亡、篇关闭（征服另获青铜「空置的宅邸」）；杀戮+主角需检定战斗&体魄，成功≥6白肚皮死亡、1天后触发《拉磨》，失败死亡结局「无名人之死」","prereqs":["腐烂之巢"],"slots":[
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"白肚皮","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"2号槽，纵欲/征服/杀戮折卡分支中死亡（放哨子分支除外）"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽，纵欲/征服/杀戮折卡分支需主角参与"},
+          {"card":"小贼的哨子","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"5号槽（失去），1天后触发《拉磨》；与6号槽苏丹卡单选其一"},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"6号槽单选，纵欲+主角：白肚皮死亡、阿里木篇关闭"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"6号槽单选，杀戮+主角需检定：成功≥6白肚皮死亡并触发《拉磨》，失败死亡结局「无名人之死」"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"6号槽单选，征服+主角：白肚皮死亡、获青铜「空置的宅邸」、阿里木篇关闭"}
+        ]},
+        {"id":"alimu_join_11","name":"拉磨","trigger":"《白肚皮》放置「小贼的哨子」，或“杀戮+主角”检定成功1天后","desc":"仪式，存续7天（逾期篇关闭）。放赫米尔+1金币+任意角色。获「黑街面疙瘩」（体魄1），可能触发《阿里木的大餐》《贼的志愿生》","prereqs":["白肚皮"],"slots":[
+          {"card":"赫米尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"}
+        ]},
+        {"id":"alimu_join_12","name":"贼的志愿生","trigger":"完成《拉磨》后折任意苏丹卡","desc":"仪式，存续5天（逾期篇关闭）。检定1社交+魅力：成功≥8则4号槽智慧+1，失败阿里木生存+1；检定2智慧&隐匿：成功≥6归还所吸入金币。固定结算可能触发《无比自然的老仆人》","prereqs":["拉磨"],"slots":[
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽，参与两项检定"},
+          {"card":"赫米尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽"}
+        ]},
+        {"id":"alimu_join_13","name":"乞儿们","trigger":"《腐烂之巢》检定1成功","desc":"仪式（逾期阿里木无法入队）。放3金币：善名+1、金币+5、获「乞儿们」、触发《饥饿的嘴》；空置：善名-1、阿里木无法入队","prereqs":["腐烂之巢"],"slots":[
+          {"card":"乞儿们","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽（事件卡）"}
+        ]},
+        {"id":"alimu_join_14","name":"无比自然的老仆人","trigger":"完成《贼的志愿生》，且完成《乞儿七事件》（不是《做鸡》或《做羔羊？》），或「乞儿们」进入奈费勒篇《苗圃》","desc":"抉择弹窗。结算：阿里木入队","prereqs":["贼的志愿生","做人"],"terminal":true,"slots":[]}
+      ]
+    },
+    {
+      "id": "alimu_qier",
+      "name": "乞儿七事件线",
+      "summary": "持有「乞儿们」后寻思随机触发的七个小事件，前六个多数有害，攒到《做人》可开启《苗圃》",
+      "steps": [
+        {"id":"alimu_qier_1","name":"饥饿的嘴","trigger":"完成《乞儿们》","desc":"仪式，自启动、耗时1天。放乞儿们+最多3金币（失去）。此后每3天若仍持有「乞儿们」则重置本事件（可重复）","prereqs":["乞儿们"],"slots":[
+          {"card":"乞儿们","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"}
+        ]},
+        {"id":"alimu_qier_2","name":"做鸡","trigger":"寻思「乞儿们」一定概率触发（可重新寻思）","desc":"放乞儿们（失去）：金币+5、恶名+1、阿里木无法入队。提示：《乞儿七事件》前六个都别做，等待《做人》出现","prereqs":["乞儿们"],"terminal":true,"slots":[
+          {"card":"乞儿们","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；1号槽（失去）"}
+        ]},
+        {"id":"alimu_qier_3","name":"做狗","trigger":"寻思「乞儿们」一定概率触发（可重新寻思）","desc":"放乞儿们（失去）+10金币：可能触发《无比自然的老仆人》","prereqs":["乞儿们"],"terminal":true,"slots":[
+          {"card":"乞儿们","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；1号槽（失去）"}
+        ]},
+        {"id":"alimu_qier_4","name":"做牛马","trigger":"寻思「乞儿们」一定概率触发（可重新寻思）","desc":"放乞儿们（失去）+5金币：可能触发《无比自然的老仆人》","prereqs":["乞儿们"],"terminal":true,"slots":[
+          {"card":"乞儿们","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；1号槽（失去）"}
+        ]},
+        {"id":"alimu_qier_5","name":"做老","trigger":"寻思「乞儿们」一定概率触发（可重新寻思）","desc":"放乞儿们（失去）+8金币：可能触发《无比自然的老仆人》","prereqs":["乞儿们"],"terminal":true,"slots":[
+          {"card":"乞儿们","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；1号槽（失去）"}
+        ]},
+        {"id":"alimu_qier_6","name":"做羔羊","trigger":"寻思「乞儿们」一定概率触发（可重新寻思）","desc":"放乞儿们（失去）+10金币+岩石「奢靡」（必须20金币）；可放任意正教思潮：虔信+1。可能触发《无比自然的老仆人》","prereqs":["乞儿们"],"terminal":true,"slots":[
+          {"card":"乞儿们","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；1号槽（失去）"},
+          {"card":"奢靡","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"3号槽，必须同时放20金币"}
+        ]},
+        {"id":"alimu_qier_7","name":"做羔羊？","trigger":"寻思「乞儿们」一定概率触发（可能要拜玲耶入队后才会出现）","desc":"放乞儿们（失去）+任意密教思潮：金骰子+3、灵视+1、恶名+1、阿里木无法入队","prereqs":["乞儿们"],"terminal":true,"slots":[
+          {"card":"乞儿们","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；1号槽（失去）"}
+        ]},
+        {"id":"alimu_qier_8","name":"做人","trigger":"寻思「乞儿们」一定概率触发（其他几个触发完后出现概率提升）","desc":"放阿里木+10金币+青铜及以下「奢靡」（须20金币）+乞儿们：触发《苗圃》、可能触发《无比自然的老仆人》、达成一千零一夜「希望的苗圃」","prereqs":["乞儿们"],"slots":[
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽"},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"3号槽，须20金币"},
+          {"card":"乞儿们","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；4号槽，放置触发《苗圃》"}
+        ]},
+        {"id":"alimu_qier_9","name":"苗圃","trigger":"完成《做人》，或完成奈费勒篇《苗圃·第一堂课》","desc":"仪式，与奈费勒篇的苗圃完全一样，详见奈费勒篇","prereqs":["做人"],"slots":[]},
+        {"id":"alimu_qier_10","name":"奈费勒送孤儿","trigger":"桌面存在《苗圃》，且奈费勒有{秘誓}或在奈费勒篇《干净的队伍》指认告密者成功；另需善名≥21、权势≥21、侠名≥12","desc":"仪式。结算：获「贫民区的孤儿」，可置入《苗圃》","prereqs":["苗圃"],"terminal":true,"slots":[]}
+      ]
+    },
+    {
+      "id": "alimu_extra",
+      "name": "后续事件（大餐/狗富）",
+      "summary": "入队线之后的散件收益：全员体魄大餐与部队「阿里木的手下」",
+      "steps": [
+        {"id":"alimu_extra_1","name":"阿里木的大餐","trigger":"寻思「黑街面疙瘩」（阿里木未入队时可触发但启动不了；可再次寻思）","desc":"仪式，存续3天。放黑街面疙瘩（失去）+阿里木+主角+任意追随者：全体参与者体魄+1；若梅姬参与，「幸福感」+1","prereqs":["拉磨"],"slots":[
+          {"card":"黑街面疙瘩","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；1号槽（失去）"},
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3号槽"}
+        ]},
+        {"id":"alimu_extra_2","name":"狗富","trigger":"在《赃物商人》购买20次后，寻思头顶惊叹号的「阿里木」","desc":"仪式，存续7天（逾期无奖惩）。放阿里木的手下+阿里木+任意大餐或10金币（仅文本差分）+任意角色。获部队「阿里木的手下」（隐匿10战斗10）","prereqs":[],"terminal":true,"slots":[
+          {"card":"阿里木的手下","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1号槽（原文如此；结算另获同名部队卡，疑OCR混淆）"},
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；2号槽"}
+        ]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "id": "eming_quanshi",
+  "title": "恶名篇/权势篇",
+  "category": "base",
+  "characters": ["主角", "阿卜德", "穆尔台兹", "盖斯", "哲瓦德", "奈费勒"],
+  "routes": [
+    {
+      "id": "eming_quanshi_tiaozhan",
+      "name": "恶名·挑战与刺杀线",
+      "summary": "恶名≥3起不断有挑战者上门，恶名≥5解锁7个杀戮小事件，恶名≥10后进入大敌暗杀的刺杀的阴影循环",
+      "steps": [
+        {"id":"eming_quanshi_tiaozhan_1","name":"挑战","trigger":"恶名≥3后每4-10天触发一次","desc":"随机品级挑战者上门（岩石到黄金）。可放情报、千夫所指/毒蛇毒液（关闭检定直接杀挑战者）或不高于挑战者品级的「杀戮」。检定骰=我方战斗&体魄-挑战者：成功≥1权势+1，成功=0我方角色死亡；逾期恶名+1、「谗言」+1、「暗中蓄谋」+1（可重复）","prereqs":[],"slots":[
+          {"card":"挑战者","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"品级随机：岩石40%/青铜40%/白银19%/黄金1%"},
+          {"card":"千夫所指","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"与毒蛇毒液二选一：关闭检定，挑战者死亡、恶名+1"},
+          {"card":"毒蛇毒液","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"与千夫所指二选一：关闭检定，挑战者死亡、恶名+1"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于挑战者品级；检定成功时挑战者死亡、恶名+1"}
+        ]},
+        {"id":"eming_quanshi_tiaozhan_2","name":"弑父","trigger":"恶名≥5后每7-10天从7个恶名5系列事件中随机触发（不重复）","desc":"儿子/父亲二选一杀戮：青铜及以下杀儿子，父亲成为{大敌}（在《刺杀的阴影》出场）；白银及以下杀父亲：恶名+3、金币+5","prereqs":[],"slots":[
+          {"card":"儿子","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"父亲","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡；儿子被杀时成为{大敌}"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"单选：青铜及以下杀儿子（父亲成为{大敌}）；白银及以下杀父亲（恶名+3、金币+5）"}
+        ]},
+        {"id":"eming_quanshi_tiaozhan_3","name":"弑君者","trigger":"恶名≥5后恶名5系列事件随机触发","desc":"卡槽乞丐。岩石「杀戮」：乞丐死亡、灵视+1、侠名-1；黄金「杀戮」：乞丐死亡、折卡失败、「谋反的意图」+1、「谗言」+2、灵视+1、侠名+1","prereqs":[],"slots":[
+          {"card":"乞丐","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"岩石：灵视+1、侠名-1；黄金：折卡失败、「谋反的意图」+1、「谗言」+2、灵视+1、侠名+1"}
+        ]},
+        {"id":"eming_quanshi_tiaozhan_4","name":"杀妻求荣","trigger":"恶名≥5后恶名5系列事件随机触发","desc":"妻子/商人二选一：白银及以下杀戮杀妻子，金币+5、恶名+3；青铜及以下杀商人，金币+10、侠名+1、恶名+1","prereqs":[],"slots":[
+          {"card":"妻子","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"商人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"单选：白银及以下杀妻子（金币+5、恶名+3）；青铜及以下杀商人（金币+10、侠名+1、恶名+1）"}
+        ]},
+        {"id":"eming_quanshi_tiaozhan_5","name":"致命主妇","trigger":"恶名≥5后恶名5系列事件随机触发","desc":"丈夫/妻子，岩石「杀戮」二选一：杀丈夫获饰品「绿宝石项链」（魔力1）、恶名+3；杀妻子恶名+3","prereqs":[],"slots":[
+          {"card":"丈夫","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"妻子","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":"岩石","required":true,"consumed":true,"note":"单选：杀丈夫获「绿宝石项链」（魔力1）、恶名+3；杀妻子恶名+3"}
+        ]},
+        {"id":"eming_quanshi_tiaozhan_6","name":"三角旋涡","trigger":"恶名≥5后恶名5系列事件随机触发","desc":"男人/女人/情敌三选一：青铜杀戮杀男人恶名+3；青铜杀戮/纵欲杀女人恶名+5并生成大敌「憎恨你的人」（在《刺杀的阴影》出场）；岩石杀戮杀情敌金币+4、恶名+3","prereqs":[],"slots":[
+          {"card":"男人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"女人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"情敌","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"单选：青铜及以下杀男人（恶名+3）；岩石杀情敌（金币+4、恶名+3）；青铜及以下杀女人（恶名+5、生成大敌）"},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":"与杀戮单选：青铜及以下杀女人，恶名+5、幕后生成大敌「憎恨你的人」"}
+        ]},
+        {"id":"eming_quanshi_tiaozhan_7","name":"清流与浊流","trigger":"恶名≥5后恶名5系列事件随机触发","desc":"清官/贪官，青铜及以下「杀戮」二选一：杀清官侠名-1、恶名+2、金币+10；杀贪官侠名+1、恶名+2","prereqs":[],"slots":[
+          {"card":"清官","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"贪官","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":"单选：杀清官侠名-1、恶名+2、金币+10；杀贪官侠名+1、恶名+2"}
+        ]},
+        {"id":"eming_quanshi_tiaozhan_8","name":"殉情的请求","trigger":"恶名≥5后恶名5系列事件随机触发","desc":"相爱的两人，岩石杀戮杀女人（男人退场、恶名+1），白银及以下杀戮两人俱死（恶名+1），两个槽都放杀戮则灵视+1、恶名+1","prereqs":[],"slots":[
+          {"card":"相爱的人·女","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被杀则死亡"},
+          {"card":"相爱的人·男","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"女人单独被杀时退场"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"多选：岩石杀女人（男人退场、恶名+1）；白银及以下两人俱死（恶名+1）；两槽都放灵视+1、恶名+1"}
+        ]},
+        {"id":"eming_quanshi_tiaozhan_9","name":"刺杀的阴影","trigger":"恶名≥10后每2-3天触发一次","desc":"大敌暗杀循环。派角色调查（智慧&隐匿对抗所有大敌）：成功≥5随机1个大敌死亡，≥3「暗中蓄谋」-1；不调查则「暗中蓄谋」+1；成功=0时67%「暗中蓄谋」+1、25%触发《暗巷袭击》、8%触发《他们的复仇》（可重复）","prereqs":[],"slots":[
+          {"card":"暗中蓄谋","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"幕后牌"},
+          {"card":"大敌","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4个槽位；检定成功≥5时随机1个大敌死亡"}
+        ]},
+        {"id":"eming_quanshi_tiaozhan_10","name":"暗巷袭击","trigger":"《刺杀的阴影》检定成功=0时25%概率触发","desc":"自启动。派去调查的追随者全员战斗检定：成功≥3{受伤}、侠名+1；<3全员死亡、权势-1","prereqs":["刺杀的阴影"],"slots":[]},
+        {"id":"eming_quanshi_tiaozhan_11","name":"他们的复仇","trigger":"《刺杀的阴影》检定成功=0时8%概率触发","desc":"主角+派去调查的追随者参战，战斗&隐匿-大敌-「暗中蓄谋」检定：成功≥2「暗中蓄谋」清零、刺客与大敌死亡、权势+3；≥1清零但全员{受伤}、权势+1；<1死亡结局「无名人之死」","prereqs":["刺杀的阴影"],"slots":[
+          {"card":"暗中蓄谋","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"成功≥1时清零"},
+          {"card":"刺客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"成功≥1时死亡"},
+          {"card":"大敌","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"4个槽位；成功≥2时死亡"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"参战"}
+        ]}
+      ]
+    },
+    {
+      "id": "eming_quanshi_zhengfu",
+      "name": "恶名·征服系列线",
+      "summary": "恶名≥10解锁5个征服小事件，其中《傲慢之罪》的战利品「部落的奇珍」可扩建为持续产金的供奉木雕",
+      "steps": [
+        {"id":"eming_quanshi_zhengfu_1","name":"血色绿洲","trigger":"恶名≥10后每7-10天从5个恶名10系列事件中随机触发（不重复）","desc":"青铜及以下「征服」+角色+部队，战斗检定对游牧民绿洲（7）：成功灭亡绿洲，获驯兽「草原马」（体魄2生存2）、金币+10、青铜「战术」+1、恶名+3；失败参战角色{受伤}、权势-1","prereqs":[],"slots":[
+          {"card":"游牧民绿洲","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"战斗7；成功则灭亡"},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":""}
+        ]},
+        {"id":"eming_quanshi_zhengfu_2","name":"劫掠商队","trigger":"恶名≥10后恶名10系列事件随机触发","desc":"青铜及以下「征服」+角色+部队，战斗检定对商队（7）：成功获饰品「商队的饰品」（体魄1魅力2）、金币+10、青铜「秘密」+1、恶名+3；失败{受伤}、权势-1","prereqs":[],"slots":[
+          {"card":"商队","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"战斗7；成功则灭亡"},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":true,"consumed":true,"note":""}
+        ]},
+        {"id":"eming_quanshi_zhengfu_3","name":"傲慢之罪","trigger":"恶名≥10后恶名10系列事件随机触发","desc":"白银及以下「征服」，战斗检定对桀骜不驯的部落（15）：成功获「部落的奇珍」、金币+3、白银「洞察」+1、恶名+1；失败{受伤}、权势-1。「部落的奇珍」可寻思开启木雕支线","prereqs":[],"slots":[
+          {"card":"桀骜不驯的部落","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"战斗15；成功则灭亡"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":""}
+        ]},
+        {"id":"eming_quanshi_zhengfu_4","name":"富有的巨魔","trigger":"恶名≥10后恶名10系列事件随机触发","desc":"白银及以下「征服」，战斗检定对神秘的怪物（15）：成功获服装「怪物的铠甲」（体魄3魔力1）、金币+3、白银「预兆」+1、侠名+3；失败{受伤}、权势-1","prereqs":[],"slots":[
+          {"card":"神秘的怪物","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"战斗15；成功则死亡"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":""}
+        ]},
+        {"id":"eming_quanshi_zhengfu_5","name":"玩泥巴的异族","trigger":"恶名≥10后恶名10系列事件随机触发","desc":"岩石「征服」，战斗检定对穴居土著村落（3）：成功岩石「预兆」+1、金币+3、灵视+1、恶名+1、参战角色被{诅咒}；失败{受伤}、权势-1","prereqs":[],"slots":[
+          {"card":"穴居土著村落","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"战斗3；成功则灭亡"},
+          {"card":"征服","sultan":true,"maxGrade":"岩石","required":true,"consumed":true,"note":""}
+        ]},
+        {"id":"eming_quanshi_zhengfu_6","name":"被供奉的木雕·扩建","trigger":"寻思「部落的奇珍」（《傲慢之罪》战利品）","desc":"放部落的奇珍+7金币，可用白银及以下「奢靡」折卡。触发《被供奉的木雕》、计入一千零一夜「奇珍之家」；可再次寻思触发（可重复）","prereqs":["傲慢之罪"],"slots":[
+          {"card":"部落的奇珍","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；建成后持续供奉"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"7金币"},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"折卡"}
+        ]},
+        {"id":"eming_quanshi_zhengfu_7","name":"被供奉的木雕","trigger":"完成《被供奉的木雕·扩建》后自启动，耗时7天、完成后立即重置","desc":"放部落的奇珍按灵视结算金币：灵视≥10金币+4、≥5金币+3、≥3金币+2、≥1金币+1、=0无奖惩（可重复）","prereqs":["被供奉的木雕·扩建"],"slots":[
+          {"card":"部落的奇珍","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    },
+    {
+      "id": "eming_quanshi_xiee",
+      "name": "恶名·二十线（叛乱与邪恶化身）",
+      "summary": "恶名≥20后开启的高危事件：追随者叛乱和主角化身邪恶化身",
+      "steps": [
+        {"id":"eming_quanshi_xiee_1","name":"连你也","trigger":"恶名≥20、追随者≥3，满足条件1-7天后触发","desc":"存续7天，逾期死亡结局「反戈一击」。手牌随机3名追随者+大敌+受雇的冒险者部队叛乱：体魄&战斗检定，成功≥1镇压（1至7号槽死亡、权势+10，成功度越低己方9-12号槽伤亡越多），<1死亡结局「无名人之死」","prereqs":[],"terminal":true,"slots":[
+          {"card":"大敌","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3个槽位；叛乱方，镇压成功时死亡"},
+          {"card":"受雇的冒险者部队","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"叛乱方，镇压成功时死亡"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"镇压方"},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":""}
+        ]},
+        {"id":"eming_quanshi_xiee_2","name":"邪恶化身","trigger":"恶名≥20、灵视≥3、寻思头顶惊叹号的「主角」","desc":"主角成为{邪恶化身}，体魄/战斗/魅力/魔力/智慧/生存/社交/隐匿+3；影响大结局全折卡、革命篇、降神篇·邪神降临线，可在灵视篇《心灵之战-16》去除","prereqs":[],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]}
+      ]
+    },
+    {
+      "id": "eming_quanshi_jianyu",
+      "name": "权势·监狱线",
+      "summary": "第9天开启探访监狱，经营囚牢处置盖斯、哲瓦德等囚犯，并可从哲学的男人处获得「黑暗幻想」刷属性",
+      "steps": [
+        {"id":"eming_quanshi_jianyu_1","name":"探访监狱","trigger":"第9天被动触发","desc":"长期存续。权势≥3方可启动：放2金币立即触发《囚牢》，达成一千零一夜「罪恶归所」。若在《囚牢》使用「杀戮」，本事件将被重置（可重复）","prereqs":[],"slots":[
+          {"card":"贵族囚牢","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"2金币"}
+        ]},
+        {"id":"eming_quanshi_jianyu_2","name":"囚牢","trigger":"完成《探访监狱》立即触发","desc":"长期存续。盖斯牢房：放角色交互触发盖斯篇《脱罪的希望》，放「苏丹的宽恕」释放盖斯；哲瓦德牢房：交互触发哲瓦德篇《黑街线人》，放「廉洁的伪证」释放并触发《无罪释放》；老赌鬼牢房联动鲁梅拉篇；通用牢房可花10金币招囚犯入队（支持+1）；灵视≥10可与哲学的男人检定（体魄对10），成功主角被动穿戴「黑暗幻想」；放「杀戮」则囚犯死亡、囚牢暂时关闭并重启《探访监狱》","prereqs":["探访监狱"],"slots":[
+          {"card":"盖斯专属牢房","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放角色交互触发盖斯篇《脱罪的希望》"},
+          {"card":"哲瓦德专属牢房","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放角色交互触发哲瓦德篇《黑街线人》"},
+          {"card":"老赌鬼专属牢房","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"鲁梅拉篇《我是来复仇的》选“该死的不止是他”后出现"},
+          {"card":"通用牢房","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2个槽位；灵视≥10时哲学的男人出现"},
+          {"card":"苏丹的宽恕","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"盖斯出狱、善名+1，触发盖斯篇《盖斯异常失望》"},
+          {"card":"廉洁的伪证","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"哲瓦德出狱，触发《无罪释放》"},
+          {"card":"鲁梅拉","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"完成鲁梅拉篇《哪种痛苦令人印象深刻》后放置：老赌鬼死亡"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"通用牢房10金币：囚犯入队、支持+1、反对清零"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"囚犯死亡、囚牢暂时关闭、重启《探访监狱》；对哲瓦德恶名+1"}
+        ]},
+        {"id":"eming_quanshi_jianyu_3","name":"哲学的力量","trigger":"主角穿戴「黑暗幻想」每次参与征服/纵欲累积{黑暗幻想}，≥3时触发一次","desc":"自启动。体魄+2、魅力+2、魔力+2，{黑暗幻想}清零，可再次累积（可重复）","prereqs":["囚牢"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"需穿戴「黑暗幻想」"}
+        ]}
+      ]
+    },
+    {
+      "id": "eming_quanshi_zaixiang",
+      "name": "权势·宰相之路线",
+      "summary": "权势≥4起阿卜德与穆尔台兹的召见链，处置穆尔台兹后解锁处理政务系列事件",
+      "steps": [
+        {"id":"eming_quanshi_zaixiang_1","name":"宰相的召见","trigger":"权势≥4触发","desc":"存续5天，逾期阿卜德支持清零、反对+1、权势-1且主角无法成为宰相。放阿卜德+主角：岩石「内幕」+1，触发《无故缺勤的臣子》","prereqs":[],"slots":[
+          {"card":"阿卜德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"eming_quanshi_zaixiang_2","name":"无故缺勤的臣子","trigger":"完成《宰相的召见》","desc":"存续5天，逾期「谗言」+1、权势-1。放穆尔台兹+3金币+任意角色：若没放金币且权势与恶名均<5则重置本事件；否则穆尔台兹支持清零、反对+1、权势+1，1天后触发《宰相的召见·2》","prereqs":["宰相的召见"],"slots":[
+          {"card":"穆尔台兹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"3金币"}
+        ]},
+        {"id":"eming_quanshi_zaixiang_3","name":"宰相的召见·2","trigger":"完成《无故缺勤的臣子》1天后","desc":"存续5天，逾期阿卜德支持清零、反对+1、权势-1。放阿卜德+主角：青铜「机遇」+1，触发《虫豸怎敢》","prereqs":["无故缺勤的臣子"],"slots":[
+          {"card":"阿卜德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"eming_quanshi_zaixiang_4","name":"虫豸怎敢","trigger":"完成《宰相的召见·2》","desc":"存续3天，逾期「谗言」+1、权势-1。放穆尔台兹+任意角色：岩石「预兆」+1，触发抉择弹窗《如何处置穆尔台兹》","prereqs":["宰相的召见·2"],"slots":[
+          {"card":"穆尔台兹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"eming_quanshi_zaixiang_5","name":"如何处置穆尔台兹","trigger":"完成《虫豸怎敢》","desc":"抉择弹窗：选“杀了他”触发《终结苦痛》；选“放过他”触发《放过他》","prereqs":["虫豸怎敢"],"slots":[]},
+        {"id":"eming_quanshi_zaixiang_6","name":"终结苦痛","trigger":"在《如何处置穆尔台兹》选“杀了他”","desc":"存续3天，逾期「谗言」+1、权势-1。放穆尔台兹+任意角色，可放青铜及以下「杀戮」（恶名+1）；固定结算权势+1、金币+4","prereqs":["如何处置穆尔台兹"],"slots":[
+          {"card":"穆尔台兹","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"“杀了他”分支，穆尔台兹死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"恶名+1"}
+        ]},
+        {"id":"eming_quanshi_zaixiang_7","name":"放过他","trigger":"在《如何处置穆尔台兹》选“放过他”","desc":"存续3天，逾期「谗言」+1、权势-1。放穆尔台兹+任意情报+任意角色，社交+魅力检定：成功≥3权势+1、「对苏丹的恐惧」+1；<3权势+1","prereqs":["如何处置穆尔台兹"],"slots":[
+          {"card":"穆尔台兹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"eming_quanshi_zaixiang_8","name":"处理政务系列事件","trigger":"权势≥5、奈费勒不是{宰相}、完成《终结苦痛》或《放过他》其一、奈费勒篇《冗长的问询》完成或逾期3-5天后（首折卡须为杀戮），每3-5天随机触发13个政务事件之一","desc":"选择赞同/反对阿卜德（多数反对需社交+魅力检定成功≥3），影响「财政赤字」、军队/官吏/国民的好感与猜忌计数。黄金「杀戮」可杀阿卜德（权势+3、恶名+2，但主角/奈费勒永久失去宰相资格）。阿卜德死后本系列照常触发，但逾期变为死亡结局「无名人之死」（可重复）","prereqs":["终结苦痛","放过他"],"slots":[
+          {"card":"阿卜德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"被吸入《权力的游戏》时仍可照常触发"},
+          {"card":"杀戮","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"阿卜德死亡、权势+3、恶名+2，但主角/奈费勒永久失去宰相资格"}
+        ]}
+      ]
+    },
+    {
+      "id": "eming_quanshi_richang",
+      "name": "权势·宰相日常线",
+      "summary": "主角成为宰相后开启：赤字滔天的财政考验、三方好感轮换事件与苏丹的猜忌清算",
+      "steps": [
+        {"id":"eming_quanshi_richang_1","name":"赤字滔天","trigger":"主角成为{宰相}次日（通过芮尔篇《平息叛乱》、奈费勒篇《宰相之位》《脏兮兮的椅子》可达成）","desc":"存续3天，逾期死亡结局「伴君如伴虎」。智慧+社交检定：成功≥5「财政赤字」-3；放15金币跳过检定-10；失败且赤字≥10死亡结局「伴君如伴虎」。5天后重置（可重复）","prereqs":[],"slots":[
+          {"card":"财政赤字","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"初始20张，受《处理政务系列事件》结算影响"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"15金币：跳过检定、「财政赤字」-10"}
+        ]},
+        {"id":"eming_quanshi_richang_2","name":"民众的代表","trigger":"成为{宰相}3-5天后与《休沐日》《战争的迷雾》每3-5天轮换随机触发","desc":"按「国民的好感」结算：=0读物「谐音谩骂」，=1岩石「预兆」+1，=2青铜「预兆」+1，=3白银「预兆」+1并首次获「国民的支持」（可重复）","prereqs":[],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"国民的好感","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"eming_quanshi_richang_3","name":"民意之剑","trigger":"寻思「国民的支持」","desc":"结算后所有因{大敌}触发的事件将不再触发（已触发的不会消除）；可再次寻思触发（可重复）","prereqs":["民众的代表"],"slots":[
+          {"card":"国民的支持","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"eming_quanshi_richang_4","name":"休沐日","trigger":"成为{宰相}后与《民众的代表》《战争的迷雾》轮换随机触发","desc":"按「官吏的好感」结算：=0读物「谐音谩骂」，=1岩石「内幕」+1，=2青铜「内幕」+1，=3白银「内幕」+1并首次获「官吏的支持」（可重复）","prereqs":[],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"官吏的好感","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"eming_quanshi_richang_5","name":"权势之盾","trigger":"寻思「官吏的支持」","desc":"结算后所有因「罪证」触发的事件将不再触发（已触发的不会消除）；可再次寻思触发（可重复）","prereqs":["休沐日"],"slots":[
+          {"card":"官吏的支持","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"eming_quanshi_richang_6","name":"战争的迷雾","trigger":"成为{宰相}后与《民众的代表》《休沐日》轮换随机触发","desc":"按「军队的好感」结算：=0读物「谐音谩骂」，=1岩石「战术or内幕」+1，=2青铜「战术or内幕」+1，=3白银「战术or内幕」+1并首次获「军队的支持」（可重复）","prereqs":[],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"军队的好感","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"eming_quanshi_richang_7","name":"苏丹的猜忌","trigger":"主角成为{宰相}7天后自启动","desc":"把《处理政务系列事件》产生的猜忌计数等量转为「苏丹的猜忌」塞给主角，计数归零，7天后重置；第一次结算似乎至少发1张（可重复）","prereqs":[],"slots":[
+          {"card":"苏丹的猜疑","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"数量=猜忌计数"}
+        ]}
+      ]
+    }
+  ]
+}

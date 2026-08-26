@@ -1,0 +1,1539 @@
+{
+  "id": "naifeile",
+  "title": "奈费勒篇",
+  "category": "character",
+  "characters": [
+    "奈费勒",
+    "阿卜德",
+    "艾迪勒",
+    "小萨法"
+  ],
+  "routes": [
+    {
+      "id": "naifeile_start",
+      "name": "开篇线",
+      "summary": "首次折断苏丹卡开启奈费勒篇，经抉择弹窗进入密会，决定全篇走向",
+      "steps": [
+        {
+          "id": "naifeile_start_1",
+          "name": "奈费勒的呼吁",
+          "trigger": "奈费勒存活、首次折断苏丹卡后立即触发",
+          "desc": "抉择弹窗，两选项仅文本差分；固定3-5天后触发《虚伪的自由》。按所折卡类型另有分支：杀戮→1天后触发《冗长的问询》（须艾迪勒存活）；奢靡→1天后触发《宫门募捐》；征服/纵欲另有弹窗小收益",
+          "prereqs": [],
+          "slots": []
+        },
+        {
+          "id": "naifeile_start_2",
+          "name": "冗长的问询",
+          "trigger": "折断的首张苏丹卡为杀戮、完成《奈费勒的呼吁》1天后且艾迪勒存活",
+          "desc": "仪式，存续2天。放任意角色+任意情报，检定智慧+社交≥3获金币+2、权势+1；可能触发权势篇《处理政务》系列事件",
+          "prereqs": [
+            "奈费勒的呼吁"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_start_3",
+          "name": "宫门募捐",
+          "trigger": "折断的首张苏丹卡为奢靡、完成《奈费勒的呼吁》1天后（须奈费勒存活）",
+          "desc": "仪式，存续2天（逾期善名-1）。放3金币：善名+1",
+          "prereqs": [
+            "奈费勒的呼吁"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_start_4",
+          "name": "虚伪的自由",
+          "trigger": "完成《奈费勒的呼吁》3-5天后",
+          "desc": "抉择弹窗：选“这是什么”获「夹在书中的字条」；选“狗都不看”奈费勒篇关闭、可能触发芮尔篇《乱军》",
+          "prereqs": [
+            "奈费勒的呼吁"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_start_5",
+          "name": "密会",
+          "trigger": "寻思「夹在书中的字条」1天后",
+          "desc": "仪式，存续14天（逾期本篇关闭）。放奈费勒+主角+字条+白银及以下杀戮/纵欲：杀戮→奈费勒死亡；纵欲→奈费勒成为{大敌}开启大敌线、本篇其他线全部关闭；空置→「谋反的意图」+1、可能开启秘誓线与清流线、达成一千零一夜「亦敌亦友」",
+          "prereqs": [
+            "虚伪的自由"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "夹在书中的字条",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "寻思触发，仪式中失去"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "与纵欲二选一；放置则奈费勒死亡"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "与杀戮二选一；放置则奈费勒成为{大敌}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "naifeile_enemy",
+      "name": "大敌线",
+      "summary": "在《密会》对奈费勒使用纵欲使其成为大敌，进入大敌战系列，最终决战",
+      "steps": [
+        {
+          "id": "naifeile_enemy_1",
+          "name": "奈费勒大敌战-积累优势",
+          "trigger": "奈费勒成为大敌时首次触发，此后每3天40%概率",
+          "desc": "逾期按检定0自启动。检定≥5触发《决战奈费勒》；≥3则「奈费勒的优势」-1、权势+1；=0则优势+1，之后3天再触发本系列随机事件（可重复）",
+          "prereqs": [
+            "密会"
+          ],
+          "slots": [
+            {
+              "card": "激进教团",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "青年官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "女护卫",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_enemy_2",
+          "name": "奈费勒大敌战-破坏名声",
+          "trigger": "大敌战系列启动后每3天20%概率",
+          "desc": "逾期按检定0自启动。检定≥5触发《决战奈费勒》；=0触发《宫廷暗流》（可重复）",
+          "prereqs": [
+            "密会"
+          ],
+          "slots": [
+            {
+              "card": "激进教团",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "青年官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "女护卫",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_enemy_3",
+          "name": "宫廷暗流",
+          "trigger": "《奈费勒大敌战-破坏名声》逾期或检定为0",
+          "desc": "仪式，自启动。放支持≥1的非追随者角色：其支持清零、反对+1；无符合人选则权势-1",
+          "prereqs": [
+            "奈费勒大敌战-破坏名声"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_enemy_4",
+          "name": "奈费勒大敌战-散布谣言",
+          "trigger": "大敌战系列启动后每3天20%概率",
+          "desc": "逾期按检定0自启动。检定≥5触发《决战奈费勒》；=0则《治理家业》暂停3天（可重复）",
+          "prereqs": [
+            "密会"
+          ],
+          "slots": [
+            {
+              "card": "激进教团",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "青年官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "女护卫",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_enemy_5",
+          "name": "奈费勒大敌战-离间计划",
+          "trigger": "大敌战系列启动后每3天20%概率",
+          "desc": "检定隐匿+魅力。≥5触发《决战奈费勒》；=0触发《离间计》（可重复）",
+          "prereqs": [
+            "密会"
+          ],
+          "slots": [
+            {
+              "card": "激进教团",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "青年官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "女护卫",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_enemy_6",
+          "name": "离间计",
+          "trigger": "《奈费勒大敌战-离间计划》逾期或检定为0",
+          "desc": "仪式，自启动。放支持≥1的贵族追随者：其{离间}+1，累计到3则该追随者离队、支持清零、反对+1",
+          "prereqs": [
+            "奈费勒大敌战-离间计划"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_enemy_7",
+          "name": "决战奈费勒",
+          "trigger": "在任一《奈费勒大敌战》事件检定≥5",
+          "desc": "仪式，存续3天（逾期3天后再触发本系列）。可放白银及以下征服/杀戮（不放则「罪证」+2）。成功≥3：奈费勒与所有对手死亡，获「战士的护巾」「奈费勒的项链」、权势+3、恶名+3；成功≥1：女护卫死亡、优势清零，大敌战继续；=0：死亡结局「无名人之死」",
+          "prereqs": [
+            "奈费勒大敌战-积累优势",
+            "奈费勒大敌战-破坏名声",
+            "奈费勒大敌战-散布谣言",
+            "奈费勒大敌战-离间计划"
+          ],
+          "slots": [
+            {
+              "card": "激进教团",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "青年官吏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "女护卫",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒的优势",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "与杀戮二选一；不放苏丹卡则「罪证」+2"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "与征服二选一；不放苏丹卡则「罪证」+2"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "naifeile_mishi",
+      "name": "秘誓线",
+      "summary": "密会空置后接济穷人，通过三条分线让奈费勒获得{秘誓}（影响大结局）",
+      "steps": [
+        {
+          "id": "naifeile_mishi_1",
+          "name": "无用的施舍",
+          "trigger": "完成《密会》时未放苏丹卡3-5天后，需善名≥6、侠名≥3",
+          "desc": "仪式，存续3天（逾期秘誓线关闭）。放3金币+岩石奢靡：善名+1、1天后触发《穷人到底需要什么？》",
+          "prereqs": [
+            "密会"
+          ],
+          "slots": [
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "岩石",
+              "required": false,
+              "consumed": true,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_mishi_2",
+          "name": "穷人到底需要什么？",
+          "trigger": "完成《无用的施舍》1天后",
+          "desc": "每天结算1次、最多存续11天（逾期或思绪=0秘誓线关闭）。向贵族/祭司/平民/同伴收集{模糊的思绪}：≥1/≥4/≥7分别获岩石/青铜/白银「洞察」，并解锁《真正帮助穷人》更多选项；期间奈费勒死亡则本事件关闭",
+          "prereqs": [
+            "无用的施舍"
+          ],
+          "slots": [
+            {
+              "card": "解答时限",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "初始10张、每天-1张，归零当天思索无效"
+            },
+            {
+              "card": "无用的施舍",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3/4/5/6号槽单选：问贵族或问同伴（检定）时放入"
+            },
+            {
+              "card": "纯净的思想",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问祭司可放的正教思潮之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "触碰洁净",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问祭司可放的正教思潮之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "赎罪祈愿",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问祭司可放的正教思潮之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "完美世界",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问祭司可放的正教思潮之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "铁头",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "快脚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "阿穆尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            },
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "问同伴可放的同伴之一（3/4/5/6号槽单选）"
+            }
+          ]
+        },
+        {
+          "id": "naifeile_mishi_3",
+          "name": "真正帮助穷人",
+          "trigger": "在《穷人到底需要什么？》获得至少1个{模糊的思绪}",
+          "desc": "抉择四分线：帮助贫穷的母亲们→《母亲的水滴》；让这些人接受命运→《神之恩》（唯此项无法达成{秘誓}）；帮他们变得更有用→《黄金的工具》（需4思绪）；帮他们铲除真正的敌人→《惩罚之火》（需7思绪，火焰大王线）",
+          "prereqs": [
+            "穷人到底需要什么？"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_mishi_4",
+          "name": "母亲的水滴",
+          "trigger": "在《真正帮助穷人》选“帮助贫穷的母亲们”",
+          "desc": "仪式，存续5天（逾期重置，最多3次）。放6金币：善名+1；3天后善名+3、金币+3并触发《奈费勒的行动·1》",
+          "prereqs": [
+            "真正帮助穷人"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_mishi_5",
+          "name": "奈费勒的行动·1",
+          "trigger": "完成《母亲的水滴》3天后",
+          "desc": "仪式，存续5天（逾期重置，最多3次）。放6金币：侠名+1、3天后触发《带来的改变》",
+          "prereqs": [
+            "母亲的水滴"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_mishi_6",
+          "name": "带来的改变",
+          "trigger": "完成《奈费勒的行动·1》3天后",
+          "desc": "仪式，存续14天（逾期秘誓线关闭）。放奈费勒+主角：金骰子+1、奈费勒获{秘誓}（相当于奈费勒版命运的羁绊，影响大结局）",
+          "prereqs": [
+            "奈费勒的行动·1"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "naifeile_mishi_7",
+          "name": "神之恩",
+          "trigger": "在《真正帮助穷人》选“让这些人接受命运”",
+          "desc": "仪式，存续5天（逾期重置，最多3次）。放6金币+思潮：正教思潮→善名+1、该思潮虔信+1、3天后《正教传教之后》；密教思潮→恶名+1、3天后《密教传教之后》",
+          "prereqs": [
+            "真正帮助穷人"
+          ],
+          "slots": [
+            {
+              "card": "正教思潮",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：正教/密教思潮二选一；放正教触发《正教传教之后》"
+            },
+            {
+              "card": "密教思潮",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：正教/密教思潮二选一；放密教触发《密教传教之后》"
+            }
+          ]
+        },
+        {
+          "id": "naifeile_mishi_8",
+          "name": "正教传教之后",
+          "trigger": "在《神之恩》放正教思潮3天后",
+          "desc": "抉择弹窗：惩罚→善名-1侠名+1；安慰→灵视+1；帮助→善名+1侠名-1；奖励→善名-1恶名+1。固定触发《奈费勒的行动·2》",
+          "prereqs": [
+            "神之恩"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_mishi_9",
+          "name": "密教传教之后",
+          "trigger": "在《神之恩》放密教思潮3天后",
+          "desc": "剧情弹窗：侠名+1、灵视+1、「谗言」+1；3天后触发《奈费勒的行动·2》",
+          "prereqs": [
+            "神之恩"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_mishi_10",
+          "name": "奈费勒的行动·2",
+          "trigger": "完成《正教传教之后》或《密教传教之后》",
+          "desc": "仪式，存续5天（逾期秘誓线关闭）。放6金币+思潮（正教善名+1/密教恶名+1）；3天后触发《未能改变的》",
+          "prereqs": [
+            "正教传教之后",
+            "密教传教之后"
+          ],
+          "slots": [
+            {
+              "card": "正教思潮",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：正教/密教思潮二选一"
+            },
+            {
+              "card": "密教思潮",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：正教/密教思潮二选一"
+            }
+          ]
+        },
+        {
+          "id": "naifeile_mishi_11",
+          "name": "未能改变的",
+          "trigger": "完成《奈费勒的行动·2》3天后",
+          "desc": "仪式，存续14天（逾期秘誓线关闭）。放奈费勒+主角：两次都放密教思潮→「不洁的思绪」+1、失去奈费勒的信任、本篇关闭；两次正教→灵视-1；各一次→「理性」+1",
+          "prereqs": [
+            "奈费勒的行动·2"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "naifeile_mishi_12",
+          "name": "黄金的工具",
+          "trigger": "在《真正帮助穷人》选“帮他们变得更有用”",
+          "desc": "仪式，存续5天（逾期重置，最多3次）。放6金币+智慧≥4角色：善名+1、侠名+1；4-6天后获「木制苹果」、「幸福感」+1并触发《奈费勒的行动·3》",
+          "prereqs": [
+            "真正帮助穷人"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_mishi_13",
+          "name": "奈费勒的行动·3",
+          "trigger": "完成《黄金的工具》4-6天后",
+          "desc": "仪式，存续5天（逾期重置，最多3次）。放6金币：侠名+1、3天后触发《带来希望的》",
+          "prereqs": [
+            "黄金的工具"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_mishi_14",
+          "name": "带来希望的",
+          "trigger": "完成《奈费勒的行动·3》3天后",
+          "desc": "仪式，存续14天（逾期秘誓线关闭）。放奈费勒+主角：金骰子+1、奈费勒获{秘誓}",
+          "prereqs": [
+            "奈费勒的行动·3"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "naifeile_fire",
+      "name": "火焰大王线",
+      "summary": "秘誓线第四分支，把一名追随者变身成火焰大王行侠仗义，注意密教徒永久变身风险",
+      "steps": [
+        {
+          "id": "naifeile_fire_1",
+          "name": "惩罚之火",
+          "trigger": "在《真正帮助穷人》选“帮他们铲除真正的敌人”（需7个思绪）",
+          "desc": "仪式，存续14天（逾期火焰大王线关闭）。放隐匿≥5的非动物追随者（须卸下装备）+火焰大王+10金币：该追随者变身为「火焰大王」（变身期间相关事件暂停），触发《劫富济贫》",
+          "prereqs": [
+            "真正帮助穷人"
+          ],
+          "slots": [
+            {
+              "card": "火焰大王",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽隐匿≥5的非动物追随者将变身为火焰大王"
+            }
+          ]
+        },
+        {
+          "id": "naifeile_fire_2",
+          "name": "劫富济贫",
+          "trigger": "完成《惩罚之火》",
+          "desc": "仪式，存续5天（逾期线关闭，变身永不解除）。放火焰大王+任意情报，检定体魄+战斗：≥3战斗+1、品级升青铜、「罪证」+1、触发《正义复仇》；<3变身解除、线关闭",
+          "prereqs": [
+            "惩罚之火"
+          ],
+          "slots": [
+            {
+              "card": "火焰大王",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_fire_3",
+          "name": "正义复仇",
+          "trigger": "《劫富济贫》检定成功",
+          "desc": "仪式，存续5天（逾期线关闭）。检定体魄+战斗：≥5体魄+1、品级升白银、触发《广为人知》；<5变身解除、线关闭",
+          "prereqs": [
+            "劫富济贫"
+          ],
+          "slots": [
+            {
+              "card": "火焰大王",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_fire_4",
+          "name": "广为人知",
+          "trigger": "《正义复仇》检定成功",
+          "desc": "抉择：煽动→《恐怖庄园》；引导→《勇气与团结》。注意：若变身者是{密教徒}，走煽动将永久变身、失去原角色",
+          "prereqs": [
+            "正义复仇"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_fire_5",
+          "name": "恐怖庄园",
+          "trigger": "在《广为人知》选“煽动”",
+          "desc": "仪式，存续3天（逾期线关闭）。变身者非密教徒：「罪证」+1、变身解除；是密教徒：体魄/战斗+3、变成{怪物}、品级升黄金、失去奈费勒的信任、本篇关闭。火焰大王上贡《权力的游戏》可达成一千零一夜「马屁的艺术」（火焰大王死亡）",
+          "prereqs": [
+            "广为人知"
+          ],
+          "slots": [
+            {
+              "card": "火焰大王",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "naifeile_fire_6",
+          "name": "勇气与团结",
+          "trigger": "在《广为人知》选“引导”",
+          "desc": "仪式，存续3天（逾期线关闭）。放火焰大王+奈费勒+主角：白银「洞察」+1、变身解除、奈费勒获{秘誓}；可能触发《最后的愿望》与大结局革命篇《烈焰呼唤》",
+          "prereqs": [
+            "广为人知"
+          ],
+          "slots": [
+            {
+              "card": "火焰大王",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "naifeile_qingliu",
+      "name": "清流线",
+      "summary": "密会空置后路过宅邸赴宴，多轮检定分出四种结局，失败有死亡风险",
+      "steps": [
+        {
+          "id": "naifeile_qingliu_1",
+          "name": "路过宅邸",
+          "trigger": "完成《密会》时未使用苏丹卡、权势≥11、未在秘誓线失去奈费勒的信任",
+          "desc": "抉择弹窗：选“怎么？我不能来？”触发《清流交汇》；选“打扰了，我走错了”清流线关闭、可能触发芮尔篇《乱军》",
+          "prereqs": [
+            "密会"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_qingliu_2",
+          "name": "清流交汇",
+          "trigger": "在《路过宅邸》选“怎么？我不能来？”",
+          "desc": "仪式，存续3天（逾期线关闭）。共4轮检定（前3轮体魄、第4轮智慧，均需成功≥3）：全成功→《干净的队伍·1》；前3成功第4失败→《干净的队伍·2》；只成功1次→《忠心可鉴》；全失败→《沉重的代价》《被独自关押的奈费勒》。可能触发哈比卜篇《奈费勒的谎言》",
+          "prereqs": [
+            "路过宅邸"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "年轻的贵族",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "年迈的贵族",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "宽裕的贵族",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_qingliu_3",
+          "name": "干净的队伍·1",
+          "trigger": "《清流交汇》四轮检定全部成功",
+          "desc": "仪式，存续3天（逾期1天后触发《被独自关押的奈费勒》）。放奈费勒+年轻的贵族+主角：获「无名的窖藏」，可能触发《异想天开的构思》《恶意的捉弄》及哈比卜篇/阿里木篇联动",
+          "prereqs": [
+            "清流交汇"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "年轻的贵族",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_qingliu_4",
+          "name": "干净的队伍·2",
+          "trigger": "《清流交汇》前3轮成功、第4轮失败",
+          "desc": "仪式，存续3天（逾期1天后触发《被独自关押的奈费勒》）。指认告密者：指认年轻的贵族→获「无名的窖藏」并可能触发苗圃线/宰相线；指认另外两人→1天后触发《被独自关押的奈费勒》",
+          "prereqs": [
+            "清流交汇"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "年轻的贵族",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "宽裕的贵族",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "年迈的贵族",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "5/6/7号槽单选，用于指认告密者"
+            }
+          ]
+        },
+        {
+          "id": "naifeile_qingliu_5",
+          "name": "忠心可鉴",
+          "trigger": "《清流交汇》前3轮检定只成功1次",
+          "desc": "仪式，存续3天（逾期死亡结局「伴君如伴虎」）。放6金币：3天后白银「机遇」+1",
+          "prereqs": [
+            "清流交汇"
+          ],
+          "slots": [],
+          "terminal": true
+        },
+        {
+          "id": "naifeile_qingliu_6",
+          "name": "沉重的代价",
+          "trigger": "《清流交汇》前3轮检定全部失败1天后",
+          "desc": "仪式，存续3天（逾期死亡结局「伴君如伴虎」）。放白银及以上品级「奇珍」方可躲过一劫",
+          "prereqs": [
+            "清流交汇"
+          ],
+          "slots": [
+            {
+              "card": "奇珍",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "须白银及以上品级"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "naifeile_qingliu_7",
+          "name": "被独自关押的奈费勒",
+          "trigger": "《清流交汇》前3轮全失败，或《干净的队伍》逾期/指认告密者错误1天后",
+          "desc": "仪式，存续10天（逾期奈费勒篇关闭）。放白银及以下杀戮则奈费勒死亡；不杀戮：青铜「预兆」+1、4天后白银「机遇」+1",
+          "prereqs": [
+            "清流交汇",
+            "干净的队伍·1",
+            "干净的队伍·2"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "放置则奈费勒死亡"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "naifeile_qingliu_8",
+          "name": "享用美酒",
+          "trigger": "寻思「无名的窖藏」（《干净的队伍》奖励）",
+          "desc": "仪式，存续3天（逾期可再次寻思触发）。放窖藏（失去）+主角+3名任意追随者：全员社交+1、主角额外智慧+1（可重复）",
+          "prereqs": [
+            "干净的队伍·1",
+            "干净的队伍·2"
+          ],
+          "slots": [
+            {
+              "card": "无名的窖藏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "寻思触发，仪式中失去"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "naifeile_miaopu",
+      "name": "苗圃线",
+      "summary": "奈费勒有秘誓且指认告密者成功后建立苗圃，产出革命篇必需的「革命的构思」",
+      "steps": [
+        {
+          "id": "naifeile_miaopu_1",
+          "name": "异想天开的构思",
+          "trigger": "未触发阿里木篇《苗圃》；在《干净的队伍》指认告密者成功且奈费勒有{秘誓}；权势≥10、善名≥10、侠名≥5，满足后1-2天触发",
+          "desc": "仪式，存续7天（逾期苗圃线关闭）。放奈费勒+10金币：获「贫民区的孤儿」、触发《苗圃·第一堂课》、达成一千零一夜「希望的苗圃」",
+          "prereqs": [
+            "干净的队伍·2"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "须20金币，放置则「谗言」+1"
+            }
+          ]
+        },
+        {
+          "id": "naifeile_miaopu_2",
+          "name": "苗圃·第一堂课",
+          "trigger": "完成《异想天开的构思》",
+          "desc": "仪式，自启动。放奈费勒+孤儿+五种美德：获「革命的构思」（放入《群龙无首》可合成「革命的计划」，是大结局革命篇必须的正当性之一）、生成美德「奈费勒之宽容」，触发《苗圃》",
+          "prereqs": [
+            "异想天开的构思"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_miaopu_3",
+          "name": "苗圃",
+          "trigger": "完成《苗圃·第一堂课》（或阿里木篇《乞儿事件·做人》）",
+          "desc": "长期存续。放教师每天生成1张「美德」（共15张，选用无实质影响）；填满孤儿槽后大结局革命篇获部队「苗圃的守卫者」；进行3次教育触发《最后的愿望》；集齐所有孤儿达成「希望的园丁」。放新世界/完美世界思潮则恶名+1、《苗圃》关闭（可重复）",
+          "prereqs": [
+            "苗圃·第一堂课"
+          ],
+          "slots": [
+            {
+              "card": "乞儿们",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "8/9/10/11号槽孤儿之一（阿里木篇获取）"
+            },
+            {
+              "card": "贫民区的孤儿",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "8/9/10/11号槽孤儿之一（奈费勒篇/阿里木篇获取）"
+            },
+            {
+              "card": "流浪儿们",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "8/9/10/11号槽孤儿之一（哈比卜篇获取）"
+            },
+            {
+              "card": "密教的遗孤",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "8/9/10/11号槽孤儿之一（密教篇获取）"
+            },
+            {
+              "card": "苏丹的猜忌",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽可放（需至少1个孤儿在场）"
+            },
+            {
+              "card": "新月",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽可放，不生成美德"
+            },
+            {
+              "card": "新世界",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽可放，放置则恶名+1、《苗圃》关闭"
+            },
+            {
+              "card": "完美世界",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽可放，放置则恶名+1、《苗圃》关闭"
+            }
+          ]
+        },
+        {
+          "id": "naifeile_miaopu_4",
+          "name": "最后的愿望",
+          "trigger": "在《苗圃》进行3次教育，且完成火焰大王线《勇气与团结》",
+          "desc": "仪式，存续5天（逾期小萨法死亡）。放小萨法+火焰大王+任意角色：放「生命之水」则3号槽角色智慧+1；空置则小萨法死亡、3号槽社交+1",
+          "prereqs": [
+            "苗圃",
+            "勇气与团结"
+          ],
+          "slots": [
+            {
+              "card": "小萨法",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "火焰大王",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "生命之水",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "不放则小萨法死亡"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "naifeile_zaixiang",
+      "name": "宰相线",
+      "summary": "从恶意的捉弄开始扳倒阿卜德，最终在囚犯与绑匪中决定谁来当宰相",
+      "steps": [
+        {
+          "id": "naifeile_zaixiang_1",
+          "name": "恶意的捉弄",
+          "trigger": "权势≥15、在《干净的队伍》指认告密者成功、奈费勒&阿卜德存活",
+          "desc": "仪式，存续3天（逾期1天后触发《一则蹊跷的新闻》）。放6金币：权势+1、3-5天后触发《恶意的玩笑》",
+          "prereqs": [
+            "干净的队伍·2"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_zaixiang_2",
+          "name": "恶意的玩笑",
+          "trigger": "完成《恶意的捉弄》3-5天后，权势≥10、奈费勒&阿卜德存活",
+          "desc": "仪式，存续3天（逾期「谗言」+1并触发《一则蹊跷的新闻》）。放主角：权势+1；放6金币：青铜「内幕」+1、获「宰相的桃色新闻」（奈费勒当宰相条件之一）。1天后触发《同盟还是敌人》",
+          "prereqs": [
+            "恶意的捉弄"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽可放：权势+1"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "青铜",
+              "required": false,
+              "consumed": true,
+              "note": "必须主角参与，放置则「妻子的不满」+1"
+            }
+          ]
+        },
+        {
+          "id": "naifeile_zaixiang_3",
+          "name": "同盟还是敌人",
+          "trigger": "完成《恶意的玩笑》1天后，阿卜德&奈费勒存活、未在秘誓线失去奈费勒的信任",
+          "desc": "抉择弹窗：把事情告诉奈费勒→3天后触发《流浊之地》；袖手旁观→1天后触发《一则蹊跷的新闻》",
+          "prereqs": [
+            "恶意的玩笑"
+          ],
+          "slots": []
+        },
+        {
+          "id": "naifeile_zaixiang_4",
+          "name": "流浊之地",
+          "trigger": "在《同盟还是敌人》选“把事情告诉奈费勒”3天后",
+          "desc": "仪式，存续3天（逾期奈费勒死亡）。放奈费勒+任意角色+任意情报，检定隐匿+战斗：≥5触发《囚犯与绑匪》；<5奈费勒与参与者死亡",
+          "prereqs": [
+            "同盟还是敌人"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "naifeile_zaixiang_5",
+          "name": "囚犯与绑匪",
+          "trigger": "《流浊之地》检定成功",
+          "desc": "仪式，存续5天。以任意形式完成则阿卜德死亡。可选槽全空置→可能触发《宰相之位》（自己当宰相）；仅放「宰相的桃色新闻」不杀戮→可能触发《脏兮兮的椅子》；放黄金杀戮→主角与奈费勒永久失去{宰相资格}",
+          "prereqs": [
+            "流浊之地"
+          ],
+          "slots": [
+            {
+              "card": "阿卜德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "宰相的桃色新闻",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": ""
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true,
+              "note": "放置则主角与奈费勒失去{宰相资格}"
+            }
+          ]
+        },
+        {
+          "id": "naifeile_zaixiang_6",
+          "name": "宰相之位",
+          "trigger": "《囚犯与绑匪》所有可选槽空置，且权势≥20、奈费勒无{宰相资格}",
+          "desc": "剧情弹窗：主角&双胞胎成为{宰相}、品级升黄金、更换立绘，社交+1、魅力+2、权势+3，Steam成就「得利」；次日触发权势篇《赤字滔天》及其后续",
+          "prereqs": [
+            "囚犯与绑匪"
+          ],
+          "slots": [],
+          "terminal": true
+        },
+        {
+          "id": "naifeile_zaixiang_7",
+          "name": "脏兮兮的椅子",
+          "trigger": "在《囚犯与绑匪》可选槽仅放「宰相的桃色新闻」，且主角非宰相、奈费勒有{宰相资格}（资格可由哈比卜篇/芮尔篇/奈布哈尼篇获得）",
+          "desc": "抉择：我当仁不让→自己当宰相（收益同《宰相之位》）；让奈费勒来→奈费勒成为{宰相}、品级升黄金、不再触发声望篇《处理政务》系列；沉默不语同前者。固定获金币+10、「一截斩断的绳索」",
+          "prereqs": [
+            "囚犯与绑匪"
+          ],
+          "slots": [],
+          "terminal": true
+        },
+        {
+          "id": "naifeile_zaixiang_8",
+          "name": "一则蹊跷的新闻",
+          "trigger": "《恶意的捉弄》或《恶意的玩笑》逾期1天后，或在《同盟还是敌人》选“袖手旁观，静观其变”",
+          "desc": "剧情弹窗，自启动：权势+2、金币+5、奈费勒死亡",
+          "prereqs": [
+            "恶意的捉弄",
+            "恶意的玩笑",
+            "同盟还是敌人"
+          ],
+          "slots": [
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

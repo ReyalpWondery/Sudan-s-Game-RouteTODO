@@ -1,0 +1,139 @@
+{
+  "id": "ruier",
+  "title": "芮尔篇",
+  "category": "character",
+  "characters": ["芮尔", "奈布哈尼", "阿卜德", "布缇娜"],
+  "routes": [
+    {
+      "id": "ruier_main",
+      "name": "主线（匪帮与宰相线）",
+      "summary": "帮助芮尔剿灭豺狼帮、建立匪帮，追查猎奴队扳倒阿卜德，最终让主角成为宰相，是主角成为宰相的唯二渠道",
+      "steps": [
+        {"id":"ruier_main_1","name":"深夜访客","trigger":"开局30天后仍未在《肉体展览》买下任何奴隶，再过1-3天触发","desc":"仪式，存续3天（逾期芮尔篇关闭）。放芮尔+1金币/疗伤草药/生命之水：善名+1或芮尔体魄+2、侠名+1，1天后可能触发《帮派斗争》；放岩石杀戮/纵欲则芮尔篇关闭。警告：本篇关闭可能导致主角无法成为宰相","prereqs":[],"slots":[
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"1金币；与疗伤草药/生命之水、岩石杀戮/纵欲为三选一"},
+          {"card":"疗伤草药","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"三选一；芮尔体魄+2、侠名+1"},
+          {"card":"生命之水","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"三选一；效果同疗伤草药"},
+          {"card":"杀戮","sultan":true,"maxGrade":"岩石","required":true,"consumed":true,"note":"三选一；放入则芮尔篇关闭（恶名≥10恶名+1权势+1，否则侠名-1）"},
+          {"card":"纵欲","sultan":true,"maxGrade":"岩石","required":true,"consumed":true,"note":"三选一；放入则芮尔篇关闭"}
+        ]},
+        {"id":"ruier_main_2","name":"帮派斗争","trigger":"侠名≥6；或在《肉体展览》买下「蛮族的女奴」1天后；或《深夜访客》放金币/草药/生命之水1天后","desc":"仪式，存续3天（逾期芮尔&烂泥众死亡）。帮助芮尔（任意角色+5金币+情报）：战斗检定成功≥2触发《芮尔的匪帮》，失败芮尔&烂泥众死亡；帮助豺狼则触发《与豺狼帮合作》","prereqs":[],"slots":[
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"烂泥众","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"豺狼帮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5金币；帮助芮尔或帮助豺狼"}
+        ]},
+        {"id":"ruier_main_3","name":"芮尔的匪帮","trigger":"在《帮派斗争》帮助芮尔且检定成功","desc":"仪式，长期存续，用于强化队友：每角色可花5金币在每个匪帮各训练1次（烂泥众生存+1、枪姬众魅力+1、刀风众驯兽+1、猎魂众战斗+1、碎纸众隐匿+1、豺狼众体魄+1）；新月受训后在法里斯篇《新月升起》额外获生存&战斗+1。触发后可能触发《乱军》","prereqs":["帮派斗争"],"slots":[
+          {"card":"烂泥众","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"初始入驻；传授生存+1"},
+          {"card":"枪姬众","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"《我要去妓院！/惊天大姐案/我，白嫖》后入驻；传授魅力+1"},
+          {"card":"刀风众","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"《猎团余党》入驻；传授驯兽+1"},
+          {"card":"猎魂众","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"《猎团余党》入驻；传授战斗+1"},
+          {"card":"碎纸众","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"《猎团余党》入驻；传授隐匿+1"},
+          {"card":"豺狼众","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"《追猎豺狼》入驻；传授体魄+1"},
+          {"card":"新月","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"受训者槽可放新月：退回金币，法里斯篇《新月升起》额外生存&战斗+1"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5金币；不放可结算但无加成"}
+        ]},
+        {"id":"ruier_main_4","name":"追猎豺狼","trigger":"建成《舍馆》和《芮尔的匪帮》次日","desc":"仪式，存续7天（逾期豺狼帮退场、后续事件关闭）。需芮尔+烂泥众+豺狼帮，可放5金币/青铜及以下征服。战斗检定成功>5：芮尔&烂泥众战斗+3，1天后触发《肝脏要不要吃》；放征服或5金币则「豺狼众」入驻匪帮；失败芮尔篇关闭","prereqs":["芮尔的匪帮"],"slots":[
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"烂泥众","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"豺狼帮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5金币；与征服二选一使「豺狼众」入驻匪帮"},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"青铜及以下；放置则「豺狼众」入驻匪帮"}
+        ]},
+        {"id":"ruier_main_5","name":"肝脏要不要吃","trigger":"《追猎豺狼》检定成功1天后","desc":"抉择弹窗：选“让我尝尝”触发《肝胆相照》；选“还是算了”芮尔篇关闭","prereqs":["追猎豺狼"],"slots":[]},
+        {"id":"ruier_main_6","name":"肝胆相照","trigger":"在《肝脏要不要吃》选“让我尝尝”","desc":"仪式，存续3天（逾期芮尔体魄+3、芮尔篇关闭）。放芮尔+主角+追随者：芮尔体魄+3（放哈比卜则+5），主角&追随者体魄+1。4-8天后可能触发《我要去妓院！》","prereqs":["肝脏要不要吃"],"slots":[
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放哈比卜：芮尔体魄+5、主角&哈比卜体魄+1；其他追随者：芮尔体魄+3"}
+        ]},
+        {"id":"ruier_main_7","name":"我要去妓院！","trigger":"拥有2级《舍馆》（侠名≥5后花5金币升级）、完成《肝脏要不要吃》4-8天后","desc":"仪式，存续7天（逾期芮尔篇关闭）。放20金币：1天后「枪姬众」入驻匪帮、可能触发《追查猎奴人》；不放金币+派人参与：触发《惊天大姐案》——放主角权势≥10则芮尔战斗+3，放奈布哈尼则芮尔生存+3、魅力+1并可能触发《浪子的思绪·芮尔》","prereqs":["肝胆相照"],"slots":[
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"20金币；放了则「枪姬众」入驻、可能触发《追查猎奴人》"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"与奈布哈尼二选一；不放金币参与则触发《惊天大姐案》，权势≥10芮尔战斗+3"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"芮尔生存+3、魅力+1，可能触发《浪子的思绪·芮尔》"}
+        ]},
+        {"id":"ruier_main_8","name":"惊天大姐案","trigger":"在《我要去妓院！》派主角或奈布哈尼参与、且不放金币","desc":"仪式，存续3天（逾期芮尔死亡、匪帮关闭）。放奢靡/纵欲：1天后触发《我，白嫖》；放征服/杀戮折卡后检定战斗+体魄：成功≥8则芮尔&参战部队战斗+3、侠名+2、「罪证」+2、「谗言」+3、《欢愉之馆》关闭、「枪姬众」入驻匪帮，失败芮尔&部队死亡；空置检定战斗+隐匿，成功≥4（文本写8，实际为4）收益略减，失败芮尔死亡","prereqs":["我要去妓院！"],"slots":[
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；奢靡/纵欲无法折卡，1天后触发《我，白嫖》"},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；同奢靡，触发《我，白嫖》"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；折卡后进入战斗+体魄检定"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；折卡后进入战斗+体魄检定"}
+        ]},
+        {"id":"ruier_main_9","name":"我，白嫖","trigger":"在《惊天大姐案》使用奢靡/纵欲1天后","desc":"仪式，存续3天（逾期侠名+1、「罪证」+1、「谗言」+3）。放布缇娜：权势≥15+贵族角色或侠名≥15可退回金币、侠名+1；否则交20金币或检定社交&魅力，失败「罪证」+1、「谗言」+3。无论成败1天后「枪姬众」入驻匪帮、可能触发《追查猎奴人》","prereqs":["惊天大姐案"],"slots":[
+          {"card":"布缇娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下，须同时放20金币"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"20金币"}
+        ]},
+        {"id":"ruier_main_10","name":"追查猎奴人","trigger":"拥有3级《舍馆》、「枪姬众」入驻《芮尔的匪帮》3-8天后","desc":"仪式，存续7天（逾期芮尔死亡、匪帮关闭）。放芮尔+角色+情报：放奈布哈尼或权势≥15贵族或20金币可直接成功（放奈布哈尼可能触发《浪子的思绪·芮尔》）。检定社交+隐匿≥3触发《赤裸的茶会》，失败重置本事件","prereqs":["我要去妓院！"],"slots":[
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"跳过检定直接成功、退回金币，可能触发《浪子的思绪·芮尔》；权势≥15贵族同效"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"20金币：跳过检定直接成功"}
+        ]},
+        {"id":"ruier_main_11","name":"赤裸的茶会","trigger":"完成《追查猎奴人》","desc":"仪式，存续7天（逾期芮尔死亡、匪帮关闭），多重检定。检定2成功≥3：获「阿卜德的罪证」并触发《宰相的暗示》；填满7/8槽走检定4/3：检定3成功≥5可折断苏丹卡——杀戮则奴隶猎人死亡、芮尔体魄+5，不杀戮则抓获并触发《从实招来》，纵欲则「猎奴队线索」+1；检定4成功≥3线索+1；检定5获胜则奴隶猎人死亡但后续事件关闭。完美通关必须填满7/8槽且放纵欲","prereqs":["追查猎奴人"],"slots":[
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"枪姬众","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"宅邸守卫","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3/4槽：宅邸守卫/奴隶猎人"},
+          {"card":"奴隶猎人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3/4槽：宅邸守卫/奴隶猎人"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；检定3奢靡则青铜「空置的旧居」+1"},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；纵欲/杀戮跳过检定1；纵欲则「猎奴队线索」+1，完美通关必须"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；跳过检定1；检定3杀戮则奴隶猎人死亡、芮尔体魄+5"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"白银及以下；检定3征服则青铜「空置的旧居」+1"}
+        ]},
+        {"id":"ruier_main_12","name":"浪子的思绪·芮尔","trigger":"在《我要去妓院！》与《追查猎奴人》均放置奈布哈尼，完成《赤裸的茶会》后寻思头顶惊叹号的奈布哈尼","desc":"仪式，长期存续。放奈布哈尼+主角：不再触发奈布哈尼篇《靠不住的盟友》","prereqs":["我要去妓院！","追查猎奴人","赤裸的茶会"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发（完成《赤裸的茶会》后寻思头顶惊叹号的奈布哈尼）"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"ruier_main_13","name":"宰相的暗示","trigger":"在《赤裸的茶会》获得「阿卜德的罪证」次日","desc":"仪式，存续3天（逾期「谗言」+2、权势-3）。放阿卜德+罪证（失去）：权势+2。若将罪证上贡《权力的游戏》：奈费勒存活则其获{宰相资格}（「谗言」+2、权势-3），已死则权势+1、善名+1","prereqs":["赤裸的茶会"],"slots":[
+          {"card":"阿卜德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"阿卜德的罪证","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"（失去）权势+2；或上贡《权力的游戏》让奈费勒获{宰相资格}"}
+        ]},
+        {"id":"ruier_main_14","name":"从实招来","trigger":"在《赤裸的茶会》检定3成功且未杀戮1天后","desc":"仪式，存续3天。放芮尔+奴隶猎人+3张「猎奴队线索」+「阿卜德的罪证」：集齐则金币+10、「乙太」+1、随机黄金情报+1（线索不足3张则补1张）；未在茶会纵欲则1天后触发《处置猎奴人》，曾纵欲则10天后金币+5","prereqs":["赤裸的茶会"],"slots":[
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奴隶猎人","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"猎奴队线索","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3个槽位；集齐3张+「阿卜德的罪证」：金币+10、「乙太」+1、随机黄金情报+1"},
+          {"card":"阿卜德的罪证","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":""}
+        ]},
+        {"id":"ruier_main_15","name":"处置猎奴人","trigger":"桌面存在《芮尔的匪帮》、奴隶猎人存活，完成《从实招来》1天后","desc":"抉择弹窗：“就交给你了，注意点形象”芮尔体魄+2；“放了吧，不值得”10天后金币+5","prereqs":["从实招来"],"slots":[]},
+        {"id":"ruier_main_16","name":"猎团余党","trigger":"分别寻思三张「猎奴队线索」（每张各触发1次，3个仪式槽位排布不同但内容相同）","desc":"仪式，长期存续。战斗&体魄检定成功≥5：芮尔体魄+2、部队战斗+1，「刀风众」（线索一）、「猎魂众」（线索二）、「碎纸众」（线索三）入驻匪帮；失败我方全员受伤。解救猎魂众达成一千零一夜「我的姐妹永不为奴」","prereqs":["赤裸的茶会"],"slots":[
+          {"card":"猎奴团","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"×2"},
+          {"card":"猎奴队线索","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发（3张线索各寻思1次）；（失去）"},
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"ruier_main_17","name":"乱军","trigger":"权势≥20、阿卜德存活、桌面存在《芮尔的匪帮》、5-8天内无芮尔篇事件触发、奈费勒篇已关闭（选“狗都不看”/“走错了”或奈费勒死亡/成为大敌），满足后5-8天触发","desc":"仪式，存续7天（逾期死亡结局「伴君如伴虎」）。三组检定对抗三支乱军，失败对应槽位角色死亡；战败计数≥2则芮尔死亡、我方全员死亡、权势-10、主角失去宰相资格。已收服刀风/碎纸/猎魂众可跳过对应检定并获「白银马鞍」/「遥远的绿洲」（大结局特殊结局用）/「族长的祝福」。1天后触发《平息叛乱》","prereqs":["芮尔的匪帮"],"slots":[
+          {"card":"蛮族乱军","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"乱军1/2/3槽之一，对应检定3"},
+          {"card":"游牧民乱军","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"乱军1/2/3槽之一，对应检定1"},
+          {"card":"自由民乱军","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"乱军1/2/3槽之一，对应检定2"},
+          {"card":"刀风众","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"援军；已收服则跳过检定1并获「白银马鞍」"},
+          {"card":"碎纸众","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"援军；已收服则跳过检定2并获「遥远的绿洲」"},
+          {"card":"猎魂众","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"援军；已收服则跳过检定3并获「族长的祝福」"},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":false,"consumed":true,"note":"黄金及以下"}
+        ]},
+        {"id":"ruier_main_18","name":"平息叛乱","trigger":"完成过任意一个权势篇《处理政务系列事件》、完成《乱军》1天后","desc":"剧情弹窗：阿卜德死亡。若《乱军》战败计数<2：主角成为{宰相}、提升为黄金品级、社交+1、魅力+2、权势+3（双胞胎同时提升品级并成为宰相），次日触发权势篇《赤字滔天》及其后续事件","prereqs":["乱军"],"slots":[]},
+        {"id":"ruier_main_19","name":"族长祝福的归属","trigger":"寻思「族长的祝福」（《乱军》收服猎魂众奖励）次日触发","desc":"抉择弹窗：“带去给她看看”触发《蛮野之心》；“算了吧，自己用了”后续事件关闭","prereqs":["乱军"],"slots":[
+          {"card":"族长的祝福","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"ruier_main_20","name":"蛮野之心","trigger":"在《族长祝福的归属》选“带去给她看看”","desc":"仪式，存续1天（逾期关闭）。放芮尔+「族长的祝福」（失去）：芮尔品级提升为黄金、除魔力外7项基本属性+2。注意当前版本芮尔无法入队，仅在谋反结局短暂进入手牌","prereqs":["族长祝福的归属"],"terminal":true,"slots":[
+          {"card":"芮尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"族长的祝福","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）芮尔升为黄金品级、7项属性+2"}
+        ]}
+      ]
+    },
+    {
+      "id": "ruier_jackal",
+      "name": "豺狼帮支线",
+      "summary": "在《帮派斗争》中帮助豺狼帮开启，与豺狼帮合作赚钱并处置奴隶，与主线互斥",
+      "steps": [
+        {"id":"ruier_jackal_1","name":"与豺狼帮合作","trigger":"在《帮派斗争》检定<2且帮助豺狼帮，每7天触发一次","desc":"仪式，自启动、耗时7天。检定骰子数=侠名：成功≥3金币+5、「等死的奴隶」+1；成功≥1金币+3、随机岩石情报+1；成功=0无奖惩（可重复）","prereqs":["帮派斗争"],"slots":[
+          {"card":"豺狼帮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"ruier_jackal_2","name":"处置等死的奴隶","trigger":"寻思「等死的奴隶」（来自《与豺狼帮合作》检定成功，或日常弹窗《偷盗的仆人》选“就用他的身体来抵罪吧”）","desc":"仪式，存续1天，可再次寻思触发。放等死的奴隶+主角+岩石纵欲/杀戮：折卡，等死的奴隶死亡（可重复）","prereqs":["与豺狼帮合作"],"slots":[
+          {"card":"等死的奴隶","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；结算中奴隶死亡"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"岩石","required":true,"consumed":true,"note":"纵欲/杀戮二选一折卡"},
+          {"card":"杀戮","sultan":true,"maxGrade":"岩石","required":true,"consumed":true,"note":"纵欲/杀戮二选一折卡"}
+        ]}
+      ]
+    }
+  ]
+}

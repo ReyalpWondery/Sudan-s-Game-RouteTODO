@@ -1,0 +1,182 @@
+{
+  "id": "mijiao_bailingye",
+  "title": "密教&拜玲耶篇",
+  "category": "character",
+  "characters": ["拜铃耶","小圆","阿里木","哲巴尔","鲁梅拉"],
+  "routes": [
+    {
+      "id": "mijiao_bailingye_join",
+      "name": "拜铃耶入队与邪术仪式线",
+      "summary": "从邪术痕迹追查拜铃耶并将其收服（或杀死），解锁献祭、召唤邪物、刺肉者等密教基础仪式",
+      "steps": [
+        {"id":"mijiao_bailingye_join_1","name":"邪恶的线索","trigger":"完成冒险篇《阴森的宅邸》时不放置杀戮","desc":"仪式，长期存续。卡槽：任意角色+邪术的痕迹+任意情报。拜铃耶参与：黄金「秘密」+1；其他情况检定智慧+社交，成功≥1：智慧+1并触发《夜的栖身地》，失败重置本事件","prereqs":[],"slots":[
+          {"card":"邪术的痕迹","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"mijiao_bailingye_join_2","name":"夜的栖身地","trigger":"在冒险篇《幕后真凶》选“威胁”，或《邪恶的线索》检定成功","desc":"仪式。卡槽拜铃耶+任意情报/白蜜琥珀宝珠。捉拿（战斗+魔力检定，放宝珠直接成功）：俘获拜铃耶为「被俘虏的异教徒」，失败则拜铃耶退场；谈谈：主角&双胞胎获{黑暗知识}、拜铃耶入队、次日获「献祭仪式图纸」","prereqs":["邪恶的线索"],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"白蜜琥珀宝珠","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"与任意情报二选一；放置则跳过检定直接按成功结算"}
+        ]},
+        {"id":"mijiao_bailingye_join_3","terminal":true,"name":"处置女邪术师","trigger":"寻思「被俘虏的异教徒」（可再次寻思触发）","desc":"仪式，存续1天。杀戮：拜铃耶死亡、主角{诅咒}、获「拜铃耶的头颅」「污渍：天使」；纵欲：死亡结局「无名人之死」","prereqs":["夜的栖身地"],"slots":[
+          {"card":"被俘虏的异教徒","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"与纵欲二选一"},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"死亡结局「无名人之死」"}
+        ]},
+        {"id":"mijiao_bailingye_join_4","name":"黑暗的召唤","trigger":"拜铃耶未入队时，在冒险篇《阴森的宅邸》杀戮","desc":"仪式，存续1天（逾期自启动）。检定社交+智慧：成功≥3触发《拜铃耶》，失败退回「邪术的痕迹」并重置。已在《破除洁净》阻止拜铃耶则本事件关闭","prereqs":[],"slots":[
+          {"card":"邪术的痕迹","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"检定失败时退回"}
+        ]},
+        {"id":"mijiao_bailingye_join_5","name":"拜铃耶","trigger":"在《黑暗的召唤》检定成功","desc":"仪式，存续1天（逾期拜铃耶直接入队）。杀戮：拜铃耶死亡、主角魔力+5灵视+5、获「污渍：天使」；纵欲：拜铃耶入队、魔力+1灵视+2、「妻子的不满」+1、获「污渍：信徒」。固定结算：主角获{黑暗知识}、献祭次数+1；拜铃耶入队次日获「献祭仪式图纸」","prereqs":["黑暗的召唤"],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"与纵欲二选一；拜铃耶死亡"},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"拜铃耶入队"}
+        ]},
+        {"id":"mijiao_bailingye_join_6","name":"活人献祭","trigger":"寻思「献祭仪式图纸」（拜铃耶入队次日剧情弹窗获得）","desc":"仪式，可寻思反复触发。放图纸+密教徒/有{黑暗知识}角色+祭品+不高于祭品品级的杀戮/纵欲折卡：金骰子+3、灵视+1，按折卡获「污渍：天使/信徒」。献祭次数+1，累计≥4时获「召唤邪物仪式图纸」；妖精祭品额外「乙太」+1（可重复）","prereqs":["拜铃耶"],"slots":[
+          {"card":"献祭仪式图纸","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于祭品品级；与纵欲二选一"},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于祭品品级；与杀戮二选一"}
+        ]},
+        {"id":"mijiao_bailingye_join_7","name":"召唤邪物","trigger":"寻思「召唤邪物仪式图纸」（可重复完成）","desc":"仪式。放图纸+有{黑暗知识}角色+3名{密教徒}+8金币+祭品：娜依拉→怪物「魅魔/大魅魔」、古利斯→「古代肢解兽」、勇者之心→「骷髅骑士」，其他随机普通怪物。魅魔可上贡《权力的游戏》清「苏丹的猜忌」（可重复）","prereqs":["活人献祭"],"slots":[
+          {"card":"召唤邪物仪式图纸","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"mijiao_bailingye_join_8","name":"刺肉者","trigger":"寻思「拜铃耶」","desc":"仪式。放拜铃耶+5金币+刺青对象（每人限一次）：主角/双胞胎魔力+3，梅姬刺青失败「妻子的不满」+1，伊曼（非密教徒）离队；密教徒额外智慧+1，可顺带移除{诅咒/疾病/受伤}。固定灵视+1；每刺青3人拜铃耶魔力+1魅力+1","prereqs":["拜铃耶"],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]}
+      ]
+    },
+    {
+      "id": "mijiao_bailingye_flower",
+      "name": "自由之花线",
+      "summary": "拜铃耶存活且持有正教思潮「触碰洁净」时开启，从不洁的援助四折卡分支一路走向降神仪式，最终可在《自由之花》中洗净拜铃耶",
+      "steps": [
+        {"id":"mijiao_bailingye_flower_1","name":"破除洁净","trigger":"拜铃耶存活、持有「触碰洁净」（青铜正教思潮）","desc":"仪式，存续5天（逾期：未入队则自由之花线关闭）。阻止：自由之花线关闭；支持：虔信清零，未入队可能触发《不洁的代言人》、已入队可能触发《不洁的援助》；赞助10金币：触发正教篇《与正教决裂》，未入队则拜铃耶入队并获「献祭仪式图纸」","prereqs":[],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"触碰洁净","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"青铜正教思潮"}
+        ]},
+        {"id":"mijiao_bailingye_flower_2","name":"不洁的代言人","trigger":"灵视≥5、在《破除洁净》选“支持”时拜铃耶未入队","desc":"仪式，存续5天（逾期自由之花线关闭）。放主角或社交≥5的梅姬：触发《不洁的援助》；放入的梅姬社交<5：自由之花线关闭","prereqs":["破除洁净"],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"与主角二选一，需社交≥5，否则自由之花线关闭"}
+        ]},
+        {"id":"mijiao_bailingye_flower_3","name":"不洁的援助","trigger":"入队前在《不洁的代言人》放主角/社交≥5梅姬；入队后完成《破除洁净》寻思头顶惊叹号的「拜铃耶」","desc":"仪式，长期存续。放黄金及以下杀戮/纵欲/奢靡/征服其一（暂不折卡，4条后续只能触发其一）：杀戮→《命运之死》、纵欲→《荒诞之欢》、奢靡→《饕餮之欲》、征服→1天后《无妄之灾》","prereqs":["破除洁净"],"slots":[
+          {"card":"杀戮","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"四选一；暂不折卡，完成后续事件时折断；触发《命运之死》"},
+          {"card":"纵欲","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"四选一；暂不折卡，完成后续事件时折断；触发《荒诞之欢》"},
+          {"card":"奢靡","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"四选一；暂不折卡，完成后续事件时折断；触发《饕餮之欲》"},
+          {"card":"征服","sultan":true,"maxGrade":"黄金","required":true,"consumed":true,"note":"四选一；暂不折卡，完成后续事件时折断；1天后触发《无妄之灾》"}
+        ]},
+        {"id":"mijiao_bailingye_flower_4","name":"命运之死","trigger":"在《不洁的援助》放入「杀戮」","desc":"仪式。随机一个不低于杀戮品级的角色死亡：伊曼→触发正教篇《与正教决裂》；法德耶/安苏亚/萨达尔尼/莎姬→触发《后宫的空缺》。获「污渍：天使」、可能触发《清洗异端》；拜铃耶未入队则入队","prereqs":["不洁的援助"],"slots":[
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"来自《不洁的援助》放置的杀戮"}
+        ]},
+        {"id":"mijiao_bailingye_flower_5","terminal":true,"name":"后宫的空缺","trigger":"在《命运之死》杀死法德耶/安苏亚/萨达尔尼/莎姬","desc":"仪式，存续5天（逾期死亡结局「伴君如伴虎」）。放魅力≥5的女性追随者：该追随者退场（进献阿图娜尔也不触发其剧情）","prereqs":["命运之死"],"slots":[]},
+        {"id":"mijiao_bailingye_flower_6","name":"荒诞之欢","trigger":"在《不洁的援助》放入「纵欲」","desc":"仪式，自启动。按纵欲品级生成目标（金→大母神/银→剃刀少女/铜→肢解兽/石→触手树）。检定魔力+体魄+魅力≥13（黄金需15）：获对应部队/怪物。获「污渍：信徒」、可能触发《清洗异端》；拜铃耶未入队则入队","prereqs":["不洁的援助"],"slots":[
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"来自《不洁的援助》放置的纵欲；品级决定生成目标"}
+        ]},
+        {"id":"mijiao_bailingye_flower_7","name":"饕餮之欲","trigger":"在《不洁的援助》放入「奢靡」","desc":"仪式，自启动。按奢靡品级吞掉手牌金币/装备/追随者，获同品级「暴食者雕像」+「污渍：念珠」、可能触发《清洗异端》。寻思「暴食者雕像」可放「乙太」使其成为{部队}；拜铃耶未入队则入队","prereqs":["不洁的援助"],"slots":[
+          {"card":"奢靡","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"来自《不洁的援助》放置的奢靡；品级决定原料槽数"}
+        ]},
+        {"id":"mijiao_bailingye_flower_8","name":"无妄之灾","trigger":"在《不洁的援助》放入「征服」1天后","desc":"仪式，存续1天（逾期自启动）。检定成功≥5：掠食者死亡、主角生存+1、《治理家业》暂停5-7天；失败：死亡结局「无名人之死」。获「污渍：王冠」、可能触发《清洗异端》；拜铃耶未入队则入队","prereqs":["不洁的援助"],"slots":[
+          {"card":"征服","sultan":true,"maxGrade":null,"required":true,"consumed":true,"note":"来自《不洁的援助》放置的征服"}
+        ]},
+        {"id":"mijiao_bailingye_flower_9","name":"清洗异端","trigger":"完成《命运之死/荒诞之欢/饕餮之欲/无妄之灾》其一，且持有白银品级正教/密教思潮，3天后","desc":"仪式，存续5天（逾期拜铃耶与密教群众死亡）。协助正教：拜铃耶与群众死亡；协助密教：触发《香喷喷的祭品》、可能触发《神啊，降临吧》；可分别劝阻正教/密教，双方劝阻成功收益最佳（善名/权势/侠名+1）、都失败则拜铃耶死亡","prereqs":["命运之死","荒诞之欢","饕餮之欲","无妄之灾"],"slots":[
+          {"card":"纯净者的祭司们","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"狂信的武士","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"密教的群众","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"额外结算：协助正教获「罪孽：裂隙」、协助密教获「污渍：王冠」"},
+          {"card":"赎罪祈愿","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"劝阻正教选项之一（直接成功）"},
+          {"card":"完美世界","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"劝阻正教选项之一（直接成功）"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"劝阻正教选项之一（直接成功）"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"劝阻正教选项之一（直接成功）；不可用于协助密教"},
+          {"card":"古老的信仰","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"劝阻密教选项之一（直接成功）"},
+          {"card":"新世界","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"劝阻密教选项之一（直接成功）"}
+        ]},
+        {"id":"mijiao_bailingye_flower_10","name":"香喷喷的祭品","trigger":"在《清洗异端》选“协助密教”","desc":"抉择弹窗：“那还等什么”→伊曼离队、反对+3、触发正教篇《与正教决裂》、获「被俘虏的祭司」；“还是放了吧”→权势-1、善名-1","prereqs":["清洗异端"],"slots":[]},
+        {"id":"mijiao_bailingye_flower_11","terminal":true,"name":"处置俘虏","trigger":"寻思「被俘虏的祭司」（可再次寻思触发）","desc":"仪式，存续1天。放白银及以下征服/杀戮：祭司死亡，征服→「污渍：王冠」、杀戮→「污渍：天使」（皆唯一）","prereqs":["香喷喷的祭品"],"slots":[
+          {"card":"被俘虏的祭司","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":"与杀戮二选一"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":true,"consumed":true,"note":"与征服二选一"}
+        ]},
+        {"id":"mijiao_bailingye_flower_12","name":"神啊，降临吧","trigger":"纵欲过拜铃耶或主角参与过《刺肉者》，且在《清洗异端》协助密教、成功劝阻双方或仅劝阻正教","desc":"仪式，存续7天（逾期自由之花线关闭）。放正教/密教思潮+神的面容组合差分：空置或1-2级神面容+密教思潮→《降神仪式·邀请》；+正教思潮→拜铃耶离队、1天后《降神仪式》；3-4级正神+密教思潮→拜铃耶成为{污染者}（可降低正教篇大结局难度）","prereqs":["清洗异端"],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"mijiao_bailingye_flower_13","name":"降神仪式","trigger":"在《神啊，降临吧》放“无神或任意级神+正教思潮”；或《降神仪式·邀请》逾期；或《密室中》检定1失败、检定2成功","desc":"仪式，存续7天（逾期触发《怪异的降临》）。向苏丹/教会求助或自己解决成功：拜铃耶死亡、7天后触发《怨恨诅咒》（按折卡获污渍/罪孽）；自己解决检定失败：我方全体死亡、触发《怪异的降临》","prereqs":["神啊，降临吧"],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"密教的信徒","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"向苏丹/教会求助选项；拜铃耶死亡、7天后《怨恨诅咒》"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"向苏丹/教会求助选项；拜铃耶死亡、7天后《怨恨诅咒》"},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"向苏丹/教会求助或自己解决选项"}
+        ]},
+        {"id":"mijiao_bailingye_flower_14","terminal":true,"name":"怨恨诅咒","trigger":"在《降神仪式》使拜铃耶死亡7天后","desc":"仪式，自启动。放拜铃耶的诅咒：「疯狂」+1","prereqs":["降神仪式"],"slots":[
+          {"card":"拜铃耶的诅咒","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"mijiao_bailingye_flower_15","terminal":true,"name":"怪异的降临","trigger":"《降神仪式》逾期，或选“自己解决”但检定失败","desc":"仪式，存续1天（逾期自启动）。放创造/腐败之神或纯净/毁灭之神可关闭检定直接杀死怪异的密神（前者获服装「神面披风」+部队「拜铃耶的信众」）；否则检定1（我方魔力&战斗 vs 密神27）失败我方全体死亡，检定2失败则2/3号槽死亡","prereqs":["降神仪式"],"slots":[
+          {"card":"怪异的密神","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"征服","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"额外获「罪孽：裂隙」"},
+          {"card":"创造之神","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"信仰槽选项：关闭检定、密神死亡、获「神面披风」+部队"},
+          {"card":"腐败之神","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"信仰槽选项：关闭检定、密神死亡、获「神面披风」+部队"},
+          {"card":"纯净之神","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"信仰槽选项：关闭检定、密神死亡"},
+          {"card":"毁灭之神","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"信仰槽选项：关闭检定、密神死亡"}
+        ]},
+        {"id":"mijiao_bailingye_flower_16","name":"降神仪式·邀请","trigger":"在《神啊，降临吧》放密教思潮+1-2级神的面容或没有神的面容","desc":"仪式，存续3天（逾期触发《降神仪式》）。放拜铃耶+密教的信徒+主角：触发抉择弹窗《我们都是祭品》","prereqs":["神啊，降临吧"],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"密教的信徒","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"mijiao_bailingye_flower_17","name":"我们都是祭品","trigger":"完成《降神仪式·邀请》","desc":"抉择弹窗：“我们都是祭品”→死亡结局「无名人之死」；“放开我！”→触发《密室中》","prereqs":["降神仪式·邀请"],"slots":[]},
+        {"id":"mijiao_bailingye_flower_18","name":"密室中","trigger":"在《我们都是祭品》选“放开我！”","desc":"仪式，存续1天（逾期「疯狂」+1、后续事件关闭）。放理性：拜铃耶离队、3天后《密神的诅咒》；放创造/腐败之神：密神死亡获「神面披风」+部队；纯净/毁灭之神：拜铃耶与密神同亡。否则检定1（按5号槽同伴改检定属性）≥8：拜铃耶离队3天后《密神的诅咒》；检定2失败死亡结局「无名人之死」、成功1天后《降神仪式》","prereqs":["我们都是祭品"],"slots":[
+          {"card":"怪异的密神","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"坚固的密室大门","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽六选一（该槽为必选）；检定1属性：主角魅力+善名"},
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽六选一；检定1属性：主角智慧+生存"},
+          {"card":"阿迪莱","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽六选一；检定1属性：主角战斗+体魄"},
+          {"card":"玛希尔","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽六选一；检定1属性：主角智慧+魔力"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽六选一；检定1属性：主角魅力+体魄"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"5号槽六选一；检定1属性：主角灵视+智慧"},
+          {"card":"理性","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"6号槽选项：关闭检定、拜铃耶离队、3天后《密神的诅咒》"},
+          {"card":"创造之神","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"6号槽选项：关闭检定、密神死亡、获「神面披风」+部队"},
+          {"card":"腐败之神","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"6号槽选项：关闭检定、密神死亡、获「神面披风」+部队"},
+          {"card":"纯净之神","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"6号槽选项：关闭检定、拜铃耶与密神死亡"},
+          {"card":"毁灭之神","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"6号槽选项：关闭检定、拜铃耶与密神死亡"}
+        ]},
+        {"id":"mijiao_bailingye_flower_19","name":"密神的诅咒","trigger":"在《密室中》放置理性或检定1成功3天后","desc":"仪式，存续3天（逾期「疯狂」+1、次日重置）。错乱学习机/创造/腐败/纯净/毁灭之神可成功对抗密神，可能触发剧情弹窗《漂亮的花束》；失败「疯狂」+1、4天后重置","prereqs":["密室中"],"slots":[
+          {"card":"怪异的密神","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"错乱学习机","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"对抗成功：密神死亡、主角&双胞胎各智慧-1"},
+          {"card":"理性","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"对抗失败：4天后重置本事件"}
+        ]},
+        {"id":"mijiao_bailingye_flower_20","name":"漂亮的花束","trigger":"在《密神的诅咒》对抗密神成功，且持有3-4级神的面容","desc":"剧情弹窗。获武器「漂亮的花束」（魅力3魔力2）；寻思它可获孤儿「密教的遗孤」（放入《苗圃》后触发《自由之花》）","prereqs":["密神的诅咒"],"slots":[]},
+        {"id":"mijiao_bailingye_flower_21","terminal":true,"name":"自由之花","trigger":"将「密教的遗孤」放入《苗圃》1天后","desc":"仪式，存续15天。按放入神的面容差分：主角参与且已{入圣}或体魄>5可让拜铃耶归队、失去{密教徒}{黑暗知识}、获{命运的羁绊}，移除所有神的面容和降神篇事件、达成一千零一夜「洗去掌心污浊」；主角参与且体魄≤5：死亡结局「无名人之死」；主角不参与多数情况拜铃耶死亡","prereqs":["漂亮的花束"],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    },
+    {
+      "id": "mijiao_bailingye_cult",
+      "name": "密教传教线",
+      "summary": "寻思任意密教思潮开启，建立密教基地、传播密教理念，并引出黑暗集会及阿里木/小圆/哲巴尔/鲁梅拉的系列联动事件",
+      "steps": [
+        {"id":"mijiao_bailingye_cult_1","name":"传播密教理念","trigger":"寻思任意「密教思潮」（不洁的思绪/窥视黑暗/古老的信仰/新世界）","desc":"仪式，可反复触发。放任意空屋：建立密教基地并触发《黑暗集会》（奈布哈尼非密教徒将离队，「不洁的思绪」无法建基地）。传教成功：追随者成为{密教徒}；特殊结算：小圆成功→1天后《拥抱那力量》，哲巴尔失败→《除魔卫道》，鲁梅拉失败→《信与理的战争》（均需拜铃耶已入队），流浪剑客失败获「疯狂面具」（可重复）","prereqs":[],"slots":[]},
+        {"id":"mijiao_bailingye_cult_2","name":"黑暗集会","trigger":"在《传播密教理念》建立密教基地1天后","desc":"仪式，耗时7天、完成后1天重置循环。主持人需有{黑暗知识}，可放祭品（「罪证」+2、献祭次数+1）。特定密教徒有额外收益（伊曼金骰子+2、杰莫尔+哈马尔合体双头食人魔等）；持有「创造之神/腐败之神」时放阿里木：阿里木离队、3天后触发《神的秘密》。结算检定按档位获情报/金币/「密教信徒」（可重复）","prereqs":["传播密教理念"],"slots":[]},
+        {"id":"mijiao_bailingye_cult_3","terminal":true,"name":"神的秘密","trigger":"持有「创造之神/腐败之神」，且在《黑暗集会》放置阿里木3天后","desc":"仪式，自启动。创造之神：阿里木死亡、对邪神的怀疑+2；腐败之神：阿里木死亡、金骰子+3","prereqs":["黑暗集会"],"slots":[
+          {"card":"阿里木","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"阿里木死亡"},
+          {"card":"创造之神","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽二选一：对邪神的怀疑+2"},
+          {"card":"腐败之神","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽二选一：金骰子+3"}
+        ]},
+        {"id":"mijiao_bailingye_cult_4","name":"拥抱那力量","trigger":"拜铃耶在队，且小圆在《传播密教理念》成为{密教徒}1天后","desc":"仪式，存续3天（逾期事件关闭）。放小圆+拜铃耶+祭品（死亡）+5金币：小圆魔力+2；第1/2次完成5天后再触发，第3次小圆获{黑暗知识}后事件关闭。警告：有{黑暗知识}的小圆会在密教篇《神的诞生》触发特殊死亡结局「愿望之神」","prereqs":["传播密教理念"],"slots":[
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"mijiao_bailingye_cult_5","terminal":true,"name":"除魔卫道","trigger":"使用哲巴尔参与《传播密教理念》（传教失败触发）","desc":"仪式，存续2天（逾期死亡结局「伴君如伴虎」）。放毒蛇血液：哲巴尔死亡、权势+1、获「勇者之心」；放千夫所指：死亡结局「不自量力」。检定主角战斗&体魄-哲巴尔战斗&体魄：成功≥5哲巴尔死亡、主角战斗+1、获「勇者之心」；失败死亡结局「无名人之死」","prereqs":["传播密教理念"],"slots":[
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"多数分支哲巴尔死亡"},
+          {"card":"毒蛇血液","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"关闭检定与苏丹卡收益；哲巴尔死亡、获「勇者之心」"},
+          {"card":"千夫所指","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"死亡结局「不自量力」"},
+          {"card":"杀戮","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"权势-1、侠名+1；搭配「毒蛇毒液」则仅折卡"}
+        ]},
+        {"id":"mijiao_bailingye_cult_6","name":"信与理的战争","trigger":"拜铃耶已入队，《传播密教理念》放置鲁梅拉1天后","desc":"仪式，存续3天（逾期事件关闭）。检定鲁梅拉战斗&魔力-拜铃耶战斗&魔力：成功≥3拜铃耶死亡；失败鲁梅拉死亡、拜铃耶智慧+3魔力+3、获「魔力增长仪式图纸」","prereqs":["传播密教理念"],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"鲁梅拉","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"检定失败则鲁梅拉死亡"}
+        ]},
+        {"id":"mijiao_bailingye_cult_7","name":"魔力增长仪式","trigger":"寻思「魔力增长仪式图纸」（《信与理的战争》鲁梅拉死亡后获得）","desc":"仪式，可寻思反复触发。放图纸+有{黑暗知识}角色+祭品（死亡）+7金币：2号槽角色按祭品品级魔力提升（金+4/银+3/铜+2/石+1）（可重复）","prereqs":["信与理的战争"],"slots":[
+          {"card":"魔力增长仪式图纸","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"黑暗力量","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"已废弃"}
+        ]}
+      ]
+    }
+  ]
+}

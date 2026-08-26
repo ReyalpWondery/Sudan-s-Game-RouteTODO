@@ -1,0 +1,147 @@
+{
+  "id": "layide",
+  "title": "拉伊德篇",
+  "category": "character",
+  "characters": ["拉伊德", "流浪剑客", "奈布哈尼", "梅姬", "玛希尔", "哲瓦德", "伊曼", "拜铃耶", "萨米尔"],
+  "routes": [
+    {
+      "id": "layide_join",
+      "name": "入队与阿尔图堡线",
+      "summary": "从囚牢赎出拉伊德入队，经流民事件链建立阿尔图堡，是全篇地基",
+      "steps": [
+        {"id":"layide_join_1","name":"咬牙切齿地指责","trigger":"冒险篇《被流民侵占的宅邸》将拉伊德关入《囚牢》并赎出（跨篇前置）","desc":"抉择弹窗：三个选项均让拉伊德入队；选“你现在在我手里”则1天后拉伊德暂时离队、获「神秘贵女的线索」、可能触发《无赖租客》（收益少，不建议）","prereqs":[],"slots":[]},
+        {"id":"layide_join_2","name":"无赖租客","trigger":"持有任意「空屋」，且《咬牙切齿地指责》选“你现在在我手里”2天后，或《流民的索要1》/《流民的索要·2》逾期","desc":"仪式存续7天（逾期失去空屋、侠名+1）。放拉伊德或20金币获白银「流民的帮闲」（放金币则拉伊德1天后归队）；放部队或征服卡则拉伊德篇关闭。此处白银帮闲寻思仅获「神秘贵女的线索」，不能触发《流民的帮闲·2》","prereqs":["咬牙切齿地指责"],"slots":[
+          {"card":"流民们","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"空屋","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放拉伊德则回到手牌；逾期则失去"},
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"「空屋」回到手牌"},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"拉伊德篇关闭"}
+        ]},
+        {"id":"layide_join_3","name":"流民的索要1","trigger":"《咬牙切齿地指责》选“我只是尽力玩好这个游戏”或“我是为了你们好”1天后，寻思头顶惊叹号的拉伊德","desc":"仪式存续5天（逾期拉伊德暂时离队、可能触发《无赖租客》）。放拉伊德+流民+8金币/大餐，或用奢靡（须16金币或大餐）/征服/杀戮折卡：奢靡或无苏丹卡+8金币获青铜「流民的帮闲」；征服/杀戮则拉伊德死亡；可选槽全空置则拉伊德归队但本篇关闭。此处用过奢靡则《流民的索要·2》不可再用","prereqs":["咬牙切齿地指责"],"slots":[
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"流民们","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"大餐","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"或8金币"},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"须16金币或大餐；此处用过则《流民的索要·2》不可再用"},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"拉伊德死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"拉伊德死亡"}
+        ]},
+        {"id":"layide_join_4","name":"流民的帮闲1","trigger":"寻思青铜「流民的帮闲」","desc":"自启动耗时3天，随机善名+1或侠名+1、白银「情报」+1、金骰子+1。重复寻思完成3次可能触发《流民的索要·2》（可重复）","prereqs":["流民的索要1"],"slots":[
+          {"card":"流民的帮闲","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；青铜品级"}
+        ]},
+        {"id":"layide_join_5","name":"流民的索要·2","trigger":"拉伊德在队、完成3次《流民的帮闲1》","desc":"存续5天（逾期拉伊德暂时离队、侠名-2善名-2、可能触发《无赖租客》）。放20金币或「空屋」（失去）获白银「流民的帮闲」；奢靡仅折卡（须20金币或空屋，若《流民的索要1》已用过奢靡则不可再折）；征服/杀戮则拉伊德死亡。寻思白银帮闲获「神秘贵女的线索」并触发《流民的帮闲·2》","prereqs":["流民的帮闲1"],"slots":[
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"流民们","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"流民的帮闲","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"（失去）"},
+          {"card":"空屋","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"或20金币（失去）：获白银「流民的帮闲」"},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"仅折卡，须20金币或空屋；若《流民的索要1》已用过奢靡则不可再折"},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"拉伊德死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"拉伊德死亡"}
+        ]},
+        {"id":"layide_join_6","name":"流民的帮闲·2","trigger":"寻思《流民的索要·2》获得的白银「流民的帮闲」","desc":"自启动耗时3天，金骰子+1、随机《赃物商人》物品1件。完成3次触发《阿尔图堡·命名》，之后仍可反复触发赚收益（可重复）","prereqs":["流民的索要·2"],"slots":[
+          {"card":"流民的帮闲","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；白银品级"}
+        ]},
+        {"id":"layide_join_7","name":"阿尔图堡·命名","trigger":"拉伊德在队、完成3次《流民的帮闲·2》","desc":"存续5天（逾期拉伊德篇关闭）。放主角触发《阿尔图堡》；放青铜及以下杀戮/征服则拉伊德死亡、恶名+2","prereqs":["流民的帮闲·2"],"slots":[
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"流民的帮闲","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"触发《阿尔图堡》"},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"拉伊德死亡、恶名+2"},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"拉伊德死亡、恶名+2"}
+        ]},
+        {"id":"layide_join_8","name":"阿尔图堡","trigger":"在《阿尔图堡·命名》放置主角","desc":"长期存续耗时3天、每次完成后重置（可重复）。可放玛希尔得「乙太」、受伤/诅咒角色祛状态、情报换高级情报或金骰子、思潮换虔信/特殊卡等。完成3次后本事件暂停并触发《困顿的堡垒》（建议先完成《她是谁？》拿到「妃子的决心」）","prereqs":["阿尔图堡·命名"],"slots":[
+          {"card":"流民的帮闲","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"玛希尔","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"限1次：「乙太」+1"},
+          {"card":"疯狂","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"限1次：消除本卡"},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"限1次：消除本卡"},
+          {"card":"罪证","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"限1次：消除本卡"},
+          {"card":"苏丹的猜忌","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"限1次：消除本卡"},
+          {"card":"誓言之证","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"回应誓言计数+1；黄金品级则金骰子+3"}
+        ]},
+        {"id":"layide_join_9","name":"困顿的堡垒","trigger":"完成3次《阿尔图堡》","desc":"存续7天（逾期失去「流民的帮闲」、永久关闭《阿尔图堡》、1天后触发《忙碌的拉伊德》）。放40金币：重启《阿尔图堡》、公主线关闭、可能触发《杀戮与激情》、大结局革命篇《各方助阵1》可获「流民部队」；放「妃子的决心」：拉伊德更名拉伊德娜、触发《伪造公主》（走公主线需多培养隐匿、抑制魅力，否则难达完美结局）","prereqs":["阿尔图堡"],"slots":[
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"妃子的决心","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"拉伊德更名拉伊德娜、触发《伪造公主》（另一选项为40金币）"}
+        ]},
+        {"id":"layide_join_10","name":"忙碌的拉伊德","trigger":"《困顿的堡垒》逾期1天后，或完成《计划失败了》1天后","desc":"自启动耗时3天、3天后重置（可重复）。若是拉伊德娜：金币+3或青铜情报+1或随机《赃物商人》物品1件","prereqs":["困顿的堡垒"],"slots":[
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"或拉伊德娜"}
+        ]},
+        {"id":"layide_join_11","name":"杀戮与激情","trigger":"需同时满足：《死斗》检定成功、《别对别人提起》选“我会保密”、拉伊德参与过奈布哈尼篇任意《XX的游戏》、《困顿的堡垒》放置40金币的1天后","desc":"存续2天（逾期无奖惩）。放拉伊德+主角，纯剧情，拉伊德篇失败结局","prereqs":["困顿的堡垒","死斗"],"terminal":true,"slots":[
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    },
+    {
+      "id": "layide_princess",
+      "name": "公主线",
+      "summary": "凭「神秘贵女的线索」揭开拉伊德身世，在困顿的堡垒放入「妃子的决心」使其化身拉伊德娜，经营舞会直至苏丹的召见",
+      "steps": [
+        {"id":"layide_princess_1","name":"她是谁？","trigger":"拉伊德存活、寻思「神秘贵女的线索」（线索来自《咬牙切齿地指责》选“你现在在我手里”，或寻思《流民的索要·2》所得白银帮闲）","desc":"存续7天耗时3天（逾期可再次寻思）。放线索+贵族追随者（须权势≥15）或非贵族追随者（须侠名≥8、不能是拉伊德）或奈布哈尼/5金币。1天后触发《别对别人提起》","prereqs":[],"slots":[
+          {"card":"神秘贵女的线索","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；卡槽中（失去）"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"或5金币"}
+        ]},
+        {"id":"layide_princess_2","name":"别对别人提起","trigger":"完成《她是谁？》1天后","desc":"抉择弹窗：两项均获武器「妃子的决心」（带{友谊的见证}标签）；选“我会保密”可能触发《杀戮与激情》。若拉伊德此前不在队，此后归队","prereqs":["她是谁？"],"slots":[]},
+        {"id":"layide_princess_3","name":"女儿的故事","trigger":"寻思「妃子的决心」","desc":"存续5天耗时1天（逾期可再次寻思）。放妃子的决心+拉伊德为纯剧情；放流浪剑客则1天后触发《死斗》（已完成《剑之名》知晓真名则有文本差分）","prereqs":["别对别人提起"],"slots":[
+          {"card":"妃子的决心","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"纯剧情"},
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"1天后触发《死斗》"}
+        ]},
+        {"id":"layide_princess_4","name":"死斗","trigger":"在《女儿的故事》放置流浪剑客1天后","desc":"自启动耗时1天。检定：骰子数=拉伊德战斗&体魄-流浪剑客战斗&体魄：成功≥1流浪剑客死亡、拉伊德战斗+2、可能触发《杀戮与激情》；成功=0则拉伊德死亡、流浪剑客战斗+2","prereqs":["女儿的故事"],"slots":[
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"检定失败（成功=0）则死亡"},
+          {"card":"流浪剑客","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"检定成功≥1则死亡"}
+        ]},
+        {"id":"layide_princess_5","name":"故国的遗毒","trigger":"在《权力的游戏》上贡「妃子的决心」（失去）","desc":"金币+20。若拉伊德存活且手牌有「苏丹的猜忌」：1天后金币+10、触发《血亲之乐》、达成一千零一夜「没有人比我更懂你-金匕首」（需结算本局后计入）；若拉伊德已死则触发《苏丹的戏弄》","prereqs":["别对别人提起"],"slots":[]},
+        {"id":"layide_princess_6","name":"血亲之乐","trigger":"在《权力的游戏》上贡「妃子的决心」1天后，或《苏丹的召见》检定1或检定3失败","desc":"自启动耗时1天。放拉伊德（或拉伊德娜）：拉伊德死亡","prereqs":["故国的遗毒"],"terminal":true,"slots":[
+          {"card":"拉伊德","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"或拉伊德娜；固定结算：拉伊德死亡"}
+        ]},
+        {"id":"layide_princess_7","name":"伪造公主","trigger":"在《困顿的堡垒》放置「妃子的决心」（拉伊德更名拉伊德娜、更换立绘）","desc":"存续5天耗时1天（逾期拉伊德娜变回拉伊德、立绘还原）。放拉伊德娜+隐匿&社交≥5的贵族角色，可邀请哲瓦德（智慧+1）/盖斯（权势+1）/伊曼（体魄+1）/哲巴尔（战斗+1）/奈布哈尼（魅力+1）/法尔达克（社交+1，需完成其篇《年轻人的婚礼》）。固定触发《长袖善舞》","prereqs":["困顿的堡垒","别对别人提起"],"slots":[
+          {"card":"拉伊德娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"哲瓦德","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"邀请槽：拉伊德娜智慧+1"},
+          {"card":"盖斯","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"邀请槽：权势+1（黄金品级）"},
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"邀请槽：体魄+1（需{命运的羁绊}或你的所有卡牌虔信总额≥5）"},
+          {"card":"哲巴尔","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"邀请槽：战斗+1（非{苏丹的近卫}）"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"邀请槽：魅力+1（非{苏丹的近卫}）"},
+          {"card":"法尔达克","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"邀请槽：社交+1（需完成法尔达克篇《年轻人的婚礼》）"}
+        ]},
+        {"id":"layide_princess_8","name":"长袖善舞","trigger":"完成《伪造公主》","desc":"长期存续耗时1天，共触发3次（前2次完成3天后重置）。每次随机出现质疑者/比美者/追求者，按社交&隐匿或社交&魅力等检定：成功≥5拉伊德娜对应属性+1并获读物/饰品/白银情报/金币+5，成功<5属性-1；检定成功对手退场、完美舞会计数+1。3次后计数<2触发《计划失败了》、≥2触发《计划非常成功》、=3达成一千零一夜「完美的舞会」","prereqs":["伪造公主"],"slots":[
+          {"card":"拉伊德娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"layide_princess_9","name":"计划失败了","trigger":"完成3次《长袖善舞》后完美舞会计数<2","desc":"抉择弹窗：选“我还是需要拉伊德娜公主”以拉伊德娜身份1天后触发《忙碌的拉伊德》（有收益）；选“公主的工作还没结束”则拉伊德娜变回拉伊德、触发《忙碌的拉伊德》","prereqs":["长袖善舞"],"slots":[]},
+        {"id":"layide_princess_10","name":"计划非常成功","trigger":"完成3次《长袖善舞》后完美舞会计数≥2","desc":"抉择弹窗：选“行吧，做你自己就好”拉伊德娜变回拉伊德、战斗+1、重启《阿尔图堡》；选“公主的工作还没结束”触发《闪闪发光》、重启《阿尔图堡》","prereqs":["长袖善舞"],"slots":[]},
+        {"id":"layide_princess_11","name":"闪闪发光","trigger":"在《计划非常成功》选“公主的工作还没结束”","desc":"长期存续耗时1天，共触发3次（前2次完成2-4天后重置）。随机出现诗人/商人/僧侣/追求者，分别获情诗/金币+8/金骰子+1/白银及以上读物饰品武器；完成3次拉伊德娜魅力+1社交+1、1天后触发《苏丹的召见》。梅姬/奈布哈尼/玛希尔/哲瓦德/伊曼/拜铃耶/萨米尔参与（2/3/4号槽皆可）各触发一次特别后续事件","prereqs":["计划非常成功"],"slots":[
+          {"card":"拉伊德娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2/3/4号槽皆可"}
+        ]},
+        {"id":"layide_princess_12","name":"机灵的仆役","trigger":"梅姬参与《闪闪发光》","desc":"存续3天耗时1天（逾期无奖惩）。放梅姬+白银/黄金情报：梅姬魅力+1、「幸福感」+1","prereqs":["闪闪发光"],"slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"layide_princess_13","name":"花与剑","trigger":"奈布哈尼参与《闪闪发光》","desc":"存续3天耗时1天（逾期无奖惩）。放奈布哈尼+2名魅力≥5的追随者：全员魅力+1生存+1、善名+1侠名+1","prereqs":["闪闪发光"],"slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"layide_princess_14","name":"逆向工程","trigger":"玛希尔参与《闪闪发光》","desc":"存续3天耗时1天（逾期无奖惩）。放玛希尔+10金币+玛希尔的任一发明：复制该发明（机关马/大炸弹/星空之镜/热气球等均可）","prereqs":["闪闪发光"],"slots":[
+          {"card":"玛希尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"layide_princess_15","name":"哲瓦德的笑容","trigger":"哲瓦德参与《闪闪发光》","desc":"存续3天耗时1天（逾期无奖惩）。放哲瓦德+白银/黄金情报：随机《赃物商人》物品1件","prereqs":["闪闪发光"],"slots":[
+          {"card":"哲瓦德","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"layide_princess_16","name":"正神的恩惠","trigger":"伊曼参与《闪闪发光》","desc":"存续3天耗时1天（逾期无奖惩）。放伊曼+正教思潮+8金币（奢靡须翻倍）：善名+1、该思潮虔信+1；放青铜及以下奢靡则虔信额外+1","prereqs":["闪闪发光"],"slots":[
+          {"card":"伊曼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"思潮虔信额外+1；放奢靡则金币须翻倍"}
+        ]},
+        {"id":"layide_princess_17","name":"密神的恩惠","trigger":"拜铃耶参与《闪闪发光》","desc":"存续3天耗时1天（逾期无奖惩）。放拜铃耶+8金币（奢靡须翻倍）：拜铃耶魔力+1、「不洁的思绪」+1；放青铜及以下奢靡则魔力额外+1","prereqs":["闪闪发光"],"slots":[
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"拜铃耶魔力额外+1；放奢靡则金币须翻倍"}
+        ]},
+        {"id":"layide_princess_18","name":"御医的诊治","trigger":"萨米尔参与《闪闪发光》","desc":"存续3天耗时1天（逾期无奖惩）。放萨米尔+8金币（奢靡须翻倍）：「疗伤草药」+1；放青铜及以下奢靡则额外+1","prereqs":["闪闪发光"],"slots":[
+          {"card":"萨米尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"「疗伤草药」额外+1；放奢靡则金币须翻倍"}
+        ]},
+        {"id":"layide_princess_19","name":"苏丹的召见","trigger":"完成3次《闪闪发光》1天后","desc":"存续3天（逾期死亡结局「伴君如伴虎」）。三连检定：检定1拉伊德娜隐匿-魅力成功≥3（放马尔基娜/梅姬/夏玛/热娜化妆可跳过）；检定2主角隐匿+魅力成功≥5（失败「苏丹的猜忌」+1继续）；检定3陪同贵族魅力对比成功≥5。检定1或3失败则拉伊德娜离队、1天后触发《血亲之乐》；全部通过获饰品「黄金腕轮」（魅力4社交4），抵达完美结局","prereqs":["闪闪发光"],"terminal":true,"slots":[
+          {"card":"拉伊德娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"检定2：隐匿+魅力成功≥5"},
+          {"card":"马尔基娜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"化妆槽：有则跳过检定1（仅文本差分）"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"化妆槽：有则跳过检定1（仅文本差分）"},
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"化妆槽：有则跳过检定1（仅文本差分）"},
+          {"card":"热娜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"化妆槽：有则跳过检定1（仅文本差分）"}
+        ]}
+      ]
+    }
+  ]
+}

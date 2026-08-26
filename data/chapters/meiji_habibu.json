@@ -1,0 +1,245 @@
+{
+  "id": "meiji_habibu",
+  "title": "梅姬篇、哈比卜篇",
+  "category": "character",
+  "characters": ["梅姬", "哈比卜"],
+  "routes": [
+    {
+      "id": "meiji_habibu_daily",
+      "name": "梅姬好感线",
+      "summary": "由善名/恶名/侠名/权势达标后寻思「梅姬」开启的一系列夫妻日常事件，积累幸福感与激情",
+      "steps": [
+        {"id":"meiji_habibu_daily_1","name":"妻子的嫁妆","trigger":"善名≥3、寻思头顶惊叹号的「梅姬」","desc":"弹窗，金币+5","prereqs":[],
+        "slots":[{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}]},
+        {"id":"meiji_habibu_daily_2","name":"妻子的担忧与爱意","trigger":"善名≥3、未触发过《妻子的忧虑》时寻思「梅姬」","desc":"弹窗，「幸福感」+1","prereqs":[],
+        "slots":[{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}]},
+        {"id":"meiji_habibu_daily_3","name":"妻子的忧虑","trigger":"恶名≥3、寻思头顶惊叹号的「梅姬」","desc":"仪式存续3天（逾期不满+1）。检定主角魅力+社交：成功≥4幸福感+1，<2不满+1","prereqs":[],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；●槽"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}]},
+        {"id":"meiji_habibu_daily_4","name":"武装娇妻","trigger":"侠名≥3、寻思头顶惊叹号的「梅姬」","desc":"仪式存续3天（逾期不满+1、梅姬战斗+1）。检定梅姬&主角魅力+社交：≥4幸福感+1，≥2随机岩石情报，<2不满+1、梅姬战斗+1","prereqs":[],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；●槽"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}]},
+        {"id":"meiji_habibu_daily_5","name":"为你辩解","trigger":"侠名≥11、梅姬参与跨篇事件《浴场里的消息》后寻思「梅姬」","desc":"仪式耗时0天。有不满则不满-1，无不满则善名+1、权势+1；存续期间新产生的不满也会被吸入","prereqs":[],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；●槽"},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"○槽，若有则不满-1，存续期间新产生的不满也会被吸入"}]},
+        {"id":"meiji_habibu_daily_6","name":"娘家送礼","trigger":"权势≥8、寻思头顶惊叹号的「梅姬」","desc":"弹窗，获驯兽「茉莉」、武器「长矛」；因获得坐骑3-5天后触发冒险篇《赌马》","prereqs":[],
+        "slots":[{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}]},
+        {"id":"meiji_habibu_daily_7","name":"妻子的茶会","trigger":"第7天后权势≥10、梅姬空闲，满足条件期间每7天触发一次","desc":"仪式。放奢靡按品级权势+1/2/3；青铜及以下纵欲→不满+1且不再触发；白银纵欲→侠名+1、梅姬激情+1且不再触发；无苏丹卡金骰子+1，有法图娜概率获各级「秘氛」或随从「密教信徒」（可重复）","prereqs":[],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"☆槽，与法图娜二选一"},
+          {"card":"法图娜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"☆槽（侧室），概率获「秘氛」/随从「密教信徒」"},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"须主角参与；按品级石/铜/银权势+1/2/3"},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"须主角参与；青铜及以下则不满+1且不再触发，白银则侠名+1、激情+1且不再触发"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"按奢靡品级放4/8/15金币，多放不退，其他情况无需放置"}]},
+        {"id":"meiji_habibu_daily_8","name":"特殊的枕头","trigger":"侠名≥5、梅姬有{激情}时寻思「梅姬」","desc":"仪式。可放不高于梅姬品级的纵欲折卡。「幸福感」+1、梅姬激情+1","prereqs":[],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；★槽"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于梅姬品级"}]},
+        {"id":"meiji_habibu_daily_9","name":"浴场约会","trigger":"梅姬获{激情}4-7天后触发（与《书店密会》相隔1天，此后每4-7天轮换其一）","desc":"仪式。纵欲：梅姬激情+1、支持+1；杀戮：梅姬死亡、恶名+1；此处纵欲不产生普通纵欲痕迹、也不受其他纵欲痕迹影响（可重复）","prereqs":[],
+        "slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"放杀戮则梅姬死亡"},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于梅姬品级；激情+1、支持+1"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于梅姬品级；梅姬死亡、恶名+1"},
+          {"card":"纵欲的痕迹·浴场","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"○槽，纵欲后出现，仅标记此地不可再折断纵欲"}]},
+        {"id":"meiji_habibu_daily_10","name":"书店密会","trigger":"梅姬获{激情}4-7天后触发，与《浴场约会》每4-7天轮换","desc":"仪式。梅姬激情+1；不产生普通纵欲痕迹，同《浴场约会》（可重复）","prereqs":[],
+        "slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于梅姬品级"},
+          {"card":"纵欲的痕迹·书店","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"○槽，纵欲后出现，仅标记此地不可再折断纵欲"}]}
+      ]
+    },
+    {
+      "id": "meiji_habibu_buman",
+      "name": "妻子的不满线",
+      "summary": "持有「妻子的不满」后开启的安抚/恶化链，处理不当会导致抑郁、死亡结局或触发出轨线",
+      "steps": [
+        {"id":"meiji_habibu_buman_1","name":"消除妻子的不满","trigger":"寻思「妻子的不满」（逾期可再次寻思触发）","desc":"仪式。多种卡牌可不满-1并附收益：玫瑰香精魅力+2、白银及以上饰品梅姬升黄金品级换立绘、雨之子·下卷智慧+2、宽恕的情诗魅力+1等；放「苏丹的猜忌」触发《管不住的老婆》（限一次，达成一千零一夜「河东狮」）；放{密教徒}奈布哈尼可能在《不谐之音》触发《浴血玫瑰》；首次消不满梅姬激情+1（可重复）","prereqs":[],
+        "slots":[
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；●槽"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"不高于梅姬品级，必须搭配「奇巧双头龙」"},
+          {"card":"玫瑰香精","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"梅姬魅力+2"},
+          {"card":"奇巧双头龙","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"梅姬战斗+1、武器「双截龙」、主角受伤"},
+          {"card":"梅姬的画像","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"仅消除不满（可重复使用）"},
+          {"card":"幸福感","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"仅消除不满（可重复使用）"},
+          {"card":"苏丹的猜忌","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"原文「苏丹的猜忌」1疑为-1；梅姬战斗+1、主角受伤、触发《管不住的老婆》（限一次）"},
+          {"card":"宽恕的情诗","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"梅姬魅力+1（可重复使用）"},
+          {"card":"雨之子·下卷","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"梅姬智慧+2（限一次）"},
+          {"card":"饰品","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"白银及以上；梅姬魅力+1、升黄金品级、更换立绘（限一次）"},
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"梅姬战斗+1（限一次）"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"梅姬魅力+1（限一次）；若为{密教徒}可能触发《浴血玫瑰》"},
+          {"card":"生命权杖","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"主角穿戴时空置5号槽也可消不满：梅姬魅力+1"}]},
+        {"id":"meiji_habibu_buman_2","name":"管不住的老婆","trigger":"在《消除妻子的不满》放置「苏丹的猜忌」","desc":"仪式自启动耗时7天，期间梅姬不可用；限一次","prereqs":["消除妻子的不满"],
+        "slots":[{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，7天不可用"}]},
+        {"id":"meiji_habibu_buman_3","name":"不谐之音","trigger":"每7天检测手牌，持有「妻子的不满」则触发","desc":"仪式。主角参与且检定成功≥1则安抚无事；否则按不满张数：1张→《远行访友》或《纾解压力》，2张→《积郁成疾》（概率替换为《风暴预兆》或法图娜篇《我们应该分享一切》），≥3张→《沉入梦中》或《放你自由》；曾在《消除妻子的不满》放密教徒奈布哈尼则触发《浴血玫瑰》","prereqs":[],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，按张数决定失败分支"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"☆槽，参与且成功≥1则安抚无事"}]},
+        {"id":"meiji_habibu_buman_4","name":"远行访友","trigger":"《不谐之音》无主角或检定失败且有1张不满（与《纾解压力》随机其一）","desc":"仪式自启动耗时5天，期间梅姬不可用","prereqs":["不谐之音"],
+        "slots":[{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，5天不可用"}]},
+        {"id":"meiji_habibu_buman_5","name":"纾解压力","trigger":"《不谐之音》无主角或检定失败且有1张不满（与《远行访友》随机其一）","desc":"仪式。放金币>3：梅姬购买随机物品（金项链/宝石耳环等）；金币≤3：不满+1","prereqs":["不谐之音"],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"●槽最多5金币；>3购买随机物品，≤3不满+1"}]},
+        {"id":"meiji_habibu_buman_6","name":"积郁成疾","trigger":"《不谐之音》无主角或检定失败且有2张不满","desc":"仪式耗时3天（逾期自启动）。梅姬抑郁+1、魅力/智慧/社交-1；抑郁=4则梅姬死亡","prereqs":["不谐之音"],
+        "slots":[{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"}]},
+        {"id":"meiji_habibu_buman_7","name":"沉入梦中","trigger":"《不谐之音》失败且不满≥3（未达成《放你自由》条件），或出轨线《面对现实》选“选择离开”6天后","desc":"仪式。死亡结局「永恒之梦」，达成一千零一夜「沉入梦中」","prereqs":["不谐之音"],"terminal":true,
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"}]},
+        {"id":"meiji_habibu_buman_8","name":"浴血玫瑰","trigger":"在《消除妻子的不满》放置{密教徒}奈布哈尼，且《不谐之音》未放主角或检定失败","desc":"仪式存续2天（逾期按失败结算）。检定战斗+隐匿≥2：不满-1、金骰子+1、「罪证」+1；失败时不满>2张→死亡结局「最后拥抱」","prereqs":["消除妻子的不满","不谐之音"],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"★槽：主角/任意{密教徒}"}]}
+      ]
+    },
+    {
+      "id": "meiji_habibu_chugui",
+      "name": "出轨线",
+      "summary": "哈比卜入队后由《她不开心》选“告诉他”开启的厨子诱惑/梅姬出轨链，多通向退场、双杀或死亡结局",
+      "steps": [
+        {"id":"meiji_habibu_chugui_1","name":"她不开心","trigger":"哈比卜入队7天后、梅姬在队、持有「妻子的不满」","desc":"仪式存续3天（逾期按“警告”结算）。3/4单选：“警告他”→出轨线关闭；“告诉他”→厨子的诱惑计数+1，开启出轨线；放小圆/主角则不满-1","prereqs":["合宜的一餐"],
+        "slots":[
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3/4★单选槽；“警告他”仅限主角；放主角则不满-1"},
+          {"card":"小圆","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"替代主角：小圆智慧+1、不满-1"}]},
+        {"id":"meiji_habibu_chugui_2","name":"疗愈的食物","trigger":"厨子的诱惑计数=1、拥有2级《舍馆》1天后","desc":"仪式存续3天（逾期自启动）。有不满：不满-1、诱惑计数+1；无不满放主角：幸福感+1、「一罐蜜饯」+1，不放主角：幸福感+1、诱惑计数+1","prereqs":["她不开心"],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"○槽，有不满则不满-1"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"☆槽"}]},
+        {"id":"meiji_habibu_chugui_3","name":"冷淡的消遣","trigger":"梅姬&哈比卜在队、3级《舍馆》且未租给妓女，且不满≥3诱惑计数≥1，或不满=2诱惑计数=2且梅姬有{激情}","desc":"仪式自启动。妻子出轨计数+1、不满-1；1天后弹窗获大餐「稀有的肉干」（不满已降则无）","prereqs":["她不开心"],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"●槽，出轨计数+1、不满-1"}]},
+        {"id":"meiji_habibu_chugui_4","name":"风暴预兆","trigger":"已完成《疗愈的食物》《冷淡的消遣》，《不谐之音》无主角或失败且有2张不满时一定概率触发","desc":"仪式自启动耗时3天。检定社交+隐匿：成功≥1→出轨计数+1并触发《面对现实》；失败→出轨计数+1","prereqs":["疗愈的食物","冷淡的消遣","不谐之音"],
+        "slots":[{"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"}]},
+        {"id":"meiji_habibu_chugui_5","name":"面对现实","trigger":"《风暴预兆》检定成功","desc":"仪式存续1天（逾期出轨计数+1）。“无法容忍”→触发《处刑》；“选择离开”→出轨计数+1、6天后触发《沉入梦中》","prereqs":["风暴预兆"],
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3/4★单选槽"}]},
+        {"id":"meiji_habibu_chugui_6","name":"处刑","trigger":"在《面对现实》选“无法容忍”","desc":"仪式存续1天（逾期自启动）。可放杀戮折卡；固定结算：梅姬死亡、哈比卜死亡","prereqs":["面对现实"],"terminal":true,
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"●槽，固定结算死亡"},
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"●槽，固定结算死亡"},
+          {"card":"杀戮","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"3/4☆槽各可放一张：不高于梅姬品级/不高于哈比卜品级"}]},
+        {"id":"meiji_habibu_chugui_7","name":"复仇之火","trigger":"梅姬死亡、妻子出轨次数≥3","desc":"仪式存续1天（逾期自启动）。检定体魄+生存≥5：哈比卜死亡；失败→死亡结局「复仇之火」","prereqs":["冷淡的消遣","风暴预兆","面对现实"],"terminal":true,
+        "slots":[{"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"}]},
+        {"id":"meiji_habibu_chugui_8","name":"放你自由","trigger":"妻子出轨计数≥1、《不谐之音》无主角或失败且不满≥3、梅姬/哈比卜空闲主角不空闲","desc":"仪式自启动。梅姬退场、哈比卜退场，并带走你所有的金币","prereqs":["冷淡的消遣","不谐之音"],"terminal":true,
+        "slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，退场"},
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，退场"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"●槽，你所有的金币被带走"}]},
+        {"id":"meiji_habibu_chugui_9","name":"持刀的绵羊","trigger":"梅姬死亡、1≤妻子出轨次数≤2","desc":"仪式自启动。侠名-1、权势-1、哈比卜死亡","prereqs":["冷淡的消遣"],"terminal":true,
+        "slots":[{"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"●槽，哈比卜死亡"}]},
+        {"id":"meiji_habibu_chugui_10","name":"食物中毒","trigger":"梅姬死亡、厨子的诱惑计数=2、妻子出轨次数=0","desc":"仪式自启动。侠名-2、哈比卜退场","prereqs":["疗愈的食物"],"terminal":true,
+        "slots":[{"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，退场"}]},
+        {"id":"meiji_habibu_chugui_11","name":"路散","trigger":"梅姬死亡、厨子的诱惑计数=1、妻子出轨次数=0","desc":"仪式自启动。哈比卜退场","prereqs":["她不开心"],"terminal":true,
+        "slots":[{"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，退场"}]}
+      ]
+    },
+    {
+      "id": "meiji_habibu_habibu",
+      "name": "哈比卜入队与施舍线",
+      "summary": "修建舍馆后招募哈比卜入队，开启做大餐与黑街施舍的侠名链",
+      "steps": [
+        {"id":"meiji_habibu_habibu_1","name":"合宜的一餐","trigger":"完成《修建舍馆》3天后、梅姬在队","desc":"仪式存续7天（逾期哈比卜也入队）。放哈比卜+1~10金币（岩石奢靡折卡需10金币）：哈比卜入队、触发《大家一起来！》；金币=10「特制佳肴」+3，≥6则+2，≤5则+1","prereqs":[],
+        "slots":[
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，结算后入队"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"★槽1~10金币；=10特制佳肴+3，≥6则+2，≤5则+1"},
+          {"card":"奢靡","sultan":true,"maxGrade":"岩石","required":false,"consumed":true,"note":"☆槽，须10金币"}]},
+        {"id":"meiji_habibu_habibu_2","name":"能吃吗好吃吗怎么吃","trigger":"寻思「哈比卜」（需已入队）","desc":"仪式放10金币+各篇章食材/食谱制作对应属性「大餐」（鳄鱼饭/烤全驼/生命布丁/暗夜之饮等）；寻思「大餐」可让任意4名角色共享加成；制作1/10/50次达成一千零一夜「美味佳肴」系列（可重复）","prereqs":["合宜的一餐"],
+        "slots":[
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；●槽"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"★槽10金币"},
+          {"card":"食材/食谱","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"★槽，使用后消耗。卡池：小鳄鱼/山狮/草药学入门/如何取悦你的爱人/圣训六十篇/游牧民的生活/猎人故事集/文书的工作/宫廷礼仪指南/沙漠之书/艾娃日记/荒野集/老花园/生命之水/游猎的野味/报菜名/白犀牛/夜晚的结晶/肥鸽子/大笨驴/大公鸡/大蛮牛/多眼智者/暗影黑手/蛇女/空壳骑士/利齿残骸/扭曲残骸/魅魔"}]},
+        {"id":"meiji_habibu_habibu_3","name":"大家一起来！","trigger":"完成《合宜的一餐》","desc":"仪式存续5天（逾期特制佳肴-1、触发《有人没吃到》）。放黑街的群众+特制佳肴：全员体魄+1、侠名+1、触发《有人没吃到》；主角&梅姬同时缺席则失去侠名+1","prereqs":["合宜的一餐"],
+        "slots":[
+          {"card":"黑街的群众","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"特制佳肴","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"●槽（失去）"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"☆槽，与主角同时缺席则失去侠名+1"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"☆槽"}]},
+        {"id":"meiji_habibu_habibu_4","name":"有人没吃到","trigger":"《大家一起来！》完成或逾期","desc":"仪式存续5天（逾期侠名-2）。3金币或任意大餐：2天后触发《贵族也想吃》（大餐另侠名+1、体魄+1）；空置派贵族→受伤、侠名-2；派非贵族检定体魄+魅力≥3侠名+1否则侠名-1；固定可能触发《边角料变多了》","prereqs":["大家一起来！"],
+        "slots":[
+          {"card":"混乱的群众","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"☆槽3金币，与大餐二选一"},
+          {"card":"大餐","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"☆槽任意大餐（失去）：侠名+1、体魄+1"}]},
+        {"id":"meiji_habibu_habibu_5","name":"贵族也想吃","trigger":"完成《有人没吃到》且没有检定失败","desc":"仪式存续5天（逾期侠名-2）。主角参与：权势≥8侠名+1否则「谗言」+1，+5金币权势+1，+大餐侠名+1；哈比卜参与：战斗+1、侠名+1（+5金币无奖惩，+大餐侠名+1）","prereqs":["有人没吃到"],"terminal":true,
+        "slots":[
+          {"card":"贪吃的贵族","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"大餐","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"☆槽任意大餐（失去），与5金币二选一"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"☆槽5金币（失去）"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"★槽：主角/哈比卜"},
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"★槽：主角/哈比卜"}]}
+      ]
+    },
+    {
+      "id": "meiji_habibu_sheguan",
+      "name": "舍馆宴席线",
+      "summary": "舍馆升到2/3级后由《边角料变多了》分支出的盛宴、乞丐与哈比卜五宴会系列",
+      "steps": [
+        {"id":"meiji_habibu_sheguan_1","name":"边角料变多了","trigger":"哈比卜出场数天后完成《合宜的一餐》、拥有2级《舍馆》次日、哈比卜&梅姬在队","desc":"抉择：“你想怎么利用起来？”触发《免费的盛宴》（完成后触发《高端宴席》）；“没有这个必要”可能触发《高端宴席》，1天后可能触发《乞丐翻垃圾》","prereqs":["合宜的一餐"],
+        "slots":[]},
+        {"id":"meiji_habibu_sheguan_2","name":"免费的盛宴","trigger":"在《边角料变多了》选“你想怎么利用起来？”","desc":"仪式存续5天（逾期侠名-2、《舍馆》关闭7天）。阿里木参与全员体魄+1；其他角色检定隐匿+社交≥5否则侠名-1；固定触发《闹事的老鼠》、可能触发《高端宴席》","prereqs":["边角料变多了"],
+        "slots":[
+          {"card":"黑街的群众","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"妙妙糊糊","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"○槽"}]},
+        {"id":"meiji_habibu_sheguan_3","name":"闹事的老鼠","trigger":"完成《免费的盛宴》","desc":"仪式存续5天。放梅姬（无需金币）：闹事的混蛋死亡、触发《硕鼠》；非梅姬+10金币：触发《硕鼠》；非梅姬无金币：重置本事件","prereqs":["免费的盛宴"],
+        "slots":[
+          {"card":"闹事的混蛋","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，梅姬参与或《硕鼠》完成后死亡"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"★槽：梅姬/任意角色"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"☆槽10金币（非梅姬时需要）"}]},
+        {"id":"meiji_habibu_sheguan_4","name":"硕鼠","trigger":"完成《闹事的老鼠》","desc":"仪式长期存续。空置且权势≥10触发《大臣赔罪》（权势<10重置）；放杀戮/纵欲→嫉妒的大臣死亡；放征服→大臣死亡并触发《全家福》","prereqs":["闹事的老鼠"],
+        "slots":[
+          {"card":"嫉妒的大臣","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，放苏丹卡则死亡"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"★槽为任意{贵族}，用苏丹卡时必须主角"},
+          {"card":"杀戮","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"青铜及以下；嫉妒的大臣死亡"},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"青铜及以下；嫉妒的大臣死亡"},
+          {"card":"征服","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"青铜及以下；大臣死亡并触发《全家福》"}]},
+        {"id":"meiji_habibu_sheguan_5","name":"大臣赔罪","trigger":"完成《硕鼠》未使用苏丹卡且权势≥10","desc":"抉择弹窗：“公开道歉”侠名+2；“需要你的支持”大臣支持+2、反对-1、权势+1；“赔钱”金币+12","prereqs":["硕鼠"],"terminal":true,
+        "slots":[]},
+        {"id":"meiji_habibu_sheguan_6","name":"全家福","trigger":"在《硕鼠》放置「征服」","desc":"仪式存续5天（逾期死亡结局「伴君如伴虎」）。检定我方战斗&体魄-敌方（25）≥5：卫兵死亡、金币+15、权势+1；失败→死亡结局「无名人之死」","prereqs":["硕鼠"],"terminal":true,
+        "slots":[{"card":"贵族领地的卫兵","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽，检定成功则死亡"}]},
+        {"id":"meiji_habibu_sheguan_7","name":"乞丐翻垃圾","trigger":"哈比卜&梅姬在队、《苗圃》（阿里木篇/奈费勒篇）在桌面，在《边角料变多了》选“没有这个必要”1天后","desc":"抉择弹窗：“你们跟我来”触发《等待一餐》；“你们在干什么”后续事件关闭","prereqs":["边角料变多了"],
+        "slots":[]},
+        {"id":"meiji_habibu_sheguan_8","name":"等待一餐","trigger":"在《乞丐翻垃圾》选“你们跟我来”","desc":"仪式存续7天（逾期后续事件关闭）。放任意大餐：善名+1、触发《想做人》","prereqs":["乞丐翻垃圾"],
+        "slots":[
+          {"card":"流民乞丐","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"●槽"},
+          {"card":"大餐","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"★槽任意大餐"}]},
+        {"id":"meiji_habibu_sheguan_9","name":"想做人","trigger":"完成《等待一餐》","desc":"抉择弹窗：“我可以帮助你们”善名+1、获「流浪儿们」（收容到《苗圃》）；“我无能为力”无奖惩","prereqs":["等待一餐"],"terminal":true,
+        "slots":[]},
+        {"id":"meiji_habibu_sheguan_10","name":"高端宴席","trigger":"拥有3级《舍馆》、哈比卜&梅姬在队，完成《边角料变多了》（《免费的盛宴》进行中须先完成）","desc":"抉择弹窗：“就这么办”随机触发《哈比卜五宴会》系列之一；“还是算了”系列关闭；固定可能触发侠名篇《舍馆阁楼租给谁》","prereqs":["边角料变多了"],
+        "slots":[]},
+        {"id":"meiji_habibu_sheguan_11","name":"哈比卜五宴会","trigger":"在《高端宴席》选“就这么办”后随机触发（每场后3-4天随机触发下一场）","desc":"系列宴会，每场耗时3天、全员对应属性总和需≥10：热辣欢宴（魅力）金币+8、黄金「秘密」+1并触发《羊排与羊肉》；生存场侠名+1、金币+5、黄金「战术」+1；社交场权势+1、金币+5、黄金「内幕」+1；另有特殊场《颂神云》《谢肉祭》见独立步骤；完成3次触发《喂养孤儿》（可重复）","prereqs":["高端宴席"],
+        "slots":[{"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"★槽；2/3/4☆任意角色，全员对应属性总和需≥10"}]},
+        {"id":"meiji_habibu_sheguan_12","name":"颂神云","trigger":"持有「完美世界」（原文注明疑为BUG），在《高端宴席》选“就这么办”后随机触发","desc":"仪式，五宴会之一。需青铜以上「正教思潮」+10金币，4/5/6号槽至少1人且全员体魄总和≥10：体魄+1、善名+1、权势+1、所放思潮虔信+1","prereqs":["高端宴席"],
+        "slots":[
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"★槽"},
+          {"card":"正教思潮","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"★槽青铜以上品级；结算虔信+1"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"★槽10金币"}]},
+        {"id":"meiji_habibu_sheguan_13","name":"谢肉祭","trigger":"拜铃耶在队、哈比卜为{密教徒}，在《高端宴席》选“就这么办”后随机触发","desc":"仪式，五宴会之一。需拜铃耶+祭品（任意非怪物非动物追随者）+至少1名密教徒：祭品死亡、体魄+1、灵视+1、「不洁的思绪」+1","prereqs":["高端宴席"],
+        "slots":[
+          {"card":"哈比卜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"★槽"},
+          {"card":"拜铃耶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"★槽"}]},
+        {"id":"meiji_habibu_sheguan_14","name":"羊排与羊肉","trigger":"完成五宴会魅力场《热辣欢宴》","desc":"抉择弹窗：“支持追随你的食客”权势-1、侠名+1；“支持花了钱的客人”权势+1、侠名-1、金币+5","prereqs":["哈比卜五宴会"],
+        "slots":[]},
+        {"id":"meiji_habibu_sheguan_15","name":"喂养孤儿","trigger":"完成3次《哈比卜五宴会》","desc":"抉择弹窗：“你做的没错”善名+1；“你不该这样”若妻子出轨计数≥1立即触发《梅姬听说了》，否则事件关闭","prereqs":["哈比卜五宴会"],
+        "slots":[]},
+        {"id":"meiji_habibu_sheguan_16","name":"梅姬听说了","trigger":"妻子出轨计数≥1、在《喂养孤儿》选“你不该这样”","desc":"抉择弹窗：“随便你们”金币+8（已建成《苗圃》则1天后善名+1）；“这样不行”无奖惩","prereqs":["喂养孤儿"],"terminal":true,
+        "slots":[]}
+      ]
+    }
+  ]
+}

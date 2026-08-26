@@ -1,0 +1,2053 @@
+{
+  "id": "xiaming_lingshi",
+  "title": "侠名篇/灵视篇",
+  "category": "base",
+  "characters": [
+    "主角",
+    "梅姬",
+    "哈比卜",
+    "流浪剑客",
+    "拜铃耶",
+    "西雅玛",
+    "奈费勒",
+    "苏丹"
+  ],
+  "routes": [
+    {
+      "id": "xiaming_lingshi_sheguan",
+      "name": "舍馆线",
+      "summary": "侠名≥3修建舍馆，招募食客、收留罪犯，并将舍馆升到4级后决定阁楼的用途",
+      "steps": [
+        {
+          "id": "xiaming_lingshi_sheguan_1",
+          "name": "修建舍馆",
+          "trigger": "侠名≥3",
+          "desc": "仪式，长期存续耗时1天。放任意「空屋」（失去）+10金币，可放岩石「奢靡」折卡（谗言+1）。结算：权势+1、触发《舍馆》、3天后触发哈比卜篇《合宜的一餐》",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "空屋",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "空置的房间/空置的宅邸/空置的旧居均可"
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "岩石",
+              "required": false,
+              "consumed": true,
+              "note": "折卡：「谗言」+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_sheguan_2",
+          "name": "舍馆",
+          "trigger": "完成《修建舍馆》",
+          "desc": "长期存续。4/5/6号槽放任意角色免费招募食客（一次性装备，参与仪式后消失，每人限1名，每7天刷新）。侠名达5/10/20可花5/10/15金币升至2/3/4级（食客增至4/5/6名），4级达成一千零一夜「四海漂泊之人」。各级舍馆可能触发哈比卜篇、法尔达克篇、阿里木篇、芮尔篇、热娜篇的若干事件",
+          "prereqs": [
+            "修建舍馆"
+          ],
+          "slots": []
+        },
+        {
+          "id": "xiaming_lingshi_sheguan_3",
+          "name": "罪犯的投奔",
+          "trigger": "侠名≥5，每5-10天触发一次",
+          "desc": "放任意角色：将罪犯招募为临时追随者（可进手牌用一次，可用于献祭；白银罪犯另获「罪证」+2）；放不高于罪犯品级的「杀戮」：罪犯死亡、侠名-1、本事件永久关闭（可重复）",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "品级须不高于罪犯；罪犯死亡、侠名-1、本事件永久关闭"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_sheguan_4",
+          "name": "舍馆阁楼租给谁",
+          "trigger": "拥有4级《舍馆》、完成过哈比卜篇《高端宴席》、梅姬&哈比卜在队",
+          "desc": "抉择弹窗：选“妓女”触发《阁楼里的笑声》；选“佣兵”触发《冒险者酒吧》；选“贵族”触发《丝绒暗室》",
+          "prereqs": [
+            "舍馆"
+          ],
+          "slots": []
+        }
+      ]
+    },
+    {
+      "id": "xiaming_lingshi_jiulou",
+      "name": "阁楼妓馆线",
+      "summary": "阁楼租给妓女，经营笑声生意，最终引向腐败的玫瑰与西雅玛变身",
+      "steps": [
+        {
+          "id": "xiaming_lingshi_jiulou_1",
+          "name": "阁楼里的笑声",
+          "trigger": "在《舍馆阁楼租给谁》选“妓女”，每5天重复直到触发《布缇娜之怒》",
+          "desc": "放《欢愉之馆》的妓女：若为朱娜/贾丽拉/夏玛则阁楼笑声计数+1。86%金币+3、14%白银「秘密」+1；计数=3时触发《布缇娜之怒》（可重复）",
+          "prereqs": [
+            "舍馆阁楼租给谁"
+          ],
+          "slots": [
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "被吸入时阁楼笑声计数+1"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "被吸入时阁楼笑声计数+1"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "被吸入时阁楼笑声计数+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_jiulou_2",
+          "name": "布缇娜之怒",
+          "trigger": "阁楼笑声计数=3、桌面存在《欢愉之馆》",
+          "desc": "抉择弹窗：“我以后会用自己的人”→6天后《阁楼里熟悉的笑声》；“你怎么管好自己的人”→13天后《阁楼里偶尔的笑声》；“我们可以合伙”→《合伙金》。警告：过早做完朱娜/贾丽拉/夏玛篇会使其无法被吸入《阁楼里的笑声》，本事件无法触发",
+          "prereqs": [
+            "阁楼里的笑声"
+          ],
+          "slots": []
+        },
+        {
+          "id": "xiaming_lingshi_jiulou_3",
+          "name": "阁楼里熟悉的笑声",
+          "trigger": "在《布缇娜之怒》选“我以后会用自己的人”6天后，每7天一次",
+          "desc": "放特定追随者收租：朱娜+3、贾丽拉+5、夏玛+5、娜依拉+5、堕落的铁头+4、魅魔+10金币；拜铃耶/魅魔60%金骰子+1、20%「窥视黑暗」+1、20%「罪证」+1（拜铃耶另20%「乙太」+1）（可重复）",
+          "prereqs": [
+            "布缇娜之怒"
+          ],
+          "slots": [
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "金币+3"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "金币+5"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "金币+5、青铜「机遇」+1"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "金币+5"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "60%金骰子+1、20%「窥视黑暗」+1、20%「罪证」+1、20%「乙太」+1"
+            },
+            {
+              "card": "魅魔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "金币+10、60%金骰子+1、20%「窥视黑暗」+1、20%「罪证」+1"
+            },
+            {
+              "card": "堕落的铁头",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "金币+4"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_jiulou_4",
+          "name": "阁楼里偶尔的笑声",
+          "trigger": "在《布缇娜之怒》选“你怎么管好自己的人”13天后，每14天一次",
+          "desc": "放随机一位欢愉之馆妓女：86%金币+3、14%白银「秘密」+1（可重复）",
+          "prereqs": [
+            "布缇娜之怒"
+          ],
+          "slots": []
+        },
+        {
+          "id": "xiaming_lingshi_jiulou_5",
+          "name": "合伙金",
+          "trigger": "在《布缇娜之怒》选“我们可以合伙”",
+          "desc": "放10金币：4天后触发《阁楼里熟悉的笑声》、8天后重新触发一次《阁楼里的笑声》；空置：14天后触发《阁楼里偶尔的笑声》",
+          "prereqs": [
+            "布缇娜之怒"
+          ],
+          "slots": []
+        },
+        {
+          "id": "xiaming_lingshi_jiulou_6",
+          "name": "腐败的玫瑰",
+          "trigger": "完成《布缇娜之怒》后，阁楼妓馆（无论哪个《笑声》）完成2次",
+          "desc": "存续3天，逾期1天后触发《恶臭的阁楼》。放西雅玛+任意情报；3号槽：拜铃耶→触发《黑暗之主的雕琢》；梅姬→「妻子的不满」+1但直接成功；哈比卜/朱娜/贾丽拉/夏玛直接成功；其他追随者检定隐匿+社交，成功≥5侠名+1、失败触发《恶臭的阁楼》",
+          "prereqs": [
+            "布缇娜之怒"
+          ],
+          "slots": [
+            {
+              "card": "西雅玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3号槽：触发《黑暗之主的雕琢》"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3号槽：「妻子的不满」+1、直接按检定成功结算"
+            },
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3号槽：直接按检定成功结算"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3号槽：直接按检定成功结算"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3号槽：直接按检定成功结算"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3号槽：直接按检定成功结算"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_jiulou_7",
+          "name": "恶臭的阁楼",
+          "trigger": "《腐败的玫瑰》逾期或检定失败",
+          "desc": "随机从手牌吸入2名男性追随者（哲巴尔、法尔达克、伊曼豁免）。侠名-2、被吸入者{疾病}；《阁楼里的笑声》《阁楼里熟悉的笑声》永久关闭",
+          "prereqs": [
+            "腐败的玫瑰"
+          ],
+          "slots": [],
+          "terminal": true
+        },
+        {
+          "id": "xiaming_lingshi_jiulou_8",
+          "name": "黑暗之主的雕琢",
+          "trigger": "在《腐败的玫瑰》放置拜铃耶",
+          "desc": "存续7天耗时7天，逾期西雅玛死亡。放拜铃耶+西雅玛+乙太：西雅玛入队并变身为「恶臭与隐疾的女神」（怪物，体魄13魅力4战斗2魔力5）",
+          "prereqs": [
+            "腐败的玫瑰"
+          ],
+          "slots": [
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "西雅玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "入队并变身「恶臭与隐疾的女神」"
+            },
+            {
+              "card": "乙太",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "xiaming_lingshi_guizu",
+      "name": "丝绒暗室线",
+      "summary": "阁楼租给贵族，引来苏丹到访，围绕款待苏丹展开的高风险支线",
+      "steps": [
+        {
+          "id": "xiaming_lingshi_guizu_1",
+          "name": "丝绒暗室",
+          "trigger": "在《舍馆阁楼租给谁》选“贵族”，每5天一次",
+          "desc": "全局随机吸入2名{贵族}（苏丹、主角除外）。按是否有{追随者}/{密教徒}概率获权势+1/金币+5/随机白银「情报」/「对苏丹的恐惧」/「窥视黑暗」。完成3次可能触发《过于尊贵的客人》（可重复）",
+          "prereqs": [
+            "舍馆阁楼租给谁"
+          ],
+          "slots": []
+        },
+        {
+          "id": "xiaming_lingshi_guizu_2",
+          "name": "过于尊贵的客人",
+          "trigger": "《丝绒暗室》完成3-4次、桌面有《群龙无首》、尚未在安苏亚篇/阿图娜尔篇偷到「万逝戒」",
+          "desc": "存续5天，逾期「谗言」+1且苏丹来访。单选一名贵族追随者应对惊慌失措的官员：拒绝→权势≥10时官员死亡权势-1、权势<10则「谗言」+2；接受→苏丹来访；说服检定社交+魅力，成功≥7且权势≥20→苏丹来访。达成“苏丹来访”开启后续",
+          "prereqs": [
+            "丝绒暗室"
+          ],
+          "slots": [
+            {
+              "card": "惊慌失措的官员",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽自动吸入"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_guizu_3",
+          "name": "奈费勒的谎言",
+          "trigger": "奈费勒存活、在《过于尊贵的客人》达成“苏丹来访”、在奈费勒篇《干净的队伍》指认告密者成功",
+          "desc": "剧情弹窗：获「贪腐之徒的名单」，在《如何款待尊贵的客人》放置可使奈费勒获{宰相资格}（隐藏标签）",
+          "prereqs": [
+            "过于尊贵的客人"
+          ],
+          "slots": []
+        },
+        {
+          "id": "xiaming_lingshi_guizu_4",
+          "name": "宰相的谎言",
+          "trigger": "阿卜德存活、在《过于尊贵的客人》达成“苏丹来访”后完成一次权势篇《处理政务》系列事件",
+          "desc": "剧情弹窗：获「罗织罪名的名单」，在《如何款待尊贵的客人》放置金币+20",
+          "prereqs": [
+            "过于尊贵的客人"
+          ],
+          "slots": []
+        },
+        {
+          "id": "xiaming_lingshi_guizu_5",
+          "name": "如何款待尊贵的客人",
+          "trigger": "在《过于尊贵的客人》达成“苏丹来访”、桌面存在《群龙无首》",
+          "desc": "存续5天，逾期死亡结局「伴君如伴虎」。放苏丹+任意大餐（白银/黄金且哈比卜存活→触发《御厨》，哈比卜已死→「苏丹的猜忌」+1）+思潮或名单（贪腐之徒的名单→奈费勒获宰相资格；罗织罪名的名单→金币+20）+主角或魅力≥5女性追随者：主角穿戴「生命权杖」=死亡结局「无名人之死」；岩石品级女性或夏玛死亡；魅力≥10女性成为{苏丹的猎物}此后触发《苏丹的偏爱》；梅姬{受伤}权势+2",
+          "prereqs": [
+            "过于尊贵的客人"
+          ],
+          "slots": [
+            {
+              "card": "苏丹",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽"
+            },
+            {
+              "card": "大餐",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "黄金/白银：哈比卜存活触发《御厨》、已死则「苏丹的猜忌」+1；青铜/岩石：权势+1、金币+5"
+            },
+            {
+              "card": "贪腐之徒的名单",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3号槽：奈费勒获{宰相资格}（来自《奈费勒的谎言》）"
+            },
+            {
+              "card": "罗织罪名的名单",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "3号槽：金币+20（来自《宰相的谎言》）"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "4号槽选项；穿戴「生命权杖」则死亡结局「无名人之死」"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "4号槽选项；夏玛死亡"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "4号槽选项；{受伤}、「妻子的不满」+1、权势+2"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true,
+              "note": "5号槽；女性品级不限、不可搭配主角"
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true,
+              "note": "5号槽；青铜/白银/黄金品级各需额外10/15/20金币"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_guizu_6",
+          "name": "苏丹的偏爱",
+          "trigger": "在《如何款待尊贵的客人》放置女性追随者后，每5-20天一次",
+          "desc": "吸入有{苏丹的猎物}标签的角色，若存续期内无法吸入（死亡/退场/在其他仪式中）则死亡结局「伴君如伴虎」。结算：该角色{受伤}、金币+5（可重复）",
+          "prereqs": [
+            "如何款待尊贵的客人"
+          ],
+          "slots": []
+        },
+        {
+          "id": "xiaming_lingshi_guizu_7",
+          "name": "御厨",
+          "trigger": "在《如何款待尊贵的客人》放白银/黄金「大餐」",
+          "desc": "存续7天，逾期死亡结局「伴君如伴虎」。放哈比卜+任意情报+说服槽：放任意贵族角色检定隐匿+智慧，成功≥8→日常篇《苏丹的戏弄》贡品新增「大餐」种类；失败（或空置）→权势+2、哈比卜离队升为白银品级成为{御厨}、触发《哈比卜逃亡》、梅姬篇出轨线关闭",
+          "prereqs": [
+            "如何款待尊贵的客人"
+          ],
+          "slots": [
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_guizu_8",
+          "name": "哈比卜逃亡",
+          "trigger": "《御厨》检定失败",
+          "desc": "存续7天，逾期哈比卜入宫、哈比卜篇关闭。放哈比卜+任意角色+情报；4号槽白银及以下「杀戮」搭配主角→哈比卜死亡、侠名-2、「妻子的不满」+1；哲巴尔/奈布哈尼/蒙面战士/法里斯→哈比卜归队；其他追随者检定隐匿+智慧，成功≥6归队、失败入宫（哈比卜篇关闭）",
+          "prereqs": [
+            "御厨"
+          ],
+          "slots": [
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "白银",
+              "required": false,
+              "consumed": true,
+              "note": "4号槽；必须搭配主角：哈比卜死亡、侠名-2、「妻子的不满」+1"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "xiaming_lingshi_yongbing",
+      "name": "冒险者酒吧线",
+      "summary": "阁楼租给佣兵，培养冒险者佣兵，最终与流浪剑客了断恩怨",
+      "steps": [
+        {
+          "id": "xiaming_lingshi_yongbing_1",
+          "name": "冒险者酒吧",
+          "trigger": "在《舍馆阁楼租给谁》选“佣兵”",
+          "desc": "长期存续耗时7天，固定结算重新触发。放冒险者佣兵，2号槽：金币强化其战斗（1-5枚+1/6-10枚+2）、三类思潮各限一次（谋反思潮→「对苏丹的恐惧」+1等）、伤药类→获读物「佣兵的笔记」、白银及以下「情报」升1级。完成1次大结局革命篇获「冒险者佣兵」报恩；完成2次次日触发《公主的滋味》（可重复）",
+          "prereqs": [
+            "舍馆阁楼租给谁"
+          ],
+          "slots": [
+            {
+              "card": "冒险者佣兵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽"
+            },
+            {
+              "card": "生命之水",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：获读物「佣兵的笔记」"
+            },
+            {
+              "card": "疗伤草药",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：获读物「佣兵的笔记」"
+            },
+            {
+              "card": "精心调配的伤药",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：获读物「佣兵的笔记」"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_yongbing_2",
+          "name": "公主的滋味",
+          "trigger": "完成《冒险者酒吧》2次",
+          "desc": "抉择弹窗：“公主确实不一样”→侠名+1、次日触发《午夜利刃》；“女人都差不多”→侠名+1（无后续）",
+          "prereqs": [
+            "冒险者酒吧"
+          ],
+          "slots": []
+        },
+        {
+          "id": "xiaming_lingshi_yongbing_3",
+          "name": "午夜利刃",
+          "trigger": "在《公主的滋味》选“公主确实不一样”次日",
+          "desc": "存续1天，逾期「剑下亡魂」+1并重置。放流浪剑客或其他角色检定隐匿+智慧成功≥7→触发《收手吧》；失败或空置→「剑下亡魂」+1重置。「剑下亡魂」=9时不再重置，1天后触发《你是最后一个》",
+          "prereqs": [
+            "公主的滋味"
+          ],
+          "slots": [
+            {
+              "card": "剑下亡魂",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2/3号槽：放入则触发《收手吧》"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_yongbing_4",
+          "name": "收手吧",
+          "trigger": "在《午夜利刃》放置流浪剑客或检定成功",
+          "desc": "存续3天，逾期死亡结局「因果报应」。与流浪剑客+盛怒决斗（对方战斗&体魄基础10+20）：成功≥3流浪剑客死亡、3/4号槽战斗+1；失败3/4号槽{受伤}、流浪剑客离队且其篇关闭。放督言之证/谋反的意图/献君的计划（需流浪剑客已入队）可关闭检定、流浪剑客智慧+1并归队；放黄金及以下「杀戮」成功时额外权势+1侠名+1",
+          "prereqs": [
+            "午夜利刃"
+          ],
+          "slots": [
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽对手；无论是否入队都会成为对手"
+            },
+            {
+              "card": "盛怒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true,
+              "note": "6号槽；检定成功时额外权势+1、侠名+1"
+            },
+            {
+              "card": "督言之证",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽（需流浪剑客已入队）：关闭检定、流浪剑客智慧+1并归队"
+            },
+            {
+              "card": "谋反的意图",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽（需流浪剑客已入队）：关闭检定、流浪剑客智慧+1并归队"
+            },
+            {
+              "card": "献君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽（需流浪剑客已入队）：关闭检定、流浪剑客智慧+1并归队"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "xiaming_lingshi_yongbing_5",
+          "name": "你是最后一个",
+          "trigger": "《午夜利刃》的「剑下亡魂」达到9张的1天后",
+          "desc": "存续1天，逾期死亡结局「因果报应」。主角与流浪剑客单挑（检定前主角战斗+1，骰子=主角战斗&体魄-对方基础10）：成功≥10流浪剑客死亡、主角战斗+1；失败死亡结局「因果报应」",
+          "prereqs": [
+            "午夜利刃"
+          ],
+          "slots": [
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽对手"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": true,
+              "note": "4号槽"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "xiaming_lingshi_xinling",
+      "name": "心灵之战线",
+      "summary": "激活神之侧身像后进入初梦，历经16场心灵之战累积正神/邪神连接，通向降神篇与多个伪胜利结局",
+      "steps": [
+        {
+          "id": "xiaming_lingshi_xinling_1",
+          "name": "初梦",
+          "trigger": "在命运商店激活「神之侧身像」、灵视≥1、主角空闲",
+          "desc": "获1级邪神面容「恶的本质？」与1级正神面容「善的本质？」，2-3天后触发《心灵之战·1》。连接每累积3点对应面容升1级（仪式升级，见神的面容线）；面容达3级开启大结局·降神篇",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_2",
+          "name": "心灵之战·1",
+          "trigger": "完成《初梦》2-3天后",
+          "desc": "存续3天，逾期「疯狂」+1并1-3天后重置（全系列相同）。放双神面容+主角；4号槽理性（失去）→怀疑各+1、智慧+1；5号槽思潮等级≥对应面容→对应连接+1，否则「疯狂」+1重置；6号槽启发：{任意处置}/{奴隶}角色→邪神连接+1+黄金「秘密」，梅姬→正神连接+1+「幸福感」，奈布哈尼→怀疑各+1。全空置：恶名≥10且善名≤3→邪神连接+1，善名≥10且恶名≤3→正神连接+1。固定结算触发镜灵篇《诡异的镜子》",
+          "prereqs": [
+            "初梦"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：正神的连接+1、「幸福感」+1"
+            },
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：对正神/邪神的怀疑各+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_3",
+          "name": "心灵之战·2",
+          "trigger": "灵视≥3、完成《心灵之战·1》2-3天后",
+          "desc": "启发：扎齐伊→邪神连接+1+黄金「洞察」，鲁梅拉→正神连接+1+「幸福感」；7号槽任意苏丹卡→怀疑各+1。全空置：主角智慧≥5且战斗<5→邪神连接+1，战斗≥5→正神连接+1",
+          "prereqs": [
+            "心灵之战·1"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1"
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「洞察」+1"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：正神的连接+1、「幸福感」+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_4",
+          "name": "心灵之战·3",
+          "trigger": "灵视≥5、完成《心灵之战·2》2-3天后",
+          "desc": "5号槽新增谋反思潮→怀疑各+1。启发：法拉杰→邪神连接+1+黄金「秘密」，娜依拉→正神连接+1+黄金「内幕」。全空置：恶名≥12善名≤3→邪神，善名≥12恶名≤3→正神",
+          "prereqs": [
+            "心灵之战·2"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「秘密」+1"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：正神的连接+1、黄金「内幕」+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_5",
+          "name": "心灵之战·4",
+          "trigger": "灵视≥7、完成《心灵之战·3》2-3天后",
+          "desc": "理性槽额外金币-1。启发：阿里木→邪神连接+1+黄金「机遇」，盖斯→正神连接+1+黄金「秘密」，哲瓦德→怀疑各+1。全空置：恶名≥13/善名≥13分界",
+          "prereqs": [
+            "心灵之战·3"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1、金币-1"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「机遇」+1"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：正神的连接+1、黄金「秘密」+1"
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：对正神/邪神的怀疑各+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_6",
+          "name": "心灵之战·5",
+          "trigger": "灵视≥9、完成《心灵之战·4》2-3天后",
+          "desc": "启发：法里斯→邪神连接+1+黄金「内幕」，玛希尔→怀疑各+1；7号槽「妻子的不满」→不满-1、正神连接+1、「幸福感」+1。全空置：恶名≥14/善名≥14分界",
+          "prereqs": [
+            "心灵之战·4"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1"
+            },
+            {
+              "card": "法里斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「内幕」+1"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：对正神/邪神的怀疑各+1"
+            },
+            {
+              "card": "妻子的不满",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：「妻子的不满」-1、正神的连接+1、「幸福感」+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_7",
+          "name": "心灵之战·6",
+          "trigger": "灵视≥10、完成《心灵之战·5》2-3天后",
+          "desc": "启发：快脚→邪神连接+1+黄金「秘氛」，小圆→正神连接+1+黄金「预兆」；7号槽风之护符/暗影罗盘/妖精的提灯→怀疑各+1。全空置：恶名≥15/善名≥15分界",
+          "prereqs": [
+            "心灵之战·5"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1"
+            },
+            {
+              "card": "快脚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「秘氛」+1"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：正神的连接+1、黄金「预兆」+1"
+            },
+            {
+              "card": "风之护符",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：对正神/邪神的怀疑各+1"
+            },
+            {
+              "card": "暗影罗盘",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：对正神/邪神的怀疑各+1"
+            },
+            {
+              "card": "妖精的提灯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：对正神/邪神的怀疑各+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_8",
+          "name": "心灵之战·7",
+          "trigger": "灵视≥12、完成《心灵之战·6》2-3天后",
+          "desc": "启发：拜铃耶→邪神连接+1+黄金「秘氛」，伊曼→正神连接+1+黄金「预兆」；7号槽乙太（失去）→怀疑各+1。全空置：恶名≥16/善名≥16分界",
+          "prereqs": [
+            "心灵之战·6"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「秘氛」+1"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：正神的连接+1、黄金「预兆」+1"
+            },
+            {
+              "card": "乙太",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "7号槽（失去）：对正神/邪神的怀疑各+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_9",
+          "name": "心灵之战·8",
+          "trigger": "灵视≥14、完成《心灵之战·7》2-3天后",
+          "desc": "启发：朱娜/贾丽拉/夏玛/索拉薇儿→邪神连接+1+黄金「机遇」，娜依拉→正神连接+1+黄金「洞察」；7号槽幸福感/木制苹果/石餐盒→怀疑各+1。全空置：恶名≥17/善名≥17分界",
+          "prereqs": [
+            "心灵之战·7"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「机遇」+1"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「机遇」+1"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「机遇」+1"
+            },
+            {
+              "card": "索拉薇儿",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「机遇」+1"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：正神的连接+1、黄金「洞察」+1"
+            },
+            {
+              "card": "幸福感",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：对正神/邪神的怀疑各+1"
+            },
+            {
+              "card": "木制苹果",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：对正神/邪神的怀疑各+1"
+            },
+            {
+              "card": "石餐盒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：对正神/邪神的怀疑各+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_10",
+          "name": "心灵之战·9",
+          "trigger": "灵视≥16、完成《心灵之战·8》2-3天后",
+          "desc": "6号槽30金币（退回）→邪神连接+1+黄金「战术」；7号槽圣主像→正神连接+1+黄金「洞察」；8号槽任意部队→邪神连接+1。全空置：恶名≥18/善名≥18分界",
+          "prereqs": [
+            "心灵之战·8"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1"
+            },
+            {
+              "card": "圣主像",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：正神的连接+1、黄金「洞察」+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_11",
+          "name": "心灵之战·10",
+          "trigger": "灵视≥18、完成《心灵之战·9》2-3天后",
+          "desc": "思潮达标时另获黄金「秘氛」/「洞察」；6号槽任意「杀戮」→邪神连接+1、社交+1；7号槽黄金「武器」→正神连接+1、战斗+1；8号槽任意「读物」→怀疑各+1、智慧+1。若热娜在队且已完成热娜篇《品鉴王冠》，获「思考的人像」（可替代理性且不消耗）。全空置：恶名≥19/善名≥19分界",
+          "prereqs": [
+            "心灵之战·9"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "6号槽：任意品级；邪神的连接+1、社交+1"
+            },
+            {
+              "card": "武器",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：需黄金品级；正神的连接+1、战斗+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_12",
+          "name": "心灵之战·11",
+          "trigger": "灵视≥20、完成《心灵之战·10》2-3天后",
+          "desc": "理性槽额外金骰子+1。启发：巴拉特→邪神连接+1+黄金「秘氛」，流浪剑客→正神连接+1+黄金「预兆」；7号槽「苏丹的猜忌」→怀疑各+1。全空置：恶名≥20善名≤3→邪神，善名≥20恶名≤3→正神",
+          "prereqs": [
+            "心灵之战·10"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1"
+            },
+            {
+              "card": "巴拉特",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、黄金「秘氛」+1"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：正神的连接+1、黄金「预兆」+1"
+            },
+            {
+              "card": "苏丹的猜忌",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：对正神/邪神的怀疑各+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_13",
+          "name": "心灵之战·12",
+          "trigger": "灵视≥22、完成《心灵之战·11》2-3天后",
+          "desc": "理性槽额外获「造物之容」（用于消解「疯狂」）。谋反思潮→正神连接+1+{受伤}+画作「红色君主」（上贡《权力的游戏》可谗言清零）；启发：梅姬→画作「梅姬的画像」（消妻子不满），有{激情}追随者→邪神连接+1+画作「肉欲」。全空置：主角智慧≥16且魅力<16→邪神连接+1并获「月之暗面」，魅力≥16→正神连接+1、魅力+2、金骰子+1",
+          "prereqs": [
+            "心灵之战·11"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1、获「造物之容」"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：怀疑各+1、「幸福感」+1、画作「梅姬的画像」"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_14",
+          "name": "心灵之战·13",
+          "trigger": "灵视≥24、完成《心灵之战·12》2-3天后",
+          "desc": "理性槽额外金骰子+1；密教思潮达标时额外恶名+1。启发：哈比卜→邪神连接+1、智慧+1，夏玛→怀疑各+1+黄金「洞察」；7号槽乙太（失去）→正神连接+1、魔力+2、灵视+1。全空置：主角智慧≥17且善名<2或恶名>3→邪神连接+1、魔力+1、金骰子+1；善名≥22恶名≤3→正神连接+1",
+          "prereqs": [
+            "心灵之战·12"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1、金骰子+1"
+            },
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：邪神的连接+1、智慧+1"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽启发：怀疑各+1、黄金「洞察」+1"
+            },
+            {
+              "card": "乙太",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "7号槽（失去）：正神的连接+1、魔力+2、灵视+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_15",
+          "name": "心灵之战·14",
+          "trigger": "灵视≥26、完成《心灵之战·13》2-3天后",
+          "desc": "6号槽法尔达克→邪神连接+1；7号槽中国/繁荣的城市/被找到的绿洲→正神连接+1；8号槽梦中花园（失去）→怀疑各+1+黄金「洞察」。全空置：侠名≥23且权势<23→邪神连接+1、战斗+1；权势≥23→正神连接+1、智慧+1",
+          "prereqs": [
+            "心灵之战·13"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1、金骰子+1"
+            },
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽：邪神的连接+1"
+            },
+            {
+              "card": "中国",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：正神的连接+1"
+            },
+            {
+              "card": "繁荣的城市",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：正神的连接+1"
+            },
+            {
+              "card": "被找到的绿洲",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "7号槽：正神的连接+1"
+            },
+            {
+              "card": "梦中花园",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "8号槽（失去）：怀疑各+1、黄金「洞察」+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_16",
+          "name": "心灵之战·15",
+          "trigger": "灵视≥28、完成《心灵之战·14》2-3天后",
+          "desc": "6号槽被困的星神→邪神连接+1、灵视+1、金骰子+1；7号槽任意大餐（失去）→正神连接+1、体魄+1、魔力+1；8号槽奇巧双头龙/双截龙→怀疑各+1+黄金「洞察」。全空置：恶名≥24善名≤3→邪神连接+1+金骰子，善名≥24恶名≤3→正神连接+1+金骰子。固定结算触发《心灵之战·16》；若鲁梅拉已成为「星灵」（鲁梅拉篇《星灵之夜·2》），此时「星灵」进入手牌",
+          "prereqs": [
+            "心灵之战·14"
+          ],
+          "slots": [
+            {
+              "card": "邪神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽必需"
+            },
+            {
+              "card": "正神的面容",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽必需"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "3号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "对正神/邪神的怀疑各+1、智慧+1、金骰子+1"
+            },
+            {
+              "card": "被困的星神",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "6号槽：邪神的连接+1、灵视+1、金骰子+1"
+            },
+            {
+              "card": "大餐",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": true,
+              "note": "7号槽（失去）：正神的连接+1、体魄+1、魔力+1"
+            },
+            {
+              "card": "奇巧双头龙",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "8号槽：怀疑各+1、黄金「洞察」+1"
+            },
+            {
+              "card": "双截龙",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "8号槽：怀疑各+1、黄金「洞察」+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_17",
+          "name": "心灵之战·16",
+          "trigger": "完成《心灵之战·15》",
+          "desc": "长期存续。放主角；2号槽：理性→获「陶土钥匙」（龙眼篇多种特定结局用，达成「开悟的奖赏」）；遥远的绿洲→触发《遁世秘法》；星灵→伪胜利结局「受祝福的双星」；星神的信仰/被困的星神/星光信标→伪胜利结局「夜空中最亮的星」。固定结算：主角全属性+1、去除{邪恶化身}；2号槽空置或放理性/绿洲则主角{入圣}并失去「星灵」",
+          "prereqs": [
+            "心灵之战·15"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：获「陶土钥匙」"
+            },
+            {
+              "card": "遥远的绿洲",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：触发《遁世秘法》"
+            },
+            {
+              "card": "星灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：伪胜利结局「受祝福的双星」"
+            },
+            {
+              "card": "星神的信仰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：伪胜利结局「夜空中最亮的星」"
+            },
+            {
+              "card": "被困的星神",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：伪胜利结局「夜空中最亮的星」"
+            },
+            {
+              "card": "星光信标",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：伪胜利结局「夜空中最亮的星」"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_18",
+          "name": "造物主的影子",
+          "trigger": "寻思「月之暗面」（《心灵之战·12》空置结算获得），可再次寻思触发",
+          "desc": "放月之暗面（失去）；2号槽：理性→「理性」+1；正教思潮→该思潮虔信+1、灵视+1；密教思潮→「不洁的思绪」+1、灵视+1（可重复）",
+          "prereqs": [
+            "心灵之战·12"
+          ],
+          "slots": [
+            {
+              "card": "月之暗面",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "寻思触发；仪式中失去"
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：「理性」+1"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_xinling_19",
+          "name": "遁世秘法",
+          "trigger": "在《心灵之战·16》放入「遥远的绿洲」",
+          "desc": "放遥远的绿洲+主角+任意苏丹卡+4-10号槽有{命运的羁绊}的追随者。结算：伪胜利结局「千年抽丝」",
+          "prereqs": [
+            "心灵之战·16"
+          ],
+          "slots": [
+            {
+              "card": "遥远的绿洲",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "xiaming_lingshi_shenmian",
+      "name": "神的面容线",
+      "summary": "用心灵之战累积的连接与怀疑升级正神/邪神的面容，3级开启大结局·降神篇",
+      "steps": [
+        {
+          "id": "xiaming_lingshi_shenmian_1",
+          "name": "天之训诫",
+          "trigger": "持有「善的本质？」后获得3个{正神的连接}",
+          "desc": "自启动。「善的本质？」升级为2级正神的面容「神圣的声音」",
+          "prereqs": [
+            "初梦"
+          ],
+          "slots": [
+            {
+              "card": "善的本质？",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "升级为2级正神的面容「神圣的声音」"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_shenmian_2",
+          "name": "神的启示",
+          "trigger": "持有「神圣的声音」后获得3个{正神的连接}",
+          "desc": "自启动。「神圣的声音」升级为3级正神的面容「纯净之神」（3级面容开启大结局·降神篇）",
+          "prereqs": [
+            "天之训诫"
+          ],
+          "slots": [
+            {
+              "card": "神圣的声音",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "升级为3级正神的面容「纯净之神」"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_shenmian_3",
+          "name": "神的面容",
+          "trigger": "持有「纯净之神」后获得3点“对正神的怀疑”",
+          "desc": "自启动。「纯净之神」升级为4级正神的面容「毁灭之神」。注意怀疑计数记在卡面上、面容升级时刷新，3级以前积累怀疑无意义",
+          "prereqs": [
+            "神的启示"
+          ],
+          "slots": [
+            {
+              "card": "纯净之神",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "升级为4级正神的面容「毁灭之神」"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "xiaming_lingshi_shenmian_4",
+          "name": "地底的呼唤",
+          "trigger": "持有「恶的本质？」后获得3个{邪神的连接}",
+          "desc": "自启动。「恶的本质？」升级为2级邪神的面容「遥远的声音」",
+          "prereqs": [
+            "初梦"
+          ],
+          "slots": [
+            {
+              "card": "恶的本质？",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "升级为2级邪神的面容「遥远的声音」"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_shenmian_5",
+          "name": "中之神",
+          "trigger": "持有「遥远的声音」后获得3个{邪神的连接}",
+          "desc": "自启动。「遥远的声音」升级为3级邪神的面容「创造之神」（3级面容开启大结局·降神篇）",
+          "prereqs": [
+            "地底的呼唤"
+          ],
+          "slots": [
+            {
+              "card": "遥远的声音",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "升级为3级邪神的面容「创造之神」"
+            }
+          ]
+        },
+        {
+          "id": "xiaming_lingshi_shenmian_6",
+          "name": "神的具现",
+          "trigger": "持有「创造之神」、对邪神的怀疑≥3",
+          "desc": "自启动。「创造之神」升级为4级邪神的面容「腐败之神」",
+          "prereqs": [
+            "中之神"
+          ],
+          "slots": [
+            {
+              "card": "创造之神",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "升级为4级邪神的面容「腐败之神」"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "xiaming_lingshi_shenmian_7",
+          "name": "神圣的仪式",
+          "trigger": "同时持有3级及以上「正神的面容」与「邪神的面容」",
+          "desc": "自启动。1号槽：创造之神→升级为「腐败之神」（腐败之神则无奖惩）；2号槽：纯净之神→升级为「毁灭之神」（毁灭之神则无奖惩），即可免去4级所需的怀疑计数直接双神升4级",
+          "prereqs": [
+            "神的启示",
+            "中之神"
+          ],
+          "slots": [
+            {
+              "card": "创造之神",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽：升级为「腐败之神」"
+            },
+            {
+              "card": "腐败之神",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "1号槽：无奖惩"
+            },
+            {
+              "card": "纯净之神",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：升级为「毁灭之神」"
+            },
+            {
+              "card": "毁灭之神",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "2号槽：无奖惩"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

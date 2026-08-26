@@ -1,0 +1,187 @@
+{
+  "id": "atunaer",
+  "title": "阿图娜尔篇",
+  "category": "character",
+  "characters": ["阿图娜尔", "梅姬", "莎姬", "奈布哈尼"],
+  "routes": [
+    {
+      "id": "atunaer_luan",
+      "name": "乱伦线",
+      "summary": "从日常相处与兄妹越界开始，累积兄妹纵欲计数与黑化值，决定梅姬去留以及后续进入流浪舞姬线还是入宫线",
+      "steps": [
+        {"id":"atunaer_luan_1","terminal":true,"name":"落幕之舞","trigger":"在《在家行淫》纵欲无激情的阿图娜尔","desc":"仪式，存续1天逾期自启动。检定主角体魄&战斗对阿图娜尔：成功≥1阿图娜尔死亡；失败则是死亡结局「因果报应」","prereqs":[],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"舞姬的决心","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"名称据OCR，存疑"}
+        ]},
+        {"id":"atunaer_luan_2","name":"流落的血脉","trigger":"阿图娜尔参与《治理家业/书店营业/浴场里的消息》1次","desc":"仪式，存续5天，逾期激情+1、黑化值+1。仅主角参与可能触发《突然的坦白》；主角+梅姬可能触发《石榴树的畸枝》《梅姬的主意》等（更完美剧情线）。此后纵欲或用她消解疯狂会累积黑化值与兄妹纵欲计数：黑化值≥3强制进入入宫线，计数=3梅姬离队","prereqs":[],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放入可开启更完美剧情线"}
+        ]},
+        {"id":"atunaer_luan_3","name":"石榴树的畸枝","trigger":"在《流落的血脉》放入主角+梅姬，或兄妹纵欲计数≥1","desc":"仪式。检定主角社交&魅力对梅姬：成功≥5无事，失败「妻子的不满」+1，逾期+2。放入阿图娜尔触发《更适合的差事》，否则2天后触发《兄妹之间》","prereqs":["流落的血脉"],"slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放入则触发《更适合的差事》"}
+        ]},
+        {"id":"atunaer_luan_4","name":"更适合的差事","trigger":"在《石榴树的畸枝》放入阿图娜尔","desc":"仪式，自启动耗时3天。1天后触发《兄妹之间》","prereqs":["石榴树的畸枝"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_luan_5","name":"兄妹之间","trigger":"《石榴树的畸枝》逾期或未放阿图娜尔2天后，或完成《更适合的差事》1天后；完成《兴师问罪》3天后会再次触发","desc":"仪式，存续1天。放疯狂直接按失败结算。检定主角社交&智慧对阿图娜尔：成功≥5无奖惩，失败黑化值+1、兄妹纵欲计数+1","prereqs":["石榴树的畸枝","更适合的差事"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"疯狂","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放入则跳过检定直接按失败结算"}
+        ]},
+        {"id":"atunaer_luan_6","name":"突然的坦白","trigger":"在《流落的血脉》仅放入主角，且兄妹纵欲计数≥1","desc":"仪式。检定成败都触发《愧疚与宝石》《兴师问罪》，失败或逾期额外「妻子的不满」+1。注意两个后续事件须同时完成，完成其一就会关闭另一个","prereqs":["流落的血脉"],"slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_luan_7","name":"兴师问罪","trigger":"《突然的坦白》完成或逾期","desc":"仪式，存续7天。阿图娜尔激情+1、主角魅力+1；关闭《愧疚与宝石》、3天后触发《兄妹之间》","prereqs":["突然的坦白"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_luan_8","name":"愧疚与宝石","trigger":"《突然的坦白》完成或逾期","desc":"仪式，存续7天。放梅姬+主角+20金币（可用白银及以下奢靡折卡，须40金币）。「妻子的不满」-1、关闭《兴师问罪》","prereqs":["突然的坦白"],"slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"折卡须40金币"},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放入后结算「妻子的不满」-1"}
+        ]},
+        {"id":"atunaer_luan_9","name":"梅姬非常失望","trigger":"兄妹纵欲计数=2且未触发《送我入宫吧》（计数来源：《在家行淫》《兄妹之间》《消解疯狂》）","desc":"剧情弹窗。「妻子的不满」+1","prereqs":["流落的血脉"],"slots":[]},
+        {"id":"atunaer_luan_10","name":"梅姬无话可说","trigger":"兄妹纵欲计数=3且未触发《送我入宫吧》","desc":"剧情弹窗。「妻子的不满」+1、可能触发《最后的谈话》","prereqs":["梅姬非常失望"],"slots":[]},
+        {"id":"atunaer_luan_11","name":"最后的谈话","trigger":"完成《梅姬无话可说》（即兄妹纵欲计数=3），且未触发《送我入宫吧》及其入宫线后续","desc":"仪式，存续1天逾期自启动。放梅姬：梅姬永久离队","prereqs":["梅姬无话可说"],"slots":[
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后梅姬永久离队"}
+        ]}
+      ]
+    },
+    {
+      "id": "atunaer_wu",
+      "name": "流浪舞姬线",
+      "summary": "阿图娜尔参与日常篇仪式5次后由《舞乐之宴》开启，全程不纵欲即可助她出走追求自由，最终达成一千零一夜「前行之舞」",
+      "steps": [
+        {"id":"atunaer_wu_1","name":"舞乐之宴","trigger":"阿图娜尔参与《治理家业/书店营业/浴场里的消息》5次","desc":"仪式，存续7天，逾期流浪舞姬线关闭。奢靡（10金币）：参与者魅力&智慧+1；空置：智慧+1；两者均2天后触发《贵族的邀请》。纵欲：黑化值+3、触发《送我入宫吧》转入入宫线","prereqs":[],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"与奢靡二选一；纵欲则黑化值+3并触发《送我入宫吧》"},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"与纵欲二选一；须10金币"}
+        ]},
+        {"id":"atunaer_wu_2","name":"贵族的邀请","trigger":"完成《舞乐之宴》时不纵欲，2天后","desc":"仪式，存续7天，逾期流浪舞姬线关闭。可选槽全空：随机青铜及以下「装备/读物」、黑化值+1、触发《遍野流言》；填满提供支援：随机白银「装备/读物」、权势+1。均4天后触发《沟渠的邀请》","prereqs":["舞乐之宴"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_wu_3","name":"遍野流言","trigger":"完成《贵族的邀请》时可选槽全空","desc":"仪式，存续3天，逾期黑化值+1。梅姬参与且兄妹纵欲计数≥1则「妻子的不满」+1，其余纯剧情","prereqs":["贵族的邀请"],"slots":[]},
+        {"id":"atunaer_wu_4","name":"沟渠的邀请","trigger":"完成《贵族的邀请》4天后，且未触发《送我入宫吧》","desc":"仪式，2/3/5号槽（非贵族追随者×2+2金币）须全放或全不放。纵欲：黑化值+3、触发《送我入宫吧》；不纵欲：3天后触发《苏丹的兴致》。逾期可能触发《梅姬的主意》，但若《流落的血脉》没放梅姬则千万别逾期，会导致阿图娜尔篇关闭","prereqs":["贵族的邀请"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"纵欲","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"纵欲则黑化值+3并触发《送我入宫吧》"}
+        ]},
+        {"id":"atunaer_wu_5","name":"梅姬的主意","trigger":"曾在《流落的血脉》放入梅姬且梅姬在队，《沟渠的邀请》逾期且兄妹纵欲计数=0","desc":"剧情弹窗。《欢愉之馆》停业，触发《欢愉之女的自由日》","prereqs":["流落的血脉","沟渠的邀请"],"slots":[]},
+        {"id":"atunaer_wu_6","name":"欢愉之女的自由日","trigger":"完成《梅姬的主意》","desc":"仪式，存续5天，逾期3天后触发《苏丹的兴致》。参与者生存&社交+1、《欢愉之馆》恢复营业、3天后触发《苏丹的兴致》；梅姬参与额外魅力&智慧+1、「幸福感」+1；奈布哈尼参与额外白银情报+1、金币+3，且他此后可参与《苏丹的兴致》《失踪的舞姬》","prereqs":["梅姬的主意"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"布提娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"名称据OCR，存疑"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"4/7号槽无法放入梅姬；参与有额外收益"}
+        ]},
+        {"id":"atunaer_wu_7","name":"苏丹的兴致","trigger":"完成《沟渠的邀请》未纵欲3天后，或《欢愉之女的自由日》完成/逾期3天后","desc":"仪式，存续3天。放30金币或奈布哈尼（须参与过《欢愉之女的自由日》）直接成功；放主角检定社交+魅力≥7。成功2天后触发《一支奇怪的舞蹈》（进入流浪线）；逾期或失败触发《美人的武装》转入入宫线（失败截至V1.0.5有BUG无法触发）","prereqs":["沟渠的邀请","欢愉之女的自由日"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽三选一（30金币/奈布哈尼/主角）；须参与过《欢愉之女的自由日》方可放入"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽三选一；放主角须检定社交+魅力≥7"}
+        ]},
+        {"id":"atunaer_wu_8","name":"一支奇怪的舞蹈","trigger":"《苏丹的兴致》检定成功或放入30金币/奈布哈尼，2天后","desc":"仪式，存续3天，逾期触发《失踪的舞姬》。黑化值=0：妹妹倾诉过往、1天后触发《坟墓前的恳谈》；黑化值≥1：阉割版剧情、触发《失踪的舞姬》","prereqs":["苏丹的兴致"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_wu_9","name":"失踪的舞姬","trigger":"《一支奇怪的舞蹈》逾期或完成时黑化值≥1","desc":"仪式，存续2天，逾期阿图娜尔退场。放梅姬（须参与过《流落的血脉》且黑化值≤1）或非贵族追随者检定社交+隐匿≥5：触发《坟墓前的恳谈》；放奈布哈尼/其他贵族或检定失败：阿图娜尔退场","prereqs":["一支奇怪的舞蹈"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽放入人选之一；须参与过《流落的血脉》且黑化值≤1"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"2号槽放入人选之一；须参与过《欢愉之女的自由日》，放入则阿图娜尔退场"}
+        ]},
+        {"id":"atunaer_wu_10","name":"坟墓前的恳谈","trigger":"完成《一支奇怪的舞蹈》时黑化值=0，或在《失踪的舞姬》放入梅姬/非贵族追随者检定成功","desc":"仪式，存续1天，逾期阿图娜尔退场。不纵欲：梅姬不在则她归队、流浪舞姬线关闭；梅姬在场1天后触发《流浪的果实》。纵欲：梅姬不在她退场；梅姬在场她归队但降为岩石品级、「疯狂」+1、恶名+2、「妻子的不满」+2、流浪舞姬线关闭","prereqs":["一支奇怪的舞蹈","失踪的舞姬"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"在场且未纵欲则触发《流浪的果实》"},
+          {"card":"纵欲","sultan":true,"maxGrade":"白银","required":false,"consumed":true,"note":"纵欲有严重负面结算，慎用"}
+        ]},
+        {"id":"atunaer_wu_11","name":"流浪的果实","trigger":"在《坟墓前的恳谈》放入梅姬且未纵欲","desc":"仪式，存续3天。阿图娜尔离队、4天后触发《流浪舞姬的来信》。可放非贵族追随者（随她离队约10-14天并获得强化）；填满所有槽位：阿图娜尔升白银、获「命运的羁绊」","prereqs":["坟墓前的恳谈"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后离队，收信期间不在队"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"放入后第六封信回馈饰品「干燥的花束」"}
+        ]},
+        {"id":"atunaer_wu_12","name":"流浪舞姬的来信","trigger":"《流浪的果实》完成或逾期4天后首次触发，此后每3-5天一封共6封","desc":"弹窗。按所放槽位回馈：放金币得饰品「精工皮靴」和大餐「细鳞鱼干」、放追随者归队并生存&魅力&社交+2、放主角得饰品「干燥的花束」；第六封信：填满过槽位触发《太阳之舞》，否则金骰子+1（可重复）","prereqs":["流浪的果实"],"slots":[]},
+        {"id":"atunaer_wu_13","terminal":true,"name":"太阳之舞","trigger":"在《流浪的果实》填满所有槽位，且收齐《流浪舞姬的来信》全部6封信","desc":"仪式，存续5天逾期无奖惩。所有参与者体魄&魅力+1、金骰子+2；梅姬参与额外「幸福感」+1。达成一千零一夜「前行之舞」","prereqs":["流浪的果实","流浪舞姬的来信"],"slots":[
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"参与额外「幸福感」+1"}
+        ]}
+      ]
+    },
+    {
+      "id": "atunaer_gong",
+      "name": "入宫线",
+      "summary": "黑化值=3或在宴会上纵欲触发《送我入宫吧》，把阿图娜尔送入后宫一路宫斗升品级，可获后宫支持者、达成完美结局，也可能令她死亡或成为大敌",
+      "steps": [
+        {"id":"atunaer_gong_1","name":"送我入宫吧","trigger":"阿图娜尔黑化值=3（在《舞乐之宴》或《沟渠的邀请》纵欲可一次性达成）","desc":"抉择弹窗。同意：激情-1、触发《美人的武装》；反对：激情-1、1天后触发《散落的果实》。此后仍要控制黑化值，过高将无法达成完美结局","prereqs":[],"slots":[]},
+        {"id":"atunaer_gong_2","name":"将阿图娜尔献给苏丹","trigger":"在《权力的游戏》上贡阿图娜尔","desc":"仪式。阿图娜尔离队、激情清零、权势+3、金币+10，4天后触发《阿图娜尔入宫》","prereqs":[],"slots":[]},
+        {"id":"atunaer_gong_3","name":"美人的武装","trigger":"在《送我入宫吧》选“同意”，或《苏丹的兴致》逾期/检定失败","desc":"仪式，存续3天，逾期触发《散落的果实》。10金币/女性贵族角色/魅力≥4饰品各使支持+1（饰品会永久装备拿不回）；青铜及以下奢靡（另须10金币）升她为白银品级。结算：她离队、4天后触发《阿图娜尔入宫》","prereqs":["送我入宫吧"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后离队入宫"},
+          {"card":"奢靡","sultan":true,"maxGrade":"青铜","required":false,"consumed":true,"note":"升阿图娜尔为白银品级；折奢靡须另放10金币"}
+        ]},
+        {"id":"atunaer_gong_4","name":"散落的果实","trigger":"在《送我入宫吧》选“反对”，或《美人的武装》逾期","desc":"仪式，自启动。阿图娜尔离队、降为岩石品级、激情与支持清零、反对+1，4天后触发《阿图娜尔入宫》","prereqs":["送我入宫吧"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后离队入宫并降为岩石品级"}
+        ]},
+        {"id":"atunaer_gong_5","name":"阿图娜尔入宫","trigger":"完成《将阿图娜尔献给苏丹》/《美人的武装》/《散落的果实》之一4天后","desc":"剧情弹窗。按品级触发后续仪式：岩石→《女奴的撕扯》、青铜→《有毒的花丛》、白银→《花朵的战争》。BUG：触发当天她被roll进上朝则后续永久关闭","prereqs":["将阿图娜尔献给苏丹","美人的武装","散落的果实"],"slots":[]},
+        {"id":"atunaer_gong_6","name":"女奴的撕扯","trigger":"完成《阿图娜尔入宫》时她为岩石品级","desc":"仪式，存续1天。派贵族追随者+5金币支援（权势<15才需金币）：恢复青铜品级、3天后触发《有毒的花丛》；已通关法德耶篇或她是密教徒可直接成功。不支援则第3次检定魅力+生存≥3，失败阿图娜尔死亡","prereqs":["阿图娜尔入宫"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_gong_7","name":"有毒的花丛","trigger":"入宫时为青铜品级，或《女奴的撕扯》支援/检定成功3天后","desc":"仪式，存续1天。放疗伤草药/生命之水等支援：升白银品级、成为王妃（出现在《权力的游戏》妃子位）、3天后触发《花朵的战争》；安苏亚/萨米尔支持或密教徒可直接成功。不支援第3次检定隐匿+体魄≥3，失败阿图娜尔退场","prereqs":["阿图娜尔入宫","女奴的撕扯"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"疗伤草药","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2号槽支援，四选一"},
+          {"card":"生命之水","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2号槽支援，四选一"},
+          {"card":"精心调配的伤药","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2号槽支援，四选一"},
+          {"card":"超臭香水","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"2号槽支援，四选一"}
+        ]},
+        {"id":"atunaer_gong_8","name":"花朵的战争","trigger":"入宫时为白银品级，或《有毒的花丛》支援/检定成功3天后","desc":"仪式，存续1天。放3件黄金「情报」或哈桑「情诗」支援：升黄金品级、获大餐「宫廷香茶」、3天后触发《夜晚的权利》；萨达尔尼支持或密教徒可直接成功。不支援第3次检定隐匿+战斗≥3，失败阿图娜尔死亡","prereqs":["阿图娜尔入宫","有毒的花丛"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_gong_9","name":"好茶","trigger":"寻思「宫廷香茶」（《花朵的战争》提供支援后获得）","desc":"仪式。主角独饮：魅力+1且不消耗茶可无限寻思刷点（BUG?）；与梅姬/侧室/夏玛等共饮：参与者魅力+1、失去茶；梅姬参与可消除「妻子的不满」（可重复）","prereqs":["花朵的战争"],"slots":[
+          {"card":"宫廷香茶","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发；3号槽有参与者时失去，主角独饮不消耗"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽共饮者之一；梅姬参与时才可放「妻子的不满」"},
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽共饮者之一"},
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽共饮者之一"},
+          {"card":"朱娜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽共饮者之一"},
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"需梅姬参与；放入后「妻子的不满」-1"}
+        ]},
+        {"id":"atunaer_gong_10","name":"唯一的宠妃","trigger":"阿图娜尔为黄金品级、莎姬已死、未触发《拥挤的王座》","desc":"仪式，自启动。黑化值≥1：2天后触发《宠妃的心愿》；黑化值=0：她成为你的“后宫支持者”，革命篇《改朝换代》后为你偷取「万逝戒」（若已通过安苏亚偷到则获「宫墙的秘密」）","prereqs":["花朵的战争"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_gong_11","name":"夜晚的权利","trigger":"《花朵的战争》支援或检定成功3天后","desc":"仪式，存续1天。放任意「天象」+魔力&魅力≥5的贵族支援：魅力+1、3天后触发《更贵的美》。不支援第3次检定体魄+生存≥4，失败阿图娜尔死亡","prereqs":["花朵的战争"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_gong_12","name":"更贵的美","trigger":"《夜晚的权利》支援或检定成功3天后","desc":"仪式，存续1天。放2件镶“大颗宝石”的「饰品」（热娜篇《宝石镶嵌》产物，失去）支援：体魄&魅力+1、3天后触发《寝技的比拼》。不支援第3次检定体魄+魅力≥5，失败阿图娜尔死亡","prereqs":["夜晚的权利"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_gong_13","name":"寝技的比拼","trigger":"《更贵的美》支援或检定成功3天后","desc":"仪式，存续1天。放20金币或夏玛/贾丽拉/朱娜支援：体魄&魅力+1、3天后可能触发《拥挤的王座》。不支援第3次检定体魄+魅力≥6，失败阿图娜尔死亡","prereqs":["更贵的美"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"夏玛","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽，与20金币单选"},
+          {"card":"贾丽拉","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽，与20金币单选"},
+          {"card":"朱娜","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"3号槽，与20金币单选"}
+        ]},
+        {"id":"atunaer_gong_14","name":"拥挤的王座","trigger":"《寝技的比拼》支援或检定成功3天后，且桌面存在《群龙无首》","desc":"仪式，存续1天，逾期阿图娜尔死亡。主角选边支持阿图娜尔或莎姬，检定双方体魄&魅力&智慧&社交：胜方宫斗胜利。阿图娜尔胜：达成一千零一夜「夙愿难偿」，黑化值≥1触发《宠妃的心愿》、=0成为后宫支持者；莎姬胜：按莎姬篇进度触发《贬斥》/《我想要她美丽的头颅》/《无头之舞》","prereqs":["寝技的比拼"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"莎姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"3/4号槽单选：放入以支持阿图娜尔或莎姬"}
+        ]},
+        {"id":"atunaer_gong_15","terminal":true,"name":"贬斥","trigger":"《拥挤的王座》莎姬宫斗胜利2天后，莎姬存活且已通关莎姬篇","desc":"剧情弹窗。阿图娜尔降为岩石品级并归队、支持清零、反对+1","prereqs":["拥挤的王座"],"slots":[]},
+        {"id":"atunaer_gong_16","terminal":true,"name":"我想要她美丽的头颅","trigger":"《拥挤的王座》莎姬宫斗胜利2天后，莎姬存活、未通关莎姬篇、阿图娜尔非密教徒","desc":"仪式，自启动。阿图娜尔死亡","prereqs":["拥挤的王座"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后死亡"}
+        ]},
+        {"id":"atunaer_gong_17","terminal":true,"name":"无头之舞","trigger":"《拥挤的王座》莎姬宫斗胜利2天后，莎姬存活、未通关莎姬篇、阿图娜尔是密教徒","desc":"仪式，自启动。阿图娜尔死亡","prereqs":["拥挤的王座"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后死亡"}
+        ]},
+        {"id":"atunaer_gong_18","name":"宠妃的心愿","trigger":"阿图娜尔宫斗胜利或《唯一的宠妃》后黑化值≥1，2天后","desc":"仪式，自启动。黑化值>支援计数：她成为{大敌}、反对+3（此后在《权力的游戏》出现时随机「谗言」或「苏丹的猜忌」+1）。莎姬存活且未通关莎姬篇：3天后触发《玫瑰的刺》","prereqs":["拥挤的王座","唯一的宠妃"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"atunaer_gong_19","terminal":true,"name":"玫瑰的刺","trigger":"未通关莎姬篇，完成《宠妃的心愿》3天后","desc":"仪式，存续1天。可放贵族角色支持一方。支持阿图娜尔成功≥2：莎姬死亡、她不再是{大敌}；支持莎姬成功≥2：阿图娜尔死亡；不参与则第2次检定双方生存&智慧，失败方死亡","prereqs":["宠妃的心愿"],"slots":[
+          {"card":"阿图娜尔","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"莎姬","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1491 @@
+{
+  "id": "hasang_maerjina",
+  "title": "哈桑篇、马尔基娜篇",
+  "category": "character",
+  "characters": [
+    "哈桑",
+    "马尔基娜"
+  ],
+  "routes": [
+    {
+      "id": "hasang_maerjina_lu",
+      "name": "羊肉炉线",
+      "summary": "寻思哈桑写诗开启，追查「异样的存在」直抵命运书店，最终解救被命运锁住的队友",
+      "steps": [
+        {
+          "id": "hasang_maerjina_lu_1",
+          "name": "哈桑写诗",
+          "trigger": "命运商店激活「哈桑」后寻思哈桑，随机触发史诗/预言诗/讽刺诗/爱情诗之一",
+          "desc": "仪式，可无限触发。检定对应属性+灵感，产出不同等级诗歌；特殊诗：天命所归（大结局革命篇用）、千夫所指（决斗类直接获胜）、黑暗根源（读者获{黑暗知识}）、宽恕的情诗（用于消除妻子的不满）。完成一次后可能触发《诗人的名望》（可重复）",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发；写诗主体"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_lu_2",
+          "name": "诗人的名望",
+          "trigger": "完成一次《哈桑写诗》、哈桑参与《治理家业》后",
+          "desc": "仪式。放入的诗给哈桑加对应属性；放主角直接关闭检定、权势+1并触发《诗人的羊》；放其他贵族需检定社交+权势≥8，成功侠名+1并触发《诗人的羊》，失败羊肉炉线关闭",
+          "prereqs": [
+            "哈桑写诗"
+          ],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "放入则关闭检定、权势+1并触发《诗人的羊》"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_lu_3",
+          "name": "诗人的羊",
+          "trigger": "《诗人的名望》检定成功或放置主角1-2天后",
+          "desc": "仪式，存续3天（逾期线关闭）。需主角+热娜/阿图娜尔/贝姬夫人/马尔基娜/双胞胎之一填满槽位，否则线关闭；检定主角魔力+智慧+灵视≥10：灵视+1、触发《奇怪的攻击》，失败线关闭",
+          "prereqs": [
+            "诗人的名望"
+          ],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "非双胞胎"
+            },
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "4/5号槽五选一，未填满则线关闭"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "4/5号槽五选一"
+            },
+            {
+              "card": "贝姬夫人",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "4/5号槽五选一"
+            },
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "4/5号槽五选一"
+            },
+            {
+              "card": "双胞胎",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "4/5号槽五选一"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_lu_4",
+          "name": "奇怪的攻击",
+          "trigger": "《诗人的羊》检定成功",
+          "desc": "仪式。对思想窃贼/错乱信使/负念蟾三连检定（魔力&智慧对抗），黄金「洞察/战术」「秘密/内幕」「秘氛/预兆」可分别直接按成功结算；全过获「异样的存在」，任一失败则金币-10/谗言+1/被诅咒+疯狂并关闭羊肉炉线",
+          "prereqs": [
+            "诗人的羊"
+          ],
+          "slots": [
+            {
+              "card": "思想窃贼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "检定1对手，成功则其死亡"
+            },
+            {
+              "card": "错乱信使",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "检定2对手，成功则其死亡"
+            },
+            {
+              "card": "负念蟾",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "检定3对手，成功则其死亡"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "洞察/战术",
+              "sultan": false,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": false,
+              "note": "黄金级，检定1直接按成功结算"
+            },
+            {
+              "card": "秘密/内幕",
+              "sultan": false,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": false,
+              "note": "黄金级，检定2直接按成功结算"
+            },
+            {
+              "card": "秘氛/预兆",
+              "sultan": false,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": false,
+              "note": "黄金级，检定3直接按成功结算"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_lu_5",
+          "name": "一桩怪谈",
+          "trigger": "寻思「异样的存在」（可再次寻思触发）",
+          "desc": "仪式。放入热娜/阿图娜尔/贝姬夫人/马尔基娜/双胞胎各头绪+1；头绪=2获读物「命运诗集」，头绪=5再次寻思时失去「异样的存在」",
+          "prereqs": [
+            "奇怪的攻击"
+          ],
+          "slots": [
+            {
+              "card": "异样的存在",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发；头绪=5时再次寻思会失去"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "放入无奖惩"
+            },
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "头绪+1，同一人可多次使用"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "头绪+1"
+            },
+            {
+              "card": "贝姬夫人",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "头绪+1"
+            },
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "头绪+1"
+            },
+            {
+              "card": "双胞胎",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "头绪+1"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_lu_6",
+          "name": "阅读命运的诗集",
+          "trigger": "寻思「命运诗集」",
+          "desc": "抉择弹窗：选“给其他人看，用于修行”触发《否认现实》（失败线）；选“给哈桑看，进一步追查”触发《闯入后台》",
+          "prereqs": [
+            "一桩怪谈"
+          ],
+          "slots": [
+            {
+              "card": "命运诗集",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_lu_7",
+          "name": "否认现实",
+          "trigger": "在《阅读命运的诗集》选“给其他人看”",
+          "desc": "仪式，自启动。失去「命运诗集」「异样的存在」；按头绪获魔力/灵视+1~3，羊肉炉线关闭",
+          "prereqs": [
+            "阅读命运的诗集"
+          ],
+          "slots": [
+            {
+              "card": "命运诗集",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            },
+            {
+              "card": "异样的存在",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "hasang_maerjina_lu_8",
+          "name": "闯入后台",
+          "trigger": "在《阅读命运的诗集》选“给哈桑看”",
+          "desc": "仪式，自启动。失去「命运诗集」「异样的存在」；灵视+1、触发《你怎么敢咩！》",
+          "prereqs": [
+            "阅读命运的诗集"
+          ],
+          "slots": [
+            {
+              "card": "命运诗集",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            },
+            {
+              "card": "异样的存在",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "非双胞胎"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_lu_9",
+          "name": "你怎么敢咩！",
+          "trigger": "完成《闯入后台》",
+          "desc": "仪式。三连检定（敌人更强），「理性」/黄金「天象」/黄金「思潮」可分别直接按成功结算；全过主角战斗/社交/魔力+2并触发《它有兴趣的问题》，任一失败则金币-20/苏丹的猜忌+1/被诅咒+疯狂+2并关闭羊肉炉线",
+          "prereqs": [
+            "闯入后台"
+          ],
+          "slots": [
+            {
+              "card": "思想窃贼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "检定1对手，成功则其死亡"
+            },
+            {
+              "card": "错乱信使",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "检定2对手，成功则其死亡"
+            },
+            {
+              "card": "负念蟾",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "检定3对手，成功则其死亡"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "理性",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "检定1直接按成功结算"
+            },
+            {
+              "card": "天象",
+              "sultan": false,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": false,
+              "note": "任意黄金级，检定2直接按成功结算"
+            },
+            {
+              "card": "思潮",
+              "sultan": false,
+              "maxGrade": "黄金",
+              "required": false,
+              "consumed": false,
+              "note": "任意黄金级，检定3直接按成功结算"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_lu_10",
+          "name": "它有兴趣的问题",
+          "trigger": "《你怎么敢咩！》检定3成功",
+          "desc": "抉择弹窗：选“我们是一样的”主角魔力+1、触发《命运的书店》；选“醒来”魔力+1但羊肉炉线关闭；选“我想要侍奉你”开启额外选项",
+          "prereqs": [
+            "你怎么敢咩！"
+          ],
+          "slots": []
+        },
+        {
+          "id": "hasang_maerjina_lu_11",
+          "name": "命运的书店",
+          "trigger": "在《它有兴趣的问题》选“我们是一样的”",
+          "desc": "仪式。可放哈桑/热娜/阿图娜尔/贝姬夫人/马尔基娜/双胞胎加对应属性；检定主角隐匿+魔力+灵视≥5：生存+1、触发《羊肉炉的恶意》、1天后触发《命运变动系列事件》；失败或逾期也触发《羊肉炉的恶意》但羊肉炉线关闭",
+          "prereqs": [
+            "它有兴趣的问题"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "非双胞胎"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "哈桑体魄+1、魔力+1；决定后续《诗人来访》"
+            },
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "热娜魅力+1、灵感+1；决定后续《珠宝匠来访》"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "阿图娜尔魅力+1、战斗+1；决定后续《舞姬的拜访》"
+            },
+            {
+              "card": "贝姬夫人",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "贝姬夫人隐匿+1、生存+1；决定后续《喵，喵喵》"
+            },
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "马尔基娜社交+1、魔力+1；决定后续《妆娘造访》"
+            },
+            {
+              "card": "双胞胎",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "双胞胎战斗+1、智慧+1；决定后续《同命鸟》"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_lu_12",
+          "name": "羊肉炉的恶意",
+          "trigger": "《命运的书店》完成或逾期",
+          "desc": "剧情弹窗，随机发生：主角{受伤}/被{诅咒}/「疯狂」+1/「苏丹的猜忌」+1/无事发生",
+          "prereqs": [
+            "命运的书店"
+          ],
+          "slots": []
+        },
+        {
+          "id": "hasang_maerjina_lu_13",
+          "name": "命运变动系列事件",
+          "trigger": "《命运的书店》检定成功1天后，按书店中所放角色触发对应仪式（诗人来访/珠宝匠来访/舞姬的拜访/喵，喵喵/妆娘造访/同命鸟）",
+          "desc": "仪式，长期存续。不完成则该队友被永远锁住；可放入带负面状态的主角消除受伤/诅咒/疯狂/苏丹的猜忌，空置得青铜「预兆」；结算1天后触发《羊肉炉的诗》",
+          "prereqs": [
+            "命运的书店"
+          ],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽六选一，对应被锁队友；不完成则其被永远锁住"
+            },
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽六选一"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽六选一"
+            },
+            {
+              "card": "贝姬夫人",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽六选一"
+            },
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽六选一"
+            },
+            {
+              "card": "双胞胎",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽六选一"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：带{受伤}或{诅咒}时放入可消除"
+            },
+            {
+              "card": "疯狂",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：放入则「疯狂」-1"
+            },
+            {
+              "card": "苏丹的猜忌",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽：放入则「苏丹的猜忌」-1"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_lu_14",
+          "name": "羊肉炉的诗",
+          "trigger": "完成任意《命运变动系列事件》1天后",
+          "desc": "剧情弹窗：金骰子+1。完成后情诗线《作祟》可跳过检定直接成功",
+          "prereqs": [
+            "命运变动系列事件"
+          ],
+          "slots": [],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "hasang_maerjina_qingshi",
+      "name": "情诗线",
+      "summary": "哈桑在队且有2个对你有激情的角色时开启，为哈桑解除爱情诗封印",
+      "steps": [
+        {
+          "id": "hasang_maerjina_qingshi_1",
+          "name": "当我们谈论爱情的时候",
+          "trigger": "哈桑在队、存在有2个对你有{激情}的角色（无论是否入队）",
+          "desc": "仪式，长期存续、完成后1天重置。放入的女性角色按人加属性（每人限一次）；完成4次：侠名+1、哈桑魅力+1、灵视+1，再1天后触发《作祟》且本事件关闭（可重复）",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽女性多选一，每人限一次：魅力+1"
+            },
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：魅力+1"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：魅力+1"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：体魄+1"
+            },
+            {
+              "card": "阿迪莱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：战斗+1"
+            },
+            {
+              "card": "拉伊德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：战斗+1"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：智慧+1"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：智慧+1"
+            },
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：智慧+1"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：社交+1"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：社交+1"
+            },
+            {
+              "card": "女性镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：社交+1"
+            },
+            {
+              "card": "拜玲耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：魔力+1"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_qingshi_2",
+          "name": "作祟",
+          "trigger": "完成4次《当我们谈论爱情的时候》2天后",
+          "desc": "仪式。哈桑智慧-1、《爱情诗》暂时锁定；双胞胎参与则情诗线关闭；主角本人参与检定智慧+魔力+灵视≥5成功触发《哈桑的苦役》（已完成《羊肉炉的诗》则跳过检定直接成功），失败情诗线关闭",
+          "prereqs": [
+            "当我们谈论爱情的时候"
+          ],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "本人参与才检定；双胞胎参与则情诗线关闭"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_qingshi_3",
+          "name": "哈桑的苦役",
+          "trigger": "完成《作祟》",
+          "desc": "仪式。单选放入存活且满足条件的角色：布提娜（侠名≥10）→《欢愉之诗》；奈费勒（需触发奈费勒篇《苗圃》且非大敌）→《苗圃的学习》；阿卜德（权势≥10）→《艺术顾问》；苏丹（恶名≥10）→《宫廷诗人》，均金骰子+1；都不选则2-3天后可能触发《有了主意》。逾期触发《时机成熟了》",
+          "prereqs": [
+            "作祟"
+          ],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "布提娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "单选，需侠名≥10且存活：金骰子+1、触发《欢愉之诗》"
+            },
+            {
+              "card": "奈费勒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "单选，需触发奈费勒篇《苗圃》且非大敌：金骰子+1、触发《苗圃的学习》"
+            },
+            {
+              "card": "阿卜德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "单选，需权势≥10且存活：金骰子+1、触发《艺术顾问》"
+            },
+            {
+              "card": "苏丹",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "单选，需恶名≥10：金骰子+1、触发《宫廷诗人》"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_qingshi_4",
+          "name": "有了主意",
+          "trigger": "在《哈桑的苦役》选“都不选”2-3天后",
+          "desc": "抉择弹窗，随机弹出一位满足条件的人选：选“就他了”走该角色后续；选“我再想想吧”可重抽，第三次选此项主角{诅咒}+2、情诗线关闭",
+          "prereqs": [
+            "哈桑的苦役"
+          ],
+          "slots": []
+        },
+        {
+          "id": "hasang_maerjina_qingshi_5",
+          "name": "欢愉之诗",
+          "trigger": "在《哈桑的苦役》或《有了主意》选布提娜1天后",
+          "desc": "仪式，自启动耗时3天。哈桑智慧+1、隐匿+1、《爱情诗》解锁",
+          "prereqs": [
+            "哈桑的苦役"
+          ],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "hasang_maerjina_qingshi_6",
+          "name": "苗圃的学习",
+          "trigger": "在《哈桑的苦役》或《有了主意》选奈费勒1天后",
+          "desc": "仪式，自启动耗时3天。哈桑智慧+1、体魄+1、《爱情诗》解锁",
+          "prereqs": [
+            "哈桑的苦役"
+          ],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "hasang_maerjina_qingshi_7",
+          "name": "艺术顾问",
+          "trigger": "在《哈桑的苦役》或《有了主意》选阿卜德1天后",
+          "desc": "仪式，自启动耗时3天。哈桑智慧+1、生存+1、《爱情诗》解锁",
+          "prereqs": [
+            "哈桑的苦役"
+          ],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "hasang_maerjina_qingshi_8",
+          "name": "宫廷诗人",
+          "trigger": "在《哈桑的苦役》或《有了主意》选苏丹1天后",
+          "desc": "仪式，自启动耗时3天。哈桑智慧+1、魔力+1、《爱情诗》解锁",
+          "prereqs": [
+            "哈桑的苦役"
+          ],
+          "slots": [
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "hasang_maerjina_cai",
+      "name": "美食支线",
+      "summary": "哈桑食用大餐后开启的独立事件，可获食谱「报菜名」",
+      "steps": [
+        {
+          "id": "hasang_maerjina_cai_1",
+          "name": "一道名菜",
+          "trigger": "哈桑空闲、莎姬存活；哈桑参与食用3次大餐3天后（食用「特制佳肴」额外魅力+1）",
+          "desc": "仪式，存续3天，逾期死亡结局（OCR作「胆挺肥」）。检定1智慧+生存≥5：金币+5、金骰子+1，2天后哈桑体魄+1、获食谱「报菜名」（可由哈比卜制成大餐）；失败进入检定2（哈桑体魄+生存），失败哈桑死亡",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "哈桑的诗",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "任意一首；诗种决定额外属性收益"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "hasang_maerjina_zhuang",
+      "name": "妆娘塑造线",
+      "summary": "寻思马尔基娜开裁缝店，经妆娘拜访后用「妆容的研究」完成四种声望之形",
+      "steps": [
+        {
+          "id": "hasang_maerjina_zhuang_1",
+          "name": "裁缝店",
+          "trigger": "寻思「马尔基娜」",
+          "desc": "仪式，耗时2天，可重复寻思触发。5金币为任意角色装扮加属性（每人限一次，主角/双胞胎全属性大幅提升）；放「苏丹的猜忌」则猜忌-1并获{病容}，达成一千零一夜「没有人比我更懂你-秃头」；双方均为{密教徒}有额外收益（可重复）",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发"
+            },
+            {
+              "card": "苏丹的猜忌",
+              "sultan": false,
+              "maxGrade": null,
+              "required": false,
+              "consumed": false,
+              "note": "首次装扮主角/双胞胎时猜忌-1、获{病容}，达成一千零一夜「没有人比我更懂你-秃头」"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_zhuang_2",
+          "name": "宅邸外的争执",
+          "trigger": "完成一次《裁缝店》",
+          "desc": "抉择弹窗：选前3项次日获「玫瑰香精」（寻思魅力+2，可用于消除妻子的不满）、2天后触发《妆娘的拜访》；选“关我屁事”主角生存+1、马尔基娜篇关闭",
+          "prereqs": [
+            "裁缝店"
+          ],
+          "slots": []
+        },
+        {
+          "id": "hasang_maerjina_zhuang_3",
+          "name": "妆娘的拜访",
+          "trigger": "在《宅邸外的争执》选第1-3项2天后",
+          "desc": "仪式，存续3天（逾期马尔基娜篇关闭）。获「妆容的研究」、白银「洞察」",
+          "prereqs": [
+            "宅邸外的争执"
+          ],
+          "slots": [
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_zhuang_4",
+          "name": "更深的塑造",
+          "trigger": "善名/恶名/权势/侠名任意一项≥8，寻思头顶惊叹号的「妆容的研究」（某种声望之形已完成2次后不能再用它触发）",
+          "desc": "抉择弹窗，四选一分别触发《善之形》《恶之形》《权之形》《侠之形》",
+          "prereqs": [
+            "妆娘的拜访"
+          ],
+          "slots": [
+            {
+              "card": "妆容的研究",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发（头顶惊叹号）"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_zhuang_5",
+          "name": "善之形",
+          "trigger": "在《更深的塑造》选“给她看善人的样子”",
+          "desc": "仪式，可完成2次、每角色限放1次。放入盖斯/梅姬/鲁梅拉/阿里木等获对应收益；放入善名≥8的主角触发《额外的问题·善》；完成第二次时善名+1",
+          "prereqs": [
+            "更深的塑造"
+          ],
+          "slots": [
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：青铜「洞察」"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：梅姬魅力+1"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：马尔基娜智慧+1"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：阿里木隐匿+1"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一，需善名≥8：触发《额外的问题·善》"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_zhuang_6",
+          "name": "额外的问题·善",
+          "trigger": "在《善之形》放入主角",
+          "desc": "抉择弹窗：选“可以”主角魅力+2；选“不可以”马尔基娜隐匿+1",
+          "prereqs": [
+            "善之形"
+          ],
+          "slots": []
+        },
+        {
+          "id": "hasang_maerjina_zhuang_7",
+          "name": "恶之形",
+          "trigger": "在《更深的塑造》选“给她看恶人的样子”",
+          "desc": "仪式，可完成2次、每角色限放1次。放入娜依拉/哲瓦德/阿里木/阿穆尔等获对应收益（法图娜需《沉默的悬谈》触发后）；放入恶名≥8的主角触发《额外的问题·恶》；完成第二次时恶名+1",
+          "prereqs": [
+            "更深的塑造"
+          ],
+          "slots": [
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：娜依拉魅力+1"
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：哲瓦德智慧+1"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一，需《沉默的悬谈》触发后：马尔基娜社交+1、法图娜魅力+1"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：马尔基娜智慧+1、阿里木生存+1"
+            },
+            {
+              "card": "阿穆尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：马尔基娜社交+1、阿穆尔魅力+1"
+            },
+            {
+              "card": "哈马尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：马尔基娜生存+1、哈马尔智慧+1"
+            },
+            {
+              "card": "杰莫尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：马尔基娜生存+1、杰莫尔智慧+1"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一，需恶名≥8：触发《额外的问题·恶》"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_zhuang_8",
+          "name": "额外的问题·恶",
+          "trigger": "在《恶之形》放入主角",
+          "desc": "抉择弹窗：选“这就是我的本性”主角与双胞胎魅力+1；选“这一切都是为了游戏”马尔基娜隐匿+1",
+          "prereqs": [
+            "恶之形"
+          ],
+          "slots": []
+        },
+        {
+          "id": "hasang_maerjina_zhuang_9",
+          "name": "权之形",
+          "trigger": "在《更深的塑造》选“给她看权贵的样子”",
+          "desc": "仪式，可完成2次。主角单选放入2/3/4/5号槽，分别获马尔基娜社交+1或白银/青铜情报抉择（莎姬/奈布哈尼/奈费勒等选项）；完成第二次时权势+1",
+          "prereqs": [
+            "更深的塑造"
+          ],
+          "slots": [
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "单选放入2/3/4/5号槽，分别对应不同收益/情报抉择"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_zhuang_10",
+          "name": "侠之形",
+          "trigger": "在《更深的塑造》选“给她看侠义之士的样子”",
+          "desc": "仪式，可完成2次、每角色限放1次。放入流浪剑客/拉伊德/拉伊德娜/哈马尔/杰莫尔等获对应收益；放入侠名≥8的主角马尔基娜战斗+1；完成第二次时侠名+1",
+          "prereqs": [
+            "更深的塑造"
+          ],
+          "slots": [
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：流浪剑客魅力+1"
+            },
+            {
+              "card": "拉伊德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：青铜「洞察」"
+            },
+            {
+              "card": "拉伊德娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：马尔基娜社交+1、拉伊德娜隐匿+1"
+            },
+            {
+              "card": "哈马尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：哈马尔战斗+1"
+            },
+            {
+              "card": "杰莫尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一：杰莫尔战斗+1"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽多选一，需侠名≥8：马尔基娜战斗+1"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_zhuang_11",
+          "name": "完美完成委托",
+          "trigger": "《善之形》《恶之形》《权之形》《侠之形》各完成2次",
+          "desc": "剧情弹窗：失去「妆容的研究」、金骰子+1。是开启神侍线的必要条件",
+          "prereqs": [
+            "善之形",
+            "恶之形",
+            "权之形",
+            "侠之形"
+          ],
+          "slots": [],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "hasang_maerjina_shen",
+      "name": "神侍线（完美结局）",
+      "summary": "四之形全满且主角入圣后，造就神的侍从并初试神威，通向龙眼篇成神线",
+      "steps": [
+        {
+          "id": "hasang_maerjina_shen_1",
+          "name": "塑造更大的东西",
+          "trigger": "《善之形》《恶之形》《权之形》《侠之形》各完成2次，且主角已通过灵视篇《心灵之战》{入圣}",
+          "desc": "抉择弹窗：选“点头”触发《神的侍从》；选“摇头”侠名-1",
+          "prereqs": [
+            "善之形",
+            "恶之形",
+            "权之形",
+            "侠之形"
+          ],
+          "slots": []
+        },
+        {
+          "id": "hasang_maerjina_shen_2",
+          "name": "神的侍从",
+          "trigger": "在《塑造更大的东西》选“点头”",
+          "desc": "仪式，存续5天（逾期黄金「秘氛」+1、马尔基娜篇关闭）。放入有{命运的羁绊}的热娜/伊曼/拜玲耶/娜依拉/盖斯/阿迪莱/法图娜/扎齐伊/鲁梅拉/法尔达克/铁头/小圆/法拉杰之一，使其成为{神的侍从}、触发《初试神威》",
+          "prereqs": [
+            "塑造更大的东西"
+          ],
+          "slots": [
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}：成为{神的侍从}"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            },
+            {
+              "card": "拜玲耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}（OCR作拜铃耶）"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            },
+            {
+              "card": "阿迪莱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            },
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            },
+            {
+              "card": "铁头",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "多选一，需有{命运的羁绊}"
+            }
+          ]
+        },
+        {
+          "id": "hasang_maerjina_shen_3",
+          "name": "初试神威",
+          "trigger": "完成《神的侍从》",
+          "desc": "仪式，存续3天（逾期马尔基娜篇关闭）。放入圣主角+神的侍从+黄金及以下奢靡/征服/杀戮/纵欲：苏丹卡不会被折断、金骰子+1、马尔基娜获{命运的羁绊}，按所放卡种加属性；开启大结局龙眼篇成神线“成为新神”的可能性",
+          "prereqs": [
+            "神的侍从"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "需已{入圣}"
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": true,
+              "consumed": true,
+              "note": "四选一，黄金及以下；苏丹卡不会被折断，主角体魄+1、神侍隐匿+1"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": true,
+              "consumed": true,
+              "note": "四选一，黄金及以下；主角魅力+1、神侍魔力+1"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": true,
+              "consumed": true,
+              "note": "四选一，黄金及以下；主角体魄+1、神侍战斗+1"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": true,
+              "consumed": true,
+              "note": "四选一，黄金及以下；主角智慧+1、神侍社交+1"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

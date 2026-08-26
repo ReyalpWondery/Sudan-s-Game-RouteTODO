@@ -1,0 +1,3693 @@
+{
+  "id": "jingling",
+  "title": "镜灵篇",
+  "category": "character",
+  "characters": [
+    "镜灵"
+  ],
+  "routes": [
+    {
+      "id": "jingling_join",
+      "name": "入队线",
+      "summary": "完成灵视篇《心灵之战1》后开启，通过古老的镜子获得镜中的生灵并为其选择模仿对象，检定通过则镜灵入队",
+      "steps": [
+        {
+          "id": "jingling_join_1",
+          "name": "诡异的镜子",
+          "trigger": "完成灵视篇《心灵之战1》",
+          "desc": "仪式，长期存续耗时1天。卡槽：古老的镜子。放男性追随者镜灵成为{男性}，放女性追随者/夏玛成为{女性}。获「镜中的生灵」、触发《映像》。后续检定对主角数值要求较高，建议不要太早开启本篇",
+          "prereqs": [],
+          "slots": [
+            {
+              "card": "古老的镜子",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "jingling_join_2",
+          "name": "映像",
+          "trigger": "完成《诡异的镜子》",
+          "desc": "仪式，存续7天（逾期镜灵篇关闭）。为镜灵选择模仿对象：成为猫（贝姬夫人：为它取名、镜灵篇关闭，无后续）/战士/贵族/智者/诗人（决定后续走哪条线及镜灵最终数值）。2-3天后触发《你的名字》",
+          "prereqs": [
+            "诡异的镜子"
+          ],
+          "slots": [
+            {
+              "card": "镜中的生灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "贝姬夫人",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "赛里曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "哲巴尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "阿迪莱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "法里斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "古利斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "杰莫尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "哈马尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "安妮塔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "拉伊德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "铁头",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "快脚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "阿穆尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "双胞胎",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "巴拉特",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "阿萨尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "快脚的老婆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            },
+            {
+              "card": "索拉薇儿",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；镜灵的模仿对象；选贝姬夫人则镜灵篇关闭"
+            }
+          ]
+        },
+        {
+          "id": "jingling_join_3",
+          "name": "你的名字",
+          "trigger": "完成《映像》2-3天后",
+          "desc": "仪式，存续1天（逾期自启动）。卡槽：镜中的生灵+主角+任意情报。检定：主角智力&魔力&魅力-镜灵魅力&魔力&魅力，成功≥4：镜灵入队、为它取名、武器/服装/饰品槽各+1；成功<4：死亡结局「碎镜」",
+          "prereqs": [
+            "映像"
+          ],
+          "slots": [
+            {
+              "card": "镜中的生灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "jingling_zs",
+      "name": "战士线",
+      "summary": "镜灵成为战士后折断「杀戮」推进，最终引向死亡轮回，决定镜灵是强化、死亡还是变为饰品「镜灵之盾」",
+      "steps": [
+        {
+          "id": "jingling_zs_1",
+          "name": "战士第一问",
+          "trigger": "镜灵成为战士入队后、折断1张「杀戮」",
+          "desc": "抉择：王者→《见得利者》；商人→《见无形之刃》；士兵→《杀戮的诀窍》；平民→《死如微尘》",
+          "prereqs": [
+            "你的名字"
+          ],
+          "slots": [
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断1张「杀戮」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_2",
+          "name": "见得利者",
+          "trigger": "在《战士第一问》选“王者”",
+          "desc": "仪式，长期存续。镜灵体魄+1；放入不同追随者获得对应属性与人性/物性收益",
+          "prereqs": [
+            "战士第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_3",
+          "name": "见无形之刃",
+          "trigger": "在《战士第一问》选“商人”",
+          "desc": "仪式，长期存续。镜灵体魄+1；放入不同追随者获得对应属性与人性/物性收益",
+          "prereqs": [
+            "战士第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿穆尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_4",
+          "name": "杀戮的诀窍",
+          "trigger": "在《战士第一问》选“士兵”",
+          "desc": "仪式，长期存续。镜灵体魄+1；放入不同追随者获得对应属性与人性/物性收益",
+          "prereqs": [
+            "战士第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿迪莱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "蒙面战士",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哲巴尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法里斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "古利斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_5",
+          "name": "死如微尘",
+          "trigger": "在《战士第一问》选“平民”",
+          "desc": "仪式，长期存续。镜灵体魄+1；放入不同追随者获得对应属性与人性/物性收益",
+          "prereqs": [
+            "战士第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "拉伊德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "杰莫尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哈马尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_6",
+          "name": "战士第二问",
+          "trigger": "镜灵成为战士入队后折断2张「杀戮」、完成《战士第一问》任一分支1天后",
+          "desc": "抉择：因为仍有留恋→《生命与期盼》；出于生命本能→《生命的本能》；因为恐惧懦弱→《生死之惧》",
+          "prereqs": [
+            "战士第一问"
+          ],
+          "slots": [
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断2张「杀戮」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_7",
+          "name": "生命与期盼",
+          "trigger": "在《战士第二问》选“因为仍有留恋”",
+          "desc": "仪式，长期存续。镜灵隐匿+1；放入不同追随者获得对应收益（如巴拉特金币+10）",
+          "prereqs": [
+            "战士第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "拉伊德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "巴拉特",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_8",
+          "name": "生命的本能",
+          "trigger": "在《战士第二问》选“出于生命本能”",
+          "desc": "仪式，长期存续。镜灵隐匿+1；放入不同追随者获得对应收益",
+          "prereqs": [
+            "战士第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；小圆限非侧室"
+            },
+            {
+              "card": "铁头",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；小圆限非侧室"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；小圆限非侧室"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；小圆限非侧室"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；小圆限非侧室"
+            },
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；小圆限非侧室"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_9",
+          "name": "生死之惧",
+          "trigger": "在《战士第二问》选“因为恐惧懦弱”",
+          "desc": "仪式，长期存续。镜灵隐匿+1；放入不同追随者获得对应收益，其余非怪物非动物追随者人性+1",
+          "prereqs": [
+            "战士第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿穆尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_10",
+          "name": "战士第三问",
+          "trigger": "镜灵成为战士入队后折断3张「杀戮」、完成《战士第二问》任一分支1天后",
+          "desc": "弹窗。结算：触发《如果有来生》",
+          "prereqs": [
+            "战士第二问"
+          ],
+          "slots": [
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断3张「杀戮」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_11",
+          "name": "如果有来生",
+          "trigger": "完成《战士第三问》",
+          "desc": "仪式，长期存续。放入不同追随者获得对应人性/物性收益。固定结算：获武器「银刃匕首」，1天后触发《战士第四问》",
+          "prereqs": [
+            "战士第三问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "马尔基娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿迪莱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "蒙面战士",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "巴拉特",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "快脚",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "铁头",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "快脚的老婆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "索拉薇儿",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "贝姬夫人",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "火焰大王",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zs_12",
+          "name": "战士第四问",
+          "trigger": "完成《如果有来生》1天后",
+          "desc": "弹窗。结算：触发《死亡轮回》",
+          "prereqs": [
+            "如果有来生"
+          ],
+          "slots": []
+        },
+        {
+          "id": "jingling_zs_13",
+          "name": "死亡轮回",
+          "trigger": "完成《战士第四问》",
+          "desc": "仪式，卡槽：镜灵+除火焰大王/贝姬夫人外任意角色。分支众多：双胞胎→镜灵死亡；部分角色→镜灵变为饰品「镜灵之盾」；{密教徒}铁头/伊曼→死亡结局「死于镜中」；扎齐伊/鲁梅拉检定失败→死亡结局「死于镜中」；奈布哈尼失败→奈布哈尼死亡；其余按镜灵人性-物性检定，成功强化镜灵、失败多变为「镜灵之盾」",
+          "prereqs": [
+            "战士第四问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "可能死亡/离队/变为饰品「镜灵之盾」，视分支而定"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "jingling_gz",
+      "name": "贵族线",
+      "summary": "镜灵成为贵族后折断「征服」推进，最终以一次征服的行为决定镜灵离队（革命篇援军）、变为饰品或大幅强化",
+      "steps": [
+        {
+          "id": "jingling_gz_1",
+          "name": "贵族第一问",
+          "trigger": "镜灵成为贵族入队后、折断1张「征服」",
+          "desc": "抉择：为了挑战自我→《见勇士》；为了占有更多→《见战利品》；为了留下功绩→《见证荣誉》",
+          "prereqs": [
+            "你的名字"
+          ],
+          "slots": [
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断1张「征服」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_2",
+          "name": "见勇士",
+          "trigger": "在《贵族第一问》选“为了挑战自我”",
+          "desc": "仪式，长期存续。镜灵权势&侠名+1；放入不同追随者获得对应收益",
+          "prereqs": [
+            "贵族第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿迪莱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "蒙面战士",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_3",
+          "name": "见战利品",
+          "trigger": "在《贵族第一问》选“为了占有更多”",
+          "desc": "仪式，长期存续。镜灵权势&侠名+1；放入不同追随者获得对应收益（如杰莫尔/哈马尔金币+10）",
+          "prereqs": [
+            "贵族第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "铁头",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "拉伊德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "杰莫尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "哈马尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_4",
+          "name": "见证荣誉",
+          "trigger": "在《贵族第一问》选“为了留下功绩”",
+          "desc": "仪式，长期存续。镜灵权势&侠名+1；放入不同追随者获得对应收益",
+          "prereqs": [
+            "贵族第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "哲巴尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "法里斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "火焰大王",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "古利斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_5",
+          "name": "贵族第二问",
+          "trigger": "镜灵成为贵族入队后折断2张「征服」、完成《贵族第一问》任一分支1天后",
+          "desc": "抉择：满足伟大的君主→此后将镜灵放入《权力的游戏》触发《征服者的梦》；建立长久的秩序→《有理想的人》；获得奴隶→《见奴隶》",
+          "prereqs": [
+            "贵族第一问"
+          ],
+          "slots": [
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断2张「征服」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_6",
+          "name": "有理想的人",
+          "trigger": "在《贵族第二问》选“建立长久的秩序”",
+          "desc": "仪式，长期存续。放入不同追随者获得对应收益。结算：触发《征服者的梦》",
+          "prereqs": [
+            "贵族第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_7",
+          "name": "见奴隶",
+          "trigger": "在《贵族第二问》选“获得奴隶”",
+          "desc": "仪式，长期存续。放入不同追随者获得对应收益。结算：触发《征服者的梦》",
+          "prereqs": [
+            "贵族第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "古利斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "铁头",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "快脚的老婆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；主角限非双胞胎"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_8",
+          "name": "征服者的梦",
+          "trigger": "在《贵族第二问》选“满足伟大的君主”后让镜灵参与《权力的游戏》，或完成《有理想的人》/《见奴隶》",
+          "desc": "剧情事件。结算：主角&双胞胎体魄+1",
+          "prereqs": [
+            "贵族第二问"
+          ],
+          "slots": []
+        },
+        {
+          "id": "jingling_gz_9",
+          "name": "贵族第三问",
+          "trigger": "镜灵成为贵族入队后折断3张「征服」、完成《贵族第二问》任一分支1天后",
+          "desc": "抉择：无数的模仿者→《谋逆的思想》；无数的牺牲者→《见幸存者》；无数的责任→《承担责任》",
+          "prereqs": [
+            "贵族第二问"
+          ],
+          "slots": [
+            {
+              "card": "征服",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断3张「征服」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_10",
+          "name": "谋逆的思想",
+          "trigger": "在《贵族第三问》选“无数的模仿者”",
+          "desc": "仪式，长期存续。可放密谋类手牌（谋反的意图/弑君的计划/革命的计划等）获得对应收益，黄金征服不折卡。固定结算：权势+1、1天后触发《贵族第四问》",
+          "prereqs": [
+            "贵族第三问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "对苏丹的恐惧",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "免于恐惧的自由",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "谋反的意图",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "革命的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "誓言之证",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "革命的构思",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "黄金征服",
+              "sultan": true,
+              "maxGrade": "黄金",
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；放入不折卡"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_11",
+          "name": "见幸存者",
+          "trigger": "在《贵族第三问》选“无数的牺牲者”",
+          "desc": "仪式，长期存续。放入不同追随者获得对应收益。固定结算：权势+1、1天后触发《贵族第四问》",
+          "prereqs": [
+            "贵族第三问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "蒙面战士",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哲巴尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法里斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "巴拉特",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_12",
+          "name": "承担责任",
+          "trigger": "在《贵族第三问》选“无数的责任”",
+          "desc": "仪式，长期存续。放入不同追随者获得对应收益。固定结算：权势+1、1天后触发《贵族第四问》",
+          "prereqs": [
+            "贵族第三问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "万逝戒",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "拉伊德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_13",
+          "name": "贵族第四问",
+          "trigger": "完成《谋逆的思想》/《见幸存者》/《承担责任》任一件1天后",
+          "desc": "弹窗。结算：触发《一次征服的行为》",
+          "prereqs": [
+            "贵族第三问"
+          ],
+          "slots": []
+        },
+        {
+          "id": "jingling_gz_14",
+          "name": "一次征服的行为",
+          "trigger": "完成《贵族第四问》",
+          "desc": "仪式，存续3天。卡槽：镜灵+被蛊惑的军队+边境领主+领主部队，并选择支持领主或支持镜灵（放部队/情报），按双方战斗&体魄检定。逾期或检定成败会改变镜灵人性/物性，并依人性与物性的大小关系分别触发《镜土的领主》/《镜之冠冤》/《以人为镜》",
+          "prereqs": [
+            "贵族第四问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "被蛊惑的军队",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "边境领主",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "领主部队",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "jingling_gz_15",
+          "name": "镜土的领主",
+          "trigger": "《一次征服的行为》中逾期且人性<物性，或检定成功且人性>物性（详见该事件分支）",
+          "desc": "结算：镜灵离队、可能触发大结局·革命篇《镜子的援军》",
+          "prereqs": [
+            "一次征服的行为"
+          ],
+          "slots": [],
+          "terminal": true
+        },
+        {
+          "id": "jingling_gz_16",
+          "name": "镜之冠冤",
+          "trigger": "《一次征服的行为》中逾期且人性>物性，或支持领主且人性≤物性，或支持镜灵检定失败且人性≤物性",
+          "desc": "仪式，自启动。结算：镜灵变为饰品「镜灵之冠」（数值不变）",
+          "prereqs": [
+            "一次征服的行为"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "结算后变为饰品「镜灵之冠」（数值不变）"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "jingling_gz_17",
+          "name": "以人为镜",
+          "trigger": "《一次征服的行为》中逾期且人性=物性，或支持领主检定失败且人性>物性，或支持镜灵检定成功且人性≤物性/失败且人性>物性",
+          "desc": "仪式，自启动。结算：镜灵智慧&社交+3、魅力&战斗+2、隐匿&魔力&体魄&生存+1",
+          "prereqs": [
+            "一次征服的行为"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    },
+    {
+      "id": "jingling_zz",
+      "name": "智者线",
+      "summary": "镜灵成为智者后折断「奢靡」推进，天降横财后按人性-物性差值走向强化、书库辖员或幻之金币三条收尾",
+      "steps": [
+        {
+          "id": "jingling_zz_1",
+          "name": "智者第一问",
+          "trigger": "镜灵成为智者入队后、折断1张「奢靡」",
+          "desc": "抉择：人类的智慧→《见聪明人》；人类的邪恶→《见坏人》；人类的愚蠢→《见蠢人》",
+          "prereqs": [
+            "你的名字"
+          ],
+          "slots": [
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断1张「奢靡」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_2",
+          "name": "见聪明人",
+          "trigger": "在《智者第一问》选“人类的智慧”",
+          "desc": "仪式，长期存续。放入智慧≥6角色等获得对应收益。固定结算：智慧+1、侠名+1、金币+8",
+          "prereqs": [
+            "智者第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_3",
+          "name": "见坏人",
+          "trigger": "在《智者第一问》选“人类的邪恶”",
+          "desc": "仪式，长期存续。放入贵族等获得对应收益。固定结算：社交+1、侠名+1、金币+8",
+          "prereqs": [
+            "智者第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿穆尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_4",
+          "name": "见蠢人",
+          "trigger": "在《智者第一问》选“人类的愚蠢”",
+          "desc": "仪式，长期存续。放入非贵族非怪物非动物角色获得对应收益。固定结算：生存+1、侠名+1、金币+8",
+          "prereqs": [
+            "智者第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "铁头",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哈马尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "杰莫尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哲巴尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_5",
+          "name": "智者第二问",
+          "trigger": "镜灵成为智者入队后折断2张「奢靡」、完成《智者第一问》任一分支1天后",
+          "desc": "抉择：挣钱当然是快乐的→《囤积之乐》；花钱的时候才快乐→《花费之乐》；也有讨厌钱的人啦→《见讨厌钱的人》",
+          "prereqs": [
+            "智者第一问"
+          ],
+          "slots": [
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断2张「奢靡」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_6",
+          "name": "囤积之乐",
+          "trigger": "在《智者第二问》选“挣钱当然是快乐的”",
+          "desc": "仪式，长期存续。放入不同追随者获得对应收益（法拉杰不可放入）。固定结算：生存+2、金币+8",
+          "prereqs": [
+            "智者第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰不可放入"
+            },
+            {
+              "card": "巴拉特",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰不可放入"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰不可放入"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰不可放入"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_7",
+          "name": "花费之乐",
+          "trigger": "在《智者第二问》选“花钱的时候才快乐”",
+          "desc": "仪式，长期存续。放入不同追随者获得对应收益。固定结算：魅力+1、金币+8",
+          "prereqs": [
+            "智者第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_8",
+          "name": "见讨厌钱的人",
+          "trigger": "在《智者第二问》选“也有讨厌钱的人啦”",
+          "desc": "仪式，长期存续。放入不同追随者获得对应收益。固定结算：智慧+1、金币+8",
+          "prereqs": [
+            "智者第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "古利斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_9",
+          "name": "智者第三问",
+          "trigger": "镜灵成为智者入队后折断3张「奢靡」、完成《智者第二问》任一分支1天后",
+          "desc": "抉择：高人一等的品位→《体验品位》；对利润的敏锐把握→《见证得利》；敢于浪费的胆识→《浪费与浪漫》",
+          "prereqs": [
+            "智者第二问"
+          ],
+          "slots": [
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断3张「奢靡」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_10",
+          "name": "体验品位",
+          "trigger": "在《智者第三问》选“高人一等的品位”",
+          "desc": "仪式，长期存续。固定结算：魅力&侠名&恶名+1、金币+8、1天后触发《智者第四问》",
+          "prereqs": [
+            "智者第三问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "热娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_11",
+          "name": "见证得利",
+          "trigger": "在《智者第三问》选“对利润的敏锐把握”",
+          "desc": "仪式，长期存续、耗时5天。卡槽：5金币+镜灵，放入巴拉特/哈比卜/主角等获金币+10。固定结算：社交&智慧&侠名&恶名+1、金币+8、1天后触发《智者第四问》",
+          "prereqs": [
+            "智者第三问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "巴拉特",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哈比卜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_12",
+          "name": "浪费与浪漫",
+          "trigger": "在《智者第三问》选“敢于浪费的胆识”",
+          "desc": "仪式，长期存续。卡槽：5金币+镜灵。固定结算：魅力&侠名&恶名+1、金币+8、1天后触发《智者第四问》",
+          "prereqs": [
+            "智者第三问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；伊曼限非密教徒"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；伊曼限非密教徒"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；伊曼限非密教徒"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；伊曼限非密教徒"
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_13",
+          "name": "智者第四问",
+          "trigger": "完成《体验品位》/《见证得利》/《浪费与浪漫》任一件1天后",
+          "desc": "弹窗。结算：触发《天降横财》",
+          "prereqs": [
+            "智者第三问"
+          ],
+          "slots": []
+        },
+        {
+          "id": "jingling_zz_14",
+          "name": "天降横财",
+          "trigger": "完成《智者第四问》",
+          "desc": "仪式。卡槽：镜灵+10~50金币+有{命运的羁绊}的追随者（放金币>20与≤20收益不同，放梅姬退回双倍金币）；放法拉杰可获「出城密道」「被打包的财物」「侠名的遮掩」（用于大结局·逃亡篇）。固定结算按人性-物性：≥2触发《有趣的人类》，-2~2之间触发《心胜于物》，≤-2则1天后触发《金币巡回》",
+          "prereqs": [
+            "智者第四问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_15",
+          "name": "有趣的人类",
+          "trigger": "完成《天降横财》时镜灵人性-物性≥2",
+          "desc": "仪式，长期存续。结算：镜灵魔力&魅力+3、生存&隐匿+2、社交&体魄&智慧&战斗+1",
+          "prereqs": [
+            "天降横财"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "jingling_zz_16",
+          "name": "心胜于物",
+          "trigger": "完成《天降横财》时镜灵-2<人性-物性<2",
+          "desc": "仪式，自启动。结算：触发《书库辖员》（仪式在桌面左上角）",
+          "prereqs": [
+            "天降横财"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_17",
+          "name": "书库辖员",
+          "trigger": "完成《心胜于物》",
+          "desc": "常驻仪式，自启动、每7天自动触发一次。卡槽：镜灵。检定智慧+社交：成功≥6获随机两本「读物」，成功≥1获随机一本，失败无奖惩（可重复）",
+          "prereqs": [
+            "心胜于物"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            }
+          ]
+        },
+        {
+          "id": "jingling_zz_18",
+          "name": "金币巡回",
+          "trigger": "完成《天降横财》时镜灵人性-物性≤-2，1天后",
+          "desc": "仪式，自启动。结算：镜灵变为50枚「幻之金币」（可作正常金币使用，大结局·龙眼篇·创世线中可用于通关）；「幻之金币」用光7天后触发《世俗之梦》",
+          "prereqs": [
+            "天降横财"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "结算后变为50枚「幻之金币」"
+            }
+          ],
+          "terminal": true
+        },
+        {
+          "id": "jingling_zz_19",
+          "name": "世俗之梦",
+          "trigger": "完成《金币巡回》获得「幻之金币」并全部花光7天后",
+          "desc": "剧情弹窗。结算：「幻之金币」+10；再次花光会再次触发本弹窗（可重复）",
+          "prereqs": [
+            "金币巡回"
+          ],
+          "slots": []
+        }
+      ]
+    },
+    {
+      "id": "jingling_sr",
+      "name": "诗人线",
+      "summary": "镜灵成为诗人后折断「纵欲」推进，见贤者后按是否纵欲过镜灵及人性-物性差值走向强化、离队化为歌者或变为武器「镜灵之琴」",
+      "steps": [
+        {
+          "id": "jingling_sr_1",
+          "name": "诗人第一问",
+          "trigger": "镜灵成为诗人入队后、折断1张「纵欲」",
+          "desc": "抉择：男人→《见男人》；女人→《见女人》；身居高位者→《见贵族》；笑而不语→《见……?》",
+          "prereqs": [
+            "你的名字"
+          ],
+          "slots": [
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断1张「纵欲」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_2",
+          "name": "见男人",
+          "trigger": "在《诗人第一问》选“男人”",
+          "desc": "仪式，长期存续。镜灵魅力+1；放入带{激情}的男性角色获得对应收益",
+          "prereqs": [
+            "诗人第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_3",
+          "name": "见女人",
+          "trigger": "在《诗人第一问》选“女人”",
+          "desc": "仪式，长期存续。镜灵魅力+1；放入带{激情}的女性角色获得对应收益",
+          "prereqs": [
+            "诗人第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "索拉薇儿",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_4",
+          "name": "见贵族",
+          "trigger": "在《诗人第一问》选“身居高位者”",
+          "desc": "仪式，长期存续。镜灵魅力+1；放入带{激情}的贵族角色获得对应收益",
+          "prereqs": [
+            "诗人第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；需带{激情}"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_5",
+          "name": "见……?",
+          "trigger": "在《诗人第一问》选“笑而不语”",
+          "desc": "仪式，长期存续。镜灵魅力+1；可放贝姬夫人/怪物/密谋手牌/任意苏丹卡（不可折卡）等特殊对象获得对应收益",
+          "prereqs": [
+            "诗人第一问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "贝姬夫人",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "革命的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "一截斩断的绳索",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "无名的窖藏",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "白犀牛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "触手树",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "肢解兽",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "剃刀少女",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "大母神",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "谋反的意图",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "弑君的计划",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "任意苏丹卡",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；放入不折卡"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_6",
+          "name": "诗人第二问",
+          "trigger": "镜灵成为诗人入队后折断2张「纵欲」、完成《诗人第一问》任一分支1天后",
+          "desc": "抉择：绵延子嗣→《欲望与子嗣》；肉体欢愉→《欲望与代价》；情感共鸣→《欲望与爱情》",
+          "prereqs": [
+            "诗人第一问"
+          ],
+          "slots": [
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断2张「纵欲」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_7",
+          "name": "欲望与子嗣",
+          "trigger": "在《诗人第二问》选“绵延子嗣”",
+          "desc": "仪式，长期存续。镜灵智慧+1；放入不同追随者获得对应收益",
+          "prereqs": [
+            "诗人第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰/夏玛限黄金品级"
+            },
+            {
+              "card": "哲瓦德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰/夏玛限黄金品级"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰/夏玛限黄金品级"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰/夏玛限黄金品级"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰/夏玛限黄金品级"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰/夏玛限黄金品级"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰/夏玛限黄金品级"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；法拉杰/夏玛限黄金品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_8",
+          "name": "欲望与代价",
+          "trigger": "在《诗人第二问》选“肉体欢愉”",
+          "desc": "仪式，长期存续。镜灵智慧+1；放入不同追随者获得对应收益",
+          "prereqs": [
+            "诗人第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "索拉薇儿",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_9",
+          "name": "欲望与爱情",
+          "trigger": "在《诗人第二问》选“情感共鸣”",
+          "desc": "仪式，长期存续。镜灵智慧+1；除梅姬外放入的角色需同时有{激情}&{命运的羁绊}才有效",
+          "prereqs": [
+            "诗人第二问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "索拉薇儿",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一；除梅姬外需同时有{激情}&{命运的羁绊}"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_10",
+          "name": "诗人第三问",
+          "trigger": "镜灵成为诗人入队后折断3张「纵欲」、完成《诗人第二问》任一分支1天后",
+          "desc": "弹窗。抉择：触发《见贤者》。注意：若在《在家行淫》纵欲镜灵则物性+3、灵视+1（其他仪式纵欲镜灵可能也有相同效果）",
+          "prereqs": [
+            "诗人第二问"
+          ],
+          "slots": [
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "折断3张「纵欲」触发，原文未限品级"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_11",
+          "name": "见贤者",
+          "trigger": "完成《诗人第三问》",
+          "desc": "仪式，长期存续。镜灵社交+1；放入不同追随者获得对应收益。结算：未曾对镜灵纵欲则1天后触发《诗人第四问》；若曾对镜灵纵欲并再次折断「纵欲」，则按人性-物性：≥2触发剧情弹窗大幅强化镜灵，-2~2之间镜灵离队并触发《远方的歌》，≤-2触发《万和之弦》",
+          "prereqs": [
+            "诗人第三问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "古利斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿迪莱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "拉伊德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿里木",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哑铃铛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "木制苹果",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_12",
+          "name": "诗人第四问",
+          "trigger": "未对镜灵纵欲、完成《见贤者》1天后",
+          "desc": "弹窗。结算：触发《一次纵欲的尝试》",
+          "prereqs": [
+            "见贤者"
+          ],
+          "slots": []
+        },
+        {
+          "id": "jingling_sr_13",
+          "name": "一次纵欲的尝试",
+          "trigger": "完成《诗人第四问》",
+          "desc": "仪式，长期存续。危险分支：放拜铃耶→拜铃耶死亡、获读物「此岸彼岸」；放主角/伊曼/玛希尔→镜灵物性暴涨（伊曼魔力清零）。结算后按人性-物性：≥2剧情弹窗大幅强化镜灵，-2~2之间镜灵离队并触发《远方的歌》（仪式在桌面右上角），≤-2触发《万和之弦》",
+          "prereqs": [
+            "诗人第四问"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": ""
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "娜依拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "扎齐伊",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "夏玛",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "拉伊德",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哲巴尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法尔达克",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿迪莱",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "哈桑",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法拉杰",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "古利斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "奈布哈尼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "朱娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法里斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "蒙面战士",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "流浪剑客",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "盖斯",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "法图娜",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "贾丽拉",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "双胞胎",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "阿图娜尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "索拉薇儿",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "玛希尔",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "同槽任选其一"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": true,
+              "note": "同槽任选其一；放入则拜铃耶死亡、获读物「此岸彼岸」"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_14",
+          "name": "远方的歌",
+          "trigger": "纵欲过镜灵后完成《见贤者》再折一张纵欲，或完成《一次纵欲的尝试》后，且镜灵-2<人性-物性<2",
+          "desc": "常驻仪式（镜灵离队后），自启动、每7天自动触发一次。结算：随机获得三首「诗歌」（同哈桑诗歌卡池）并重置本仪式（可重复）",
+          "prereqs": [
+            "见贤者"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "镜灵已离队，仪式每7天自启动"
+            }
+          ]
+        },
+        {
+          "id": "jingling_sr_15",
+          "name": "万和之弦",
+          "trigger": "纵欲过镜灵后完成《见贤者》再折一张纵欲，或完成《一次纵欲的尝试》后，且镜灵人性-物性≤-2",
+          "desc": "仪式，自启动。结算：镜灵变为武器「镜灵之琴」（数值不变）",
+          "prereqs": [
+            "见贤者"
+          ],
+          "slots": [
+            {
+              "card": "镜灵",
+              "sultan": false,
+              "maxGrade": null,
+              "required": true,
+              "consumed": false,
+              "note": "结算后变为武器「镜灵之琴」（数值不变）"
+            }
+          ],
+          "terminal": true
+        }
+      ]
+    }
+  ]
+}

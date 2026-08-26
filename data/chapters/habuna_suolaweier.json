@@ -1,0 +1,115 @@
+{
+  "id": "habuna_suolaweier",
+  "title": "哈布娜篇、索拉薇儿篇",
+  "category": "character",
+  "characters": ["哈布娜", "索拉薇儿", "奈布哈尼"],
+  "routes": [
+    {
+      "id": "habuna_suolaweier_habuna",
+      "name": "哈布娜线（纺织教室/蓝巾军）",
+      "summary": "从奈布哈尼篇《肉体展览》买下「有手艺的女奴」后开启，救出哈布娜并办起纺织教室，最终获得大结局助战「蓝巾军」",
+      "steps": [
+        {"id":"habuna_suolaweier_habuna_1","name":"微小的麻烦","trigger":"在奈布哈尼篇《肉体展览》买下「有手艺的女奴」后，寻思「奈布哈尼」","desc":"仪式，存续5天耗时1天，逾期哈布娜退场。卡槽：哈布娜+任意角色+任意情报。贵族执行需权势≥10，非贵族需侠名≥10，否则检定成功≥3，成功获「精美的蓝纱」，失败哈布娜退场","prereqs":[],
+        "slots":[
+          {"card":"哈布娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"habuna_suolaweier_habuna_2","name":"精致的礼物","trigger":"寻思「精美的蓝纱」","desc":"抉择送礼对象：主角得魅力+1与青铜「秘密」，梅姬得「幸福感」，奈布哈尼会退回蓝纱且权势+1，其他追随者按贵族/平民加权势/侠名。送出后2-3天触发《火中的自由》。警告：若在《权力的游戏》上贡蓝纱，哈布娜成为宫廷匠人、本篇关闭；蓝纱也可给热娜《珠宝设计》制成「湛蓝丝巾」，同样触发后续","prereqs":["微小的麻烦"],
+        "slots":[
+          {"card":"精美的蓝纱","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"寻思触发；送礼后失去，但送给奈布哈尼会被退回"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"送礼对象之一（槽位2★必填，与梅姬/奈布哈尼/其他追随者任选其一）：主角魅力+1、青铜「秘密」+1"},
+          {"card":"梅姬","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"送礼对象之一：梅姬魅力+1、「幸福感」+1"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"送礼对象之一：退回「精美的蓝纱」、魅力+1、权势+1，可重新寻思换人送"}
+        ]},
+        {"id":"habuna_suolaweier_habuna_3","name":"火中的自由","trigger":"完成《精致的礼物》2-3天后（或在《珠宝设计》制成「湛蓝丝巾」）","desc":"仪式，存续1天，逾期哈布娜死亡。检定我方体魄+生存≥5：善名+1、触发《你所能做到的》；失败哈布娜死亡、参与者受伤。若放奈布哈尼参与则免检定，改为触发《探访》","prereqs":["精致的礼物"],
+        "slots":[
+          {"card":"哈布娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"habuna_suolaweier_habuna_4","name":"探访","trigger":"在《火中的自由》放置奈布哈尼","desc":"仪式，存续5天，逾期哈布娜死亡且1天后重置奈布哈尼篇《靠不住的盟友》。卡槽含主角；可放谋反思潮（「对苏丹的恐惧」+1）或密教思潮（奈布哈尼成为{密教徒}、体魄+2），均使奈布哈尼不再是{苏丹的近卫}。结算后不再触发《靠不住的盟友》","prereqs":["火中的自由"],"terminal":true,
+        "slots":[
+          {"card":"哈布娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"卡槽序号3，OCR标记不明，按●必填处理"}
+        ]},
+        {"id":"habuna_suolaweier_habuna_5","name":"你所能做到的","trigger":"在《火中的自由》检定成功且未放置奈布哈尼","desc":"仪式，存续7天，逾期哈布娜死亡。卡槽：哈布娜+奈布哈尼+任意女性追随者。结算触发《纺织教室》；奈布哈尼参与则不再触发《靠不住的盟友》","prereqs":["火中的自由"],
+        "slots":[
+          {"card":"哈布娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"槽位2★；参与则不再触发《靠不住的盟友》"}
+        ]},
+        {"id":"habuna_suolaweier_habuna_6","name":"纺织教室","trigger":"完成《你所能做到的》","desc":"仪式，长期存续耗时5天。卡槽：哈布娜+智慧≥4角色（奈布哈尼参与额外金币+3）。结算金币+7并重置本事件；第3次完成时本事件暂时关闭并触发《蓝巾》（疑似BUG：第三次无金币奖励）（可重复）","prereqs":["你所能做到的"],
+        "slots":[
+          {"card":"哈布娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"非必需；参与则额外金币+3"}
+        ]},
+        {"id":"habuna_suolaweier_habuna_7","name":"蓝巾","trigger":"完成3次《纺织教室》","desc":"仪式，存续7天，逾期重置《纺织教室》。卡槽：哈布娜+主角+任意谋反思潮。结算「对苏丹的恐惧」+1；未来在大结局·龙眼篇《土丘》、大结局·革命篇《各方助阵·2》时可获得部队「蓝巾军」","prereqs":["纺织教室"],"terminal":true,
+        "slots":[
+          {"card":"哈布娜","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]}
+      ]
+    },
+    {
+      "id": "habuna_suolaweier_suolaweier",
+      "name": "索拉薇儿线（入队/妓女分支）",
+      "summary": "从奈布哈尼篇《肉体展览》买下「娇弱的女奴」后开启，三选一决定索拉薇儿入队、进欢愉之馆或由奈布哈尼收留",
+      "steps": [
+        {"id":"habuna_suolaweier_suolaweier_1","name":"娇弱的女奴","trigger":"在奈布哈尼篇《肉体展览》买下「娇弱的女奴」","desc":"抉择弹窗三分支：“你就收留她吧”→5天后寻思奈布哈尼触发《那个女人》；“不如把她留给我”→索拉薇儿入队、激情+1、触发《我不如她吗》；“她应该学着靠自己生活”→1天后触发《欢愉之馆的新人》","prereqs":[],
+        "slots":[]},
+        {"id":"habuna_suolaweier_suolaweier_2","name":"那个女人","trigger":"在《娇弱的女奴》选“你就收留她吧”，5天后寻思头顶惊叹号的「奈布哈尼」","desc":"仪式，自启动耗时1天。卡槽：索拉薇儿+奈布哈尼。索拉薇儿进入《欢愉之馆》成为{妓女}，触发《酩酊一醉》","prereqs":["娇弱的女奴"],
+        "slots":[
+          {"card":"索拉薇儿","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后进入《欢愉之馆》成为{妓女}"},
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"habuna_suolaweier_suolaweier_3","name":"酩酊一醉","trigger":"完成《那个女人》","desc":"仪式，存续6天，逾期奈布哈尼离队。卡槽：奈布哈尼+10金币。结算后不再触发《靠不住的盟友》","prereqs":["那个女人"],"terminal":true,
+        "slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"需10金币"}
+        ]},
+        {"id":"habuna_suolaweier_suolaweier_4","name":"我不如她吗","trigger":"索拉薇儿入队后，在任意仪式与其折断「纵欲」的次日","desc":"抉择弹窗：“她怎么比得上你？”→3天后触发《奢侈的欢欣》；“对，你不如她”→次日触发《不是故意》、4天后触发《另谋出路》。警告：若将索拉薇儿上贡《权力的游戏》，索拉薇儿死亡","prereqs":["娇弱的女奴"],
+        "slots":[]},
+        {"id":"habuna_suolaweier_suolaweier_5","name":"奢侈的欢欣","trigger":"在《我不如她吗》选“她怎么比得上你？”3天后","desc":"仪式，存续3天，逾期索拉薇儿激情清零、4天后触发《另谋出路》。卡槽：索拉薇儿+15金币。索拉薇儿升为白银品级、魅力&社交+2；「妻子的不满」+1、5天后触发《未被满足的渴求》","prereqs":["我不如她吗"],
+        "slots":[
+          {"card":"索拉薇儿","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":true,"consumed":true,"note":"需15金币"}
+        ]},
+        {"id":"habuna_suolaweier_suolaweier_6","name":"未被满足的渴求","trigger":"完成《奢侈的欢欣》5天后","desc":"仪式，存续10天，逾期4天后触发《另谋出路》。卡槽：任意「空屋」+索拉薇儿+同品级及以下「奢靡」。结算触发《金屋藏娇》","prereqs":["奢侈的欢欣"],
+        "slots":[
+          {"card":"空屋","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"空置的房间/空置的宅邸/空置的旧居均可；会带入《金屋藏娇》"},
+          {"card":"索拉薇儿","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"奢靡","sultan":true,"maxGrade":null,"required":false,"consumed":true,"note":"需与所放「空屋」同品级及以下（动态品级）；放入则「妻子的不满」+1"}
+        ]},
+        {"id":"habuna_suolaweier_suolaweier_7","name":"金屋藏娇","trigger":"完成《未被满足的渴求》","desc":"仪式，自启动耗时5天。卡槽：索拉薇儿+前置所放「空屋」+0-3金币。吸入3金币：侠名+1、重置本事件（可重复）；不足3金币生气计数+1；计数=2时索拉薇儿离队、侠名-5、「妻子的不满」+1、1天后触发《另谋出路》","prereqs":["未被满足的渴求"],
+        "slots":[
+          {"card":"索拉薇儿","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""},
+          {"card":"空屋","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"即《未被满足的渴求》所放的那间空屋"},
+          {"card":"金币","sultan":false,"maxGrade":null,"required":false,"consumed":true,"note":"0-3金币；吸入3金币侠名+1，不足则生气计数+1"}
+        ]},
+        {"id":"habuna_suolaweier_suolaweier_8","name":"不是故意","trigger":"在《我不如她吗》选“对，你不如她”次日","desc":"仪式，存续1天，逾期自启动。卡槽：「妻子的不满」。结算「妻子的不满」-1","prereqs":["我不如她吗"],
+        "slots":[
+          {"card":"妻子的不满","sultan":false,"maxGrade":null,"required":false,"consumed":false,"note":"卡槽标记为○；放入后「妻子的不满」-1"}
+        ]},
+        {"id":"habuna_suolaweier_suolaweier_9","name":"另谋出路","trigger":"《我不如她吗》选“对，你不如她”4天后；或《奢侈的欢欣》/《未被满足的渴求》逾期4天后；或《金屋藏娇》生气计数=2的1天后","desc":"仪式，自启动耗时1天。索拉薇儿离队、进入《欢愉之馆》成为{妓女}，失去{激情}与{纵欲的痕迹}（可再次对其折断纵欲卡）","prereqs":["我不如她吗","奢侈的欢欣","未被满足的渴求","金屋藏娇"],"terminal":true,
+        "slots":[
+          {"card":"索拉薇儿","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后离队、成为{妓女}"}
+        ]},
+        {"id":"habuna_suolaweier_suolaweier_10","name":"欢愉之馆的新人","trigger":"在《娇弱的女奴》选“她应该学着靠自己生活”1天后","desc":"仪式，自启动耗时1天。索拉薇儿进入《欢愉之馆》成为{妓女}","prereqs":["娇弱的女奴"],
+        "slots":[
+          {"card":"索拉薇儿","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"结算后进入《欢愉之馆》成为{妓女}"}
+        ]},
+        {"id":"habuna_suolaweier_suolaweier_11","name":"浪子的思绪","trigger":"善名≥18、完成《欢愉之馆的新人》后，寻思头顶惊叹号的「奈布哈尼」","desc":"仪式，长期存续耗时1天。卡槽：奈布哈尼+主角。结算后不再触发《靠不住的盟友》","prereqs":["欢愉之馆的新人"],"terminal":true,
+        "slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"},
+          {"card":"主角","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":""}
+        ]},
+        {"id":"habuna_suolaweier_suolaweier_12","name":"如此大恩·1","trigger":"侠名≥8、索拉薇儿为青铜品级且成为{妓女}后，寻思头顶惊叹号的「奈布哈尼」","desc":"剧情弹窗。善名+1、权势+1","prereqs":[],"terminal":true,
+        "slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]},
+        {"id":"habuna_suolaweier_suolaweier_13","name":"如此大恩·2","trigger":"侠名≥8、索拉薇儿为白银品级且成为{妓女}后，寻思头顶惊叹号的「奈布哈尼」","desc":"剧情弹窗。善名+2、侠名+1、权势-1、获「小药瓶」；寻思「小药瓶」触发《懂的都懂》，可使1名非动物角色体魄+1","prereqs":[],"terminal":true,
+        "slots":[
+          {"card":"奈布哈尼","sultan":false,"maxGrade":null,"required":true,"consumed":false,"note":"寻思触发"}
+        ]}
+      ]
+    }
+  ]
+}

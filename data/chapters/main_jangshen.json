@@ -1,0 +1,1341 @@
+{
+  "id": "main_jangshen",
+  "title": "大结局·降神篇",
+  "category": "main",
+  "characters": [
+    "苏丹",
+    "伊曼",
+    "梅姬",
+    "拜铃耶",
+    "鲁梅拉",
+    "高原的圣主"
+  ],
+  "routes": [
+    {
+      "id": "main_jangshen_zheng",
+      "name": "正神降临线",
+      "summary": "持有「纯净之神」（不持有创造/腐败之神）且完成正教篇《向教会求助》后开启，建立教权、造神临之塔，最终迎接或反抗正神",
+      "steps": [
+        {
+          "id": "main_jangshen_zheng_1",
+          "name": "纯净者的启示",
+          "trigger": "完成正教篇《向教会求助》；持有「纯净之神」且不持有「创造之神」「腐败之神」",
+          "desc": "剧情弹窗。触发《神圣的烙印》20天倒计时，并按伊曼存活与否、是否触发过《与正教决裂》分别触发《揣测神意》《接管教会》《人前显圣》《异端之战》；邪神降临线关闭",
+          "prereqs": [],
+          "slots": []
+        },
+        {
+          "id": "main_jangshen_zheng_2",
+          "name": "异端之战",
+          "trigger": "完成《纯净者的启示》时伊曼存活、已触发《与正教决裂》",
+          "desc": "仪式，耗时1天。放伊曼+纯净者的祭司们+主角+部队等（可放黄金及以下「征服」额外获「罪孽:裂隙」）。两轮检定（魔力&魅力5、战斗&体魄14）任一失败即死亡结局「无名人之死」；成功则伊曼与祭司死亡，主角升金成为{教领}、受伤、五项属性+2，可能触发《开始造塔》",
+          "prereqs": [
+            "纯净者的启示"
+          ],
+          "slots": [
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "检定成功后伊曼死亡"
+            },
+            {
+              "card": "纯净者的祭司们",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "检定成功后死亡"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "检定成功额外获「罪孽:裂隙」"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_3",
+          "name": "人前显圣",
+          "trigger": "完成《纯净者的启示》时伊曼已死、已触发《与正教决裂》",
+          "desc": "仪式，耗时1天。主角+2任意角色（3人魔力总和≥20）+20金币。主角升金成为{教领}、五项属性+2，可能触发《开始造塔》（此路线不会受伤）",
+          "prereqs": [
+            "纯净者的启示"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "金币",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "20金币；另需3人魔力总和≥20"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_4",
+          "name": "接管教会",
+          "trigger": "完成《纯净者的启示》、伊曼死亡、未触发《与正教决裂》（通常经《揣测神意》逾期/杀戮或《为你祝圣》选“这是我们的命运”触发）",
+          "desc": "仪式，耗时1天。主角+「完美世界」。主角升金成为{教领}、受伤、五项属性+2，可能触发《开始造塔》；双胞胎不享受收益",
+          "prereqs": [
+            "纯净者的启示"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "完美世界",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "双胞胎不享受收益"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_5",
+          "name": "揣测神意",
+          "trigger": "完成《纯净者的启示》时伊曼存活、未触发《与正教决裂》",
+          "desc": "仪式，存续2天耗时1天。放伊曼+主角+纯净之神（仅3级面容可用）。逾期：伊曼死亡、触发《神的仆人》《接管教会》。空置：触发《为你祝圣》；放白银及以下「杀戮」：伊曼死亡、获「罪孽:无辜者之血」（唯一）、触发《神的仆人》《接管教会》",
+          "prereqs": [
+            "纯净者的启示"
+          ],
+          "slots": [
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "纯净之神",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "只能用3级面容，4级用不了"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "白银",
+              "note": "伊曼死亡、获「罪孽:无辜者之血」（唯一）、触发《神的仆人》《接管教会》；空置则触发《为你祝圣》"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_6",
+          "name": "为你祝圣",
+          "trigger": "完成《揣测神意》且不杀戮",
+          "desc": "抉择：“这是我们的命运”→伊曼死亡、获服装「茉莉花之焰」、触发《神的仆人》《接管教会》；“不,你不要死”→触发《神圣哗变》",
+          "prereqs": [
+            "揣测神意"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_jangshen_zheng_7",
+          "name": "神的仆人",
+          "trigger": "未触发《与正教决裂》，且在《揣测神意》逾期或杀戮伊曼，或在《为你祝圣》选“这是我们的命运”",
+          "desc": "仪式，耗时1天。主角+任意正教思潮。主角升金成为{教领}、受伤、五项属性+2（已成教领可再领一遍收益，也可用双胞胎升金额外生成一个{教领}）；获4级正教思潮「完美世界」（放的若是完美世界则不再获得）",
+          "prereqs": [
+            "揣测神意",
+            "为你祝圣"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "也可用双胞胎升金，额外生成一个{教领}"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_8",
+          "name": "神圣哗变",
+          "trigger": "在《为你祝圣》选“不,你不要死”",
+          "desc": "仪式，自启动耗时1天。主角+正教思潮+伊曼。主角升金成为{教领}、受伤、五项属性+2、获「完美世界」；伊曼入队、受伤、体魄-2，可能触发《开始造塔》",
+          "prereqs": [
+            "为你祝圣"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "结算后伊曼入队、受伤、体魄-2"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_9",
+          "name": "开始造塔",
+          "trigger": "完成《纯净者的启示》的任一后续使主角成为{教领}，且未持有「创造之神」「腐败之神」",
+          "desc": "剧情弹窗。主角&双胞胎魅力/魔力/灵视+1、金骰子+1；触发《教领的特权》《觐见苏丹》",
+          "prereqs": [
+            "异端之战",
+            "人前显圣",
+            "接管教会",
+            "神的仆人",
+            "神圣哗变"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_jangshen_zheng_10",
+          "name": "教领的特权",
+          "trigger": "完成剧情弹窗《开始造塔》",
+          "desc": "仪式，耗时1天。两行各放神的乙太/正教的金库+3角色+情报，每行角色社交+魅力≥25：第一行消耗「神的乙太」，第二行金币+10。若{污染者}拜铃耶参与：拜铃耶死亡、「神的乙太」清零（后续一系列仪式敌方属性倒扣6点）。每天可领一次（可重复）",
+          "prereqs": [
+            "开始造塔"
+          ],
+          "slots": [
+            {
+              "card": "神的乙太",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "每行角色社交+魅力≥25则「神的乙太」-1；拜铃耶参与则清零"
+            },
+            {
+              "card": "正教的金库",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_11",
+          "name": "觐见苏丹",
+          "trigger": "完成剧情弹窗《开始造塔》",
+          "desc": "仪式，耗时1天。主角+非{密教徒}追随者+20金币（两人魔力合计≥10）。权势+1、触发《立柱》",
+          "prereqs": [
+            "开始造塔"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "与非密教徒追随者魔力合计≥10"
+            },
+            {
+              "card": "金币",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "20金币"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_12",
+          "name": "立柱",
+          "trigger": "完成《觐见苏丹》",
+          "desc": "仪式，耗时5天。智慧≥8角色+体魄&社交≥5角色+隐匿&智慧≥5贵族+15金币。已有「罪孽:无辜者之血」直接完成；否则需祭品（部队或一群孩子）+黄金及以下「杀戮」获此罪孽（不放杀戮则祭品死亡、重置本事件）。结算：「神的耐心」+5、触发《镀金》",
+          "prereqs": [
+            "觐见苏丹"
+          ],
+          "slots": [
+            {
+              "card": "金币",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "15金币"
+            },
+            {
+              "card": "罪孽:无辜者之血",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "有则直接完成"
+            },
+            {
+              "card": "乞儿们/流浪儿们/贫民区的孤儿",
+              "sultan": false,
+              "required": false,
+              "consumed": true,
+              "note": "祭品（或任意部队），需配合杀戮"
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "祭品+杀戮组合获「罪孽:无辜者之血」；不放杀戮则祭品死亡、重置本事件"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_13",
+          "name": "镀金",
+          "trigger": "完成《立柱》",
+          "desc": "仪式，耗时3天。已有「罪孽:傲慢」直接完成；否则攀爬者（任意角色）+15金币+黄金及以下「奢靡」获此罪孽（不放奢靡则攀爬者死亡、重置本事件）。结算：「神的耐心」+3、触发《引火物》",
+          "prereqs": [
+            "立柱"
+          ],
+          "slots": [
+            {
+              "card": "罪孽:傲慢",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "有则直接完成"
+            },
+            {
+              "card": "金币",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "15金币"
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "攀爬者+金币+奢靡组合获「罪孽:傲慢」；不放奢靡则攀爬者死亡、重置本事件"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_14",
+          "name": "引火物",
+          "trigger": "完成《镀金》",
+          "desc": "仪式，耗时0天。已有「罪孽:裂隙」直接完成并触发《最后的诱惑》；否则放黄金及以下「征服」：暂不折卡、触发《审判烈焰》",
+          "prereqs": [
+            "镀金"
+          ],
+          "slots": [
+            {
+              "card": "罪孽:裂隙",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "有则直接完成并触发《最后的诱惑》"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "暂不折卡，转入《审判烈焰》"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_15",
+          "name": "审判烈焰",
+          "trigger": "在《引火物》放置「征服」后（卡槽1即《引火物》里那张征服）",
+          "desc": "仪式。按征服品级吸入特定角色（岩石：朱娜/小圆/铁头/乞丐；青铜：鲁梅拉/阿萨尔/安苏亚/贾丽拉/商人；白银：玛希尔/伊玛尼/拜铃耶/贵族/夏玛；黄金：流浪剑客/莎姬/贵族/夏玛）。结算：折卡、被吸入角色死亡、获「罪孽:裂隙」（唯一）、触发《最后的诱惑》",
+          "prereqs": [
+            "引火物"
+          ],
+          "slots": [
+            {
+              "card": "征服",
+              "sultan": true,
+              "required": true,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "即《引火物》里那张，本仪式折卡"
+            },
+            {
+              "card": "按征服品级吸入的角色",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "2号槽死亡。岩石:朱娜/小圆/铁头/乞丐；青铜:鲁梅拉/阿萨尔/安苏亚/贾丽拉/商人；白银:玛希尔/伊玛尼/拜铃耶/贵族/夏玛；黄金:流浪剑客/莎姬/贵族/夏玛"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_16",
+          "name": "最后的诱惑",
+          "trigger": "持有「罪孽:裂隙」时完成《引火物》，或完成《审判烈焰》",
+          "desc": "仪式，耗时1天。已有「罪孽:欲望」直接完成；否则主角+追随者（伊曼或其他有{激情}的追随者）+黄金及以下「纵欲」获此罪孽。结算：获「神临之塔」（拿去完成《神圣的烙印》）",
+          "prereqs": [
+            "引火物",
+            "审判烈焰"
+          ],
+          "slots": [
+            {
+              "card": "罪孽:欲望",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "有则直接完成"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": false,
+              "consumed": false
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "或其他有{激情}的追随者"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_17",
+          "name": "神圣的烙印",
+          "trigger": "完成《纯净者的启示》",
+          "desc": "仪式，每天结算1次最多存续30天，逾期死亡结局「灰飞烟灭」。卡槽：神的耐心（初始20张每天-1，《立柱》《镀金》《教领的特权》可补充）+神临之塔+4张罪孽（裂隙/欲望/傲慢/无辜者之血，均需先完成专属事件）。完成：移除桌面所有仪式、冻结苏丹卡/苏丹的猜忌/莎姬的信物倒计时、触发《神临仪式》",
+          "prereqs": [
+            "纯净者的启示"
+          ],
+          "slots": [
+            {
+              "card": "神的耐心",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "初始20张每天-1，《立柱》《镀金》《教领的特权》可补充"
+            },
+            {
+              "card": "神临之塔",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "《最后的诱惑》产出"
+            },
+            {
+              "card": "罪孽:裂隙",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "《引火物》或《审判烈焰》"
+            },
+            {
+              "card": "罪孽:欲望",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "《最后的诱惑》"
+            },
+            {
+              "card": "罪孽:傲慢",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "《镀金》"
+            },
+            {
+              "card": "罪孽:无辜者之血",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "《立柱》"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_18",
+          "name": "神临仪式",
+          "trigger": "完成《神圣的烙印》",
+          "desc": "仪式，存续3天耗时0天，逾期自启动。卡槽1放纯净之神→死亡结局「寂静之歌」；放毁灭之神→触发《反抗正神?》。另需主角/伊曼+苏丹+任意角色（主角必须参与）。结算：参与者中密教徒死亡，非密教徒体魄/智慧/魅力+1；达成一千零一夜「诸神降临」、Steam成就「欲望」",
+          "prereqs": [
+            "神圣的烙印"
+          ],
+          "slots": [
+            {
+              "card": "纯净之神",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽二选一；放入则死亡结局「寂静之歌」"
+            },
+            {
+              "card": "毁灭之神",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "1号槽二选一；放入触发《反抗正神?》"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽，主角必须参与"
+            },
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "2号槽，与主角二选一"
+            },
+            {
+              "card": "苏丹",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_19",
+          "name": "反抗正神?",
+          "trigger": "持有「毁灭之神」并完成《神临仪式》",
+          "desc": "抉择弹窗。“累了,毁灭吧”→死亡结局「寂静之歌」。“反抗神”→触发《世界之眼》，且：未偷「万逝戒」则苏丹入队、达成一千零一夜「风云际会」；已偷「万逝戒」（安苏亚篇/阿迪莱篇可偷）则苏丹死亡；拜铃耶未入队则入队（魅力/魔力+2）；曾在莎姬篇《向星星许愿》放毁灭之神则高原的圣主入队；已触发玛希尔篇《承阳武士》则获武器「承阳剑」",
+          "prereqs": [
+            "神临仪式"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_jangshen_zheng_20",
+          "name": "世界之眼",
+          "trigger": "在《反抗正神?》选“反抗神”",
+          "desc": "仪式，存续1天耗时0天，逾期死亡结局「寂静之歌」。卡槽含神的乙太（未偷光固定2张）+主角/苏丹/高原的圣主（星灵可关闭检定直接触发《大猎捕》）+3角色+情报。4轮检定（难度8，受乙太张数×3削减）：苏丹或高原的圣主在3号槽可跳过检定1；检定1失败即「寂静之歌」，检定2/3失败死人或全员扣属性，检定4后触发《大猎捕》",
+          "prereqs": [
+            "反抗正神?"
+          ],
+          "slots": [
+            {
+              "card": "神的乙太",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "未偷光则固定2张，每张使检定-3"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "主角/苏丹/高原的圣主三选一"
+            },
+            {
+              "card": "苏丹",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "三选一；可跳过检定1"
+            },
+            {
+              "card": "高原的圣主",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "三选一；跳过检定1且战斗+3、体魄+3"
+            },
+            {
+              "card": "星灵",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "鲁梅拉篇飞升线产物；关闭检定直接触发《大猎捕》"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_21",
+          "name": "大猎捕",
+          "trigger": "完成《世界之眼》",
+          "desc": "仪式，存续1天耗时0天，逾期死亡结局「寂静之歌」。放腐败之神可关闭检定：获武器「那由多」、金骰子+5、触发《匕首之路》。否则检定我方体魄&魔力&战斗-乙太×3-天使们(26)，成功≥10触发《匕首之路》，失败「寂静之歌」。缺部队保护的角色将{失去战力}无法参与后续仪式（唯独苏丹不需要）",
+          "prereqs": [
+            "世界之眼"
+          ],
+          "slots": [
+            {
+              "card": "神的乙太",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "每张使检定-3"
+            },
+            {
+              "card": "天使们",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "腐败之神",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "关闭检定：获武器「那由多」、金骰子+5、触发《匕首之路》"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_22",
+          "name": "匕首之路",
+          "trigger": "完成《大猎捕》",
+          "desc": "仪式，存续1天耗时0天，逾期死亡结局「寂静之歌」。4轮检定（10/7/10/7，受乙太×3削减），任一失败即「寂静之歌」。拜铃耶在2号槽：关闭所有检定直接过关但拜铃耶死亡；高原的圣主跳过检定2、苏丹跳过检定3、玛希尔跳过检定4。成功触发《天空之火》",
+          "prereqs": [
+            "大猎捕"
+          ],
+          "slots": [
+            {
+              "card": "神的乙太",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "每张使检定-3；拜铃耶在2号槽可关闭所有检定直接过关但死亡"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_23",
+          "name": "天空之火",
+          "trigger": "完成《匕首之路》",
+          "desc": "仪式，存续1天耗时0天，逾期死亡结局「寂静之歌」。若有伊曼或陶土钥匙（《心灵之战16》获得）则关闭所有检定直接触发《转生的真神》（伊曼无激情会额外死亡）。否则5轮魔力&体魄检定（难度6，受乙太×3削减），失败死人；最终参与者魔力总和≥40触发《转生的真神》，不足则「寂静之歌」",
+          "prereqs": [
+            "匕首之路"
+          ],
+          "slots": [
+            {
+              "card": "神的乙太",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "每张使检定-3"
+            },
+            {
+              "card": "陶土钥匙",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "任意情报/陶土钥匙；有伊曼或陶土钥匙可关闭检定直接通过（伊曼无激情则额外死亡）"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_zheng_24",
+          "name": "转生的真神",
+          "terminal": true,
+          "trigger": "完成《天空之火》",
+          "desc": "仪式，正神线终点。毁灭之神+神的乙太+4张罪孽+苏丹+高原的圣主+主角。检定我方体魄&战斗&魔力-乙太×3-毁灭之神(27)：成功≥5则毁灭之神/苏丹/女术士死亡，达成Steam成就「对等」、真胜利结局「弑神者」；失败死亡结局「寂静之歌」",
+          "prereqs": [
+            "天空之火"
+          ],
+          "slots": [
+            {
+              "card": "毁灭之神",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "神的乙太",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "每张使检定-3"
+            },
+            {
+              "card": "罪孽:裂隙",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "罪孽:欲望",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "罪孽:傲慢",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "罪孽:无辜者之血",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "苏丹",
+              "sultan": false,
+              "required": false,
+              "consumed": false
+            },
+            {
+              "card": "高原的圣主",
+              "sultan": false,
+              "required": false,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "main_jangshen_xie",
+      "name": "邪神降临线",
+      "summary": "持有「创造之神」（不持有纯净/毁灭之神）时开启，孕育黑暗之卵、集齐四张污渍卡牌，最终迎接或反抗邪神",
+      "steps": [
+        {
+          "id": "main_jangshen_xie_1",
+          "name": "从狂喜中醒来",
+          "trigger": "持有「创造之神」、不持有「纯净之神」「毁灭之神」",
+          "desc": "剧情弹窗。主角&双胞胎魔力/体魄/灵视+1、金骰子+1；触发《恶之华》20天倒计时与《受孕》；正神降临线关闭",
+          "prereqs": [],
+          "slots": []
+        },
+        {
+          "id": "main_jangshen_xie_2",
+          "name": "受孕",
+          "trigger": "完成《从狂喜中醒来》",
+          "desc": "仪式，耗时1天。需污渍:信徒+新世界+乙太（失去）+主持人（{黑暗知识}且魔力≥6；放鲁梅拉则死亡结局「星之救赎」）+3名{密教徒}+黄金及以下「纵欲」（获污渍:信徒）+产卵者（主角：受伤灵视+1，邪恶化身主角另获「深渊的礼物」；梅姬：成为密教徒受伤灵视+1，可能触发《梅姬不再不满》；拜铃耶：灵视+1）。结算：「神的耐心」+5、获「黑暗之卵」，寻思之触发《喂食》，5天未完成触发《饥渴》，1天后可能触发《救赎的机会》",
+          "prereqs": [
+            "从狂喜中醒来"
+          ],
+          "slots": [
+            {
+              "card": "污渍:信徒",
+              "sultan": false,
+              "required": false,
+              "consumed": false
+            },
+            {
+              "card": "新世界",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "乙太",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            },
+            {
+              "card": "纵欲",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "获「污渍:信徒」（已有则无法放置，没有则必须放入）"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "9号槽产卵者三选一；受伤、灵视+1，邪恶化身主角另获「深渊的礼物」"
+            },
+            {
+              "card": "梅姬",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "产卵者三选一；成为密教徒、受伤、灵视+1，可能触发《梅姬不再不满》"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "产卵者三选一；灵视+1；已不是密教徒则不可放入"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_3",
+          "name": "梅姬不再不满",
+          "trigger": "在《受孕》放置梅姬、持有「妻子的不满」",
+          "desc": "仪式，自启动耗时1天。放「妻子的不满」：其清零且未来再也不会获得",
+          "prereqs": [
+            "受孕"
+          ],
+          "slots": [
+            {
+              "card": "妻子的不满",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "清零且未来再也不会获得"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_4",
+          "name": "救赎的机会",
+          "terminal": true,
+          "trigger": "完成《受孕》1天后，伊曼不是{密教徒}、未完成《喂食》",
+          "desc": "仪式，耗时1天。放伊曼+主角+黑暗之卵：死亡结局「后悔药」（伊曼有{命运的羁绊}则有文本差分）。完成《喂食》后本事件关闭",
+          "prereqs": [
+            "受孕"
+          ],
+          "slots": [
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "黑暗之卵",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_5",
+          "name": "饥渴",
+          "trigger": "完成《受孕》5天后仍未完成《喂食》",
+          "desc": "仪式，自启动耗时1天。黑暗之卵被动吸入任意非怪物追随者或可{任意处置}的人：其死亡；再5天后仍未完成《喂食》则重置本事件（可重复）",
+          "prereqs": [
+            "受孕"
+          ],
+          "slots": [
+            {
+              "card": "黑暗之卵",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "被动吸入的追随者死亡"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_6",
+          "name": "喂食",
+          "trigger": "完成《受孕》、寻思「黑暗之卵」（逾期可再次寻思触发）",
+          "desc": "仪式，存续1天耗时1天。污渍:念珠+黑暗之卵+祭品（追随者/可任意处置的人/食客/动物，死亡）+黄金及以下「奢靡」（获污渍:念珠、免除罪证）+10-40金币。结算：灵视+1、恶名+1、「神的耐心」+3、触发《子宫》、不再触发《饥渴》；《救赎的机会》关闭；若伊曼在队且非密教徒则离队",
+          "prereqs": [
+            "受孕"
+          ],
+          "slots": [
+            {
+              "card": "黑暗之卵",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "寻思触发；逾期可再次寻思"
+            },
+            {
+              "card": "污渍:念珠",
+              "sultan": false,
+              "required": false,
+              "consumed": false
+            },
+            {
+              "card": "奢靡",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "获「污渍:念珠」（唯一）、免除罪证；已有则无法放置，没有则必须放入"
+            },
+            {
+              "card": "金币",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "10-40金币，配合奢靡品级"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_7",
+          "name": "子宫",
+          "trigger": "完成《喂食》",
+          "desc": "仪式，耗时1天。污渍:王冠+贫民聚居地+任意部队+黄金及以下「征服」（部队死亡、获污渍:王冠、免除罪证）。结算：获「血池」、恶名+2、灵视+1、「罪证」+2、触发《献祭》；伊曼在队且非密教徒则离队、反对+2",
+          "prereqs": [
+            "喂食"
+          ],
+          "slots": [
+            {
+              "card": "污渍:王冠",
+              "sultan": false,
+              "required": false,
+              "consumed": false
+            },
+            {
+              "card": "贫民聚居地",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "部队死亡、获「污渍:王冠」（唯一）、免除罪证"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_8",
+          "name": "献祭",
+          "trigger": "完成《子宫》",
+          "desc": "仪式，耗时1天。污渍:天使+血池+4名{密教徒}（后续成为对手，尽量挑战斗&魔力&体魄低的）+4名祭品（死亡）+黄金及以下「杀戮」（获污渍:天使、免除罪证）。结算：密教徒离队（结局时被加强并成为对手）、恶名+3、灵视+1、「罪证」+5。若曾在《权利的游戏》或《比最好更好的》上贡魅魔/大魅魔：获「血池」（污渍卡牌集齐）；否则触发《苏丹的诘问·邪神》",
+          "prereqs": [
+            "子宫"
+          ],
+          "slots": [
+            {
+              "card": "污渍:天使",
+              "sultan": false,
+              "required": false,
+              "consumed": false
+            },
+            {
+              "card": "血池",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "获「污渍:天使」（唯一）、免除罪证"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_9",
+          "name": "苏丹的诘问·邪神",
+          "trigger": "截止完成《献祭》时尚未上贡魅魔/大魅魔",
+          "desc": "仪式，存续3天耗时1天，逾期死亡结局「伴君如伴虎」。放血池+20金币（失去）+战斗&体魄≥5的怪物（失去）+魅力≥10的密教徒或怪物（失去）。结算：清除所有{大敌}相关事件、1天后触发《讨伐》",
+          "prereqs": [
+            "献祭"
+          ],
+          "slots": [
+            {
+              "card": "血池",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "金币",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "20金币（失去）"
+            },
+            {
+              "card": "战斗&体魄≥5的怪物",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "失去；多眼智者/暗影黑手/蛇女/空壳骑士/利齿残骸/扭曲残骸/填充者"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_10",
+          "name": "讨伐",
+          "trigger": "完成《苏丹的诘问·邪神》1天后",
+          "desc": "仪式，耗时3天。大量卡槽：非密教徒追随者+伊曼+纯净者的祭司们+狂信的武士+大敌+正义之怒+血池+任意角色/部队+杀戮/征服+情报。检定11-15号槽战斗-1-9号槽战斗：成功≥5则敌方全员死亡、我方全员战斗+2、获「血池」；失败死亡结局「功败垂成」",
+          "prereqs": [
+            "苏丹的诘问·邪神"
+          ],
+          "slots": [
+            {
+              "card": "伊曼",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "无{密教徒}{命运的羁绊}的伊曼"
+            },
+            {
+              "card": "纯净者的祭司们",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "狂信的武士",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "大敌",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "正义之怒",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "血池",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "杀戮",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "杀戮/征服二选一"
+            },
+            {
+              "card": "征服",
+              "sultan": true,
+              "required": false,
+              "consumed": true,
+              "maxGrade": "黄金",
+              "note": "杀戮/征服二选一"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_11",
+          "name": "恶之华",
+          "trigger": "完成《从狂喜中醒来》",
+          "desc": "仪式，每天结算1次最多存续30天，逾期死亡结局「扎根」。卡槽：神的耐心（初始20张每天-1，《受孕》《喂食》《敦请圣像》可补充）+4张污渍（信徒/念珠/王冠/天使，需先在本篇对应仪式使用过）+黑暗之卵+血池。完成：移除桌面所有事件、冻结苏丹卡/苏丹的猜忌/莎姬的信物倒计时、触发《神的诞生》",
+          "prereqs": [
+            "从狂喜中醒来"
+          ],
+          "slots": [
+            {
+              "card": "神的耐心",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "初始20张每天-1，《受孕》《喂食》《敦请圣像》可补充"
+            },
+            {
+              "card": "污渍:信徒",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "需先在《受孕》使用过"
+            },
+            {
+              "card": "污渍:念珠",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "需先在《喂食》使用过"
+            },
+            {
+              "card": "污渍:王冠",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "需先在《子宫》使用过"
+            },
+            {
+              "card": "污渍:天使",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "需先在《献祭》使用过"
+            },
+            {
+              "card": "黑暗之卵",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "血池",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_12",
+          "name": "神的诞生",
+          "trigger": "完成《恶之华》",
+          "desc": "仪式，存续3天耗时0天，逾期死亡结局「腐化」。消耗黑暗之卵+血池+4张污渍，卡槽7放创造之神则升级为「腐败之神」。祭品分支：深渊的礼物→真胜利结局「截稿日」、Steam成就「慈爱」；完成小圆篇《自由之人》且有{黑暗知识}的小圆→伪胜利结局「愿望之神」；有{黑暗知识}的主角→《反抗邪神?》；鲁梅拉/拜铃耶→其死亡并触发《反抗邪神?》；其余追随者：创造之神在场→死亡结局「腐化」，腐败之神在场→《反抗邪神?》。固定结算：一千零一夜「诸神降临」、Steam成就「欲望」",
+          "prereqs": [
+            "恶之华"
+          ],
+          "slots": [
+            {
+              "card": "黑暗之卵",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            },
+            {
+              "card": "血池",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            },
+            {
+              "card": "污渍:王冠",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            },
+            {
+              "card": "污渍:信徒",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            },
+            {
+              "card": "污渍:念珠",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            },
+            {
+              "card": "污渍:天使",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "失去"
+            },
+            {
+              "card": "创造之神",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "7号槽二选一；升级为「腐败之神」"
+            },
+            {
+              "card": "腐败之神",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "7号槽二选一；无奖惩"
+            },
+            {
+              "card": "深渊的礼物",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "8号槽祭品多选一；真胜利结局「截稿日」"
+            },
+            {
+              "card": "小圆",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "祭品（需完成小圆篇《自由之人》且有{黑暗知识}）；伪胜利结局「愿望之神」"
+            },
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false,
+              "note": "祭品（需{黑暗知识}）；触发《反抗邪神?》"
+            },
+            {
+              "card": "鲁梅拉",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "祭品；死亡并触发《反抗邪神?》"
+            },
+            {
+              "card": "拜铃耶",
+              "sultan": false,
+              "required": true,
+              "consumed": true,
+              "note": "祭品；死亡并触发《反抗邪神?》"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_13",
+          "name": "反抗邪神?",
+          "trigger": "在《神的诞生》以有{黑暗知识}的主角/鲁梅拉/拜铃耶为祭品，或腐败之神在场时使用其他追随者做祭品",
+          "desc": "抉择弹窗。“反抗神”→触发《暗影渐起》（已建立《生命权杖雕塑》则获「承阳剑」；曾在《向星星许愿》放腐败之神则高原的圣主入队）。“算了,毁灭吧”→死亡结局「腐化」",
+          "prereqs": [
+            "神的诞生"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_jangshen_xie_14",
+          "name": "暗影渐起",
+          "trigger": "在《反抗邪神?》选“反抗神”",
+          "desc": "仪式，存续1天耗时0天，逾期死亡结局「腐化」。主角+3名任意角色/部队+情报。4轮检定（难度7/7/7/10），任一失败即「腐化」；检定2成功≥10则苏丹入队（穿戴杀生者/斩王剑/黄金甲/髑气）、达成一千零一夜「风云际会」；高原的圣主在4号槽跳过检定4。成功触发《末日风暴》",
+          "prereqs": [
+            "反抗邪神?"
+          ],
+          "slots": [
+            {
+              "card": "主角",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_15",
+          "name": "末日风暴",
+          "trigger": "完成《暗影渐起》",
+          "desc": "仪式，存续1天耗时0天，逾期死亡结局「腐化」。放星灵可关闭检定直接触发《迷梦之刃》。4轮检定（难度10），成功≥10对应槽位魔力+3，<10该槽死亡，<5死亡结局「腐化」；最终触发《迷梦之刃》",
+          "prereqs": [
+            "暗影渐起"
+          ],
+          "slots": [
+            {
+              "card": "星灵",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "关闭检定直接触发《迷梦之刃》"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_16",
+          "name": "迷梦之刃",
+          "trigger": "完成《末日风暴》",
+          "desc": "仪式，存续1天耗时0天，逾期死亡结局「腐化」。5轮魅力检定（难度5），任一失败即「腐化」；特定角色可跳过对应检定（1:梅姬/法里斯/贾丽拉，2:奈布哈尼/娜依拉，3:夏玛/哲瓦德/哈比卜，4:玛希尔/阿里木/哲巴尔，5:阿迪莱/法拉杰/鲁梅拉）。成功触发《造化歧路》",
+          "prereqs": [
+            "末日风暴"
+          ],
+          "slots": []
+        },
+        {
+          "id": "main_jangshen_xie_17",
+          "name": "造化歧路",
+          "trigger": "完成《迷梦之刃》",
+          "desc": "仪式，存续1天耗时0天，逾期死亡结局「腐化」。需全知视角/机械降神/盲目服从/自我重复；放毁灭之神可关闭检定、获「舒尼雅」、直接触发《混沌之王》。否则4轮检定（隐匿/智慧/社交/魅力，难度5），任一失败即「腐化」，成功获武器「舒尼雅」（战斗7魔力7重投2）、触发《混沌之王》",
+          "prereqs": [
+            "迷梦之刃"
+          ],
+          "slots": [
+            {
+              "card": "全知视角",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "机械降神",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "盲目服从",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "自我重复",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            },
+            {
+              "card": "毁灭之神",
+              "sultan": false,
+              "required": false,
+              "consumed": false,
+              "note": "关闭检定、获「舒尼雅」、直接触发《混沌之王》"
+            }
+          ]
+        },
+        {
+          "id": "main_jangshen_xie_18",
+          "name": "混沌之王",
+          "terminal": true,
+          "trigger": "完成《造化歧路》",
+          "desc": "仪式，邪神线终点，存续1天耗时0天，逾期死亡结局「腐化」。腐败之神+《献祭》中离队的4位昔日追随者为对手。检定6-11号槽战斗&体魄&魔力-对手属性：成功≥9达成Steam成就「对等」、真胜利结局「无尽的旅途」；失败死亡结局「腐化」",
+          "prereqs": [
+            "造化歧路"
+          ],
+          "slots": [
+            {
+              "card": "腐败之神",
+              "sultan": false,
+              "required": true,
+              "consumed": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

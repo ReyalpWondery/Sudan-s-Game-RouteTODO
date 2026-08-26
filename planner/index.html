@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>苏丹的游戏 · 线路规划器</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="title">苏丹的游戏 · 线路规划器</div>
+  <nav id="viewNav">
+    <button data-view="planner" class="active">线路规划</button>
+    <button data-view="cards">销卡查询</button>
+  </nav>
+  <div class="top-stats" id="topStats"></div>
+  <div class="top-actions">
+    <button id="btnCollapse" title="收起/展开所有卡片详情">收起全部</button>
+    <button id="btnReset" class="danger" title="清空所有已添加线路与完成记录">重置全部</button>
+  </div>
+</header>
+<div id="layout">
+  <aside id="sidebar">
+    <nav id="tabs">
+      <button data-tab="character" class="active">人物线</button>
+      <button data-tab="main">主线</button>
+      <button data-tab="base">基础篇</button>
+      <button data-tab="achievement">成就</button>
+    </nav>
+    <input id="search" type="search" placeholder="搜索线路 / 事件 / 成就…">
+    <div id="tabContent"></div>
+  </aside>
+  <main id="main">
+    <section id="warnPanel" class="hidden"></section>
+    <section id="nowPanel">
+      <h2>当前可做 <span id="nowCount" class="pill"></span></h2>
+      <div id="nowList" class="now-list"></div>
+    </section>
+    <section id="cards"></section>
+    <div id="emptyHint" class="empty-hint">
+      <p>还没有添加任何线路。</p>
+      <p>在左侧选择「人物线 / 主线 / 基础篇」中的线路点击 <b>+ 添加</b>，或在「成就」页一键添加相关线路。</p>
+    </div>
+  </main>
+</div>
+<div id="cardPage" class="hidden">
+  <aside id="cardSide">
+    <input id="cardSearch" type="search" placeholder="输入卡名，如：奢靡 / 玛希尔 / 星空之镜…" autocomplete="off">
+    <div id="cardSuggest" class="hidden"></div>
+    <div class="sultan-quick">
+      <div class="sq-title">苏丹卡速查</div>
+      <div class="sq-btns" id="sultanQuick"></div>
+    </div>
+  </aside>
+  <main id="cardMain">
+    <div id="cardEmpty" class="empty-hint">
+      <p>在左侧输入或选择一张卡。</p>
+      <p>可以查到：<b>这张卡能去哪里销（折卡/消耗/使用）</b>，以及<b>哪些任务需要它、得留着</b>。</p>
+    </div>
+    <div id="cardResult"></div>
+  </main>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="cardpage.js"></script>
+</body>
+</html>
