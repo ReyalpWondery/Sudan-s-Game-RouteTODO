@@ -166,6 +166,7 @@
   function selectCard(name) {
     input.value = name;
     sugBox.classList.add('hidden');
+    document.body.classList.remove('side-open'); // 手机端选卡后收起抽屉，直接看结果
     currentQuery = parseName(name);
     renderResult();
   }

@@ -81,6 +81,7 @@ node alimu_repro.js      # 阿里木篇排序复现脚本（诊断用，无 PASS
 - 状态变更统一走 `save(); render();`：每次操作后全量重渲染（数据量小，无需虚拟 DOM）。
 - `app.js` 通过 `window.PLANNER` 暴露只读索引与少量操作（`addRoute`、`stepStatus`、`refresh` 等）给 `cardpage.js`；跨脚本通信只用这两个全局对象，不要新增。
 - 中文注释集中在关键业务逻辑（分歧排除、完结标记、前置解析）上方；改这些逻辑时同步更新注释。
+- **手机端抽屉**：`≤768px` 时顶栏汉堡按钮 `#btnMenu` 切换 `body.side-open`，两个侧栏（`#sidebar` / `#cardSide`）变为左侧抽屉，`#sideMask` 遮罩点击收起；销卡页选卡后自动收起。媒体查询集中在 `style.css` 末尾。
 
 ## 关键业务逻辑（改之前先读懂）
 

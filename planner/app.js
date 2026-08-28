@@ -646,6 +646,12 @@
   }
 
   /* ---------- 事件绑定 ---------- */
+  // 手机端侧边栏抽屉：汉堡按钮开关，点遮罩收起（桌面端按钮与遮罩被 CSS 隐藏，不影响）
+  function setSideOpen(on) { document.body.classList.toggle('side-open', !!on); }
+  document.getElementById('btnMenu').onclick = function () {
+    setSideOpen(!document.body.classList.contains('side-open'));
+  };
+  document.getElementById('sideMask').onclick = function () { setSideOpen(false); };
   Array.prototype.forEach.call(document.querySelectorAll('#tabs button'), function (b) {
     b.onclick = function () {
       document.querySelector('#tabs button.active').classList.remove('active');

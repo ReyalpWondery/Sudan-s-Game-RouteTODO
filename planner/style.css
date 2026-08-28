@@ -201,3 +201,38 @@ button{cursor:pointer;font-family:inherit}
 /* ===== 自动加入提示 toast ===== */
 .toast{position:fixed;right:18px;bottom:18px;max-width:420px;background:#22301c;border:1px solid var(--green);color:#c8e0b0;padding:10px 14px;border-radius:8px;font-size:13px;line-height:1.6;opacity:0;pointer-events:none;transition:opacity .25s;z-index:99}
 .toast.show{opacity:1;pointer-events:auto;cursor:pointer}
+
+/* ===== 手机端：侧边栏抽屉 ===== */
+#btnMenu{display:none;background:var(--bg3);border:1px solid var(--border);color:var(--gold);padding:4px 10px;border-radius:4px;font-size:16px;line-height:1.2}
+#btnMenu:hover{border-color:var(--gold)}
+#sideMask{display:none}
+
+@media (max-width:768px){
+  #btnMenu{display:block}
+  /* 顶栏压成一行 52px，抽屉从这个高度以下开始，汉堡按钮始终可点 */
+  #topbar{height:52px;padding:0 8px;gap:6px;position:relative;z-index:100;flex-wrap:nowrap}
+  #topbar .title{display:none}
+  #topbar .top-stats{display:none}
+  #topbar button{padding:4px 8px;font-size:12px}
+  #viewNav button{padding:4px 8px;font-size:12px}
+
+  /* 两个页面的侧栏都变成左侧抽屉，默认藏在屏幕外 */
+  #sidebar,#cardSide{
+    position:fixed;top:52px;left:0;bottom:0;z-index:60;
+    width:min(86vw,340px);min-width:0;
+    transform:translateX(-105%);transition:transform .25s ease;
+    box-shadow:4px 0 16px rgba(0,0,0,.5);
+  }
+  body.side-open #sidebar,body.side-open #cardSide{transform:none}
+
+  /* 遮罩：点击收起抽屉 */
+  #sideMask{display:block;position:fixed;top:52px;left:0;right:0;bottom:0;background:rgba(0,0,0,.55);z-index:50;opacity:0;pointer-events:none;transition:opacity .25s}
+  body.side-open #sideMask{opacity:1;pointer-events:auto}
+
+  /* 主区铺满并收紧留白 */
+  #main,#cardMain{padding:10px 10px 80px}
+  .progress{width:80px}
+  .card-head .prog{width:100%;margin-left:0;flex-wrap:wrap}
+  .now-item .from{white-space:normal}
+  .toast{right:10px;left:10px;bottom:12px;max-width:none}
+}
